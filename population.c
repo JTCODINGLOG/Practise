@@ -11,6 +11,6 @@ int main (void)
     {
         nstart*(13/12)^y
     }
-    while
+    while 
 
 }
