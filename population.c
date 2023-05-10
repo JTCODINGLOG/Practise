@@ -10,7 +10,7 @@ int main (void)
     for (int y = 1; nstart <= nend ; y++)
     {
         nstart = nstart *((13/12)^y);
-        if (nstart = nend)
+        if nstart = nend
         {
             printf ("The number of years is %i", y );
         }
