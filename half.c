@@ -15,6 +15,6 @@ bill = bill * (1+ (tax / 100) );
 bill = bill * (1+ (tip /100) );
 bill = bill / 2;
 
-printf ("You will owe $ %f each!\n", bill);
+printf ("You will owe $ %.2f each!\n", bill);
 
 }
