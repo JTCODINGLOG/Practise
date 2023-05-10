@@ -24,7 +24,7 @@ int main (void)
         start += start / 12;
         years++;
     }
-    printf ("Years: %i\n", years);
+    printf("Years: %i\n", years);
 
 
 
