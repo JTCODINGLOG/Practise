@@ -18,8 +18,8 @@ int main (void)
     while ( end < start );
 
 
-    int years = 0
-    while (start < end);
+    int years = 0;
+    while (start < end)
     {
         start += start / 12;
         years++;
