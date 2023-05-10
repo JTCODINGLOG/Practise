@@ -24,13 +24,6 @@ int main(void)
 
 
 
-
-
-
-
-
-
-
 int get_size(void)
 {
     int n;
