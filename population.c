@@ -1,8 +1,13 @@
-//end size/(start size * 13/12)
-//till end size
+#include <cs50.h>
+#include <stdio.h>
 
+int main (void)
+{
+    int nstart = get_int ("What is the start size?: ");
+    int nend = get_int ("What is the end size?: ");
 
-// y=0  y<anos  anos++
-// n * 13/12
-
-//return years
+    for (int y=1; nstart < nend ; y++)
+    {
+        nstart = nstart *((13/12)^y)
+    }
+}
