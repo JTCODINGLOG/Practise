@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int main(void)
+{
+
+}
 
 float share()
 {
@@ -9,6 +13,5 @@ float share()
     float tax = get_float ("Sale Tax Percent: ");
     float tip  = get_float ("Tip percent: ");
 
-    float owned = get_float (bill + tax + tip);
-    return (printf ("You will owe %f each", owned));
+    float owned = (bill +( bill * tax / 100 ))
 }
