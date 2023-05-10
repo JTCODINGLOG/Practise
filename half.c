@@ -7,5 +7,8 @@ int main(void)
     float tax = get_float ("Sale Tax Percent: ");
     float tip  = get_float ("Tip percent: ");
 
-    int 
+    void share()
+    {
+        printf ()
+    }
 }
