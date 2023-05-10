@@ -20,6 +20,7 @@ int main (void)
 
     for(int y = 0; nstart < nend; y++)
     {
-        
+        nstart = nstart *((13/12)^y);
+        printf ("The number of years is %i\n", y );
     }
 }
