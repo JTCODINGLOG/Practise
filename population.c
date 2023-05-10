@@ -6,7 +6,7 @@ int main (void)
     int start;
     do
     {
-        int nstart = get_int ("What is the start size?: ");
+        start = get_int ("Start size?: ");
     }
     while ( start < 9 );
 
