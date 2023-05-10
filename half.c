@@ -6,17 +6,15 @@
 int main(void)
 {
 
-}
-
 float bill = get_float ("Bill before tax and tip: ");
 float tax = get_float ("Sale Tax Percent: ");
 float tip  = get_float ("Tip percent: ");
 
-float share(bill, tax, tip)
-{
-    bill = bill * (1+ (tax / 100) );
-    bill = bill * (1+ (tip /100) );
-    bill = bill / 2;
 
-    return bill;
+bill = bill * (1+ (tax / 100) );
+bill = bill * (1+ (tip /100) );
+bill = bill / 2;
+
+printf ("You will owe $ %f each! ", bill);
+
 }
