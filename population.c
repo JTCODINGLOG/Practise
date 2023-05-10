@@ -7,12 +7,9 @@ int main (void)
     int nend = get_int ("What is the end size?: ");
 
     for (int y = 1; nstart < nend ; y++)
-
-    do
     {
         nstart = nstart *((13/12)^y);
         printf ("The number of years is %i\n", y );
     }
-    while 
 
 }
