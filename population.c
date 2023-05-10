@@ -18,7 +18,9 @@ int main (void)
     while ( end < start );
 
     int years = 0;
-    
+
+    while (start>end)
+
 
 
 }
