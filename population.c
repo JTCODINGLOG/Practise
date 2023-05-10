@@ -19,10 +19,10 @@ int main (void)
 
 
     int years = 0
-    while (start > end);
+    while (start < end);
     {
+        start = start + (start / 12);
         years++;
-        start = start / 12
     }
 
 
