@@ -21,9 +21,10 @@ int main (void)
     int years = 0
     while (start < end);
     {
-        start = start + (start / 12);
+        start += start / 12;
         years++;
     }
+    printf ("Years: %i\n", years);
 
 
 
