@@ -10,9 +10,9 @@ int main(void)
     }
     while (height<1 || height>8);
 
-     for (int j = 0; j < height; j++)
+    for (int l = 0; l < height; l++)
     {
-        for (int i=-6; i < j ; i++)
+        for (int k =7; k > l ; k--)
         {
             printf (" ");
         }
