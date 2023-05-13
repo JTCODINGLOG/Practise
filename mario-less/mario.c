@@ -11,7 +11,7 @@ int main(void)
     }
     while (height<1 || height>8);
 
-    switch (height)
+    switch (height+)
     {
         case 8: printf("#\n");
         case 7: printf("##\n");
