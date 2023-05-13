@@ -5,7 +5,7 @@ int main(void)
 {
     long number = get_long ("Number: ");
 
-    number = 
+    printf (number % 10);
 
 
     //American Express 15 digits, starts with 34 or 37
