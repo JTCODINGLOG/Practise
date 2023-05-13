@@ -11,15 +11,11 @@ int main(void)
     }
     while (height<1 || height>8);
 
-
-    for (int j = 0; j < height; j++)
-    {
-        for (int i=5; i > height; i--)
+    for (int i=0; i < height; i++)
         {
             printf ("#");
         }
-
         printf ("\n");
-    }
+
 
 }
