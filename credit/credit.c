@@ -19,9 +19,9 @@ int main(void)
 
 
 
-    number12 = 4003600000000014 %100000000000;
-    number13 = 4003600000000014 %1000000000000;
-    number13d = (number13-number12)/100000000000;
+    number12 = 4003600000000014 %1000000000000;
+    number13 = 4003600000000014 %10000000000000;
+    number13d = (number13-number12)/1000000000000;
     printf ("Numero 13 es %li \n", number13d);
 
 
