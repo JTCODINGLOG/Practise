@@ -11,19 +11,14 @@ int main(void)
     }
     while (height<1 || height>8);
 
-    switch (height+)
+
+    for (int j = 0; j < height; j++)
     {
-        case 8: printf("#\n");
-        case 7: printf("##\n");
-        case 6: printf("###\n");
-        case 5: printf("####\n");
-        case 4: printf("#####\n");
-        case 3: printf("######\n");
-        case 2: printf("#######\n");
-        case 1: printf("########\n");
-            break;
+        for (int i=0; i < height; i++)
+        {
+            printf ("#");
+        }
+        printf ("\n");
     }
-
-
 
 }
