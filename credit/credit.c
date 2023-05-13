@@ -5,9 +5,9 @@ int main(void)
 {
     long number = get_long ("Number: ");
 
-    number = number % 10;
+    number = number %10;
 
-    printf (number);
+    printf (" %li ", number);
 
 
     //American Express 15 digits, starts with 34 or 37
@@ -18,5 +18,5 @@ int main(void)
 
     //% 10 to get rest and figure out digit
 
-    4003600000000014
+    //4003600000000014
 }
