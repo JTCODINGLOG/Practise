@@ -3,21 +3,28 @@
 
 int main(void)
 {
-    long number = get_long ("Number: ");
+    //long number = get_long ("Number: ");
+    int number;
 
-    number = number %100;
+    number = 4003600000000014 %100;
     printf (" %li \n", number);
-    number = number %10000;
+
+    number = 4003600000000014 %10000;
     printf (" %li \n", number);
-    number = number %1000000;
+
+    number = 4003600000000014 %1000000;
     printf (" %li \n", number);
-    number = number %100000000;
+
+    number = 4003600000000014 %100000000;
     printf (" %li \n", number);
-    number = number %10000000000;
+
+    number = 4003600000000014 %10000000000;
     printf (" %li \n", number);
-    number = number %1000000000000;
+
+    number = 4003600000000014 %1000000000000;
     printf (" %li \n", number);
-    number = number %100000000000000;
+
+    number = 4003600000000014 %100000000000000;
     printf (" %li \n", number);
 
 
