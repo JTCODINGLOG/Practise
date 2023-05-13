@@ -4,6 +4,7 @@
 int main(void)
 {
     int number = get_int ("Number: ");
+    
 
     //American Express 15 digits, starts with 34 or 37
     //MasterCard 16 digits, starts with 51,52,53,54,55
