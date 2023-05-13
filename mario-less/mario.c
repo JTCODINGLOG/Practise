@@ -9,6 +9,6 @@ int main(void)
     {
          height = get_int ("Height: \n");
     }
-    while (0<height<8);
+    while (0<height);
 
 }
