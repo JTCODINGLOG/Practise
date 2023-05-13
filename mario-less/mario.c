@@ -16,7 +16,13 @@ int main(void)
         {
             printf (".");
         }
-        printf("\n");
+
+        for (int i=-1; i < l ; i++)
+        {
+            printf ("#");
+        }
+        printf ("\n");
+
     }
 
     for (int j = 0; j < height; j++)
