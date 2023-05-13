@@ -16,6 +16,7 @@ int main(void)
         {
             printf (" ");
         }
+    }
 
     for (int j = 0; j < height; j++)
     {
