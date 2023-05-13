@@ -4,7 +4,7 @@
 int main(void)
 {
     //long number = get_long ("Number: ");
-    int number;
+    long number;
 
     number = 4003600000000014 %100;
     printf (" %li \n", number);
