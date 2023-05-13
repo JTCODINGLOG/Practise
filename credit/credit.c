@@ -6,7 +6,18 @@ int main(void)
     long number = get_long ("Number: ");
 
     number = number %100;
-
+    printf (" %li \n", number);
+    number = number %10000;
+    printf (" %li \n", number);
+    number = number %1000000;
+    printf (" %li \n", number);
+    number = number %100000000;
+    printf (" %li \n", number);
+    number = number %10000000000;
+    printf (" %li \n", number);
+    number = number %1000000000000;
+    printf (" %li \n", number);
+    number = number %100000000000000;
     printf (" %li \n", number);
 
 
@@ -18,5 +29,5 @@ int main(void)
 
     //% 10 to get rest and figure out digit
 
-    //400003600000000014
+    //4003600000000014
 }
