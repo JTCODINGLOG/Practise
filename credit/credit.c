@@ -8,23 +8,23 @@ int main(void)
     long number2;
     long number12;
     long number13;
+    long number2d;
+    long number13d;
+
 
     number1 = 4003600000000014 %10;
-
     number2 = 4003600000000014 %100;
-    printf ("Numero 2 es %li \n", (number2-number1)/10;
+    number2d = (number2-number1)/100;
+    printf ("Numero 2 es %li \n", number2d;
 
 
 
     number12 = 4003600000000014 %100000000000;
-
     number13 = 4003600000000014 %1000000000000;
-    printf ("Numero 13 es %li \n", (number13-number12)/1000000000000;
+    number13d = (number13-number12)/1000000000000
+    printf ("Numero 13 es %li \n", number13d;
 
-    long number;
 
-    number = 4003600000000014 / 10000000000000;
-    printf (" %li", number);
 
 
     //American Express 15 digits, starts with 34 or 37
