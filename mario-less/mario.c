@@ -13,14 +13,14 @@ int main(void)
 
     switch (height)
     {
-        case 1: printf("#");
-        case 2: printf("##");
-        case 3: printf("###");
-        case 4: printf("####");
-        case 5: printf("#####");
-        case 6: printf("######");
-        case 7: printf("#######");
-        case 8: printf("########");
+        case 8: printf("#\n");
+        case 7: printf("##\n");
+        case 6: printf("###\n");
+        case 5: printf("####\n");
+        case 4: printf("#####\n");
+        case 3: printf("######\n");
+        case 2: printf("#######\n");
+        case 1: printf("########\n");
             break;
     }
 
