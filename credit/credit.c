@@ -60,9 +60,18 @@ int main(void)
     //deciding the type of card
     if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6 ) && (number == 16))
     {
-        printf("MASTERCARD \n");
+        printf ("MASTERCARD \n");
     }
-    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7) && (number) )
+    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7) && (number == 15) )
+    {
+        printf ("AMEX \n");
+    }
+    else if ((start / 10 == 4) && ( number == 13 || number == 16))
+    {
+        printf ("VISA \n");
+    }
+    else
+        printf ("INVALID \n");
 
 
 
