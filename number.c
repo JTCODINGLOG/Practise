@@ -10,8 +10,8 @@ int main(void)
     }
     while (3999999999999 > number);
 
-    int n1;
-    n1 = number %10;
-    printf ("%i", n1);
+    int n2;
+    n2 = number %100/10;
+    printf ("%i", n2);
 
 }

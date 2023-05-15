@@ -12,8 +12,7 @@ int main(void)
 
     //number extraction
     int n1;
-
-
+    n1 = number %10;
     int n2;
     n2 = (number %100 - number %10)/10;
     int n3;
