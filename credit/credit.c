@@ -15,7 +15,8 @@ int main(void)
 
 
     int n2;
-    n2 = (number %100 - number %10)/10
+    n2 = (number %100 - number %10)/10;
+    printf ("Numero 2 es %li \n", n2);
 
 
     //long number = get_long ("Number: ");
