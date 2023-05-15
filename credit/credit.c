@@ -58,8 +58,11 @@ int main(void)
     int start = number / 10^(i-2);
 
     //deciding the type of card
-    if (start == 51,52,53,
-54,55
+    if (start / 10 == 5)&&(0 < start % 10 < 6 );
+    {
+        printf("MASTERCARD \n");
+    }
+    else if 
 
 
 
