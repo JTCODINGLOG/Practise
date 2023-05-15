@@ -50,7 +50,7 @@ int main(void)
     //total last digit
     if (total % 10 != 0)
     {
-        printf ("INVALID \n")
+        printf ("INVALID \n");
         return 0;
     }
 
@@ -58,11 +58,11 @@ int main(void)
     int start = number / 10^(i-2);
 
     //deciding the type of card
-    if (start / 10 == 5)&&(0 < start % 10 < 6 );
+    if (start / 10 == 5) && (0 < start % 10 < 6 ) && (number == 16);
     {
         printf("MASTERCARD \n");
     }
-    else if 
+    else if
 
 
 
