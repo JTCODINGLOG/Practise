@@ -7,7 +7,13 @@ int main(void)
     long number = get_long ("Number: ");
 
     //counting
-    
+    int i = 0;
+    long c = number;
+    while (c >10)
+    {
+        c = c/10;
+        i++
+    }
 
 
 
