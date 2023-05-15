@@ -15,7 +15,7 @@ int main(void)
     for (long i = 1; i < number ; i = i * 10, d++ )
     {
         int n = number % ( i * 10 ) / i;
-        d_x = n;
+        int d_x = n;
         printf ("%i\n", d_x);
     }
 
