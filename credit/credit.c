@@ -58,8 +58,8 @@ int main(void)
     int start = number / 10^(i-2);
 
     //deciding the type of card
-    
-
+    if (start == 51,52,53,
+54,55
 
 
 
