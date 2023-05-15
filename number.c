@@ -22,6 +22,7 @@ int main(void)
     for (long i = 1; i < number ; i=i*10 )
     {
         int n = number %(i*10) / i;
-        printf ("number is %i \n" n);
+        int ("n1")
+        printf ("number is %i \n", n);
     }
 }
