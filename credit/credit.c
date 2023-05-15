@@ -14,11 +14,11 @@ int main(void)
     int n1;
     n1 = number %10;
     int n2;
-    n2 = (number %100 - number %10)/10;
+    n2 = number %100/10;
     int n3;
-    n3 = (number %1000 - number %100)/100;
+    n3 = number %1000/100;
     int n4;
-    n4 = (number %10000 - number %1000)/1000;
+    n4 = number %10000/1000;
     int n2;
     n2 = (number %100 - number %10)/10;
     int n2;
