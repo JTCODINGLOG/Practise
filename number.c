@@ -10,12 +10,15 @@ int main(void)
     }
     while (3999999999999 > number);
 
+    int n1;
+    n1 = number %10;
     int n2;
     n2 = number %100/10;
-    printf ("%i", n2);
+    int n3;
+    n3 = number %1000/100;
 
-    int n4;
-    n4 = number %10000/1000;
-    printf ("%i", n4);
-
+    for (int i = 1;  ; i*10 )
+    {
+        int n = number %(i*10) / i
+    }
 }
