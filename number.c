@@ -10,15 +10,15 @@ int main(void)
     }
     while (3999999999999 > number);
 
-
-
-    for (long i = 1, int d = 1; i < number ; i = i * 10, d++ )
+    int d_1, d_2
+    int d = 1;
+    for (long i = 1; i < number ; i = i * 10, d++ )
     {
         int n = number % ( i * 10 ) / i;
-        int d_x = n
+        d_x = n;
+        printf ("%i\n", d_x);
     }
 
-
-    ;
+    printf ("%i", d_1);
 
 }
