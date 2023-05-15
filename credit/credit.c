@@ -57,6 +57,9 @@ int main(void)
     //find first 2 digits
     int start = number / 10^(i-2);
 
+    //deciding the type of card
+    
+
 
 
 
