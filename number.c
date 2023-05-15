@@ -19,9 +19,9 @@ int main(void)
     //n3 = number %1000/100;
 
 
-    for (int i = 1; i < number ; i=i*10 )
+    for (long i = 1; i < number ; i=i*10 )
     {
         int n = number %(i*10) / i;
-        printf ("number is %i \n",i, n);
+        printf ("number is %i \n" n);
     }
 }
