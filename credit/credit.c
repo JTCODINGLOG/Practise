@@ -58,15 +58,15 @@ int main(void)
     int start = number / 10^(i-2);
 
     //deciding the type of card
-    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6 ) && (number == 16))
+    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6 ) && (i == 16))
     {
         printf ("MASTERCARD \n");
     }
-    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7) && (number == 15) )
+    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7) && (i == 15) )
     {
         printf ("AMEX \n");
     }
-    else if ((start / 10 == 4) && ( number == 13 || number == 16))
+    else if ((start / 10 == 4) && ( i == 13 || i == 16))
     {
         printf ("VISA \n");
     }
