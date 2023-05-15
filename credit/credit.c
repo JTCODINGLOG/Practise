@@ -15,7 +15,7 @@ int main(void)
 
 
     int n2;
-    n2 = number
+    n2 = (number %100 - number %10)/10
 
 
     //long number = get_long ("Number: ");
