@@ -14,6 +14,7 @@ int main(void)
         c = c/10;
         i++;
     }
+    printf (%i)
 
 
 
