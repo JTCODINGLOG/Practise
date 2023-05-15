@@ -22,6 +22,6 @@ int main(void)
     for (int i = 1; i < number ; i=i*10 )
     {
         int n = number %(i*10) / i;
-        printf ("%i", n);
+        printf ("%i \n", n);
     }
 }
