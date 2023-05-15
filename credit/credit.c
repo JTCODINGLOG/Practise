@@ -8,9 +8,9 @@ int main(void)
     {
         number = get_long ("Number: ");
     }
-    while (3999999999999 > number);
+    while (3999999999999 > number > 10000000000000000);
 
-    
+
     //long number = get_long ("Number: ");
     long number1;
     long number2;
