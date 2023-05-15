@@ -3,12 +3,13 @@
 
 int main(void)
 {
-    long number;
-    do
-    {
-        number = get_long ("Number: ");
-    }
-    while (999999999999 > number > 10000000000000000);
+    //get number
+    long number = get_long ("Number: ");
+
+    //counting
+    
+
+
 
     //number extraction
     int n1;
