@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    int i = 3999999999999;
+    long number;
     do
     {
-        long number = get_long ("Number: ");
+        number = get_long ("Number: ");
     }
-    while (i > number)
+    while (3999999999999 > number);
 }
