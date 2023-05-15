@@ -12,7 +12,7 @@ int main(void)
     while (c > 0)
     {
         c = c/10;
-        i++
+        i++;
     }
 
 
