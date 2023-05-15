@@ -14,4 +14,8 @@ int main(void)
     n2 = number %100/10;
     printf ("%i", n2);
 
+    int n4;
+    n4 = number %10000/1000;
+    printf ("%i", n4);
+
 }
