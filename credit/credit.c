@@ -16,12 +16,13 @@ int main(void)
     }
 
     //checking lenght
-    if (i < 13 || i > 16)
+    if (i < 13 || i > 16 || i==14)
     {
         printf("INVALID \n");
+        return 0;
     }
 
-    
+
 
 
 
