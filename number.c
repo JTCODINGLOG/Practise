@@ -27,4 +27,11 @@ int main(void)
 
         printf ("number is %i \n", n);
     }
+
+    {
+    for (int x = 1 ; x<=5 ; x++)
+       int a_x;
+    return 0;
+}
+
 }
