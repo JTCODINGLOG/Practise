@@ -30,12 +30,13 @@ int main(void)
     int sum2 = 0;
     int d1 = 0;
     int d2 = 0;
+    int total = 0;
     do
     {
     //sum1
     n1 = n % 10;
     sum1 = sum1 + n1;
-    n = n/10;
+    n = n / 10;
 
     //sum2
     n2 = n % 10;
@@ -45,7 +46,7 @@ int main(void)
     }
     while ( n > 0);
 
-    int total = sum1 + sum2;
+    total = sum1 + sum2;
 
     //total last digit
     if (total % 10 != 0)
