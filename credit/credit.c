@@ -8,7 +8,7 @@ int main(void)
     {
         long number = get_long ("Number: ");
     }
-    while (i < )
+    while (i > number)
 
     //long number = get_long ("Number: ");
     long number1;
