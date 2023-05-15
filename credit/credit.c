@@ -3,8 +3,12 @@
 
 int main(void)
 {
-    
-
+    int i = 3999999999999
+    do
+    {
+        long number = get_long ("Number: ");
+    }
+    while (i < )
 
     //long number = get_long ("Number: ");
     long number1;
