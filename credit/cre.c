@@ -47,5 +47,10 @@ int main(void)
 
     int total = sum1 + sum2;
 
-    
+    //total last digit
+    if (total % 10 != 0)
+    {
+        printf ("INVALID \n");
+        return 0;
+    }
 }
