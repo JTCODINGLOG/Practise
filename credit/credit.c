@@ -55,7 +55,8 @@ int main(void)
     }
 
     //find first 2 digits
-    
+    int first = number / (10^i);
+    int second = number 
 
 
 
