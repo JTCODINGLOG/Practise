@@ -8,13 +8,13 @@ int main(void)
 
     //counting
     int i = 0;
-    long c = number;
-    while (c > 0)
+
+    while (number > 0)
     {
-        c = c/10;
+        number = number/10;
         i++;
     }
-    printf (%i)
+    printf ("the number of digits for %li is %i", number, i);
 
 
 
