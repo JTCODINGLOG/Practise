@@ -62,7 +62,7 @@ int main(void)
     {
         printf("MASTERCARD \n");
     }
-    else if ((start / 10 == 3) )
+    else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7) && (number) )
 
 
 
