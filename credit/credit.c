@@ -9,7 +9,7 @@ int main(void)
     //counting
     int i = 0;
     long c = number;
-    while (c >10)
+    while (c > 0)
     {
         c = c/10;
         i++
