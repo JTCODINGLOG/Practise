@@ -18,10 +18,13 @@ int main(void)
     //int n3;
     //n3 = number %1000/100;
 
+    int d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16;
 
     for (long i = 1; i < number ; i=i*10 )
     {
         int n = number %(i*10) / i;
+        d1 = n;
+        
         printf ("number is %i \n", n);
     }
 }
