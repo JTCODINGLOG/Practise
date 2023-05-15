@@ -3,6 +3,9 @@
 
 int main(void)
 {
+    
+
+
     //long number = get_long ("Number: ");
     long number1;
     long number2;
