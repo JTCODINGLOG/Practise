@@ -42,9 +42,20 @@ int main(void)
     d1 = n2 % 10;
     d2 = n2 / 10;
     sum2 = sum2 + d1 +d2;
-
-
     }
+    while ( n > 0);
+
+    int total = sum1 + sum2;
+
+    //total last digit
+
+    if ((total % 10)) != 0)
+    {
+        printf ("INVALID \n")
+        return 0;
+    }
+
+    
 
 
 
