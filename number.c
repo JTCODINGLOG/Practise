@@ -22,6 +22,6 @@ int main(void)
         printf ("%i\n", d_x);
     }
 
-    printf ("%i", d_1);
+    printf ("/n/n/n%i", d_1);
 
 }
