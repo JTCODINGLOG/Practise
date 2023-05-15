@@ -17,8 +17,10 @@ int main(void)
     int n3;
     n3 = number %1000/100;
 
-    for (int i = 1;  ; i*10 )
+    int n;
+    for (int i = 1; n==number ; i*10 )
     {
-        int n = number %(i*10) / i;
+        n = number %(i*10) / i;
+        printf ("%i", n);
     }
 }
