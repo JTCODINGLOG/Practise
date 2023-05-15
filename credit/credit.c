@@ -34,7 +34,7 @@ int main(void)
     {
     //sum1
     n1 = n % 10;
-    n = n/10;
+    n = n / 10;
     sum1 = sum1 + n1;
 
     //sum2
