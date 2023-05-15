@@ -12,5 +12,8 @@ int main(void)
 
     int n2;
     n2 = (number %100 - number %10)/10;
-    printf ("Numero 2 es %i \n", n2);
+    int n3;
+    n3 = (number %1000 - number %100)/100;
+    printf ("%i", n3);
+
 }
