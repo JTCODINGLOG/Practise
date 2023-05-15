@@ -14,7 +14,15 @@ int main(void)
         c = c/10;
         i++;
     }
+
+    //checking lenght
+    if (i < 13 || i > 16)
+    {
+        printf("INVALID \n");
+    }
+
     
+
 
 
 
