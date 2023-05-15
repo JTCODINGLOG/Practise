@@ -10,6 +10,13 @@ int main(void)
     }
     while (3999999999999 > number > 10000000000000000);
 
+    //number extraction
+    int n1;
+
+
+    int n2;
+    n2 = number
+
 
     //long number = get_long ("Number: ");
     long number1;
