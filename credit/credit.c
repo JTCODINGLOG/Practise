@@ -40,6 +40,7 @@ int main(void)
     //sum2
     n2 = n % 10;
     n = n/10;
+    n2 = n2 * 2;
     d1 = n2 % 10;
     d2 = n2 / 10;
     sum2 = sum2 + d1 +d2;
