@@ -10,10 +10,8 @@ int main(void)
     }
     while (3999999999999 > number);
 
-    int n2;
-    n2 = (number %100 - number %10)/10;
-    int n3;
-    n3 = (number %1000 - number %100)/100;
-    printf ("%i", n3);
+    int n1;
+    n1 = number %10;
+    printf ("%i", n1);
 
 }
