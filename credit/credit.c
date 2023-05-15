@@ -8,7 +8,7 @@ int main(void)
     {
         number = get_long ("Number: ");
     }
-    while (3999999999999 > number > 10000000000000000);
+    while (999999999999 > number > 10000000000000000);
 
     //number extraction
     int n1;
