@@ -19,6 +19,6 @@ int main(void)
 
     for (int i = 1;  ; i*10 )
     {
-        int n = number %(i*10) / i
+        int n = number %(i*10) / i;
     }
 }
