@@ -41,7 +41,7 @@ int get_cents(void)
     {
         int cents = get_int ("Cents: ");
     }
-    while ( cents > 0);
+    while ( cents < 0);
     return 0;
 }
 
