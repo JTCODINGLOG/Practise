@@ -49,22 +49,22 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     int quarters;
-    int rest;
     quarters = cents / 25;
-    rest = cents % 25;
-    return quarters, rest;
+    return quarters;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    int dimes;
+    dimes = cents / 10;
+    return dimes;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    int nickels;
+    nickels = cents / 5;
+    return nickels;
 }
 
 int calculate_pennies(int cents)
