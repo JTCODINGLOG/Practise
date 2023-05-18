@@ -49,8 +49,10 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     int quarters;
-    quarters = cents / 25
-    return printf ("%i", quarters);
+    int rest;
+    quarters = cents / 25;
+    rest = cents % 25;
+    return quarters, rest;
 }
 
 int calculate_dimes(int cents)
