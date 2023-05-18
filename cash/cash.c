@@ -50,7 +50,7 @@ int calculate_quarters(int cents)
 {
     int quarters;
     quarters = cents / 25
-    return 0;
+    return printf ("%i", quarters);
 }
 
 int calculate_dimes(int cents)
