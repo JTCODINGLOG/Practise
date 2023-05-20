@@ -9,5 +9,8 @@ int main(void)
     for (int i = 0; i < strlen(s); i++)
     {
         if (s[i] >= 'a' && s[i] <= 'z')
+        {
+            printf(")
+        }
     }
 }
