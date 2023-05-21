@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-bool valid_triangle (float a, float b, float c);
+string valid_triangle (float a, float b, float c);
 
 int main(void)
 {
@@ -9,26 +9,26 @@ int main(void)
     float side_b = get_float ("Insert side b: ");
     float side_c = get_float ("Insert side c: ");
 
-    bool valid_triangle (float a, float b, float c);
+    string valid_triangle (float a, float b, float c);
 
 }
 
-bool valid_triangle (float a, float b, float c)
+string valid_triangle (float a, float b, float c)
 {
     if (a>0 && b>0 && c>0)
     {
-        if (a+b>c || a+c>b || b+c>a)
+        if (a + b >= c || a + c >= b || b +c >= a)
         {
-            return true;
+            return printf ("Yes");
         }
         else
         {
-            return false;
+            return printf ("false");
         }
     }
     else
     {
-        return false;
+        return printf ("false");
     }
 
 }
