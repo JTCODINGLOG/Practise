@@ -19,16 +19,16 @@ bool valid_triangle (float a, float b, float c)
     {
         if (a+b>c || a+c>b || b+c>a)
         {
-            return True;
+            return true;
         }
         else
         {
-            return False;
+            return false;
         }
     }
     else
     {
-        return False;
+        return false;
     }
 
 }
