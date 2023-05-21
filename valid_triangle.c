@@ -10,7 +10,7 @@ int main(void)
 
 bool valid_triangle
 {
-    if(a+b>c)
+    if(a+b>ck)
     return True
     else
     return False
