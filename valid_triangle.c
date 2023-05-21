@@ -19,16 +19,19 @@ string valid_triangle (float a, float b, float c)
     {
         if (a + b >= c || a + c >= b || b +c >= a)
         {
-            return printf ("Yes");
+            string x = printf ("Yes");
+            return x;
         }
         else
         {
-            return printf ("false");
+            string y = printf ("No");
+            return y;
         }
     }
     else
     {
-        return printf ("false");
+        string y = printf ("No");
+            return y;
     }
 
 }
