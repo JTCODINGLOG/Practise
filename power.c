@@ -6,8 +6,8 @@ int main(void)
     int n = get_int ("Size: ");
 
     int powers[n];
-    for (int i = 1, j = 0; j < n; i = i*2)
+    for (int i = 1, j = 0; j < n; i = i*2, j++)
     {
-        printf( "%i", i );
+        printf( "%i\n", i );
     }
 }
