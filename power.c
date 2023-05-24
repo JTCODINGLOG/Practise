@@ -3,12 +3,11 @@
 
 int main(void)
 {
-    int n = get_size ("Size: ");
+    int n = get_int ("Size: ");
 
     int powers[n];
-
-    for (int i = 0; i < n; i++)
+    for (int i = 1, j = 0; j < n; i = i*2)
     {
-        
+        printf( "%i", i );
     }
 }
