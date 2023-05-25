@@ -13,7 +13,7 @@ int main(void)
     int power[n];
 
     power[0] = 1;
-    printf("%i", power[0]);
+    printf("%i\n", power[0]);
 
     for (int i = 1; i < n; i++)
     {
