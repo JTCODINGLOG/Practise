@@ -16,6 +16,6 @@ int main(void)
         power[i] = 1
         power[i] = 2 * power[i - 1];
 
-        printf( "%i\n", i );
+        printf( "%i\n", power [i] );
     }
 }
