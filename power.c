@@ -17,5 +17,5 @@ int main(void)
         printf( "%i\n", powers[j] );
     }
 
-    printf("%i"; powers[n]);
+    printf("%i", powers[2]);
 }
