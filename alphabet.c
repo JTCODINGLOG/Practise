@@ -4,13 +4,13 @@
 
 int main(void)
 {
-    string low = get_string ("insert string: ")
+    string low = get_string ("insert string: ");
 
-    int n = 
+    int n =
 
-    for(int i = 0; )
+    for(int i = 0; i < n; i++)
     {
-
+        if
     }
-    if ()
+    
 }
