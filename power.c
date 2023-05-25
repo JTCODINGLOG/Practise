@@ -16,6 +16,4 @@ int main(void)
         powers[j] = i;
         printf( "%i\n", powers[j] );
     }
-
-    printf("%i\n", powers[n-1]);
 }
