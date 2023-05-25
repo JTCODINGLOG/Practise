@@ -11,10 +11,10 @@ int main(void)
 
     for(int i = 0; i < n - 1; i++)
     {
-        if (islower (int low[i]))
-        printf ("%s", low[i]);
+        if (islower ( low[i] ))
+        printf ("%c\n", low[i]);
         else
-        printf ("upper");
+        printf ("No\n");
     }
 
 }
