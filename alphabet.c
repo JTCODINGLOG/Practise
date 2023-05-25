@@ -12,12 +12,17 @@ int main(void)
     for(int i = 0; i < n - 1; i++)
     {
         if (islower ( low[i] ))
+        {
             if (low[i] < low[i+1])
             printf ("Yes");
             else
             printf ("No, it does not follow alphabetical order\n");
+        }
         else
-        printf ("No, there are blocks\n");
+        {
+            printf ("No, there are blocks\n");
+        }
+        return 0;
     }
 
 }
