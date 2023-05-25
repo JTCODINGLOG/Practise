@@ -15,7 +15,7 @@ int main(void)
             if (low[i] < low[i+1])
             printf ("Yes");
             else
-            printf ("No, is does not follow alphabetical order\n");
+            printf ("No, it does not follow alphabetical order\n");
         else
         printf ("No, there are blocks\n");
     }
