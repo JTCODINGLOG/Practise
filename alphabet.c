@@ -4,10 +4,11 @@
 
 int main(void)
 {
-    string low;
-    do
+    string low = get_string ("insert string: ")
+
+    for(int i = 0; )
     {
-        low= get_string ("insert lowercase string")
+
     }
-    while (isupper)
+    if ()
 }
