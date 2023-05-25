@@ -14,9 +14,13 @@ int main(void)
         if (islower ( low[i] ))
         {
             if (low[i] < low[i+1])
-            printf ("Yes");
+            {
+                printf ("Yes, lowercase and follows alphabetical order\n");
+            }
             else
-            printf ("No, it does not follow alphabetical order\n");
+            {
+                printf ("No, it does not follow alphabetical order\n");
+            }
         }
         else
         {
