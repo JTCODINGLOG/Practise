@@ -11,8 +11,8 @@ int main(void)
 
     for(int i = 0; i < n - 1; i++)
     {
-        if (islower low[0])
-        
+        if (islower (char low[0]))
+
     }
 
 }
