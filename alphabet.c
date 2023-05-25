@@ -9,5 +9,5 @@ int main(void)
     {
         low= get_string ("insert lowercase string")
     }
-    while 
+    while (isupper)
 }
