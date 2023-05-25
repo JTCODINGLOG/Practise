@@ -10,10 +10,10 @@ int main(void)
     }
     while (n < 1);
 
+    power[0] = 1
     int powers[n];
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i =< n; i++)
     {
-        power[i] = 1
         power[i] = 2 * power[i - 1];
 
         printf( "%i\n", power [i] );
