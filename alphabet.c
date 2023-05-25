@@ -6,6 +6,8 @@ int main(void)
 {
     string low = get_string ("insert string: ")
 
+    int n = 
+
     for(int i = 0; )
     {
 
