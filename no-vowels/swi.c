@@ -29,7 +29,7 @@ string replace (string N)
     for(int i = 0; i < n; i)
     {
          switch (N[i])
-         {case 1: (N[i] == 'a')
+         {case a: (N[i] == 'a')
          {
             N[i] = 6;
          }
