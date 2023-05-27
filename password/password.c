@@ -30,7 +30,7 @@ bool valid(string password)
     {
         if (isupper ( password[i]))
         {
-            return
+            return 
         }
         else if (islower ( password[i]))
         {
