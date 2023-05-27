@@ -11,9 +11,13 @@ int replace;
 
 int main(int argc, string argv[])
 {
-    if (argc =! 1)
+    if (argc != 1)
     {
-        printf (")
+        printf ("please, insert just one command line argument")
+    }
+    else
+    {
+    return 1;
     }
 }
 
