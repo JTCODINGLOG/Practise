@@ -49,7 +49,7 @@ string replace (string argv[1])
          }
     }
 
-    return printf ( "%s\n", string argv[1]);
+    return printf ( "%s\n", argv[1]);
 
 
 }
