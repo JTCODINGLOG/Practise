@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 }
 
-int replace (string argv[1])
+replace (string argv[1])
 {
     int n = strlen(argv[1]);
 
