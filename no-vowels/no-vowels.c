@@ -13,7 +13,7 @@ int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        replace(string argv[1]);
+        int replace(string argv[1]);
     }
     else
     {
