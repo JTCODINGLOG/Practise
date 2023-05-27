@@ -25,12 +25,13 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    bool check
     int lenght = strlen (password);
     for (int i = 0; i < lenght; i++)
     {
         if (isupper ( password[i]))
         {
-            return 
+            return
         }
         else if (islower ( password[i]))
         {
