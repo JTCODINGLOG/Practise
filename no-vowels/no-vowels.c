@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(string N);
+string replace(string input);
 
 int main(int argc, string argv[])
 {
@@ -22,29 +22,29 @@ int main(int argc, string argv[])
     }
 }
 
-string replace (string N)
+string replace (string input)
 {
-    int n = strlen(N);
+    int n = strlen(input);
 
-    for(int i = 0; i < n; i)
+    for(int i = 0; i < n; i++)
     {
-         if (N[i] == 'a')
+         if (input[i] == 'a')
          {
-            N[i] = 6;
+            input[i] = 6;
          }
-         else if (N[i] == 'e')
+         else if (input[i] == 'e')
          {
-            N[i] = 3;
+            input[i] = 3;
          }
-         else if (N[i] == 'i')
+         else if (input[i] == 'i')
          {
-            N[i] = 1;
+            input[i] = 1;
          }
-         else if (N[i] == 'o')
+         else if (input[i] == 'o')
          {
-            N[i] = 0;
+            input[i] = 0;
          }
          return 0;
     }
-    return N;
+    return input;
 }
