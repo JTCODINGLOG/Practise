@@ -30,6 +30,7 @@ bool valid(string password)
     {
         if (isupper ( charpassword[i]))
         islower
+        isdigit
     }
 
     return false;
