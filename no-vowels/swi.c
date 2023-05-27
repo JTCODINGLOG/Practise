@@ -46,5 +46,6 @@ string replace (string N)
             N[i] = '0';
             break;
         }
+    }
     return N;
 }
