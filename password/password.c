@@ -25,10 +25,9 @@ int main(void)
 bool valid(string password)
 {
     int lenght = strlen (password);
-
     for (int i = 0; i < lenght; i++)
     {
-        
+        password[i] ==
     }
 
     return false;
