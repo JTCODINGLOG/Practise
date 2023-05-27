@@ -30,19 +30,19 @@ string replace (string input)
     {
          if (input[i] == 'a')
          {
-            input[i] = 6;
+            input[i] = '6';
          }
          else if (input[i] == 'e')
          {
-            input[i] = 3;
+            input[i] = '3';
          }
          else if (input[i] == 'i')
          {
-            input[i] = 1;
+            input[i] = '1';
          }
          else if (input[i] == 'o')
          {
-            input[i] = 0;
+            input[i] = '0';
          }
     }
     return input;
