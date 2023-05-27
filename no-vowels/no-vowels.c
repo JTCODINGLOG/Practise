@@ -48,6 +48,6 @@ string replace (string N)
          {
             return 0;
          }
-    return N;
     }
+    return N;
 }
