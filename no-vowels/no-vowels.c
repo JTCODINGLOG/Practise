@@ -11,8 +11,10 @@ int replace;
 
 int main(int argc, string argv[])
 {
-
-    return 1;
+    if (argc =! 1)
+    {
+        printf (")
+    }
 }
 
 int replace (string argv[1])
