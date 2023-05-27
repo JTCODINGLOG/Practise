@@ -13,7 +13,7 @@ int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        int replace(string argv[1]);
+        printf ("%s\n", replace())
     }
     else
     {
@@ -49,8 +49,6 @@ int replace (string argv[1])
             return 0;
          }
     }
-
-    return printf ( "%s\n", argv[1]);
 
 
 }
