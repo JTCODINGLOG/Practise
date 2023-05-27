@@ -13,7 +13,7 @@ int main(int argc, string argv[])
 {
     if (argc != 1)
     {
-        printf ("please, insert just one command line argument")
+        printf ("please, insert just one command line argument");
     }
     else
     {
