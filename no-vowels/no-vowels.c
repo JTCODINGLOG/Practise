@@ -14,10 +14,13 @@ int main(int argc, string argv[])
     return 1;
 }
 
-int replace [argv[1]]
+int replace (string argv[1])
 {
     int n = strlen(argv[1]);
-    for(int i = 0, i < arg[1][n-1], i++)
-    argv[1][i]
+    int i = 0;
+    for(i = 0, i < n, i++)
+    {
+        argv[1][i]
+    }
 
 }
