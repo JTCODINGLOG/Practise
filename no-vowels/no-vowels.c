@@ -7,13 +7,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int replace(string N);
+string replace(string N);
 
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf ("%i\n", replace(argv[1]));
+        printf ("%s\n", replace(argv[1]));
     }
     else
     {
@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     }
 }
 
-int replace (string N)
+string replace (string N)
 {
     int n = strlen(N);
 
@@ -50,6 +50,4 @@ int replace (string N)
          }
     return N;
     }
-
-
 }
