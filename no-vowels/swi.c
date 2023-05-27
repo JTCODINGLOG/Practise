@@ -8,7 +8,6 @@
 #include <string.h>
 
 string replace(string N);
-
 int main(int argc, string argv[])
 {
     if (argc == 2)
