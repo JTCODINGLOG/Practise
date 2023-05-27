@@ -17,6 +17,7 @@ int main(int argc, string argv[])
 int replace (string argv[1])
 {
     int n = strlen(argv[1]);
+
     for(int i = 0, i < n, i++)
     {
          if (argv[1][i] == 'a')
@@ -40,5 +41,7 @@ int replace (string argv[1])
             return argv[1][i]
          }
     }
+    
+    return printf ( "%s", argv[1]);
 
 }
