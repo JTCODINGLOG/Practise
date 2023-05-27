@@ -26,8 +26,7 @@ string replace (string N)
 {
     int n = strlen(N);
 
-    int i = 0;
-    do
+    for(int i = 0; i < n; i)
     {
          if (N[i] == 'a')
          {
@@ -47,9 +46,8 @@ string replace (string N)
          }
          else
          {
-            i++;
+            return 0;
          }
     }
-    while (i < n);
     return N;
 }
