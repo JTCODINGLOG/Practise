@@ -25,7 +25,7 @@ string replace (string argv[1])
 {
     int n = strlen(argv[1]);
 
-    for(int i = 0, i < n, i++)
+    for(int i = 0; i < n; i++)
     {
          if (argv[1][i] == 'a')
          {
