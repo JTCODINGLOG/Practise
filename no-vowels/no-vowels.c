@@ -44,10 +44,7 @@ string replace (string N)
          {
             N[i] = 0;
          }
-         else
-         {
-            return 0;
-         }
+         return 0;
     }
     return N;
 }
