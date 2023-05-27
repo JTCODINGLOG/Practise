@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int replace;
+string replace(argv[1]);
 
 int main(int argc, string argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 }
 
-replace (string argv[1])
+string replace (string argv[1])
 {
     int n = strlen(argv[1]);
 
