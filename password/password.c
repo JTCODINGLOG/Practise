@@ -5,6 +5,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 bool valid(string password);
 
@@ -27,7 +28,7 @@ bool valid(string password)
     int lenght = strlen (password);
     for (int i = 0; i < lenght; i++)
     {
-        password[i] ==
+        if (isupper ( charpassword[i]))
     }
 
     return false;
