@@ -7,14 +7,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int replace(string argv[1]);
+int replace(string N);
 
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        string N = argv[1]
-        printf ("%s\n", replace(N))
+        printf ("%s\n", replace(argv[1]))
     }
     else
     {
@@ -23,27 +22,27 @@ int main(int argc, string argv[])
     }
 }
 
-int replace (string argv[1])
+int replace (string N)
 {
-    int n = strlen(argv[1]);
+    int n = strlen(N);
 
     for(int i = 0; i < n; i++)
     {
-         if (argv[1][i] == 'a')
+         if (N[i] == 'a')
          {
-            argv[1][i] = 6;
+            N[i] = 6;
          }
-         if (argv[1][i] == 'e')
+         if (N[i] == 'e')
          {
-            argv[1][i] = 3;
+            N[i] = 3;
          }
-         if (argv[1][i] == 'i')
+         if (N[i] == 'i')
          {
-            argv[1][i] = 1;
+            N[i] = 1;
          }
-         if (argv[1][i] == 'o')
+         if (N[i] == 'o')
          {
-            argv[1][i] = 0;
+            N[i] = 0;
          }
          else
          {
