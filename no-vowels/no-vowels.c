@@ -15,5 +15,8 @@ int main(int argc, string argv[])
 
 int replace [argv[1]]
 {
-    
+    n
+    for(int i = 0, i < arg[1][n-1], i++)
+    argv[1][i]
+
 }
