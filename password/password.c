@@ -25,7 +25,11 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    bool check
+    bool chupper = False;
+    bool chlower = False;
+    bool chdigit = False;
+    bool chsymbol = False;
+
     int lenght = strlen (password);
     for (int i = 0; i < lenght; i++)
     {
