@@ -7,13 +7,13 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(string argv[1]);
+int replace(string argv[1]);
 
 int main(int argc, string argv[])
 {
-    if (argc != 1)
+    if (argc != 2)
     {
-        printf ("please, insert just one command line argument");
+        printf ("please, insert just one command line argument\n");
     }
     else
     {
@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 }
 
-string replace (string argv[1])
+int replace (string argv[1])
 {
     int n = strlen(argv[1]);
 
