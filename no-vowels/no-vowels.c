@@ -6,7 +6,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int replace
+
 int main(int argc, string argv[])
+{
+    return 1
+}
+
+int replace [argv[1]]
 {
     
 }
