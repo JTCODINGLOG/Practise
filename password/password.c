@@ -29,13 +29,21 @@ bool valid(string password)
     for (int i = 0; i < lenght; i++)
     {
         if (isupper ( charpassword[i]))
-        {}
+        {
+            return u
+        }
         else if (islower ( charpassword[i]))
-        {}
+        {
+            return l
+        }
         else if (isdigit ( charpassword[i]))
-        {}
+        {
+            return d
+        }
         else if (ispunct ( charpassword[i]))
-        {}
+        {
+            return p
+        }
 
     }
 
