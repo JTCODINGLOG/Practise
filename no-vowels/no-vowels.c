@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(argv[1]);
+string replace(string argv[1]);
 
 int main(int argc, string argv[])
 {
