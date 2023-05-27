@@ -29,6 +29,7 @@ bool valid(string password)
     for (int i = 0; i < lenght; i++)
     {
         if (isupper ( charpassword[i]))
+        
     }
 
     return false;
