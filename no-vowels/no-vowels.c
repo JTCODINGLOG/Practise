@@ -11,6 +11,7 @@ int replace;
 
 int main(int argc, string argv[])
 {
+
     return 1;
 }
 
@@ -41,7 +42,7 @@ int replace (string argv[1])
             return argv[1][i]
          }
     }
-    
-    return printf ( "%s", argv[1]);
+
+    return printf ( "%s\n", argv[1]);
 
 }
