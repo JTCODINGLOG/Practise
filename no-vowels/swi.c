@@ -28,9 +28,8 @@ string replace (string N)
 
     for(int i = 0; i < n; i)
     {
-         switch 
-
-         if (N[i] == 'a')
+         switch (N[i])
+         {case 1: (N[i] == 'a')
          {
             N[i] = 6;
          }
