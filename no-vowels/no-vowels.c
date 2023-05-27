@@ -46,7 +46,7 @@ string replace (string N)
          }
          else
          {
-            return 0;
+            return N[i];
          }
     }
     return N;
