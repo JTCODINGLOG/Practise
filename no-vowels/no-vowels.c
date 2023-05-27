@@ -44,7 +44,6 @@ string replace (string input)
          {
             input[i] = 0;
          }
-         return 0;
     }
     return input;
 }
