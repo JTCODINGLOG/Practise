@@ -28,19 +28,19 @@ bool valid(string password)
     int lenght = strlen (password);
     for (int i = 0; i < lenght; i++)
     {
-        if (isupper ( charpassword[i]))
+        if (isupper ( password[i]))
         {
-            return u
+            return
         }
-        else if (islower ( charpassword[i]))
+        else if (islower ( password[i]))
         {
             return l
         }
-        else if (isdigit ( charpassword[i]))
+        else if (isdigit ( password[i]))
         {
             return d
         }
-        else if (ispunct ( charpassword[i]))
+        else if (ispunct ( password[i]))
         {
             return p
         }
