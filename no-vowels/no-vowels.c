@@ -5,17 +5,18 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int replace
 
 int main(int argc, string argv[])
 {
-    return 1
+    return 1;
 }
 
 int replace [argv[1]]
 {
-    n
+    int n = strlen(argv[1]);
     for(int i = 0, i < arg[1][n-1], i++)
     argv[1][i]
 
