@@ -32,15 +32,15 @@ string replace (string N)
          {
             N[i] = 6;
          }
-         if (N[i] == 'e')
+         else if (N[i] == 'e')
          {
             N[i] = 3;
          }
-         if (N[i] == 'i')
+         else if (N[i] == 'i')
          {
             N[i] = 1;
          }
-         if (N[i] == 'o')
+         else if (N[i] == 'o')
          {
             N[i] = 0;
          }
