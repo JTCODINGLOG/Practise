@@ -26,26 +26,25 @@ string replace (string N)
 {
     int n = strlen(N);
 
-    for(int i = 0; i < n; i)
+    for(int i = 0; i < n; i++)
     {
          switch (N[i])
-         {case a: (N[i] == 'a')
          {
-            N[i] = 6;
-         }
-         else if (N[i] == 'e')
-         {
-            N[i] = 3;
-         }
-         else if (N[i] == 'i')
-         {
-            N[i] = 1;
-         }
-         else if (N[i] == 'o')
-         {
-            N[i] = 0;
-         }
-         return 0;
-    }
+            case 'a':
+            N[i] = '6';
+            break;
+
+            case 'e':
+            N[i] = '3';
+            break;
+
+            case 'i':
+            N[i] = '1';
+            break;
+
+            case'o':
+            N[i] = '0';
+            break;
+        }
     return N;
 }
