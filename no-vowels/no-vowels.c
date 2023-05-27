@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int replace
+int replace;
 
 int main(int argc, string argv[])
 {
@@ -17,10 +17,28 @@ int main(int argc, string argv[])
 int replace (string argv[1])
 {
     int n = strlen(argv[1]);
-    int i = 0;
-    for(i = 0, i < n, i++)
+    for(int i = 0, i < n, i++)
     {
-        argv[1][i]
+         if (argv[1][i] == 'a')
+         {
+            argv[1][i] = 6;
+         }
+         if else(argv[1][i] == 'e')
+         {
+            argv[1][i] = 3;
+         }
+         if else(argv[1][i] == 'i')
+         {
+            argv[1][i] = 1;
+         }
+         if else(argv[1][i] == 'o')
+         {
+            argv[1][i] = 0;
+         }
+         else
+         {
+            return argv[1][i]
+         }
     }
 
 }
