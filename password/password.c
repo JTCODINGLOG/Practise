@@ -52,7 +52,7 @@ bool valid(string password)
     }
     if (chupper == true && chlower == true && chdigit == true && chsymbol == true)
     {
-        return true
+        return true;
     }
 
     return false;
