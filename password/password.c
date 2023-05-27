@@ -25,32 +25,33 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    bool chupper = False;
-    bool chlower = False;
-    bool chdigit = False;
-    bool chsymbol = False;
+    bool chupper = false;
+    bool chlower = false;
+    bool chdigit = false;
+    bool chsymbol = false;
 
     int lenght = strlen (password);
     for (int i = 0; i < lenght; i++)
     {
         if (isupper ( password[i]))
         {
-            return
+            chupper = true;
         }
         else if (islower ( password[i]))
         {
-            return l
+            chlower = true;
         }
         else if (isdigit ( password[i]))
         {
-            return d
+            chdigit = true;
         }
         else if (ispunct ( password[i]))
         {
-            return p
+            chsymbol = true;
         }
-
     }
+    if (chupper == true && chlower == true && chdigit == true && chsymbol == true)
+    {}
 
     return false;
 }
