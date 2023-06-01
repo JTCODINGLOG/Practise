@@ -38,5 +38,5 @@ string alpha (string word)
             printf ("This is not an alphabetical key");
         }
     }
-    return word;
+    return ;
 }
