@@ -5,7 +5,7 @@
 
 int main(int argc, string argv[])
 {
-    if (strlen(argv[1]) == 26 && argc == 2)
+    if (strlen(argv[1]) == 26 && argc == 2 && isalpha (argv[1]))
     {
         string plaintext = get_string ("plaintext: ");
     }
