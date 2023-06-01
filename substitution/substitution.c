@@ -5,7 +5,11 @@
 
 int main(int argc, string argv[])
 {
-    if (strlen(argv[1]) == 26 && argc == 2)
+    if (argc ==1)
+    {
+        printf ("Usage: ./substitution key\n");
+    }
+    else if (strlen(argv[1]) == 26 && argc == 2)
     {
         string plaintext = get_string ("plaintext: ");
     }
