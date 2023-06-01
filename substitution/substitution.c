@@ -6,21 +6,21 @@
 //Get and validate de key
 int main(int argc, string argv[])
 {
-    if (argc ==1)
+    if (argc != 2)
     {
         printf ("Usage: ./substitution key\n");
     }
-    else if (strlen(argv[1]) == 26 && argc == 2)
-    {
-        string plaintext = get_string ("plaintext: ");
-    }
-    else if (strlen(argv[1]) != 26 && argc == 2)
+    else if (strlen(argv[1]) != 26)
     {
         printf ("Key must contain 26 characters\n");
     }
+    else if (alpha (argv[1]) = false)
+    else if
+
+
     else
     {
-        printf ("Usage: ./substitution key\n");
+        string plaintext = get_string ("plaintext: ");
     }
 
 }
@@ -47,7 +47,7 @@ string repeat (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
-    
+
     }
     return ;
 }
