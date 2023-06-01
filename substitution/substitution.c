@@ -26,10 +26,12 @@ bool alpha (string word)
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
         if (isalpha(word[i]))
-        
+        {
+            r
+        }
         else
         {
-            return printf ("This is not an alphabetical key")
+            return printf ("This is not an alphabetical key");
         }
 
     }
