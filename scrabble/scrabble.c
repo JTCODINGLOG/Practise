@@ -33,6 +33,8 @@ int main(void)
     }
 }
 
+// TODO: Compute and return score for string
+
 int compute_score(string word)
 {
     int sum = 0;
@@ -52,6 +54,6 @@ int compute_score(string word)
         }
     return sum;
 }
-    // TODO: Compute and return score for string
+
 
 
