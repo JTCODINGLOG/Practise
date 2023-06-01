@@ -27,13 +27,19 @@ int compute_score(string word)
     for (int i = 0, l = strlen(word); i < l; i++ )
         {
             word[i] = toupper (word[i]);
+            
             if (65 > int word[i] || int word[i] > 90)
             {
                 sum += 0;
             }
             else
+            {
                 int n = int word[i]-65;
                 sum += POINTS[n];
+            }
         }
-    // TODO: Compute and return score for string
+    return sum;
 }
+    // TODO: Compute and return score for string
+
+
