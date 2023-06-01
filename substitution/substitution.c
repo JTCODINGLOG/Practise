@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+//Get and validate de key
 int main(int argc, string argv[])
 {
     if (argc ==1)
