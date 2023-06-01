@@ -27,7 +27,7 @@ bool alpha (string word)
     {
         if (isalpha(word[i]))
         {
-            r
+            return ;
         }
         else
         {
