@@ -5,9 +5,9 @@
 
 int main(int argc, string argv[])
 {
-    if (int strlen(argv[1]) == 26 && argc == 2)
+    if (strlen(argv[1]) == 26 && argc == 2)
     {
-        string plaintext = get_string;
+        string plaintext = get_string ("plaintext: ");
     }
 
     else
