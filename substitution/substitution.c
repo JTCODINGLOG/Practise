@@ -23,15 +23,12 @@ int main(int argc, string argv[])
 //check is alphabetical
 bool alpha (word)
 {
-    do
-
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
         if (isalpha(word[i]))
-
         else
         {
-            return False
+            return printf ("This is not an alphabetical key")
         }
 
     }
