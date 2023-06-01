@@ -14,10 +14,14 @@ int main(int argc, string argv[])
     {
         printf ("Key must contain 26 characters\n");
     }
-    else if (alpha (argv[1]))
-    else if
-
-
+    else if (alpha (argv[1]) = false)
+    {
+        printf ("key must contain just alphabetical characters" )
+    }
+    else if (repeat (argv[1]))
+    {
+        printf ("Key contains repeated characters\n");
+    }
     else
     {
         string plaintext = get_string ("plaintext: ");
@@ -43,7 +47,7 @@ bool alpha (string word)
 }
 
 //check that any char is repeated
-string repeat (string word)
+bool repeat (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
