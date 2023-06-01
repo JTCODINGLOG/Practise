@@ -17,10 +17,18 @@ int main(int argc, string argv[])
 }
 
 //check is alphabetical
-int alpha (word)
+bool alpha (word)
 {
+    do
+
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
-        if
+        if (isalpha(word[i]))
+
+        else
+        {
+            return False
+        }
+
     }
 }
