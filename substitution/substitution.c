@@ -17,4 +17,10 @@ int main(int argc, string argv[])
 }
 
 //check is alphabetical
-int alpha
+int alpha (word)
+{
+    for ( int i = 0, n = strlen (word); i < n; i++)
+    {
+        if
+    }
+}
