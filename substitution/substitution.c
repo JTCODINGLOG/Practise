@@ -36,7 +36,7 @@ bool alpha (string word)
     {
         if (isalpha(word[i]))
         {
-            word[i] = true;
+            word[i] = 1;
         }
         else
         {
@@ -45,6 +45,11 @@ bool alpha (string word)
     }
     return word;
 }
+
+
+
+
+
 
 //check that any char is repeated
 bool repeat (string word)
