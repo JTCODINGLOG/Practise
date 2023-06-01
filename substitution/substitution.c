@@ -9,14 +9,15 @@ int main(int argc, string argv[])
     {
         string plaintext = get_string ("plaintext: ");
     }
-    if else (argc == 1 || argc > 2)
-    {
-        printf ("Usage: ./substitution key\n")
-    }
-    else
+    if else (strlen(argv[1]) != 26 && argc == 2)
     {
         printf ("Key must contain 26 characters\n");
     }
+    else (argc == 1 || argc > 2)
+    {
+        printf ("Usage: ./substitution key\n")
+    }
+
 }
 
 //check is alphabetical
