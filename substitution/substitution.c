@@ -26,11 +26,28 @@ int main(int argc, string argv[])
 }
 
 //check is alphabetical
-string alpha (string word)
+bool alpha (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
         if (isalpha(word[i]))
+        {
+            word[i] = true;
+        }
+        else
+        {
+            false;
+        }
+    }
+    return word;
+}
+
+//check that any char is repeated
+string repeat (string word)
+{
+    for ( int i = 0, n = strlen (word); i < n; i++)
+    {
+        if ((word[i]))
         {
             word[i] = toupper (word[i]);
         }
