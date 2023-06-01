@@ -23,7 +23,10 @@ int main(void)
 
 int compute_score(string word)
 {
-    for (i=)
+    for (int i=65, )
+    {
+        word[]
+    }
     for (int i = 0, l = strlen(word); i < l; i++ )
         {
             word[i] = toupper (word[i]);
