@@ -40,7 +40,7 @@ bool alpha (string word)
         }
         else
         {
-            false;
+            word[i] = 0;
         }
     }
     return word;
