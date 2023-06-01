@@ -21,18 +21,19 @@ int main(int argc, string argv[])
 }
 
 //check is alphabetical
-bool alpha (string word)
+string alpha (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
         if (isalpha(word[i]))
         {
-            toupper (word[i]);
+            word[i] = toupper (word[i]);
         }
         else
         {
-            return printf ("This is not an alphabetical key");
+            printf ("This is not an alphabetical key");
+            return 1;
         }
-
     }
+    return word;
 }
