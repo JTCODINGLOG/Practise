@@ -31,8 +31,7 @@ string alpha (string word)
         }
         else
         {
-            string notalpha = printf ("This is not an alphabetical key");
-            return notalpha;
+            printf ("This is not an alphabetical key");
         }
     }
     return word;
