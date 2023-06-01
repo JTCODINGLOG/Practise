@@ -37,6 +37,7 @@ bool alpha (string word)
         if (isalpha(word[i]))
         {
             word[i] = 1;
+            
         }
         else
         {
