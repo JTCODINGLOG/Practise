@@ -27,7 +27,7 @@ int compute_score(string word)
     for (int i = 0, l = strlen(word); i < l; i++ )
         {
             word[i] = toupper (word[i]);
-            
+
             if (65 > int word[i] || int word[i] > 90)
             {
                 sum += 0;
