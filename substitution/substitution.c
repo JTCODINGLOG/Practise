@@ -47,14 +47,7 @@ string repeat (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
-        if ((word[i]))
-        {
-            word[i] = toupper (word[i]);
-        }
-        else
-        {
-            printf ("This is not an alphabetical key");
-        }
+    
     }
     return ;
 }
