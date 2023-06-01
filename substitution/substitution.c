@@ -13,9 +13,9 @@ int main(int argc, string argv[])
     {
         printf ("Key must contain 26 characters\n");
     }
-    else (argc == 1 || argc > 2)
+    else (argc == 1 || argc > 2);
     {
-        printf ("Usage: ./substitution key\n")
+        printf ("Usage: ./substitution key\n");
     }
 
 }
