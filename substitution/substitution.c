@@ -37,6 +37,7 @@ bool alpha (string word)
 {
     int sum = 0;
     int n = strlen (word);
+    word = toupper (word);
     for ( int i = 0; i < n; i++)
     {
         if (isalpha(word[i]))
