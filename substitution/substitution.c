@@ -77,7 +77,7 @@ bool repeat (string word)
     {
         for ( int j = i + 1; j < n; j++)
         {
-            if (!(word[i] != word[j]))
+            if (word[i] == word[j])
             {
                 return true;
             }
