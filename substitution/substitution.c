@@ -73,19 +73,13 @@ bool repeat (string word)
 {
     int sum = 0;
     int n = strlen (word);
-    bool x;
     for ( int i = 0; i < n; i++)
     {
         for ( int j = i + 1; j < n; j++)
         {
-            if (word[i] != word[j])
+            if (!(word[i] != word[j]))
             {
-                word[i] = 1;
-                sum += word[i];
-            }
-            else
-            {
-                return false;
+                return false
             }
         }
         return true;
