@@ -69,13 +69,30 @@ bool alpha (string word)
 //check that any char is repeated
 bool repeat (string word)
 {
-    for ( int i = 0, n = strlen (word); i < n; i++)
+    int sum = 0;
+    int n = strlen (word);
+    for ( int i = 0; i < n; i++)
     {
         for ( int j = i + 1; j < n; j++)
         {
             if (word[i] == word[j])
-            
+            {
+                word[i] = 1;
+                sum += word[i];
+            }
+            else if (word[i] != word[j])
+            {
+                word[i] = 0;
+            }
         }
     }
-    return ;
+
+    if (sum == n)
+    {
+        return true;
+    }
+    else if (sum != n)
+    {
+        return false;
+    }
 }
