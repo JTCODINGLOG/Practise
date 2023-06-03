@@ -79,7 +79,7 @@ bool repeat (string word)
         {
             if (word[i] == word[j])
             {
-                printf ("%i %i %c %c", i, j, word[i], word[j]);
+                printf ("%i %i gdfgdf %c dfgdg %c", i, j, word[i], word[j]);
                 return true;
             }
         }
