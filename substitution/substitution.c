@@ -71,9 +71,10 @@ bool repeat (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
-        for ( int j = i + 1, j < n; j++)
+        for ( int j = i + 1; j < n; j++)
         {
-            if (word)
+            if (word[i] == word[j])
+            
         }
     }
     return ;
