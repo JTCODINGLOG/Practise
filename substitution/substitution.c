@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 bool alpha (string word);
-bool repeat (string ward);
+bool repeat (string word);
 
 //Get and validate de key
 int main(int argc, string argv[])
@@ -42,8 +42,10 @@ bool alpha (string word)
     {
         if (isalpha(word[i]))
         {
+            printf ("%s\n", word);
             word[i] = 1;
             sum += word[i];
+            printf ("%s\n", word);
 
         }
         else
@@ -69,19 +71,17 @@ bool alpha (string word)
 
 
 //check that any char is repeated
-bool repeat (string ward)
+bool repeat (string word)
 {
     int sum = 0;
-    int n = strlen (ward);
-    printf ("%s\n", ward);
+    int n = strlen (word);
     for ( int i = 0; i < n; i++)
     {
         for ( int j = i + 1; j < n; j++)
         {
-            if (ward[i] == ward[j])
+            if (word[i] == word[j])
             {
-                printf ("%i %i\n", i, j);
-                //return true;
+                return true;
             }
         }
     }
