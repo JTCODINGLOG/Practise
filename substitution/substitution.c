@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     {
         printf ("key must contain just alphabetical characters\n");
     }
-    else if (repeat (argv[1]))
+    else if (repeat (argv[1]) == false)
     {
         printf ("Key contains repeated characters\n");
     }
