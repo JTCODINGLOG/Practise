@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+bool alpha (string word);
+
 //Get and validate de key
 int main(int argc, string argv[])
 {
@@ -14,7 +16,7 @@ int main(int argc, string argv[])
     {
         printf ("Key must contain 26 characters\n");
     }
-    else if (alpha (argv[1]) = false)
+    else if (alpha (argv[1]) == false)
     {
         printf ("key must contain just alphabetical characters" )
     }
