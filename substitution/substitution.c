@@ -35,7 +35,7 @@ int main(int argc, string argv[])
 //check is alphabetical
 bool alpha (string word)
 {
-    int sum;
+    int sum = 0;
     int n = strlen (word);
     for ( int i = 0; i < n; i++)
     {
@@ -51,8 +51,11 @@ bool alpha (string word)
         }
     }
 
-    if (sum == n);
-    return true;
+    if (sum == n)
+    {
+        return true;
+    }
+    return 0;
 }
 
 
