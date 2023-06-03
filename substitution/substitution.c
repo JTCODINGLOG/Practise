@@ -85,18 +85,8 @@ bool repeat (string word)
             }
             else
             {
-                word[i] = 0;
+                return false;
             }
         }
-    }
-
-    if (sum == n)
-    {
-        //x = true;
         return true;
-    }
-    else
-    {
-        return false;
-    }
 }
