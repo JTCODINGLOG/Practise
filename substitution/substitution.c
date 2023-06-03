@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     }
     else if (alpha (argv[1]) == false)
     {
-        printf ("key must contain just alphabetical characters" )
+        printf ("key must contain just alphabetical characters\n");
     }
     else if (repeat (argv[1]))
     {
