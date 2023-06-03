@@ -32,11 +32,12 @@ int main(int argc, string argv[])
 
 }
 
-//check is alphabetical
+//check that it is alphabetical
 bool alpha (string word)
 {
     int sum = 0;
     int n = strlen (word);
+    bool x;
     for ( int i = 0; i < n; i++)
     {
         if (isalpha(word[i]))
@@ -53,12 +54,13 @@ bool alpha (string word)
 
     if (sum == n)
     {
-        return true;
+        x = true;
     }
-    else if (sum != n)
+    else
     {
-        return false;
+        x = false;
     }
+    return x;
 }
 
 
@@ -71,6 +73,7 @@ bool repeat (string word)
 {
     int sum = 0;
     int n = strlen (word);
+    bool x;
     for ( int i = 0; i < n; i++)
     {
         for ( int j = i + 1; j < n; j++)
@@ -89,10 +92,11 @@ bool repeat (string word)
 
     if (sum == n)
     {
-        return true;
+        x = true;
     }
-    else if (sum != n)
+    else
     {
-        return false;
+        x = false;
     }
+    return x;
 }
