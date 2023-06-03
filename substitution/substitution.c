@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 bool alpha (string word);
+bool repeat (string word);
 
 //Get and validate de key
 int main(int argc, string argv[])
