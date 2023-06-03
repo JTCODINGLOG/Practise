@@ -42,11 +42,9 @@ bool alpha (string word)
     {
         if (isalpha(word[i]))
         {
-            printf ("%s\n", word);
-            word[i] = 1;
-            sum += word[i];
-            printf ("%s\n", word);
-
+            //word[i] = 1;
+            //sum += word[i];
+            sum ++
         }
         else
         {
