@@ -83,7 +83,7 @@ bool repeat (string word)
                 word[i] = 1;
                 sum += word[i];
             }
-            else if (word[i] != word[j])
+            else
             {
                 word[i] = 0;
             }
