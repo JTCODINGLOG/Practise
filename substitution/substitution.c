@@ -55,7 +55,10 @@ bool alpha (string word)
     {
         return true;
     }
-    return 0;
+    else if (sum != n)
+    {
+        return false;
+    }
 }
 
 
