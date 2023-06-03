@@ -37,7 +37,6 @@ bool alpha (string word)
 {
     int sum = 0;
     int n = strlen (word);
-    word = toupper (word);
     for ( int i = 0; i < n; i++)
     {
         if (isalpha(word[i]))
@@ -70,7 +69,7 @@ bool repeat (string word)
     {
         for ( int j = i + 1; j < n; j++)
         {
-            if (word[i] == word[j])
+            if (toupper (word[i]) == toupper(word[j]))
             {
                 return true;
             }
