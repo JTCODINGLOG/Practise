@@ -71,7 +71,10 @@ bool repeat (string word)
 {
     for ( int i = 0, n = strlen (word); i < n; i++)
     {
-        for ( int j = i + 1, i < n)
+        for ( int j = i + 1, j < n; j++)
+        {
+            if (word)
+        }
     }
     return ;
 }
