@@ -82,5 +82,6 @@ bool repeat (string word)
                 return true;
             }
         }
-        return false;
+    }
+    return false;
 }
