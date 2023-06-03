@@ -80,8 +80,8 @@ bool repeat (string word)
         {
             if (word[i] == word[j])
             {
-                printf ("%i %i gdfgdf %c dfgdg %c", i, j, word[i], word[j]);
-                return true;
+                printf ("%i %i\n", i, j);
+                //return true;
             }
         }
     }
