@@ -73,6 +73,7 @@ bool repeat (string word)
 {
     int sum = 0;
     int n = strlen (word);
+    printf ("%s\n", word);
     for ( int i = 0; i < n; i++)
     {
         for ( int j = i + 1; j < n; j++)
