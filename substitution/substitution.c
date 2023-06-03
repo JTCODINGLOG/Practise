@@ -37,30 +37,22 @@ bool alpha (string word)
 {
     int sum = 0;
     int n = strlen (word);
-    bool x;
     for ( int i = 0; i < n; i++)
     {
         if (isalpha(word[i]))
         {
-            //word[i] = 1;
-            //sum += word[i];
-            sum ++
-        }
-        else
-        {
-            word[i] = 0;
+            sum++;
         }
     }
 
     if (sum == n)
     {
-        x = true;
+        return true;
     }
     else
     {
-        x = false;
+        return false;
     }
-    return x;
 }
 
 
