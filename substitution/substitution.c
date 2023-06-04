@@ -5,7 +5,6 @@
 
 bool alpha (string word);
 bool repeat (string word);
-string position (string word);
 
 //Get and validate de key
 int main(int argc, string argv[])
@@ -35,7 +34,6 @@ int main(int argc, string argv[])
     }
 
     string plaintext = get_string ("plaintext: ");
-    
 //ENCRYPTATION - NEW
     for (int i = 0, n = strlen (plaintext); i < n; i++ )
     {
@@ -48,6 +46,7 @@ int main(int argc, string argv[])
         else if (islower(plaintext[i]))
         {
             int pos = plaintext[i]-97;
+            
             plaintext[i] = (argv[1][pos]);
         }
     }
