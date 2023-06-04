@@ -10,8 +10,6 @@ string position (string word);
 //Get and validate de key
 int main(int argc, string argv[])
 {
-    string plaintext;
-
     if (argc != 2)
     {
         printf ("Usage: ./substitution key\n");
@@ -29,14 +27,15 @@ int main(int argc, string argv[])
         printf ("key must contain just alphabetical characters\n");
         return 1;
     }
-    else if (repeat (argv[1]) == true)
+
+    if (repeat (argv[1]) == true)
     {
         printf ("Key contains repeated characters\n");
+        return 1;
     }
-    else
-    {
-        plaintext = get_string ("plaintext: ");
-    }
+
+    string plaintext = get_string ("plaintext: ");
+
 
 
     position(plaintext);
