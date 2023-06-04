@@ -38,8 +38,10 @@ int main(int argc, string argv[])
 
     for ( int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        argv[1][i] 
+        int s = position [i];
+        plaintext[1] = argv[1][s];
     }
+    printf ("%s\n", plaintext);
 
 
 
