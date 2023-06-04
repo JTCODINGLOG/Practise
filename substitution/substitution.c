@@ -47,7 +47,7 @@ int main(int argc, string argv[])
         else if (islower(plaintext[i]))
         {
             int pos = plaintext[i]-97;
-            plaintext[i] = argv[1][pos];
+            plaintext[i] = tolower(argv[1][pos]);
         }
     }
 
