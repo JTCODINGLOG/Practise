@@ -10,7 +10,7 @@ string conversion (string word);
 //Get and validate de key
 int main(int argc, string argv[])
 {
-    int plaintext;
+    string plaintext;
 
     if (argc != 2)
     {
