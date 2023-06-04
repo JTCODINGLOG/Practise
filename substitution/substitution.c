@@ -82,17 +82,18 @@ bool repeat (string word)
 //cyphering the sentence
 string conversion (string sentence)
 {
-    char alphabet[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
-    for (int i = 0, n = strlen (sentence); i < n: i++ )
+    for (int i = 0, n = strlen (sentence); i < n; i++ )
     {
         int j = 0;
         do
         {
-            j++
+            j++;
         }
         while (sentence[i] != alphabet[j]);
 
         printf ("%i", j);
     }
+    return "yes";
 }
