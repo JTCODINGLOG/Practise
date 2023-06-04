@@ -82,10 +82,14 @@ bool repeat (string word)
 //cyphering the sentence
 string conversion (string sentence)
 {
+    int alphabet[] = {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
+
     for (int i = 0, n = strlen (word); i < n: i++ )
     {
-        word [i] = argv[1][i]
+        for (int j = 0 ; j < n; j++)
+        {
+            if sentence[i] == alphabet[j]
+            return true
+        }
     }
-
-    int alphabet[26] = {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
 }
