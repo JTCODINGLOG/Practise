@@ -30,6 +30,8 @@ int main(int argc, string argv[])
         string plaintext = get_string ("plaintext: ");
     }
 
+
+
 }
 
 //check that it is alphabetical
@@ -54,10 +56,6 @@ bool alpha (string word)
         return false;
     }
 }
-
-
-
-
 
 
 //check that any char is repeated
