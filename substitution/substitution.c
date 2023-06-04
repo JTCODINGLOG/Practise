@@ -34,27 +34,46 @@ int main(int argc, string argv[])
         return 1;
     }
 
-//get text and encrypt it
-
     string plaintext = get_string ("plaintext: ");
-
-    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-
+//ENCRYPTATION - NEW
     for (int i = 0, n = strlen (plaintext); i < n; i++ )
     {
-        int j = 0;
-        do
+        if (isupper(plaintext[i]))
         {
-            j++;
+            int pos = plaintext[i]-65;
+            plaintext[i] = argv[1][];
         }
-        while (plaintext[i] != alphabet[j]);
 
-        plaintext[i] = argv[1][j];
+        else if (islower(plaintext[i]))
+        {
+            int pos = plaintext[i]-97;
+            plaintext[i] = argv[1][];
+        }
     }
 
-    printf ("%s\n", plaintext);
 
-}
+
+//get text and encrypt it - OLD
+
+
+
+    //char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+
+    //for (int i = 0, n = strlen (plaintext); i < n; i++ )
+    //{
+      //  int j = 0;
+        //do
+        //{
+          //  j++;
+        //}
+        //while (plaintext[i] != alphabet[j]);
+
+        //plaintext[i] = argv[1][j];
+    //}
+
+    //printf ("%s\n", plaintext);
+
+//}
 
 //check that it is alphabetical
 bool alpha (string word)
