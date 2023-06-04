@@ -5,7 +5,7 @@
 
 bool alpha (string word);
 bool repeat (string word);
-string conversion (string sentence);
+string conversion (string word);
 
 //Get and validate de key
 int main(int argc, string argv[])
@@ -84,6 +84,6 @@ string conversion (string sentence)
 {
     for (int i = 0, n = strlen (word); i < n: i++ )
     {
-        word
+        word [0]
     }
 }
