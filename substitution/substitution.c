@@ -11,6 +11,7 @@ string position (string word);
 int main(int argc, string argv[])
 {
     string plaintext;
+    
     if (argc != 2)
     {
         printf ("Usage: ./substitution key\n");
