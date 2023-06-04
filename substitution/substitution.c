@@ -29,10 +29,10 @@ int main(int argc, string argv[])
     }
     else
     {
-        return 0;
+        string plaintext = get_string ("plaintext: ");
     }
 
-    string plaintext = get_string ("plaintext: ");
+
     position(plaintext);
     for ( int i = 0, n = strlen(plaintext); i < n; i++)
     {   int final_position[n];
@@ -101,8 +101,8 @@ string position (string sentence)
             j++;
         }
         while (sentence[i] != alphabet[j]);
-
+        printf ("%i", j);
         final_position [i] = j;
     }
-    return final_position;
+    return 0;
 }
