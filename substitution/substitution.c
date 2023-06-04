@@ -40,7 +40,7 @@ int main(int argc, string argv[])
         if (isupper(plaintext[i]))
         {
             int pos = plaintext[i]-65;
-            plaintext[i] = argv[1][pos];
+            plaintext[i] = toupper(argv[1][pos]);
         }
 
         else if (islower(plaintext[i]))
