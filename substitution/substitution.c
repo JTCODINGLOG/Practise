@@ -34,6 +34,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
+//get text and encrypt it
+
     string plaintext = get_string ("plaintext: ");
 
     char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
@@ -46,12 +48,11 @@ int main(int argc, string argv[])
             j++;
         }
         while (plaintext[i] != alphabet[j]);
+
         plaintext[i] = argv[1][j];
     }
 
     printf ("%s\n", plaintext);
-
-
 
 }
 
@@ -95,23 +96,4 @@ bool repeat (string word)
         }
     }
     return false;
-}
-
-
-//cyphering the sentence
-string position (string sentence)
-{
-    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    for (int i = 0, n = strlen (sentence); i < n; i++ )
-    {
-        int j = 0;
-        do
-        {
-            j++;
-        }
-        while (sentence[i] != alphabet[j]);
-
-        // I wanted to do: "sentence[i] = argv[1][j];" and then at the end "return sentence;"   but I cannot include argv[1] inside the function so....:
-    }
-
 }
