@@ -84,6 +84,6 @@ string conversion (string sentence)
 {
     for (int i = 0, n = strlen (word); i < n: i++ )
     {
-        word [0]
+        word [i] = argv[1][i]
     }
 }
