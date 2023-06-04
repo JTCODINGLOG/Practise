@@ -93,7 +93,7 @@ string conversion (string sentence)
         }
         while (sentence[i] != alphabet[j]);
 
-        printf ("%i", j);
+        sentence [i] = sentence [j]
     }
     return "yes";
 }
