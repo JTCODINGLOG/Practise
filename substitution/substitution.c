@@ -34,6 +34,7 @@ int main(int argc, string argv[])
     string conversion(string plaintext);
 
 
+
 }
 
 //check that it is alphabetical
@@ -93,7 +94,7 @@ string conversion (string sentence)
         }
         while (sentence[i] != alphabet[j]);
 
-        sentence [i] = sentence [j]
+        sentence [i] = argv[1][j];
     }
-    return "yes";
+    return printf ("%s", sentence);
 }
