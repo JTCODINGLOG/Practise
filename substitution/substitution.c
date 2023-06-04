@@ -99,8 +99,6 @@ string conversion (string sentence)
             j++;
         }
         while (sentence[i] != alphabet[j]);
-
-        sentence [i] = argv[1][j];
     }
     return sentence;
 }
