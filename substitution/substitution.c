@@ -33,10 +33,9 @@ int main(int argc, string argv[])
     }
 
     string plaintext = get_string ("plaintext: ");
-    int final_position[];
     position(plaintext);
     for ( int i = 0, n = strlen(plaintext); i < n; i++)
-    {
+    {   int final_position[n];
         int s = final_position[i];
         plaintext[1] = argv[1][s];
     }
