@@ -101,6 +101,9 @@ string position (string sentence)
             j++;
         }
         while (sentence[i] != alphabet[j]);
+
+        // I wanted to do: "sentence[i] = argv[1][j];" and then at the end "return sentence;"   but I cannot include argv[1] inside the function so....:
+
         printf ("%i", j);
         final_position [i] = j;
     }
