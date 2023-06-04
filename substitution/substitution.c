@@ -10,7 +10,7 @@ string position (string word);
 //Get and validate de key
 int main(int argc, string argv[])
 {
-
+    
     if (argc != 2)
     {
         printf ("Usage: ./substitution key\n");
