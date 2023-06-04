@@ -93,12 +93,14 @@ string conversion (string sentence)
 
     for (int i = 0, n = strlen (sentence); i < n; i++ )
     {
+        string final;
         int j = 0;
         do
         {
             j++;
         }
         while (sentence[i] != alphabet[j]);
+        final(i)
     }
     return sentence;
 }
