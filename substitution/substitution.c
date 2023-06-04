@@ -5,6 +5,7 @@
 
 bool alpha (string word);
 bool repeat (string word);
+string conversion (string sentence);
 
 //Get and validate de key
 int main(int argc, string argv[])
@@ -30,6 +31,7 @@ int main(int argc, string argv[])
         string plaintext = get_string ("plaintext: ");
     }
 
+    conversion (plaintext);
 
 
 }
@@ -74,4 +76,14 @@ bool repeat (string word)
         }
     }
     return false;
+}
+
+
+//cyphering the sentence
+string conversion (string sentence)
+{
+    for (int i = 0, n = strlen (word); i < n: i++ )
+    {
+        word
+    }
 }
