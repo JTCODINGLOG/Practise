@@ -10,6 +10,8 @@ string conversion (string word);
 //Get and validate de key
 int main(int argc, string argv[])
 {
+    int plaintext;
+
     if (argc != 2)
     {
         printf ("Usage: ./substitution key\n");
@@ -28,7 +30,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        string plaintext = get_string ("plaintext: ");
+        plaintext = get_string ("plaintext: ");
     }
 
     conversion(plaintext);
@@ -84,12 +86,15 @@ string conversion (string sentence)
 {
     int alphabet[] = {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
 
-    for (int i = 0, n = strlen (word); i < n: i++ )
+    for (int i = 0, n = strlen (sentence); i < n: i++ )
     {
-        for (int j = 0 ; j < n; j++)
+        int j = 0;
+        do
         {
-            if sentence[i] == alphabet[j]
-            return true
+            j++
         }
+        while (sentence[i] != alphabet[j]);
+
+        printf ("%i", j);
     }
 }
