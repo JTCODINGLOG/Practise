@@ -92,7 +92,7 @@ bool repeat (string word)
 string position (string sentence)
 {
     char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    int final_position[];
+    int final_position[] = {1};
     for (int i = 0, n = strlen (sentence); i < n; i++ )
     {
         int j = 0;
