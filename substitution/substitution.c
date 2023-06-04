@@ -29,10 +29,10 @@ int main(int argc, string argv[])
     }
     else
     {
-        string plaintext;
+        return 0;
     }
 
-    plaintext = get_string ("plaintext: ");
+    string plaintext = get_string ("plaintext: ");
 
     conversion(plaintext);
 
