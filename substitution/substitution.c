@@ -17,13 +17,17 @@ int main(int argc, string argv[])
         printf ("Usage: ./substitution key\n");
         return 1;
     }
-    else if (strlen(argv[1]) != 26)
+
+    if (strlen(argv[1]) != 26)
     {
         printf ("Key must contain 26 characters\n");
+        return 1;
     }
-    else if (alpha (argv[1]) == false)
+
+    if (alpha (argv[1]) == false)
     {
         printf ("key must contain just alphabetical characters\n");
+        return 1;
     }
     else if (repeat (argv[1]) == true)
     {
