@@ -41,17 +41,13 @@ int main(int argc, string argv[])
         if (isupper(plaintext[i]))
         {
             int pos = plaintext[i]-65;
-            plaintext[i] = argv[1][];
+            plaintext[i] = argv[1][pos];
         }
 
         else if (islower(plaintext[i]))
         {
             int pos = plaintext[i]-97;
-            plaintext[i] = argv[1][];
-        }
-        else if (!isalpha(plaintext[i]))
-        {
-            
+            plaintext[i] = argv[1][pos];
         }
     }
 
