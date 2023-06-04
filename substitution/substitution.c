@@ -92,7 +92,6 @@ bool repeat (string word)
 string position (string sentence)
 {
     char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    int final_position[] = {1};
     for (int i = 0, n = strlen (sentence); i < n; i++ )
     {
         int j = 0;
@@ -103,9 +102,6 @@ string position (string sentence)
         while (sentence[i] != alphabet[j]);
 
         // I wanted to do: "sentence[i] = argv[1][j];" and then at the end "return sentence;"   but I cannot include argv[1] inside the function so....:
-
-        printf ("%i", j);
-        final_position [i] = j;
     }
-    return 0;
+
 }
