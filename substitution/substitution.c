@@ -50,7 +50,9 @@ int main(int argc, string argv[])
             plaintext[i] = argv[1][pos];
         }
     }
-    
+
+    printf ("%s\n", plaintext);
+}
 
 //check that it is alphabetical
 
