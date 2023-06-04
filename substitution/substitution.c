@@ -36,12 +36,19 @@ int main(int argc, string argv[])
 
     string plaintext = get_string ("plaintext: ");
 
-    position(plaintext);
-    for ( int i = 0, n = strlen(plaintext); i < n; i++)
-    {   int final_position[n];
-        int s = final_position[i];
-        plaintext[1] = argv[1][s];
+    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+
+    for (int i = 0, n = strlen (plaintext); i < n; i++ )
+    {
+        int j = 0;
+        do
+        {
+            j++;
+        }
+        while (plaintext[i] != alphabet[j]);
+        plaintext[i] = argv[1][j];
     }
+
     printf ("%s\n", plaintext);
 
 
