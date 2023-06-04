@@ -10,7 +10,7 @@ string conversion (string word);
 //Get and validate de key
 int main(int argc, string argv[])
 {
-    string plaintext;
+
     if (argc != 2)
     {
         printf ("Usage: ./substitution key\n");
@@ -29,8 +29,10 @@ int main(int argc, string argv[])
     }
     else
     {
-        plaintext = get_string ("plaintext: ");
+        string plaintext;
     }
+
+    plaintext = get_string ("plaintext: ");
 
     conversion(plaintext);
 
