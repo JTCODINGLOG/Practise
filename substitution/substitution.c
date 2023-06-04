@@ -5,7 +5,7 @@
 
 bool alpha (string word);
 bool repeat (string word);
-string conversion (string word);
+string position (string word);
 
 //Get and validate de key
 int main(int argc, string argv[])
@@ -34,9 +34,12 @@ int main(int argc, string argv[])
 
     string plaintext = get_string ("plaintext: ");
 
-    conversion(plaintext);
+    position(plaintext);
 
-    printf ("%s\n", plaintext);
+    for ( int i = 0, n = strlen(plaintext); i < n; i++)
+    {
+        
+    }
 
 
 
@@ -86,10 +89,10 @@ bool repeat (string word)
 
 
 //cyphering the sentence
-string conversion (string sentence)
+string position (string sentence)
 {
-    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-
+    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    int final_position[];
     for (int i = 0, n = strlen (sentence); i < n; i++ )
     {
         int j = 0;
@@ -99,7 +102,7 @@ string conversion (string sentence)
         }
         while (sentence[i] != alphabet[j]);
 
-        sentence [i] = argv[1][j];
+        final_position [i] = j;
     }
-    return sentence;
+    return final_position;
 }
