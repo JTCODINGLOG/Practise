@@ -49,6 +49,10 @@ int main(int argc, string argv[])
             int pos = plaintext[i]-97;
             plaintext[i] = argv[1][];
         }
+        else if (!isalpha(plaintext[i]))
+        {
+            
+        }
     }
 
 
