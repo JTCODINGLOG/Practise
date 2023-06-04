@@ -33,6 +33,8 @@ int main(int argc, string argv[])
 
     string conversion(string plaintext);
 
+    printf ("%s\n", plaintext);
+
 
 
 }
@@ -97,5 +99,5 @@ string conversion (string sentence)
 
         sentence [i] = argv[1][j];
     }
-    return printf ("%s", sentence);
+    return sentence;
 }
