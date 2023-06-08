@@ -39,9 +39,7 @@ int main(int argc, string argv[])
     // TODO #2
     wordsize = argv[1][0];
 
-    if (4 > wordsize || wordsize > 8)
-    wordsize = argv[1];
-    else
+    if (5 > wordsize || wordsize > 8)
     {
         printf ("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
