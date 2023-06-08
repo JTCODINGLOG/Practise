@@ -39,7 +39,7 @@ int main(int argc, string argv[])
     // TODO #2
     wordsize = argv[1];
 
-    if (3 < argv[1] < 9)
+    if (4 > wordsize || wordsize > 8)
     wordsize = argv[1];
     else
     {
