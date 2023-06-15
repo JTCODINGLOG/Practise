@@ -116,9 +116,12 @@ string get_guess(int wordsize)
     // ensure users actually provide a guess that is the correct length
     // TODO #3
 
-    for ()
-    {}
-    guess = int_string ("Input a 5-letter word: ");
+    int i = 0;
+    do
+    {
+        guess = int_string ("Input a 5-letter word: ");
+    }
+    while (i != strlent(wordsize))
 
 
     return guess;
