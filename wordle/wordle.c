@@ -119,9 +119,9 @@ string get_guess(int wordsize)
     int i = 0;
     do
     {
-        guess = int_string ("Input a 5-letter word: ");
+        guess = int_string ("Input a %i-letter word: ", wordsize);
     }
-    while (i != strlent(wordsize))
+    while (strlen(guess) != strlen(wordsize));
 
 
     return guess;
