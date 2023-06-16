@@ -154,15 +154,15 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 score += EXACT;
                 return score;
             }
-            
-            if (guess[i] == choice[j] || i != j)
+            else if (guess[i] == choice[j] || i != j)
             {
                 score += CLOSE;
                 return score;
             }
-
-
-
+            else
+            {
+                return score;
+                }
         }
     }
     return score;
