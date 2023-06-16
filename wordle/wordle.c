@@ -147,7 +147,13 @@ int check_word(string guess, int wordsize, int status[], string choice)
         // keep track of the total score by adding each individual letter's score from above
     for (int i = 0; i < strlen(guess); i++)
     {
-        for 
+        for (int j = 0; j < strlen(choice); j++)
+        {
+            if (guess[i] == choice[j])
+            {
+                score += 
+            }
+        }
     }
     return score;
 }
