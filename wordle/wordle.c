@@ -165,6 +165,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 return score;
                 }
         }
+        printf("%i\n", score);
     }
     return score;
 }
