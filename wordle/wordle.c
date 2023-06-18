@@ -167,7 +167,26 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-
+    for (int i = 0; i < strlen(guess); i++)
+    {
+        for (int j = 0; j < strlen(choice); j++)
+        {
+            if (guess[i] == choice[j] && i == j)
+            {
+                printf(GREEN"This is WORDLE50"RESET"\n");
+                break;
+            }
+            if (guess[i] == choice[j] && i != j)
+            {
+                printf(GREEN"This is WORDLE50"RESET"\n");
+                break;
+            }
+            if (guess[i] != choice[j])
+            {
+                printf(RED"This is WORDLE50"RED"\n");
+            }
+        }
+    }
     printf("\n");
     return;
 }
