@@ -109,7 +109,8 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
-    if (guess == (strlen (choice) * 2))
+    
+    if (guess == choice)
     printf("You win!")
     else
     printf("You lose...")
@@ -120,7 +121,7 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
-    string guess = "";
+    //string guess = "";
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
