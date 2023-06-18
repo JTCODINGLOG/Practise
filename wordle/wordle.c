@@ -75,7 +75,6 @@ int main(int argc, string argv[])
     printf("You have %i tries to guess the %i-letter word I'm thinking of\n", guesses, wordsize);
 
     // main game loop, one iteration for each guess
-    string guess = "";
     for (int i = 0; i < guesses; i++)
     {
         // obtain user's guess
@@ -111,7 +110,7 @@ int main(int argc, string argv[])
     // Print the game's result
     // TODO #7
 
-    if (guess == choice)
+    if (choice)
     printf("You win!");
     else
     printf("You lose...");
