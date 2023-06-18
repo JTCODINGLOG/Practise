@@ -110,7 +110,7 @@ int main(int argc, string argv[])
     // Print the game's result
     // TODO #7
 
-    if (choice)
+    if (argv[1] == choice)
     printf("You win!");
     else
     printf("You lose...");
