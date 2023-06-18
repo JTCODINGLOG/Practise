@@ -173,17 +173,17 @@ void print_word(string guess, int wordsize, int status[])
         {
             if (guess[i] == choice[j] && i == j)
             {
-                printf(GREEN"This is WORDLE50"RESET"\n");
+                printf(GREEN"%c", guess[i]);
                 break;
             }
             if (guess[i] == choice[j] && i != j)
             {
-                printf(GREEN"This is WORDLE50"RESET"\n");
+                printf(YELLOW"%c", guess[i]);
                 break;
             }
             if (guess[i] != choice[j])
             {
-                printf(RED"This is WORDLE50"RED"\n");
+                printf(RED"%c", guess[i]);
             }
         }
     }
