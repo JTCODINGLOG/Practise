@@ -109,6 +109,10 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
+    if (status == (strlen (guess) * 2))
+    printf("You win!")
+    else
+    printf("You lose...")
 
     // that's all folks!
     return 0;
