@@ -78,7 +78,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < guesses; i++)
     {
         // obtain user's guess
-        guess = get_guess(wordsize);
+        string guess = get_guess(wordsize);
 
         // array to hold guess status, initially set to zero
         int status[wordsize];
