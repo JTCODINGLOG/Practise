@@ -79,7 +79,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < guesses; i++)
     {
         // obtain user's guess
-        string guess = get_guess(wordsize);
+        guess = get_guess(wordsize);
 
         // array to hold guess status, initially set to zero
         int status[wordsize];
@@ -112,9 +112,9 @@ int main(int argc, string argv[])
     // TODO #7
 
     if (guess == choice)
-    printf("You win!")
+    printf("You win!");
     else
-    printf("You lose...")
+    printf("You lose...");
 
     // that's all folks!
     return 0;
@@ -122,7 +122,7 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
-    //string guess = "";
+    string guess = "";
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
