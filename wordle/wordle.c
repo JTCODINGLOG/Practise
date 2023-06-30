@@ -112,7 +112,7 @@ int main(int argc, string argv[])
 
     if (won == true)
     {
-        printf("You win!");
+        printf("You win!\n");
     }
     else
     {
