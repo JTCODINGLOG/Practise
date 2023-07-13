@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cs50>
+#include <cs50.h>
 
 int collatz (int n)
 {
@@ -20,8 +20,10 @@ int collatz (int n)
         steps += 3;
         collatz (3*n + 1);
     }
+}
 
 int main(void)
 {
-
+    int number = getint ("Write a number: ");
+    int collatz (number);
 }
