@@ -7,17 +7,17 @@ int collatz (int n)
 
     if (n == 1)
     {
-        steps += 1;
-        return printf ("%i\n",steps);
+        printf ("%i\n",steps);
+        return 0;
     }
     else if (n % 2 == 0)
     {
-        steps += 2;
+        steps += 1;
         collatz(n/2);
     }
     else
     {
-        steps += 3;
+        steps += 1;
         collatz (3*n + 1);
     }
 
