@@ -8,6 +8,7 @@ int collatz (int n)
     if (n == 1)
     {
         steps += 1;
+        printf ("%i", steps);
         return 0;
     }
     else if (n % 2 == 0)
@@ -20,6 +21,7 @@ int collatz (int n)
         steps += 3;
         collatz (3*n + 1);
     }
+
     return 1;
 }
 
