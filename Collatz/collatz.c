@@ -27,7 +27,7 @@ int collatz (int n)
 int main(void)
 {
     int number;
-    number = get_int ("Write a number: ");
+    
     int collatz (int number);
 }
 
