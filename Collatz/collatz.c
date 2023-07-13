@@ -20,10 +20,12 @@ int collatz (int n)
         steps += 3;
         collatz (3*n + 1);
     }
+    return 1;
 }
 
 int main(void)
 {
-    int number = getint ("Write a number: ");
-    int collatz (number);
+    int number;
+    number = get_int ("Write a number: ");
+    int collatz (int number);
 }
