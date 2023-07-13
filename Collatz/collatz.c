@@ -8,7 +8,7 @@ int collatz (int n)
     if (n == 1)
     {
         steps += 1;
-        return printf ("%i",steps);
+        return printf ("%i\n",steps);
     }
     else if (n % 2 == 0)
     {
