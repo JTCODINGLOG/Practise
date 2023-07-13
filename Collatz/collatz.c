@@ -8,7 +8,7 @@ int collatz (int n)
     if (n == 1)
     {
         steps += 1;
-        return 0;
+        return printf ("%i",steps);
     }
     else if (n % 2 == 0)
     {
@@ -27,7 +27,8 @@ int collatz (int n)
 int main(void)
 {
     int number;
-    
-    int collatz (int number);
+    number = get_int ("Write a number: ");
+    collatz (number);
+
 }
 
