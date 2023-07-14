@@ -20,4 +20,5 @@ candidate get_candidate (string prompt)
     candidate c;
     c.name = get_string("Enter a name: ");
     c.vote = get_int("Enter a number of votes: ");
+    return c;
 }
