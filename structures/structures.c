@@ -4,13 +4,17 @@
 typedef struct
 {
     string name;
-    int vote;
+    int votes;
 }
 candidate;
 
+candidate get_candidate (string prompt);
+
 int main(void)
 {
-    candidate president = get_candidate("Enter a candidate: ")
+    candidate president = get_candidate("Enter a candidate: ");
+    printf("%s\n", president.name);
+    printf("%i\n", president.votes);
 }
 
 candidate get_candidate (string prompt)
@@ -19,6 +23,6 @@ candidate get_candidate (string prompt)
 
     candidate c;
     c.name = get_string("Enter a name: ");
-    c.vote = get_int("Enter a number of votes: ");
+    c.votes = get_int("Enter a number of votes: ");
     return c;
 }
