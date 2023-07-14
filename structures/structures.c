@@ -19,7 +19,7 @@ int main(void)
 
 candidate get_candidate (string prompt)
 {
-    print("%s\n", prompt);
+    printf("%s\n", prompt);
 
     candidate c;
     c.name = get_string("Enter a name: ");
