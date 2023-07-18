@@ -10,7 +10,9 @@ int main(void)
 int conv (string s)
 {
     s = get_string("Enter a positive integer:\n");
-    int strlen(string s);
-    
+    int ind = strlen(string s);
+    s[ind]
+
+
 
 }
