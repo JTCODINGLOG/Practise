@@ -40,6 +40,8 @@ int convert(string input)
     {
         int conv = input[i] - 48;
         input[i] = '\0';
+
+        convert(input)
     }
 
 
