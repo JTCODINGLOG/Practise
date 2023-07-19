@@ -42,10 +42,10 @@ int convert(string input)
         tempint = input[i] - 48;
         input[i] = '\0';
 
-        convert(input)
+        convert(input);
+
+        number = number * 10 + tempint;
+        return number;
     }
-
-
-
-
+    return number;
 }
