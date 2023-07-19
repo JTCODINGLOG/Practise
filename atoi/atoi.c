@@ -26,6 +26,14 @@ int main(void)
 int convert(string input)
 {
     // TODO
+    if (index < 0)
+    {
+        return conv;
+    }
+    
     int index = strlen(input) - 1;
-    conv = input[index] - 65
+    int conv[index] = input[index] - 48;
+
+
+
 }
