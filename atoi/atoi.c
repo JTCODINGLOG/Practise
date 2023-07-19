@@ -30,9 +30,10 @@ int convert(string input)
     {
         return conv;
     }
-    
+
     int index = strlen(input) - 1;
     int conv[index] = input[index] - 48;
+    
 
 
 
