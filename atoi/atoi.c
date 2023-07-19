@@ -27,5 +27,5 @@ int convert(string input)
 {
     // TODO
     int index = strlen(input) - 1;
-    input[index]
+    input[index] = 
 }
