@@ -6,6 +6,7 @@
 
 int convert(string input);
 
+int conv = 0;
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -26,14 +27,20 @@ int main(void)
 int convert(string input)
 {
     // TODO
+
+
+    int index = strlen(input) - 1;
+
+
     if (index < 0)
     {
         return conv;
     }
+    for (int i = index; i >= 0; i-1)
+    {
+        int conv[index] = input[index] - 48;
+    }
 
-    int index = strlen(input) - 1;
-    int conv[index] = input[index] - 48;
-    
 
 
 
