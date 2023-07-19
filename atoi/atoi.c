@@ -28,24 +28,11 @@ int convert(string input)
 {
     // TODO
 
-
-    int index = strlen(input) - 1;
-    int tempint = 0;
-
-
-    if (index < 0)
+    if (input[0] == '\0')
     {
-        return number;
+        return 0;
     }
-    for (int i = index; i >= 0; i--)
-    {
-        tempint = input[i] - 48;
-        input[i] = '\0';
-
-        convert(input);
-
-        number = number * 10 + tempint;
-        return number;
-    }
-    return number;
+    int digit = input[strlen - 1] - 48;
+    input[strlen(input) - 1] = 0;
+    
 }
