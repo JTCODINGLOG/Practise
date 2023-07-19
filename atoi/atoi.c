@@ -38,7 +38,7 @@ int convert(string input)
     }
     for (int i = index; i >= 0; i-1)
     {
-        int conv[index] = input[index] - 48;
+        int conv = input[index] - 48;
     }
 
 
