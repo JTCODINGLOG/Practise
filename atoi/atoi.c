@@ -34,5 +34,6 @@ int convert(string input)
     }
     int digit = input[strlen - 1] - 48;
     input[strlen(input) - 1] = 0;
-    
+    return digit + convert(input) * 10;
+
 }
