@@ -36,9 +36,10 @@ int convert(string input)
     {
         return conv;
     }
-    for (int i = index; i >= 0; i-1)
+    for (int i = index; i >= 0; i--)
     {
-        int conv = input[index] - 48;
+        int conv = input[i] - 48;
+        input[i] = '\0';
     }
 
 
