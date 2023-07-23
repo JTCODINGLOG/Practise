@@ -63,10 +63,13 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    if (temps[i].temps > temps[i+1].temps)
-    {
-        avg_temp joker = temps[i];
-        temps [i] = temps[i+1];
-        temps[i+1] = joker;
-    }
+
+    (NUM_CITIES - 1) / 2
+    
+            if (temps[i].temps > temps[i+1].temps)
+            {
+                avg_temp joker = temps[i];
+                temps [i] = temps[i+1];
+                temps[i+1] = joker;
+            }
 }
