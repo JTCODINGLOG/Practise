@@ -63,7 +63,12 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    //If nothing to sort
-    int n
-    if
+    if NUM_CITIES = 1
+    {
+        return;
+    }
+    else
+    {
+        NUM_CITIES / 2
+    }
 }
