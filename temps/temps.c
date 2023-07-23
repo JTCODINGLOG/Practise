@@ -67,11 +67,12 @@ void sort_cities(void)
     {
         return;
     }
-    else if
+    else if 
     {
-        avg_temp sorted_temp[NUM_CITIES];
+        int new position;
+
         NUM_CITIES/2 - 1
-        sort_cities(void) 
+        sort_cities(void)
     }
     else
     {
