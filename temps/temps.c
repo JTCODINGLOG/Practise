@@ -69,11 +69,12 @@ void sort_cities(void)
     }
     else if
     {
+        avg_temp sorted_cities []
         NUM_CITIES/2 - 1
         sort_cities(void)
     }
     else
     {
-        
+
     }
 }
