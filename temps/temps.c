@@ -63,7 +63,7 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    if NUM_CITIES = 1
+    if NUM_CITIES = 0
     {
         return;
     }
