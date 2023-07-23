@@ -67,9 +67,11 @@ void sort_cities(void)
     {
         return;
     }
-    else if 
+    else if (inttemps[i].temps > temps[i+1].temps; i++)
     {
-        int new position;
+        avg_temp temposi = temps[0];
+        temps[0] = temps[1];
+        temps[1] = temposi;
 
         NUM_CITIES/2 - 1
         sort_cities(void)
