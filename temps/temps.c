@@ -69,6 +69,7 @@ void sort_cities(void)
     }
     else
     {
-        (NUM_CITIES/2) -1
+        NUM_CITIES/2 - 1
+        sort_cities(void)
     }
 }
