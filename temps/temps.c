@@ -63,11 +63,7 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    if NUM_CITIES = 0
-    {
-        return;
-    }
-    else if (temps[0].temps > temps[1].temps)
+    if (temps[0].temps > temps[1].temps)
     {
         for (int i = 0; i < NUM_CITIES; i++)
         avg_temp temposi = temps[i];
