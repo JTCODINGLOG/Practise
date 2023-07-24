@@ -63,9 +63,6 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    if (int j < j+1)
-    {i++}
-    else
     {
         for (int i = 0; i < NUM_CITIES - 1; i++)
             {
@@ -76,7 +73,8 @@ void sort_cities(void)
                     temps[i+1] = arr1;
                 }
             }
-    return sort_cities
+            sort_cities
+    return 
 
 
 }
