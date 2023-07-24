@@ -68,7 +68,7 @@ void sort_cities(void)
         int min;
         for (int j = 0, i; j < NUM_CITIES; j++)
         {
-            if (temps[i] < temp[j])
+            if (temps[i].temp < temp[j].temp)
             {
                 min = temps[i];
             }
