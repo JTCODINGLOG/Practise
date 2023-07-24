@@ -63,8 +63,10 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    if (i < i+1)
-    {}
+    if (int j < j+1)
+    {i++}
+    else
+    {
         for (int i = 0; i < NUM_CITIES - 1; i++)
             {
                 if (temps[i].temps > temps[i+1].temps)
