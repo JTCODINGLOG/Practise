@@ -65,7 +65,18 @@ void sort_cities(void)
     // Add your code here
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        
+        int min;
+        for (int j = 0, i; j < NUM_CITIES; j++)
+        {
+            if (temps[i] < temp[j])
+            {
+                min = temps[i];
+            }
+            else
+            {
+                min = temp[j];
+            }
+        }
     }
 
 
