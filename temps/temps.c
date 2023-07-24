@@ -66,6 +66,7 @@ void sort_cities(void)
             for (int j = 0; j < NUM_CITIES; j++)
             {
                 if temps[i] > temps[i+1]
+                
             }
 
 
