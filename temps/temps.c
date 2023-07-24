@@ -63,11 +63,17 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
+            int closingest = 0;
             for (int j = 0; j < NUM_CITIES; j++)
             {
-                if temps[j] > temps[j+1]
-
-
+                if temps[j].temps < temps[j+1].temps
+                {
+                    closingest++;
+                }
+            }
+            if closingest = NUM_CITIES -1
+            {
+                return temps[NUM_CITIES];
             }
 
 
@@ -80,12 +86,5 @@ void sort_cities(void)
                     temps[i + 1] = arr1;
                 }
             }
-            return sort_cities
-
-
-
-
-    return
-
-
+            return sort_cities;
 }
