@@ -63,19 +63,23 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    {
-        for (int i = 0; i < NUM_CITIES; i++)
-        {
-            for (int j = i+1; j < i; j++)
+            for (int j = 0; j < NUM_CITIES; j++)
             {
-                if (temps[i].temps > temps[j].temps)
+                if temps[i] > temps[i+1]
+            }
+
+
+            for (int i = 0; i < NUM_CITIES; i++)
+            {
+                if (temps[i].temps > temps[i + 1].temps)
                 {
                     avg_temp arr1 = temps[i];
-                    temps [i] = temps[j];
-                    temps[j] = arr1;
+                    temps [i] = temps[i + 1];
+                    temps[i + 1] = arr1;
                 }
             }
-        }
+            return sort_cities
+
 
 
 
