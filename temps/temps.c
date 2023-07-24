@@ -63,7 +63,7 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    avg_temp arr1[NUM_CITIES/2], arr2[NUM_CITIES/2];
+    avg_temp arr1[NUM_CITIES/2];
 
     if NUM_CITIES = 1
                 if (temps[i].temps > temps[i+1].temps)
