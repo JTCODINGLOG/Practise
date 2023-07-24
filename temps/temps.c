@@ -66,7 +66,7 @@ void sort_cities(void)
             int closingest = 0;
             for (int j = 0; j < NUM_CITIES; j++)
             {
-                if temps[j].temps < temps[j+1].temps
+                if (temps[j].temps < temps[j+1].temps)
                 {
                     closingest++;
                 }
