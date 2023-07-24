@@ -66,25 +66,25 @@ void sort_cities(void)
             int closingest = 0;
             for (int j = 0; j < NUM_CITIES; j++)
             {
-                if (temps[j].temps < temps[j+1].temps)
+                if (temps[j].temp < temps[j+1].temp)
                 {
                     closingest++;
                 }
             }
-            if closingest = NUM_CITIES -1
+            if (closingest == NUM_CITIES -1)
             {
-                return temps[NUM_CITIES];
+                return;
             }
 
 
             for (int i = 0; i < NUM_CITIES; i++)
             {
-                if (temps[i].temps > temps[i + 1].temps)
+                if (temps[i].temp > temps[i + 1].temp)
                 {
                     avg_temp arr1 = temps[i];
                     temps [i] = temps[i + 1];
                     temps[i + 1] = arr1;
                 }
             }
-            return sort_cities;
+            sort_cities();
 }
