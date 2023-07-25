@@ -63,10 +63,10 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here //BUBBLE SORT
-    
+
     for (int j = 0; j < NUM_CITIES;j++)
     {
-       for (int i = 0; i < NUM_CITIES - 1; i++)
+       for (int i = 0; i < NUM_CITIES - 1 - j; i++)
        {
             if (temps[i].temp > temps[i + 1].temp)
             {
