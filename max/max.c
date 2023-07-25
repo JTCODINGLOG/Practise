@@ -49,7 +49,7 @@ int min(int array[], int n)
     {
         if(min_value > array[i])
         {
-            min_value = array[i]
+            min_value = array[i];
         }
     }
     return min_value;
