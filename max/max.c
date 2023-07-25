@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 int max(int array[], int n);
+int min(int array[], int n);
 
 int main(void)
 {
@@ -22,6 +23,7 @@ int main(void)
     }
 
     printf("The max value is %i.\n", max(arr, n));
+    printf("The min value is %i.\n", min(arr, n));
 }
 
 // TODO: return the max value
@@ -37,4 +39,17 @@ int max(int array[], int n)
         }
     }
     return array[n-1];
+}
+
+int min(int array[], int n)
+{
+    int min_value = array[0];
+
+    for (int i = 0; i < n; i++)
+    {
+        if(min_value > array[i])
+        {
+            min_value = array[i]
+        }
+    }
 }
