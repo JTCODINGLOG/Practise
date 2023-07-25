@@ -29,12 +29,12 @@ int max(int array[], int n)
 {
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] > arr[i+1])
+        if (array[i] > array[i+1])
         {
-            int temp = arr[i+1];
-            arr[i+1] = arr[i];
-            arr[i] = temp;
+            int temp = array[i+1];
+            array[i+1] = array[i];
+            array[i] = temp;
         }
     }
-    return arr[n-1];
+    return array[n-1];
 }
