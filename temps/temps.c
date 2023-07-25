@@ -62,21 +62,18 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // Add your code here
-
-
-
-//BUBBLE SORT
-//    for (int j = 0; j < NUM_CITIES;j++)
-//    {
-//       for (int i = 0; i < NUM_CITIES - 1; i++)
-//       {
-//            if (temps[i].temp > temps[i + 1].temp)
-//            {
-//                avg_temp arr1 = temps[i];
-//                temps [i] = temps[i + 1];
-//                temps[i + 1] = arr1;
-//        }
-//            }
-//    }
+    // Add your code here //BUBBLE SORT
+    
+    for (int j = 0; j < NUM_CITIES;j++)
+    {
+       for (int i = 0; i < NUM_CITIES - 1; i++)
+       {
+            if (temps[i].temp > temps[i + 1].temp)
+            {
+                avg_temp arr1 = temps[i];
+                temps [i] = temps[i + 1];
+                temps[i + 1] = arr1;
+            }
+        }
+    }
 }
