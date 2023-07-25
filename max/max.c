@@ -52,4 +52,5 @@ int min(int array[], int n)
             min_value = array[i]
         }
     }
+    return min_value;
 }
