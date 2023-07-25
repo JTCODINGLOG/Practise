@@ -63,21 +63,7 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    for (int i = 0; i < NUM_CITIES; i++)
-    {
-        int min;
-        for (int j = 0, i; j < NUM_CITIES; j++)
-        {
-            if (temps[i].temp < temp[j].temp)
-            {
-                min = temps[i];
-            }
-            else
-            {
-                min = temp[j];
-            }
-        }
-    }
+
 
 
 //BUBBLE SORT
@@ -90,7 +76,7 @@ void sort_cities(void)
 //                avg_temp arr1 = temps[i];
 //                temps [i] = temps[i + 1];
 //                temps[i + 1] = arr1;
-//            }
 //        }
+//            }
 //    }
 }
