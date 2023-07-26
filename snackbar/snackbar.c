@@ -105,15 +105,16 @@ void add_items(void)
     menu[9].item = "Soda";
     menu[9].price = 2;
 
-
-
     return;
 }
 
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    if (strcmp(strings[i], s) == 0)
-    
+    if (strcmp(menu[i].item, item) == 0)
+    {
+        printf ("%.2f\n", menu[i].price)
+    }
+
     return 0.0;
 }
