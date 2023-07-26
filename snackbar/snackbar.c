@@ -34,18 +34,7 @@ typedef struct
 menu_item;
 
 // Array of menu items
-menu_item menu[NUM_ITEMS];
-
-
-
-
-// Add items to menu
-void add_items(void);
-
-// Calculate total cost
-float get_cost(string item);
-
-int main(void)
+menu_item menu[NUM_ITEMS]
 {
     menu[0].item = "Burger";
     menu[0].price = 9.5;
@@ -76,7 +65,24 @@ int main(void)
 
     menu[9].item = "Soda";
     menu[9].price = 2;
-    
+}
+
+
+
+
+// Add items to menu
+void add_items(void)
+{
+
+}
+
+// Calculate total cost
+float get_cost(string item);
+
+int main(void)
+{
+
+
     add_items();
 
     printf("\nWelcome to Beach Burger Shack!\n");
