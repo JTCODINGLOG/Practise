@@ -36,8 +36,8 @@ menu_item;
 // Array of menu items
 menu_item menu[NUM_ITEMS];
 
-menu.item = ;
-menu.price = ;
+menu[0].item = Burger: $9.5;
+menu[0].price = ;
 
 menu.item = ;
 menu.price = ;
