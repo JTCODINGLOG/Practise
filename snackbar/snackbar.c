@@ -36,6 +36,34 @@ menu_item;
 // Array of menu items
 menu_item menu[NUM_ITEMS];
 
+menu.item = ;
+menu.price = ;
+
+menu.item = ;
+menu.price = ;
+
+menu.item = ;
+menu.price = ;
+
+menu.item = ;
+menu.price = ;
+
+menu.item = ;
+menu.price = ;
+
+menu.item = ;
+menu.price = ;
+
+menu.item = ;
+menu.price = ;
+menu.item = ;
+menu.price = ;
+menu.item = ;
+menu.price = ;
+menu.item = ;
+menu.price = ;
+
+
 // Add items to menu
 void add_items(void);
 
