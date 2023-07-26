@@ -19,7 +19,7 @@ void sort_cities(void);
 
 int main(void)
 {
-    temps[0].city = "Austin";
+    ♠[0].city = "Austin";
     temps[0].temp = 97;
 
     temps[1].city = "Boston";
