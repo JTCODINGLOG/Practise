@@ -36,32 +36,35 @@ menu_item;
 // Array of menu items
 menu_item menu[NUM_ITEMS];
 
-menu[0].item = "Burger: ";
-menu[0].price = $9.5;
+menu[0].item = "Burger";
+menu[0].price = 9.5;
 
-menu.item = ;
-menu.price = ;
+menu[1].item = "Vegan Burguer";
+menu[1].price = 11;
 
-menu.item = ;
-menu.price = ;
+menu[2].item = "Hot Dog";
+menu[2].price = 5;
 
-menu.item = ;
-menu.price = ;
+menu[3].item = "Cheese Dog";
+menu[3].price = 7;
 
-menu.item = ;
-menu.price = ;
+menu[4].item = "Fries";
+menu[4].price = 5;
 
-menu.item = ;
-menu.price = ;
+menu[5].item = "Cheese Fries";
+menu[5].price = 6;
 
-menu.item = ;
-menu.price = ;
-menu.item = ;
-menu.price = ;
-menu.item = ;
-menu.price = ;
-menu.item = ;
-menu.price = ;
+menu[6].item = "Cold Pressed Juice";
+menu[6].price = 7;
+
+menu[7].item = "Cold Brew";
+menu[7].price = 3;
+
+menu[8].item = "Water";
+menu[8].price = 2;
+
+menu[9].item = "Soda";
+menu[9].price = 2;
 
 
 // Add items to menu
