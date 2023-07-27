@@ -59,7 +59,7 @@ int main(void)
     while (true)
     {
         string item = get_string("Enter a food item: ");
-        if (strlen(item) == 0 )
+        if (strlen(item) == 0)
         {
             printf("\n");
             break;
