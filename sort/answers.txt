@@ -1,13 +1,17 @@
 sort1 uses: Bubble sort
 
-How do you know?: It performs slower than sort 2 in all the random files.
-The significance of the delay compared to sort 2 and 3 increases when using it on random50000.txt
-It performs really fast when the list is already ordered.
+How do you know?: After performing trials on random lists I already decided that sort 2 was out of the question because it is merge sort.
+I also had an idea of which could be the others because usually bubble sort performs slower than selection sort in random lists.
+Then I just needed to try sort 1 and 3 with sorted lists, because the difference relay in their omega.
+Sort 1 (omega n) is Bubble sort because it performs in these lists faster than sort 3 (omega n squared), which is by elimination selection sort.
 
 sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: I just needed to use it on the random lists provided. It performed way faster than sort 1 and 3.
 
 sort3 uses: Selection sort
 
-How do you know?: TODO
+How do you know?: After performing trials on random lists I already decided that sort 2 was out of the question because it is merge sort.
+I also had an idea of which could be the others because usually bubble sort performs slower than selection sort in random lists.
+Then I just needed to try sort 1 and 3 with sorted lists, because the difference relay in their omega.
+Sort 3 (omega n squared )is Selection sort because it performs in these lists slower than sort 1 (omega n squared), which is by elimination bubble sort.
