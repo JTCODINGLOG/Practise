@@ -84,8 +84,8 @@ void print_winner(void)
     {
         if (candidates[i].votes < candidates[i + 1].votes)
         {
-            int joker;
-            joker = candidates[i].votes;
+            candidate joker;
+            joker = candidates[i];
             candidates[i] = candidates[i + 1];
             candidates[i + 1] = joker;
         }
