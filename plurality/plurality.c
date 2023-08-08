@@ -89,7 +89,14 @@ void print_winner(void)
             candidates[i] = candidates[i + 1];
             candidates[i + 1] = joker;
         }
-        if (candidates)
+    }
+    printf ("The winner is/are:")
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[0].votes > candidates[i + 1].votes)
+        return printf ("%s", candidates[0].name);
+        if (candidates[0].votes = candidates[i + 1].votes)
+        return 
     }
     return;
 }
