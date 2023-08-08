@@ -91,8 +91,8 @@ void print_winner(void)
         }
     }
     printf ("The winner is/are:\n%s\n", candidates[0].name);
-    
-    for (int i = 0; i < candidate_count; i++)
+
+    for (int i = 1; i < candidate_count; i++)
     {
         if (candidates[0].votes = candidates[i + 1].votes)
         printf ("%s\n", candidates[i+1]);
