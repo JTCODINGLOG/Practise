@@ -89,6 +89,7 @@ void print_winner(void)
             candidates[i] = candidates[i + 1];
             candidates[i + 1] = joker;
         }
+        if (candidates)
     }
     return;
 }
