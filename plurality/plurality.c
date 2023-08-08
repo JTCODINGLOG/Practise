@@ -82,7 +82,7 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if candidate 
+        if candidate
     }
     return;
 }
