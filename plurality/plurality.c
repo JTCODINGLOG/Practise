@@ -94,9 +94,12 @@ void print_winner(void)
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[0].votes > candidates[i + 1].votes)
-        return printf ("%s", candidates[0].name);
+        {
+            printf ("%s", candidates[0].name);
+            break;
+        }
         if (candidates[0].votes = candidates[i + 1].votes)
-        return 
+        printf ("%s %s", candidates[0].name, candidates[i+1]);
     }
     return;
 }
