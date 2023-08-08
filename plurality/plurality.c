@@ -67,10 +67,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     int i = 1;
-    if (name == argv[i])
+    if (name == candidate[i].name)
     {
-        candidate[i].vote
+        candidate[i].vote =+ 1
     }
+    
     // TODO
     return false;
 }
