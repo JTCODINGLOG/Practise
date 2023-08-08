@@ -66,12 +66,13 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    int i = 1;
+    for (int i = 0; i < ; i++)
     if (name == candidate[i].name)
     {
         candidate[i].vote =+ 1
     }
-    
+
+
     // TODO
     return false;
 }
