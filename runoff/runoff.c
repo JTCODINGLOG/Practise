@@ -190,7 +190,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     for (int i = 0; i < candidate_count; i++)
-    if (
+    if (candidates.votes
 
     // TODO
     return false;
