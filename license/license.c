@@ -19,6 +19,11 @@ int main(int argc, char *argv[])
     char *infile = argv[1];
 
     FILE *inptr = fopen(infile, "r");
+    if (inptr == NULL)
+    {
+        printf ("Could not open %s file", infile);
+        return 2;
+    }
 
     int idx = 0;
 
