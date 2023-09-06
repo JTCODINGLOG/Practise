@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
-    bi.biHeight = 
+    bi.biHeight = bi.biHeight * (-1);
 
     // Write outfile's BITMAPINFOHEADER
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
