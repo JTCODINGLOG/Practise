@@ -15,6 +15,9 @@ int main(int argc, char *argv[])
     // Create array to store plate numbers
     char *plates[8];
 
+    //create infile
+    char *infile = argv
+
     FILE *infile = fopen(argv[1], "r");
 
     int idx = 0;
