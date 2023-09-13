@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     char *plates[8];
 
     //create infile
-    char *infile = argv[1];
+    
 
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
