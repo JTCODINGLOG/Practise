@@ -30,14 +30,13 @@ int main(int argc, char *argv[])
 
     int idx = 0;
 
-    while (fread(&buffer, 1, 7, inptr) == 7)
+    while (fread(buffer, 1, 7, inptr) == 7)
     {
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
         // Save plate number in array
-        *plates[idx] = buffer[0];
-        *(plates[idx]+1) = buffer[1];
+        plates[idx] = buffer;
 
         idx++;
     }
