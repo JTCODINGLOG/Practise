@@ -25,8 +25,6 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    int idx = 0;
-
     while (fread(&buffer, 1, 7, inptr) == 7)
     {
         // Replace '\n' with '\0'
@@ -35,11 +33,8 @@ int main(int argc, char *argv[])
         // Save plate number in array
         for (int i=0; i < 7; i++)
         {
-            *plates[idx+i] = buffer[i];
+            *plates[i] = buffer[i];
         }
-
-
-        idx++;
     }
 
 
