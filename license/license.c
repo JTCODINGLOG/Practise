@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
-    char *buffer = malloc(strlen(buffer));
+    char *buffer = malloc(strlen(buffer)+1);
 
     // Create array to store plate numbers
     char *plates[8];
