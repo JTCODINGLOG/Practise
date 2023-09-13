@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
         buffer[6] = '\0';
 
         // Save plate number in array
-        *(plates[idx]) = buffer;
+        *plates[idx] = buffer[0];
+        *(plates[idx]+1) = buffer[1];
 
         idx++;
     }
