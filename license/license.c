@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
+    str = (char*)malloc
+
     char buffer[7];
 
     // Create array to store plate numbers
