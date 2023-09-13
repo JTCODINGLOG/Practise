@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib
 
 int main(int argc, char *argv[])
 {
