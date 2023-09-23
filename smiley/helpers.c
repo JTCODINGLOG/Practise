@@ -8,12 +8,12 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
         {
             if(image[i][j].rgbtBlue == 0)
             {
-                pixel.rgbtBlue = 41;
-                pixel.rgbtGreen = 181;
-                pixel.rgbtRed = 209;
+                image[i][j].rgbtBlue = 41;
+                image[i][j].rgbtGreen = 181;
+                image[i][j].rgbtRed = 209;
             }
         }
     }
-
+return
     // Change all black pixels to a color of your choosing
 }
