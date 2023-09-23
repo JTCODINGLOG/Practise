@@ -11,6 +11,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
             {
                 pixel.rgbtBlue =
                 pixel.rgbtBlue =
+                pixel.rgbtBlue =
             }
         }
     }
