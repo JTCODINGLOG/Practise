@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
     uint8_t header_buffer[44];
     int16_t samples_buffer;
 
-    fread (header_buffer, 1, 44)
-    fwrite
+    fread (header_buffer, 1, 44, input);
+    fwrite ()
 
     // TODO: Read samples from input file and write updated data to output file
 
