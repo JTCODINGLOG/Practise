@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     while (fread (samples_buffer, 1, 2, input) == 1)
     {
-        fwrite(samples_buffer, 1, 2, output)
+        fwrite(samples_buffer, 1, 2, output);
     }
 
     // Close files
