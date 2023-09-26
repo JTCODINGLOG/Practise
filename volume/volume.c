@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     uint8_t header[44];
-    int16_t notes[];
+    int16_t samples[];
 
     fread ()
 
