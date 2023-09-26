@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     uint8_t header_buffer[44];
-    int16_t samples_buffer;
+    int16_t samples_buffer[1];
 
     // TODO: Copy header from input file to output file
 
@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
 
     while (fread (samples_buffer, 1, 2, input) == 1)
     {
+        samples_buffer = samples_buffer * factor;
         fwrite(samples_buffer, 1, 2, output);
     }
 
