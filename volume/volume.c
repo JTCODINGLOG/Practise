@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     while (fread (samples_buffer, sizeof(int16_t), 1, input) == 1)
     {
-        samples_buffer[0] = samples_buffer[0]*factor;
+        samples_buffer[0] *= factor;
         fwrite(samples_buffer, sizeof(int16_t), 1, output);
     }
 
