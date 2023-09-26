@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     int16_t samples[];
 
     fread ()
+    fwrite
 
     // TODO: Read samples from input file and write updated data to output file
 
