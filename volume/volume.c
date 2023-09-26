@@ -38,12 +38,15 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
 
-    fread (&header_buffer, 1, 44, input);
-    fwrite (&header_buffer, 1, 44, output);
+    fread (header_buffer, 1, 44, input);
+    fwrite (header_buffer, 1, 44, output);
 
     // TODO: Read samples from input file and write updated data to output file
 
-    while (fread != 0)
+    while (fread (samples_buffer, 1, 2, input) == 1)
+    {
+        fwrite(samples_buffer, 1, 2, output)
+    }
 
     // Close files
     fclose(input);
