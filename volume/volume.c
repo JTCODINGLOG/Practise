@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
 
     while (fread (samples_buffer, 1, 2, input) == 1)
     {
+        samples_buffer = samples_buffer * 
         fwrite(samples_buffer, 1, 2, output);
     }
 
