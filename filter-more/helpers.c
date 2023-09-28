@@ -7,7 +7,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < height; j++)
         {
-            int average
+            BYTE average = image[i][j]image[i][j]image[i][j]
         }
     }
     return;
