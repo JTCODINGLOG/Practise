@@ -13,7 +13,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             buffer = image[i][j];
             image[i][j] = image[i][width - 1 - j];
             image[i][width - 1 - j] = buffer;
-
         }
     }
     return;
