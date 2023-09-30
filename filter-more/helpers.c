@@ -54,9 +54,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int avg_red;
             int avg_green;
             int avg_blue;
-            for (int j = 0; j < 9; j++)
+            for (int h = 0; h < 3; h++)
             {
-                
+                for (int h = 0; h < 3; h++)
             }
 
         }
