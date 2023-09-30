@@ -51,14 +51,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int avg_red;
-            int avg_green;
-            int avg_blue;
+            int tot_red = 0;
+            int tot_green = 0;
+            int tot_blue = 0;
             for (int h = -1; h < 2; h++)
             {
                 for (int h = -1; h < 2; h++)
-                
+                tot_red += copy[h][j].rgbtBlue;
+                tot_green += copy[h][j].rgbtGreen;
+                tot_blue += copy[h][j].rgbtRed;
             }
+
+            //theory: divide each tot between 9 passing the value to the image pixel.
+            //problem: not all the pixels have a perfect matrix around
+
 
         }
     }
