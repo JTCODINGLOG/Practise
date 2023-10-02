@@ -69,7 +69,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                  }
 
                  image[i][j].rgbtRed = round(tot_red / 9);
-                 image[i][j].rgbtGreen = round(tot_green / )9;
+                 image[i][j].rgbtGreen = round(tot_green / 9);
                  image[i][j].rgbtBlue = round(tot_blue / 9);
             }
 
