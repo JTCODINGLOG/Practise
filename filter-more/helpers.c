@@ -56,6 +56,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int counter = 0;
 
             for (int k = -1; k < 2; k++)
+            {
                 for (int l = -1; l < 2; l++)
                 {
                     tot_red += copy[i+k][j+l].rgbtRed;
