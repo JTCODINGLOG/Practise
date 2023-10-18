@@ -95,8 +95,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    int gx_matrix [3][3] = {{-1,0,1}, {-2,0,2}, {-1,0,1}};
-    int gy_matrix [3][3] = {{-1,2,1}, {0,0,0}, {1,2,1}};
+    int gx_matrix[3][3] = {{-1,0,1}, {-2,0,2}, {-1,0,1}};
+    int gy_matrix[3][3] = {{-1,2,1}, {0,0,0}, {1,2,1}};
 
     for (int i = 0; i < height; i++)
     {
@@ -105,7 +105,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int tot_red = 0;
             int tot_green = 0;
             int tot_blue = 0;
-            float counter = 0;
 
             for (int k = -1; k < 2; k++)
             {
@@ -117,7 +116,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    tot_red += copy[x][y].rgbtRed;
+                    tot_red += gx_matrix[][]*copy[x][y].rgbtRed;
                     tot_green += copy[x][y].rgbtGreen;
                     tot_blue += copy[x][y].rgbtBlue;
 
