@@ -80,6 +80,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //problem: not all the pixels have a perfect matrix around
         }
     }
+    return;
 }
 
 // Detect edges
