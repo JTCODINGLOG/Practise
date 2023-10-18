@@ -122,13 +122,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    tot_red_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtRed;
-                    tot_green_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
-                    tot_blue_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
+                    tot_red_gx += (gx_matrix[x_m][y_m]*copy[x][y].rgbtRed);
+                    tot_green_gx += (gx_matrix[x_m][y_m]*copy[x][y].rgbtGreen);
+                    tot_blue_gx += (gx_matrix[x_m][y_m]*copy[x][y].rgbtBlue);
 
-                    tot_red_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtRed;
-                    tot_green_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
-                    tot_blue_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
+                    tot_red_gy += (gy_matrix[x_m][y_m]*copy[x][y].rgbtRed);
+                    tot_green_gy += (gy_matrix[x_m][y_m]*copy[x][y].rgbtGreen);
+                    tot_blue_gy += (gy_matrix[x_m][y_m]*copy[x][y].rgbtBlue);
                 }
             }
         }
