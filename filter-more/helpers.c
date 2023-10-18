@@ -136,11 +136,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtBlue = sqrt(pow(tot_blue_gx, 2) + pow(tot_blue_gy, 2));
 
             if (image[i][j].rgbtRed > 255)
-            {image[i][j]rgbtRed = 255}
+            {image[i][j].rgbtRed = 255;}
             if (image[i][j].rgbtGreen > 255)
-            {image[i][j]rgbtGreen = 255}
+            {image[i][j].rgbtGreen = 255;}
             if (image[i][j].rgbtBlue > 255)
-            {image[i][j]rgbtBlue = 255}
+            {image[i][j].rgbtBlue = 255;}
         }
     }
     return;
