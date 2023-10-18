@@ -109,6 +109,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int tot_red_gy = 0;
             int tot_green_gy = 0;
             int tot_blue_gy = 0;
+            int tot_red = 0;
+            int tot_green = 0;
+            int tot_blue = 0;
 
             for (int k = -1; k < 2; k++)
             {
@@ -131,6 +134,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     tot_blue_gy += (gy_matrix[x_m][y_m]*copy[x][y].rgbtBlue);
                 }
             }
+            int tot_red = tot_red_gx + tot_red_gy;
         }
     }
     return;
