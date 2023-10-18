@@ -87,51 +87,5 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            copy[i][j] = image[i][j];
-        }
-    }
-
-    int gx_matrix[3][3] = {{-1,0,1}, {-2,0,2}, {-1,0,1}};
-    int gy_matrix[3][3] = {{-1,2,1}, {0,0,0}, {1,2,1}};
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            int tot_red_gx = 0;
-            int tot_green_gx = 0;
-            int tot_blue_gx = 0;
-            int tot_red_gy = 0;
-            int tot_green_gy = 0;
-            int tot_blue_gy = 0;
-
-            for (int k = -1; k < 2; k++)
-            {
-                for (int l = -1; l < 2; l++)
-                {
-                    int x = i + k;
-                    int y = j + l;
-                    int x_m = k + 1;
-                    int y_m = l + 1;
-                    if ( x < 0 || y < 0 || x > (height -1) || y > (width -1))
-                    {
-                        continue;
-                    }
-                    tot_red_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtRed;
-                    tot_green_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
-                    tot_blue_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
-
-                    tot_red_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtRed;
-                    tot_green_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
-                    tot_blue_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
-                }
-            }
-        }
-    }
     return;
 }
