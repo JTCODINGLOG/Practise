@@ -134,7 +134,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     tot_blue_gy += (gy_matrix[x_m][y_m]*copy[x][y].rgbtBlue);
                 }
             }
-            int tot_red = tot_red_gx + tot_red_gy;
+            int tot_red = sqrt(tot_red_gx + tot_red_gy;
         }
     }
     return;
