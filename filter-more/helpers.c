@@ -71,11 +71,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     counter++;
                 }
-            }
-            image[i][j].rgbtRed = round(tot_red / counter);
-            image[i][j].rgbtGreen = round(tot_green / counter);
-            image[i][j].rgbtBlue = round(tot_blue / counter);
 
+                image[i][j].rgbtRed = round(tot_red / counter);
+                image[i][j].rgbtGreen = round(tot_green / counter);
+                image[i][j].rgbtBlue = round(tot_blue / counter);
+            }
             //theory: divide each tot between 9 passing the value to the image pixel.
             //problem: not all the pixels have a perfect matrix around
         }
@@ -105,9 +105,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int tot_red_gx = 0;
             int tot_green_gx = 0;
             int tot_blue_gx = 0;
-            int tot_red_gy = 0;
-            int tot_green_gy = 0;
-            int tot_blue_gy = 0;
+            int tot_red_g = 0;
+            int tot_green_g = 0;
+            int tot_blue_g = 0;
 
             for (int k = -1; k < 2; k++)
             {
@@ -121,19 +121,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    tot_red_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtRed;
-                    tot_green_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
-                    tot_blue_gx += gx_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
-
-                    tot_red_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtRed;
-                    tot_green_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
-                    tot_blue_gy += gy_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
+                    tot_red += gx_matrix[x_m][y_m]*copy[x][y].rgbtRed;
+                    tot_green += gx_matrix[x_m][y_m]*copy[x][y].rgbtGreen;
+                    tot_blue += gx_matrix[x_m][y_m]*copy[x][y].rgbtBlue;
                 }
 
                 image[i][j].rgbtRed = round(tot_red / counter);
                 image[i][j].rgbtGreen = round(tot_green / counter);
                 image[i][j].rgbtBlue = round(tot_blue / counter);
             }
+            //theory: divide each tot between 9 passing the value to the image pixel.
+            //problem: not all the pixels have a perfect matrix around
         }
     }
     return;
