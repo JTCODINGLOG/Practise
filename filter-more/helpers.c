@@ -114,14 +114,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int l = -1; l < 2; l++)
                 {
-                    int x = i + k;
-                    int y = j + l;
-                    int x_m = k + 1;
-                    int y_m = l + 1;
                     if ( x < 0 || y < 0 || x > (height -1) || y > (width -1))
                     {
                         continue;
                     }
+
+                    int x = i + k;
+                    int y = j + l;
+                    int x_m = k + 1;
+                    int y_m = l + 1;
+
                     tot_red_gx += (gx_matrix[x_m][y_m]*copy[x][y].rgbtRed);
                     tot_green_gx += (gx_matrix[x_m][y_m]*copy[x][y].rgbtGreen);
                     tot_blue_gx += (gx_matrix[x_m][y_m]*copy[x][y].rgbtBlue);
