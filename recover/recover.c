@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
                 counter++;
             }
-
         }
+        else ( /*not the start of a new jpeg, keep saving the*/)
     }
 
     fclose(infile);
