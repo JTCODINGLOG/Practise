@@ -14,12 +14,14 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("Please enter only 1 argument\n");
+        return 1;
     }
 
     FILE*infile = fopen(argv[1], "r");
     if (infile == NULL)
     {
         printf("Usage: ./recover file\n");
+        return 1;
     }
 
     BYTE buffer[BLOCK_SIZE];
