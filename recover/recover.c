@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 
     FILE*infile = fopen(argv[1], "r");
 
+    //create as many as needed, loop?
     FILE*outfile = fopen(/*allocate room for image*/,"w");
 
     BYTE buffer[BLOCK_SIZE];
