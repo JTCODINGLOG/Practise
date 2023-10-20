@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 const int BLOCK_SIZE = 512;
-// a JPEG file could have more than one block
+// a JPEG file can have more than one block
 
 int main(int argc, char *argv[])
 {
