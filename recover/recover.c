@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
     int counter = 0;
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
-    {   /*the four first bytes have to be 0xff, 0xd8, oxff, oxe*/
+    {
+        fread(buffer, 1, BLOCK_SIZE, infile);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
             fclose(/*old JPEG file*/);
