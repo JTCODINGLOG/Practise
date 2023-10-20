@@ -13,15 +13,14 @@ int main(int argc, char *argv[])
 
     FILE*infile = fopen(argv[1], "r");
 
-    //create as many as needed, loop?
-    FILE*outfile = fopen(/*allocate room for image*/,"w");
-
     BYTE buffer[BLOCK_SIZE];
 
     while (fread(buffer, 1, BLOCK_SIZE, infile))
     {   /*the four first bytes have to be 0xff, 0xd8, oxff, oxe*/
         if (buffer[0] = ff && buffer[1] == d8 && buffer[2] == ff &&)
         {
+            fclose(/*old JPEG file*/)
+            FILE*outfile = fopen(/*allocate room for image*/,"w");
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
         }
     }
