@@ -20,10 +20,11 @@ int main(int argc, char *argv[])
     {   /*the four first bytes have to be 0xff, 0xd8, oxff, oxe*/
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
-            counter++;
             fclose(/*old JPEG file*/)
+            sprintf(counter, "03i.jpg", 2)
             FILE*outfile = fopen(/*allocate room for image*/,"w");
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
+            counter++;
         }
     }
 
