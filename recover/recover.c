@@ -6,7 +6,6 @@ const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
-    //512 bytes until a new JPEG is found.
     //empty spaces are 0.
 
     typedef uint8_t BYTE;
