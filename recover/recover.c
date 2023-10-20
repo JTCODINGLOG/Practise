@@ -11,7 +11,16 @@ int main(int argc, char *argv[])
 
     typedef uint8_t BYTE;
 
+    if (argc != 2)
+    {
+        printf("Please enter only 1 argument\n");
+    }
+
     FILE*infile = fopen(argv[1], "r");
+    if (infile == NULL)
+    {
+        printf("Usage: ./recover file\n");
+    }
 
     BYTE buffer[BLOCK_SIZE];
     int counter = 0;
