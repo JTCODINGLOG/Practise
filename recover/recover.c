@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
                 FILE*outfile = fopen(/*allocate room for image*/,"w");
 
-                sprintf(counter, "03i.jpg", 2);
+                sprintf(counter, "%03i.jpg", 2);
 
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
                 counter++;
