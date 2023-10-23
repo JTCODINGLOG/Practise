@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     }
 
     FILE*outfile = NULL;
-    char *outfile_name = malloc ()
+    char *outfile_name = malloc(8 * sizeof(char));
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
     int memo_block = 1;
