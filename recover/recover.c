@@ -56,10 +56,20 @@ int main(int argc, char *argv[])
             else
             {
                 fclose(outfile);
-                sprintf(counter, "03i.jpg", 2);
-                FILE*outfile = fopen(/*add more room for image*/,"w");
+                int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
+                if (outfile_ptr == NULL)
+                {
+                    printf("Memory not allocated for output file"\n);
+                    return 1;
+                }
+
+                sprintf(outfile_ptr[counter_image], "%03i.jpg", counter_image);
+
+                FILE*outfile = fopen(outfile_ptr,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
-                counter++;
+
+                counter_image++;
+                memo_block++;
             }
         }
         else ( /*not the start of a new jpeg, keep writing the data of the image*/)
