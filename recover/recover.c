@@ -73,6 +73,9 @@ int main(int argc, char *argv[])
             }
         }
         else ( /*not the start of a new jpeg, keep writing the data of the image*/)
+        {
+            
+        }
     }
 
     fclose(infile);
