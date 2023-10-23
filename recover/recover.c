@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     }
 
     FILE*infile = fopen(argv[1], "r");
+    FILE*outfile;
     if (infile == NULL)
     {
         printf("Usage: ./recover file\n");
@@ -32,25 +33,27 @@ int main(int argc, char *argv[])
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
+            if (counter_image != 0)
+            {
+                fclose(outfile);
+            }
+
             memo_block = 1;
 
-            if (counter_image != 0)
-            
+            int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
+            if (outfile_ptr == NULL)
             {
-                int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
-                if (outfile_ptr == NULL)
-                {
-                    printf("Memory not allocated for output file"\n);
-                    return 1;
-                }
+                printf("Memory not allocated for output file"\n);
+                return 1;
+            }
 
-                sprintf(outfile_ptr[counter_image], "%03i.jpg", counter_image);
+            sprintf(outfile_ptr[counter_image], "%03i.jpg", counter_image);
 
-                FILE*outfile = fopen(outfile_ptr,"w");
-                fwrite(buffer, 1, BLOCK_SIZE, outfile);
+            outfile = fopen(outfile_ptr,"w");
+            fwrite(buffer, 1, BLOCK_SIZE, outfile);
 
-                counter_image++;
-                memo_block++;
+            counter_image++;
+            memo_block++;
         }
         else
         {
