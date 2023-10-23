@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 const int BLOCK_SIZE = 512;
 // a JPEG file can have more than one block
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE*outfile[50];
+    FILE*outfile = NULL;
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
     int memo_block = 1;
