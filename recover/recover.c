@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
             memo_block = 1;
-            
+
             if (counter_image = 0)
             {
                 int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
             }
             else
             {
-                fclose(/*old JPEG file*/);
+                fclose(outfile);
                 sprintf(counter, "03i.jpg", 2);
                 FILE*outfile = fopen(/*add more room for image*/,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
