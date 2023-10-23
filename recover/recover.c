@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
                     return 1;
                 }
                 counter_image++;
-                sprintf(outfile_ptr, "%03i.jpg", counter_image);
+                sprintf(outfile_ptr[counter_image], "%03i.jpg", counter_image);
 
                 FILE*outfile = fopen(outfile_ptr,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
