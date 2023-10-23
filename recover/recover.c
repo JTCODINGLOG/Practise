@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
-        fread(buffer, 1, BLOCK_SIZE, infile);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
             memo_block = 1;
