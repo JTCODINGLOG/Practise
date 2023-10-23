@@ -18,12 +18,13 @@ int main(int argc, char *argv[])
     }
 
     FILE*infile = fopen(argv[1], "r");
-    FILE*outfile;
     if (infile == NULL)
     {
         printf("Usage: ./recover file\n");
         return 1;
     }
+
+    FILE*outfile;
 
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
