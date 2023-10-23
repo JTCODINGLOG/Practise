@@ -34,16 +34,19 @@ int main(int argc, char *argv[])
         {
             if (counter = 0)
             {
-                int* outfile_ptr = (int*) malloc(sizeof(BLOCK_SIZE));
+                counter++;
+                int* outfile_ptr = (int*) malloc(counter * sizeof(BLOCK_SIZE));
                 if (outfile_ptr == NULL)
                 {
                     printf("Memory not allocated for output file"\n);
                     return 1;
                 }
 
+                sprintf(outfile_ptr, "%03i.jpg", counter);
+
                 FILE*outfile = fopen(/*allocate room for image*/,"w");
-                counter++;
-                sprintf(filename, "%03i.jpg", counter);
+
+
 
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
 
