@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
             if (counter = 0)
             {
                 sprintf(counter, "03i.jpg", 2);
-                
+
                 FILE*outfile = fopen(/*allocate room for image*/,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
                 counter++;
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             {
                 fclose(/*old JPEG file*/);
                 sprintf(counter, "03i.jpg", 2);
-                FILE*outfile = fopen(/*allocate room for image*/,"w");
+                FILE*outfile = fopen(/*add more room for image*/,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
                 counter++;
             }
