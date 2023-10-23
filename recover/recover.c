@@ -35,11 +35,10 @@ int main(int argc, char *argv[])
             if (counter = 0)
             {
                 sprintf(counter, "03i.jpg", 2);
-                counter++;
-                int* outfile = = (int*)malloc(sizeof(BLOCK_SIZE));
-                outfile_ptr
+                int* outfile_ptr = (int*) malloc(sizeof(BLOCK_SIZE))
                 FILE*outfile = fopen(/*allocate room for image*/,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
+                counter++;
             }
             else
             {
