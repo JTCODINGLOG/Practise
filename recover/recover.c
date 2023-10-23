@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
             if (counter = 0)
             {
                 counter++;
-                int* outfile_ptr[counter] = (int*) malloc(counter * sizeof(BLOCK_SIZE));
+                int* outfile_ptr = (int*) malloc(counter * sizeof(BLOCK_SIZE));
                 if (outfile_ptr == NULL)
                 {
                     printf("Memory not allocated for output file"\n);
