@@ -7,7 +7,7 @@ const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
-    //empty spaces are 0.
+    //empty spaces are 0s
 
     typedef uint8_t BYTE;
 
