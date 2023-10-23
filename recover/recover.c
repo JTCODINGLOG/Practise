@@ -24,8 +24,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE*outfile;
-
+    FILE*outfile[50];
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
     int memo_block = 1;
