@@ -25,18 +25,17 @@ int main(int argc, char *argv[])
     }
 
     BYTE buffer[BLOCK_SIZE];
-    int counter = 0;
-    int memo_blocks = 1;
+    int counter_image = 0;
+    int memo_block = 1;
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
         fread(buffer, 1, BLOCK_SIZE, infile);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
-            if (counter = 0)
+            if (counter_image = 0)
             {
-                counter++;
-                int* outfile_ptr = (int*) malloc(counter * sizeof(BLOCK_SIZE));
+                int* outfile_ptr = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
                 if (outfile_ptr == NULL)
                 {
                     printf("Memory not allocated for output file"\n);
