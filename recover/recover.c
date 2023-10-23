@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
                 memo_block++;
             }
         }
-        else ( /*not the start of a new jpeg, keep writing the data of the image*/)
+        else
         {
             fread(buffer, 1, BLOCK_SIZE, infile);
             FILE*outfile = fopen(outfile_ptr,"w");
