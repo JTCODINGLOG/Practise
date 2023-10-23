@@ -76,7 +76,6 @@ int main(int argc, char *argv[])
         {
             fread(buffer, 1, BLOCK_SIZE, infile);
             int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
-            FILE*outfile = fopen(outfile_ptr,"w");
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
             memo_block++;
         }
