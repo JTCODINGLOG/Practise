@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
         fread(buffer, 1, BLOCK_SIZE, infile);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & oxf0) == 0xe0 )
         {
+            memo_block = 1;
+            
             if (counter_image = 0)
             {
                 int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
@@ -41,11 +43,14 @@ int main(int argc, char *argv[])
                     printf("Memory not allocated for output file"\n);
                     return 1;
                 }
-                counter_image++;
+
                 sprintf(outfile_ptr[counter_image], "%03i.jpg", counter_image);
 
                 FILE*outfile = fopen(outfile_ptr,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
+
+                counter_image++;
+                memo_block++;
 
             }
             else
