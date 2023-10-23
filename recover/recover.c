@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
         {
             if (counter_image = 0)
             {
-                int* outfile_ptr = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
+                int* outfile_ptr[counter_image] = (int*) malloc(memo_block * sizeof(BLOCK_SIZE));
                 if (outfile_ptr == NULL)
                 {
                     printf("Memory not allocated for output file"\n);
