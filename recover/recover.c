@@ -41,8 +41,8 @@ int main(int argc, char *argv[])
                     printf("Memory not allocated for output file"\n);
                     return 1;
                 }
-
-                sprintf(outfile_ptr, "%03i.jpg", counter);
+                counter_image++;
+                sprintf(outfile_ptr, "%03i.jpg", counter_image);
 
                 FILE*outfile = fopen(outfile_ptr,"w");
                 fwrite(buffer, 1, BLOCK_SIZE, outfile);
