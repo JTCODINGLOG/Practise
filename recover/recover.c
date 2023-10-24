@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
     }
 
     FILE*outfile = NULL;
+    //alocate memory for the name of the jpegs: 000.jpg\0  (8 characters in total)
     char *outfile_name = malloc(8 * sizeof(char));
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
