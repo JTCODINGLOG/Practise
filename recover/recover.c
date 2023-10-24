@@ -54,12 +54,10 @@ int main(int argc, char *argv[])
         }
         else
         {
-            fread(buffer, 1, BLOCK_SIZE, infile);
             if (buffer[0] == 0)
             {
                 continue;
             }
-            BYTE* outfile_ptr[counter_image] = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
             memo_block++;
         }
