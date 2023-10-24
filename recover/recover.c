@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     FILE*infile = fopen(argv[1], "r");
     if (infile == NULL)
     {
-        fclose(infile);
         printf("Usage: ./recover file\n");
         return 1;
     }
