@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
             if (outfile == NULL)
             {
-                printf("Output file not correctly opened"\n);
+                printf("Output file not correctly opened for file %i\n", counter_image);
                 return 2;
             }
         }
