@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
             memo_block = 1;
 
-            BYTE* outfile_ptr[counter_image] = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
+            BYTE* outfile_ptr = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
             if (outfile_ptr == NULL)
             {
                 printf("Memory not allocated for output file"\n);
