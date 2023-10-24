@@ -40,19 +40,17 @@ int main(int argc, char *argv[])
                 fclose(outfile);
             }
 
-            if (outfile_ptr == NULL)
-            {
-                printf("Memory not allocated for output file"\n);
-                return 1;
-            }
+
 
             sprintf(outfile_name, "%03i.jpg", counter_image);
             outfile = fopen(outfile_name,"w");
+
             if (outfile == NULL)
             {
-
+                printf("Output file not correctly opened"\n);
                 return 1;
             }
+
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
 
             counter_image++;
