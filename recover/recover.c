@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         printf("Please enter only 1 argument\n");
         return 1;
     }
-
+    // open memory card
     FILE*infile = fopen(argv[1], "r");
     if (infile == NULL)
     {
