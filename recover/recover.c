@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
 
-            sprintf(outfile, "%03i.jpg", counter_image);
+            sprintf(outfile_name, "%03i.jpg", counter_image);
 
             outfile = fopen(outfile_ptr,"w");
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
