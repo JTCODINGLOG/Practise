@@ -47,8 +47,6 @@ int main(int argc, char *argv[])
             if (outfile == NULL)
             {
                 printf("Output file not correctly opened"\n);
-                fclose(infile);
-                fclose(outfile)
                 return 1;
             }
         }
