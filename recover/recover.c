@@ -66,4 +66,6 @@ int main(int argc, char *argv[])
     fclose(infile);
     fclose(outfile);
 
+    return 0;
+
 }
