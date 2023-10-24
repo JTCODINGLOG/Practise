@@ -47,7 +47,6 @@ int main(int argc, char *argv[])
             {
                 free(outfile_name);
                 fclose(infile);
-                fclose(outfile);
                 printf("Output file %i not correctly opened\n", counter_image);
                 return 2;
             }
