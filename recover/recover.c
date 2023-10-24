@@ -30,7 +30,8 @@ int main(int argc, char *argv[])
     char *outfile_name = malloc(8 * sizeof(char));
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
-    bool same_image = false;
+    bool same_image;
+    same_image = false;
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
