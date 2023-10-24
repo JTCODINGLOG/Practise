@@ -54,7 +54,9 @@ int main(int argc, char *argv[])
             counter_image++;
         }
         else
-        {}
+        {
+            continue;
+        }
 
         fwrite(buffer, 1, BLOCK_SIZE, outfile);
     }
