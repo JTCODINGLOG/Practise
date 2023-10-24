@@ -50,7 +50,10 @@ int main(int argc, char *argv[])
                 return 2;
             }
         }
-
+        if (fread(buffer, 1, BLOCK_SIZE, infile) == 0)
+        {
+            continue;
+        }
         fwrite(buffer, 1, BLOCK_SIZE, outfile);
     }
     free(outfile_name);
