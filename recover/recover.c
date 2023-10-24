@@ -48,19 +48,14 @@ int main(int argc, char *argv[])
                 printf("Output file not correctly opened"\n);
                 return 1;
             }
-
-            fwrite(buffer, 1, BLOCK_SIZE, outfile);
-
             counter_image++;
         }
-        else
+        if (buffer[0] == 0)
         {
-            if (buffer[0] == 0)
-            {
-                continue;
-            }
-            fwrite(buffer, 1, BLOCK_SIZE, outfile);
+            continue;
         }
+
+        fwrite(buffer, 1, BLOCK_SIZE, outfile);
     }
     free(outfile_name);
     fclose(infile);
