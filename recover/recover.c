@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             }
             counter_image++;
         }
-        else
+        if else (outfile = NULL)
         {
             continue;
         }
