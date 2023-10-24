@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
             memo_block = 1;
 
-            int* outfile_ptr[counter_image] = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
+            BYTE* outfile_ptr[counter_image] = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
             if (outfile_ptr == NULL)
             {
                 printf("Memory not allocated for output file"\n);
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
             {
                 continue;
             }
-            int* outfile_ptr[counter_image] = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
+            BYTE* outfile_ptr[counter_image] = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
             memo_block++;
         }
