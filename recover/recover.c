@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
     char *outfile_name = malloc(8 * sizeof(char));
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
+    bool same_image = false;
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
@@ -49,9 +50,10 @@ int main(int argc, char *argv[])
                 printf("Output file %i not correctly opened\n", counter_image);
                 return 2;
             }
+            same_image = true;
             counter_image++;
         }
-        if else (outfile = NULL)
+        if else (same_image == false)
         {
             continue;
         }
