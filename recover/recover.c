@@ -1,24 +1,4 @@
-
-    while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
-    {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
-        {
-            if (counter_image != 0)
-            {
-                fclose(outfile);
-            }
-
-            sprintf(outfile_name, "%03i.jpg", counter_image);
-            outfile = fopen(outfile_name,"w");
-            if (outfile == NULL)
-            {
-                free(outfile_name);
-                fclose(infile);
-                printf("Output file %i not correctly opened\n", counter_image);
-                return 2;
-            }
-            counter_image++;
-        }#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -51,6 +31,26 @@ int main(int argc, char *argv[])
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
 
+    while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
+    {
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
+        {
+            if (counter_image != 0)
+            {
+                fclose(outfile);
+            }
+
+            sprintf(outfile_name, "%03i.jpg", counter_image);
+            outfile = fopen(outfile_name,"w");
+            if (outfile == NULL)
+            {
+                free(outfile_name);
+                fclose(infile);
+                printf("Output file %i not correctly opened\n", counter_image);
+                return 2;
+            }
+            counter_image++;
+        }
         else
         {
             continue;
