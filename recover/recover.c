@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
     FILE*infile = fopen(argv[1], "r");
     if (infile == NULL)
     {
+        fclose(infile);
         printf("Usage: ./recover file\n");
         return 1;
     }
@@ -44,7 +45,9 @@ int main(int argc, char *argv[])
             outfile = fopen(outfile_name,"w");
             if (outfile == NULL)
             {
-                fclose
+                free(outfile_name);
+                fclose(infile);
+                fclose(outfile);
                 printf("Output file not correctly opened for file %i\n", counter_image);
                 return 2;
             }
