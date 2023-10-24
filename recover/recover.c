@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
             outfile = fopen(outfile_ptr,"w");
-            
+
             sprintf(outfile_name, "%03i.jpg", counter_image);
 
 
