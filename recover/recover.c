@@ -40,8 +40,6 @@ int main(int argc, char *argv[])
                 fclose(outfile);
             }
 
-
-
             sprintf(outfile_name, "%03i.jpg", counter_image);
             outfile = fopen(outfile_name,"w");
 
