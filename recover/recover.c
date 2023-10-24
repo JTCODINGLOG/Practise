@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
             if (counter_image != 0)
             {
                 fclose(outfile);
+                same_image = false;
             }
 
             sprintf(outfile_name, "%03i.jpg", counter_image);
