@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
     char *outfile_name = malloc(8 * sizeof(char));
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
-    int memo_block = 1;
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
@@ -41,23 +40,17 @@ int main(int argc, char *argv[])
                 fclose(outfile);
             }
 
-            memo_block = 1;
-
-            BYTE* outfile_ptr = (BYTE*) malloc(memo_block * sizeof(BLOCK_SIZE));
             if (outfile_ptr == NULL)
             {
                 printf("Memory not allocated for output file"\n);
                 return 1;
             }
-            outfile = fopen(outfile_ptr,"w");
 
             sprintf(outfile_name, "%03i.jpg", counter_image);
-
-
+            outfile = fopen(outfile_name,"w");
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
 
             counter_image++;
-            memo_block++;
         }
         else
         {
