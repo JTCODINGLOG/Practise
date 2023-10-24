@@ -59,10 +59,9 @@ int main(int argc, char *argv[])
                 continue;
             }
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
-            memo_block++;
         }
     }
-
+    free(outfile_name);
     fclose(infile);
     fclose(outfile);
 
