@@ -48,6 +48,11 @@ int main(int argc, char *argv[])
 
             sprintf(outfile_name, "%03i.jpg", counter_image);
             outfile = fopen(outfile_name,"w");
+            if (outfile == NULL)
+            {
+
+                return 1;
+            }
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
 
             counter_image++;
