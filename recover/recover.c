@@ -50,11 +50,6 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
-        
-        if (buffer[0] == 0)
-        {
-            continue;
-        }
 
         fwrite(buffer, 1, BLOCK_SIZE, outfile);
     }
