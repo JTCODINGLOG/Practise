@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 const int BLOCK_SIZE = 512;
 // a JPEG file can have more than one block
@@ -30,8 +31,8 @@ int main(int argc, char *argv[])
     char *outfile_name = malloc(8 * sizeof(char));
     BYTE buffer[BLOCK_SIZE];
     int counter_image = 0;
-    bool same_image;
-    same_image = false;
+    bool same_image = false;
+
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
             same_image = true;
             counter_image++;
         }
-        if else (same_image == false)
+        else if (same_image == false)
         {
             continue;
         }
