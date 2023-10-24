@@ -49,10 +49,11 @@ int main(int argc, char *argv[])
                 printf("Memory not allocated for output file"\n);
                 return 1;
             }
-
+            outfile = fopen(outfile_ptr,"w");
+            
             sprintf(outfile_name, "%03i.jpg", counter_image);
 
-            outfile = fopen(outfile_ptr,"w");
+
             fwrite(buffer, 1, BLOCK_SIZE, outfile);
 
             counter_image++;
