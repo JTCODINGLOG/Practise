@@ -42,15 +42,15 @@ int main(int argc, char *argv[])
 
             sprintf(outfile_name, "%03i.jpg", counter_image);
             outfile = fopen(outfile_name,"w");
-            counter_image++;
-
             if (outfile == NULL)
             {
+                fclose
                 printf("Output file not correctly opened for file %i\n", counter_image);
                 return 2;
             }
+            counter_image++;
         }
-        
+
         fwrite(buffer, 1, BLOCK_SIZE, outfile);
     }
     free(outfile_name);
