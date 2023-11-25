@@ -117,15 +117,12 @@ bool check(char *word)
         {
             return false;
         }
-        else
-        {
-            if (cursor->is_word == true)
-            {
-                return true;
-            }
-            cursor = cursor->children[index];
 
+        if (cursor->is_word == true)
+        {
+            return true;
         }
+        cursor = cursor->children[index];
     }
 }
 
