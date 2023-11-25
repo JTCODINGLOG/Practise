@@ -112,7 +112,9 @@ bool check(char *word)
     node* cursor = root;
     for (int i = 0; i < strlen(word); i++)
     {
+        int index = tolower(word[i]) - 'a';
         
+
     }
 
     return true;
