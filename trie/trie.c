@@ -123,7 +123,7 @@ bool check(char *word)
             {
                 return true;
             }
-            cursor = cursor->children;
+            cursor = cursor->children[index];
 
         }
     }
