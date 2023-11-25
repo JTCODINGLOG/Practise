@@ -117,12 +117,13 @@ bool check(char *word)
         {
             return false;
         }
-        else
+        else if(cursor->is_word == true)
         {
-            if (cursor->is_word == false)
-            cursor = cursor->children[index];
+            break;
         }
+        cursor = cursor->children[index];
     }
+    return true;
 }
 
 // Unload trie from memory
