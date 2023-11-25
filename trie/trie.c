@@ -124,6 +124,7 @@ bool check(char *word)
         }
         cursor = cursor->children[index];
     }
+    return;
 }
 
 // Unload trie from memory
