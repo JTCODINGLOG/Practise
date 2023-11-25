@@ -119,6 +119,7 @@ bool check(char *word)
         }
         else
         {
+            if (cursor->is_word == false)
             cursor = cursor->children[index];
         }
     }
