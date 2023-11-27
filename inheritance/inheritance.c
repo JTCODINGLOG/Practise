@@ -70,7 +70,7 @@ person *create_family(int generations)
         for (int i = 0; i < 2; i++)
         {
         int r = rand() % 2;
-        current->alleles[i] = current->parents[i]->alleles[r];
+        current->alleles[i] = current->parents[r]->alleles[r];
         }
     }
 
