@@ -88,7 +88,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return current;
 }
 
 // Free `p` and all ancestors of `p`.
