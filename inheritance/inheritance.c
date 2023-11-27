@@ -44,7 +44,7 @@ person *create_family(int generations)
     if (current == NULL)
     {
         printf("Memory could not be allocated\n");
-        return 1;
+        return;
     }
     for (int = 0; i < 2; i++)
     {
