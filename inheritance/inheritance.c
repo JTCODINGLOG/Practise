@@ -81,11 +81,10 @@ person *create_family(int generations)
         {
             current->parents[i] = NULL;
             int r = rand() % 2;
-            current->alleles[i] = random_allele()
+            current->alleles[i] = random_allele();
         }
 
-
-        // TODO: Randomly assign alleles
+        // TODO: Randomly assign alleles ->done above
     }
 
     // TODO: Return newly created person
