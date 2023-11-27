@@ -66,6 +66,8 @@ person *create_family(int generations)
         current->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
+        //note than in cs50 they don't do it like in real genetics where bothe alleles could be from one single parent
+        //in cs50 choose one from the father and one from the mother
 
         for (int i = 0; i < 2; i++)
         {
