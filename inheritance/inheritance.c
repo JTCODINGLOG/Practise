@@ -40,15 +40,15 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
 
-    person* root = malloc(sizeof(person));
-    if (root = NULL)
+    person* current = malloc(sizeof(person));
+    if (current = NULL)
     {
         return printf("Memory could not be allocated\n");
     }
     for (int = 0; i < 2; i++)
     {
-        root->parents[i] = NULL;
-        root->alleles[i] = NULL;
+        current->parents[i] = NULL;
+        current->alleles[i] = NULL;
     }
 
 
@@ -56,7 +56,6 @@ person *create_family(int generations)
     // If there are still generations left to create
     if (generations > 1)
     {
-        person *current = root;
         // Create two new parents for current person by recursively calling create_family
         person *parent0 = create_family(generations - 1);
         person *parent1 = create_family(generations - 1);
