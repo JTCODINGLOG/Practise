@@ -44,9 +44,9 @@ person *create_family(int generations)
     if (current == NULL)
     {
         printf("Memory could not be allocated\n");
-        return 1;
+        return NULL;
     }
-    for (int = 0; i < 2; i++)
+    for (int i = 0; i < 2; i++)
     {
         current->parents[i] = NULL;
         current->alleles[i] = NULL;
