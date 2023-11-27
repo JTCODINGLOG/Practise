@@ -43,6 +43,7 @@ person *create_family(int generations)
     person* current = malloc(sizeof(person));
     if (current == NULL)
     {
+        printf("Memory could not be allocated\n");
         return 1;
     }
     for (int = 0; i < 2; i++)
