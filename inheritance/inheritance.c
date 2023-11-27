@@ -48,7 +48,7 @@ person *create_family(int generations)
     for (int = 0; i < 2; i++)
     {
         root->parents[i] = NULL;
-        root->alleles[i] = 
+        root->alleles[i] = random_allele();
     }
 
 
