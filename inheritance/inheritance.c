@@ -40,6 +40,8 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
 
+    malloc 
+
     // If there are still generations left to create
     if (generations > 1)
     {
