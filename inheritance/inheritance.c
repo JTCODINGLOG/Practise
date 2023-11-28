@@ -99,7 +99,10 @@ void free_family(person *p)
 {
     // TODO: Handle base case
 
-    person *joker = current;
+    person *joker = p;
+    p = p->parents;
+    free(joker);
+    free family(p);
 
 
 
