@@ -100,7 +100,11 @@ void free_family(person *p)
     // TODO: Handle base case
 
     person *joker = p;
-    p = p->parents[0];
+    if (p->parents[0] != NULL)
+    {
+        p = p->parents[0];
+    }
+
     free(joker);
     free family(p);
 
