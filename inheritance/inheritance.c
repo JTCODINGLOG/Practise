@@ -102,7 +102,11 @@ void free_family(person *p)
     person *joker = p;
     if (p->parents[0] != NULL)
     {
-        p = p->parents[0];
+        free_family(p->parents[0]);
+    }
+    if (p->parents[1] != NULL)
+    {
+        free_family(p_parents[1]);
     }
 
     free(joker);
