@@ -99,19 +99,6 @@ void free_family(person *p)
 {
     // TODO: Handle base case
 
-    person *joker = p;
-    if (p->parents[0] != NULL)
-    {
-        free_family(p->parents[0]);
-    }
-    if (p->parents[1] != NULL)
-    {
-        free_family(p_parents[1]);
-    }
-    free(p);
-
-
-
 
     // TODO: Free parents recursively
 
