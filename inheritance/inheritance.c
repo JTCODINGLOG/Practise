@@ -105,6 +105,12 @@ void free_family(person *p)
 
     // TODO: Free parents recursively
 
+    for (int i = 0; i < 2; i++)
+    {
+        free_family(p->parents[i])
+    }
+
+
     // TODO: Free child
 }
 
