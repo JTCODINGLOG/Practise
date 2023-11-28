@@ -108,9 +108,7 @@ void free_family(person *p)
     {
         free_family(p_parents[1]);
     }
-
-    free(joker);
-    free family(p);
+    free(p);
 
 
 
