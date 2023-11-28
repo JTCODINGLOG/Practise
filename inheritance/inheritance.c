@@ -107,14 +107,11 @@ void free_family(person *p)
 
     for (int i = 0; i < 2; i++)
     {
-        if (p-parents[i] != NULL)
+        if (p->parents[i] != NULL)
         {
             free_family(p->parents[i]);
         }
-        else
-        {
-            free(p);
-        }
+        free(p);
     }
 
 
