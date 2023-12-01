@@ -12,9 +12,13 @@ int main(void)
 {
     string text = get_string("Text: ");
 
+    printf ("%i %i %i", c_letters(text), c_words(text), c_sentences(text));
+
     int L = c_letters (text) / c_words (text) * 100;
     int S = c_sentences (text) / c_words (text) * 100;
     int index = round (0.0588 * L - 0.296 * S - 15.8);
+
+    printf ("%i %i", L, S);
 
     if (index < 1)
     {
