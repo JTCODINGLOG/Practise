@@ -25,3 +25,9 @@ int count_letters (string text)
     }
     return letter_counter;
 }
+
+int count_words (string text)
+{
+    int word_counter = 0
+    for
+}
