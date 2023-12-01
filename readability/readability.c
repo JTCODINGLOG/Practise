@@ -5,8 +5,11 @@ int main(void)
 {
     string text = get_string("Text: ");
     0\
-    
-    while (text)
+    do
+    (
+        count
+    )
+    while (text[i][j] =! NULL)
     float L = text /100
     float s
 }
