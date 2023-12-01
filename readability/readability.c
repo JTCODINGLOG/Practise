@@ -9,15 +9,12 @@ int main(void)
 {
     string text = get_string("Text: ");
     printf ("%i\n", count_letters(text));
-
-
-    printf ("%i\n", lenght);
 }
 
 int count_letters (string text)
 {
     int letter_counter = 0;
-    for (int i = 0; i < strlen(text); lenght; i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]))
         {
