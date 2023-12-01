@@ -13,6 +13,8 @@ int main(void)
     printf ("%i letters and %i words \n", count_letters(text), count_words(text));
 }
 
+
+
 int count_letters (string text)
 {
     int letter_counter = 0;
@@ -26,6 +28,7 @@ int count_letters (string text)
     return letter_counter;
 }
 
+
 int count_words (string text)
 {
     int word_counter = 0;
@@ -37,4 +40,10 @@ int count_words (string text)
         }
     }
     return word_counter;
+}
+
+
+int count_sentences (string text)
+{
+    
 }
