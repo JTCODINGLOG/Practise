@@ -10,13 +10,12 @@ int c_sentences (string text);
 string main(void)
 {
     string text = get_string("Text: ");
-    c_letters (text);
-    c_words (text);
-    c_sentences (text);
-    printf ("%i letters and %i words and %i sentences.\n", c_letters(text), c_words(text), c_sentences(text));
+
     float L = c_letters (text) / c_words (text) * 100;
     float S = c_sentences (text) / c_words (text) * 100;
     int index = round(0.0588 * L - 0.296 * S - 15.8);
+
+    return (printf ("Grade %i\n", index));
 
 }
 
