@@ -34,7 +34,7 @@ int count_words (string text)
     int word_counter = 0;
     for (int i = 0; i <strlen(text); i++)
     {
-        if (isalpha(text[i]) && text[i+1] != '-' && (((isspace(text[i+1])) || (ispunct(text[i+1])))))
+        if (isalpha(text[i]) && (text[i+1] != '-' || isspace(text[i+1]) || ispunct(text[i+1])))
         {
             word_counter++;
         }
