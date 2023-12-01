@@ -23,7 +23,7 @@ int main(void)
     int years = 0;
     while (start < end)
     {
-        start += start / 12;
+        start += start / 6;
         years++;
     }
 
