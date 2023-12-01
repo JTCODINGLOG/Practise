@@ -8,7 +8,7 @@ int main(void)
     int lenght = strlen(text);
     for (int i = 0; i < lenght; i++)
     {
-        if ( text[i]
+        if ( 64 < text[i] < 91
     }
     printf ("%i\n", lenght);
 }
