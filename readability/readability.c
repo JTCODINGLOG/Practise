@@ -48,7 +48,7 @@ int count_sentences (string text)
     int sentence_counter = 0;
     for (int i = 0; i <strlen(text); i++)
     {
-        if (isalpha(text[i]) && ((isspace(text[i+1])) || (ispunct(text[i+1]))))
+        if (text[i] = '.') || text || (ispunct(text[i+1]))
         {
             sentence_counter++;
         }
