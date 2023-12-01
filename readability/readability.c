@@ -7,7 +7,7 @@ int count_letters (string text);
 int count_words (string text);
 int count_sentences (string text);
 
-int main(void)
+string main(void)
 {
     string text = get_string("Text: ");
     printf ("%i letters and %i words and %i sentences.\n", count_letters(text), count_words(text), count_sentences(text));
