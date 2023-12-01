@@ -3,35 +3,38 @@
 #include <string.h>
 #include <ctype.h>
 
-int count_letters (string text);
-int count_words (string text);
-int count_sentences (string text);
+int c_letters (string text);
+int c_words (string text);
+int c_sentences (string text);
 
 string main(void)
 {
     string text = get_string("Text: ");
-    printf ("%i letters and %i words and %i sentences.\n", count_letters(text), count_words(text), count_sentences(text));
+    c_letters (text);
+    c_words (text);
+    c_sentences (text);
+    printf ("%i letters and %i words and %i sentences.\n", c_letters(text), c_words(text), c_sentences(text));
 }
 
 
 
 int c_letters (string text)
 {
-    int letter_counter = 0;
+    int letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]))
         {
-            letter_counter++;
+            letters++;
         }
     }
-    return letter_counter;
+    return letters;
 }
 
 
-int count_words (string text)
+int c_words (string text)
 {
-    int word_counter = 0;
+    int words = 0;
     for (int i = 0; i <strlen(text); i++)
     {
         if (isalpha(text[i]) && (isspace(text[i+1]) || ispunct(text[i+1])))
@@ -40,22 +43,22 @@ int count_words (string text)
             {
                 continue;
             }
-            word_counter++;
+            words++;
         }
     }
-    return word_counter;
+    return words;
 }
 
 
-int count_sentences (string text)
+int c_sentences (string text)
 {
-    int sentence_counter = 0;
+    int sentences = 0;
     for (int i = 0; i <strlen(text); i++)
     {
         if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
-            sentence_counter++;
+            sentences++;
         }
     }
-    return sentence_counter;
+    return sentences;
 }
