@@ -4,4 +4,6 @@
 int main(void)
 {
     string text = get_string("Text: ");
+    0\
+    float L = text /100
 }
