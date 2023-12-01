@@ -15,7 +15,7 @@ string main(void)
 
 
 
-int count_letters (string text)
+int c_letters (string text)
 {
     int letter_counter = 0;
     for (int i = 0; i < strlen(text); i++)
