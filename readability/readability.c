@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int c_letters (string text);
 int c_words (string text);
@@ -11,11 +12,23 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    float L = c_letters (text) / c_words (text) * 100;
-    float S = c_sentences (text) / c_words (text) * 100;
+    int L = c_letters (text) / c_words (text) * 100;
+    int S = c_sentences (text) / c_words (text) * 100;
     int index = round(0.0588 * L - 0.296 * S - 15.8);
 
-    return (printf ("Grade %i\n", index));
+    if (index < 1)
+    {
+        printf ("Before grade 1\n");
+        return 0;
+    }
+    else if (index > 16)
+    {
+        printf("Grade 16+\n");
+        return 0;
+    }
+
+    printf ("Grade %i\n", index);
+    return 0;
 
 }
 
