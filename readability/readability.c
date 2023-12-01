@@ -14,8 +14,8 @@ int main(void)
 
     printf ("%i and %i and %i\n", c_letters(text), c_words(text), c_sentences(text));
 
-    float L = c_letters (text) / c_words (text) * 100;
-    float S = c_sentences (text) / c_words (text) * 100;
+    float L = (float) c_letters (text) / c_words (text) * 100;
+    float S = (float) c_sentences (text) / c_words (text) * 100;
     int index = round (0.0588 * L - 0.296 * S - 15.8);
 
     printf ("%f so %f\n", L, S);
