@@ -7,7 +7,7 @@ int c_letters (string text);
 int c_words (string text);
 int c_sentences (string text);
 
-string main(void)
+int main(void)
 {
     string text = get_string("Text: ");
 
