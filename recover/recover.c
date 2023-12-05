@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     // open memory card
-    FILE*infile = fopen(argv[1], "r");
+    FILE *infile = fopen(argv[1], "r");
     if (infile == NULL)
     {
         printf("Usage: ./recover file\n");

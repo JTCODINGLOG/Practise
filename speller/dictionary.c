@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -37,8 +37,12 @@ bool load(const char *dictionary)
 {
     // TODO
     //fopen file, check if return value is null, if yes, return false
-    FILE *file = fopen(dictionary, "r");
-    
+    FILE *infile = fopen(dictionary, "r");
+    if (infile == NULL)
+    {
+        printf ("Not able to open the external file\n")
+        return false;
+    }
     //read strings from the file one at a time, we can use fscanf(file (pointer), %s(string), word(character where we will read the word into))
     //we will do the previous step until fscanf return EOF --> end of the file.
     //for each word we read, we can create a node with malloc (remember to check if null) and copy the word there using strcpy
