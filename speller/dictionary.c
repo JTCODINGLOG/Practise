@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -45,7 +46,11 @@ bool load(const char *dictionary)
     }
     //read strings from the file one at a time, we can use fscanf(file (pointer), %s(string), word(character where we will read the word into))
     char *word;
-    int fscanf (infile, %s, word);
+    do(fscanf (infile, %s, word) != EOF)
+    {
+
+    }
+    while
     //we will do the previous step until fscanf return EOF --> end of the file.
     //for each word we read, we can create a node with malloc (remember to check if null) and copy the word there using strcpy
     //for previous: node *n = malloc(sizeof(node)); and strcpy(n->word, "Hello");
