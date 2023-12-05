@@ -37,7 +37,7 @@ bool load(const char *dictionary)
 {
     // TODO
     //fopen file, check if return value is null, if yes, return false
-    //read strings from the file, 1we can use fscanf(file (pointer), %s(string), word(character wher we will read the word into))
+    //read strings from the file one at a time, we can use fscanf(file (pointer), %s(string), word(character where we will read the word into))
     //we will do the previous step until fscanf return EOF --> end of the file.
     //for each word we read, we can create a node with malloc (remember to check if null) and copy the word there using strcpy
     //for previous: node *n = malloc(sizeof(node)); and strcpy(n->word, "Hello");
