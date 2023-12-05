@@ -38,16 +38,19 @@ bool load(const char *dictionary)
 {
     // TODO
     //fopen file, check if return value is null, if yes, return false
+    //read strings from the file one at a time, we can use fscanf(file (pointer), %s(string), word(character where we will read the word into))
+    //we will do the previous step until fscanf return EOF --> end of the file.
+    //for each word we read, we can create a node with malloc (remember to check if null) and copy the word there using strcpy
+    //for previous: node *n = malloc(sizeof(node)); and strcpy(n->word, "Hello");
+    //now we insert the node in the hashtable
+    //for that we use the hash function, which takes a string and returns an index. Later on we'll modify this function.
+    //hashtable is an array of linked lists, please set pointers in the right order (don't lose access)
     FILE *infile = fopen(dictionary, "r");
     if (infile == NULL)
     {
         printf ("Not able to open the external file\n");
         return false;
     }
-    //read strings from the file one at a time, we can use fscanf(file (pointer), %s(string), word(character where we will read the word into))
-    //we will do the previous step until fscanf return EOF --> end of the file.
-    //for each word we read, we can create a node with malloc (remember to check if null) and copy the word there using strcpy
-    //for previous: node *n = malloc(sizeof(node)); and strcpy(n->word, "Hello");
     char *word = malloc(46 * sizeof(char));
     while(fscanf (infile, "%s", word) != EOF)
     {
@@ -61,12 +64,6 @@ bool load(const char *dictionary)
         n->next = table(hash(word));
         table(hash(word)) = n;
     }
-
-
-    //now we insert the node in the hashtable
-    //for that we use the hash function, which takes a string and returns an index. Later on we'll modify this function.
-    //hashtable is an array of linked lists, please set pointers in the right order (don't lose access)
-
     return false;
 }
 
