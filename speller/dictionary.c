@@ -45,7 +45,7 @@ bool load(const char *dictionary)
         return false;
     }
     //read strings from the file one at a time, we can use fscanf(file (pointer), %s(string), word(character where we will read the word into))
-    char *word;
+    char *word = malloc(45 * sizeof(char));
     do(fscanf (infile, %s, word) != EOF)
     {
 
