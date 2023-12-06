@@ -38,8 +38,8 @@ unsigned int hash(const char *word)
     int lenght = strlen(word);
     for (int i = 0, j = 1; i < lenght; i++, j++)
     {
-        word[i] = toupper(word[i]);
-        int calc_joker = word[i] * j;
+        char upper = toupper(word[i]);
+        int calc_joker = upper * j;
         hash_number += calc_joker;
     }
     return hash_number % N;
