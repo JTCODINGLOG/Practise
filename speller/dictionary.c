@@ -39,7 +39,7 @@ unsigned int hash(const char *word)
         int calc_joker = word[i] * j;
         hash_number += calc_joker;
     }
-    return round(hash_number / N);
+    return hash_number % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
