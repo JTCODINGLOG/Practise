@@ -35,9 +35,10 @@ unsigned int hash(const char *word)
     //i.e. 568 % 26    (if N = 26)
     //it needs to handle similarly upper and lower case. It also needs to provide a value for apostrophes.
     int hash_number = 0;
-    for (int i = 0, j = 1; i < strlen(word); i++, j++)
+    int lenght = strlen(word);
+    for (int i = 0, j = 1; i < lenght; i++, j++)
     {
-        toupper(word[i]);
+        word[i] = toupper(word[i]);
         int calc_joker = word[i] * j;
         hash_number += calc_joker;
     }
