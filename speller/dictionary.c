@@ -33,6 +33,7 @@ unsigned int hash(const char *word)
     //multiply each ascii value of a character by its position (starting by 1).
     //after we summarize these products, divide into the number of elements in the hash table with %.
     //i.e. 568 % 26    (if N = 26)
+    //it needs to handle similarly upper and lower case. It also needs to provide a value for apostrophes.
     int hash_number = 0;
     for (int i = 0, j = 1; i < strlen(word); i++, j++)
     {
