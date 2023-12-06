@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     int hash_number = 0;
     for (int i = 0, j = 1; i < strlen(word); i++, j++)
     {
-        if (word[i])
+        toupper(word[i]);
         int calc_joker = word[i] * j;
         hash_number += calc_joker;
     }
