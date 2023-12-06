@@ -33,10 +33,10 @@ unsigned int hash(const char *word)
     //multiply each ascii value of a character by its position (starting by 1).
     //after we summarize these products, divide into the number of elements in the hash table with %.
     //i.e. 568 % 26    (if N = 26)
-    int word_hash
-    for (int i = 0, j = 1; i == strlen(word); i++)
+    int hash_number;
+    for (int i = 0, j = 1; i < strlen(word); i++, j++)
     {
-
+        word[i] = j * 
     }
     return toupper(word[0]) - 'A';
 }
