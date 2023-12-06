@@ -36,7 +36,7 @@ unsigned int hash(const char *word)
     int hash_number;
     for (int i = 0, j = 1; i < strlen(word); i++, j++)
     {
-        word[i] = j * 
+        word[i] *= j
     }
     return toupper(word[0]) - 'A';
 }
