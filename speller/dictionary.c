@@ -20,7 +20,7 @@ const unsigned int N = 26;
 node *table[N];
 
 //Global variable for dictionary size
-int track_size = 0;
+unsigned int track_size = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     //after we summarize these products, divide into the number of elements in the hash table with %.
     //i.e. 568 % 26    (if N = 26)
     //it needs to handle similarly upper and lower case. It also needs to provide a value for apostrophes.
-    int hash_number = 0;
+    unsigned int hash_number = 0;
     int lenght = strlen(word);
     for (int i = 0, j = 1; i < lenght; i++, j++)
     {
