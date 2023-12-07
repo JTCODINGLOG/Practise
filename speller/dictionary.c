@@ -26,6 +26,9 @@ unsigned int track_size = 0;
 bool check(const char *word)
 {
     // TODO
+    //check in which part of the array the list the word could possibly be
+    hash(word);
+    
     return false;
 }
 
