@@ -56,6 +56,8 @@ bool load(const char *dictionary)
     //now we insert the node in the hashtable
     //for that we use the hash function, which takes a string and returns an index. Later on we'll modify this function.
     //hashtable is an array of linked lists, please set pointers in the right order (don't lose access)
+
+    //we'll also keep track of number of words "to help size function"
     FILE *infile = fopen(dictionary, "r");
     if (infile == NULL)
     {
@@ -63,6 +65,7 @@ bool load(const char *dictionary)
         return false;
     }
     char *word = malloc(46 * sizeof(char));
+    int track = 0;
     while(fscanf (infile, "%s", word) != EOF)
     {
         node *n = malloc (sizeof(node));
@@ -74,6 +77,7 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         n->next = table(hash(word));
         table(hash(word)) = n;
+        track++;
     }
     free(word);
     fclose(infile);
