@@ -27,11 +27,12 @@ bool check(const char *word)
 {
     // TODO
     //check in which part of the array the list the word could possibly be
+    //strcasecmp compares two strings case insensitive
     if (table(hash(word))->word == word)
     {
         return true;
     }
-    
+
 
     return false;
 }
