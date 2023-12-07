@@ -19,6 +19,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+//Global variable for dictionary size
+int track_size = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -65,7 +68,6 @@ bool load(const char *dictionary)
         return false;
     }
     char *word = malloc(46 * sizeof(char));
-    int track = 0;
     while(fscanf (infile, "%s", word) != EOF)
     {
         node *n = malloc (sizeof(node));
@@ -77,7 +79,7 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         n->next = table(hash(word));
         table(hash(word)) = n;
-        track++;
+        track_size++;
     }
     free(word);
     fclose(infile);
