@@ -27,6 +27,8 @@ bool check(const char *word)
 {
     // TODO
     //check in which part of the array the list the word could possibly be
+    //set up a pointer variable to follow up through the list
+    //create a loop that ends when list ends, where node->next is NULL
     //strcasecmp compares two strings case insensitive
     if (table(hash(word))->word == word)
     {
