@@ -27,8 +27,12 @@ bool check(const char *word)
 {
     // TODO
     //check in which part of the array the list the word could possibly be
-    hash(word);
+    if (table(hash(word))->word == word)
+    {
+        return true;
+    }
     
+
     return false;
 }
 
