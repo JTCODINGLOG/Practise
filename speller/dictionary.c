@@ -30,9 +30,7 @@ unsigned int track_size = 0;
     //strcasecmp compares two strings case insensitive
 bool check(const char *word)
 {
-    node *cursor;
-
-    cursor = table(hash(word));
+    node *cursor = table(hash(word));
 
     while (strcasecmp(cursor->word, word) != 0)
     {
