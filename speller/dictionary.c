@@ -30,10 +30,15 @@ bool check(const char *word)
     //set up a pointer variable to follow up through the list
     //create a loop that ends when list ends, where node->next is NULL
     //strcasecmp compares two strings case insensitive
+    node *follow;
+
+    follow = table(hash(word));
+
     if (table(hash(word))->word == word)
     {
         return true;
     }
+
 
 
     return false;
