@@ -111,5 +111,10 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    // create two variables to follow up, cursor and another one.
+    //while one helps freeing memory, the other one keeps track
+    //two loops, one for the hash array, the other one for the list
+    //firs loop ends after N times
+    //second loop ends where node->next is equal to NULL
     return false;
 }
