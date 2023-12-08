@@ -23,30 +23,26 @@ node *table[N];
 unsigned int track_size = 0;
 
 // Returns true if word is in dictionary, else false
-bool check(const char *word)
-{
     // TODO
     //check in which part of the array the list the word could possibly be
     //set up a pointer variable to follow up through the list
     //create a loop that ends when list ends, where node->next is NULL
     //strcasecmp compares two strings case insensitive
+bool check(const char *word)
+{
     node *cursor;
 
     cursor = table(hash(word));
-    if (strcasecmp(cursor->word, word) == 0)
-        {
-            return true;
-        }
 
-    while (cursor->next != NULL)
+    while (strcasecmp(cursor->word, word) == 0)
     {
-        if (strcasecmp(cursor->word, word) == 0)
+        if (cursor->next == NULL)
         {
-            return true;
+            return false;
         }
         cursor = cursor->next;
     }
-    return false;
+    return true;
 }
 
 // Hashes word to a number
