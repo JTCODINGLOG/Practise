@@ -34,10 +34,15 @@ bool check(const char *word)
 
     follow = table(hash(word));
 
-    if (table(hash(word))->word == word)
+    while (follow->next != NULL)
     {
-        return true;
+        if (follow->word == word)
+        {
+            return true;
+        }
+        follow = follow->next;
     }
+
 
 
 
