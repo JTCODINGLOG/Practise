@@ -31,7 +31,7 @@ unsigned int track_size = 0;
 bool check(const char *word)
 {
     node *cursor = table(hash(word));
-    if (cursor = NULL)
+    if (cursor == NULL)
     {
         return false;
     }
