@@ -47,6 +47,20 @@ bool check(const char *word)
     return true;
 }
 
+{
+    node *cursor = table(hash(word));
+
+    while (cursor != NULL)
+    {
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+        cursor = cursor->next;
+    }
+    return false;
+}
+
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
