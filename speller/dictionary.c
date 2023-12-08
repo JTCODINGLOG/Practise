@@ -31,6 +31,10 @@ unsigned int track_size = 0;
 bool check(const char *word)
 {
     node *cursor = table(hash(word));
+    if (cursor = NULL)
+    {
+        return false;
+    }
 
     while (strcasecmp(cursor->word, word) != 0)
     {
