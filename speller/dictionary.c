@@ -117,19 +117,17 @@ unsigned int size(void)
 bool unload(void)
 {
     node *cursor = table(hash(word));
-    node *cleaner;
+    node *cleaner = NULL;
 
     for (int i = 0; i < N; i++)
     {
         while (cursor != NULL)
         {
-            if (strcasecmp(cursor->word, word) == 0)
-            {
-                return true;
-            }
+            cleaner = cursor;
             cursor = cursor->next;
+            free(cleaner)
         }
-        return false;
+        cursor;
 
     }
 
