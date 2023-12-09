@@ -125,7 +125,7 @@ bool unload(void)
         {
             cleaner = cursor;
             cursor = cursor->next;
-            free(cleaner)
+            free(cleaner);
         }
         cursor;
 
