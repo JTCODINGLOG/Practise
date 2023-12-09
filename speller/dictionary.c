@@ -97,7 +97,6 @@ bool load(const char *dictionary)
         table[hash(word)] = n;
         track_size++;
     }
-    free(word);
     fclose(infile);
     return true;
 }
