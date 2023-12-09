@@ -108,13 +108,19 @@ unsigned int size(void)
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
-bool unload(void)
-{
     // TODO
-    // create two variables to follow up, cursor and another one.
+    // create two variables to follow up.
     //while one helps freeing memory, the other one keeps track
     //two loops, one for the hash array, the other one for the list
     //firs loop ends after N times
     //second loop ends where node->next is equal to NULL
+bool unload(void)
+{
+    node *cursor = table(hash(word));
+    node *cleaner;
+
+    for (int i = 0; i < N)
+
+
     return false;
 }
