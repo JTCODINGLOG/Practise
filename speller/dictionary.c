@@ -116,21 +116,19 @@ unsigned int size(void)
     //second loop ends where node->next is equal to NULL
 bool unload(void)
 {
-    node *cursor = table(hash(word));
+    node *cursor = NULL;
     node *cleaner = NULL;
 
     for (int i = 0; i < N; i++)
     {
+        cursor = table(i);
         while (cursor != NULL)
         {
             cleaner = cursor;
             cursor = cursor->next;
             free(cleaner);
         }
-        cursor;
-
     }
 
-
-    return false;
+    return true;
 }
