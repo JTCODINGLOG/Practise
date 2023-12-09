@@ -30,7 +30,7 @@ unsigned int track_size = 0;
     //strcasecmp compares two strings case insensitive
 bool check(const char *word)
 {
-    node *cursor = table(hash(word));
+    node *cursor = table[hash(word)];
 
     while (cursor != NULL)
     {
@@ -91,8 +91,8 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(n->word, word);
-        n->next = table(hash(word));
-        table(hash(word)) = n;
+        n->next = table[hash(word)];
+        table[hash(word)] = n;
         track_size++;
     }
     free(word);
@@ -121,13 +121,14 @@ bool unload(void)
 
     for (int i = 0; i < N; i++)
     {
-        cursor = table(i);
+        cursor = table[i];
         while (cursor != NULL)
         {
             cleaner = cursor;
             cursor = cursor->next;
             free(cleaner);
         }
+        table[i] = NULL;
     }
     return true;
 }
