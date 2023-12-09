@@ -81,7 +81,7 @@ bool load(const char *dictionary)
         printf ("Not able to open the external file\n");
         return false;
     }
-    char *buffer = malloc(46 * sizeof(char));
+    char *word = malloc(46 * sizeof(char));
     while(fscanf (infile, "%s", word) != EOF)
     {
         node *n = malloc (sizeof(node));
@@ -90,7 +90,7 @@ bool load(const char *dictionary)
             printf ("Not able to allocate memory for a node\n");
             return false;
         }
-        strcpy(n->word, buffer);
+        strcpy(n->word, word);
         n->next = table[hash(word)];
         table[hash(word)] = n;
         track_size++;
