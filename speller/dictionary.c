@@ -81,7 +81,7 @@ bool load(const char *dictionary)
         printf ("Not able to open the external file\n");
         return false;
     }
-    word = malloc(46 * sizeof(char));
+    char *word = malloc(46 * sizeof(char));
     while(fscanf (infile, "%s", word) != EOF)
     {
         node *n = malloc (sizeof(node));
