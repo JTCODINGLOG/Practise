@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <dictionary.h>
+#include "dictionary.h"
+#include <string.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -81,7 +82,7 @@ bool load(const char *dictionary)
         printf ("Not able to open the external file\n");
         return false;
     }
-    char word [46];
+    char *word = malloc(46 * sizeof(char));
     while(fscanf (infile, "%s", word) != EOF)
     {
         node *n = malloc (sizeof(node));
@@ -95,6 +96,7 @@ bool load(const char *dictionary)
         table[hash(word)] = n;
         track_size++;
     }
+    free(word);
     fclose(infile);
     return true;
 }
