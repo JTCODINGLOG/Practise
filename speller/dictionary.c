@@ -119,7 +119,19 @@ bool unload(void)
     node *cursor = table(hash(word));
     node *cleaner;
 
-    for (int i = 0; i < N)
+    for (int i = 0; i < N; i++)
+    {
+        while (cursor != NULL)
+        {
+            if (strcasecmp(cursor->word, word) == 0)
+            {
+                return true;
+            }
+            cursor = cursor->next;
+        }
+        return false;
+
+    }
 
 
     return false;
