@@ -129,6 +129,5 @@ bool unload(void)
             free(cleaner);
         }
     }
-
     return true;
 }
