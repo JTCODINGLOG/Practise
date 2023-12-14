@@ -4,4 +4,4 @@
 
 greeting = input("Greeting: ")
 
-if (greeting =)
+if (greeting == Hello)
