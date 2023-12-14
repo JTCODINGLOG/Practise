@@ -3,5 +3,5 @@
 
 
 greeting = input("Greeting: ")
-greeting.tolo
+greeting.upper()
 if (greeting == Hello)
