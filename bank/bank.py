@@ -1,1 +1,5 @@
-greeting
+
+
+
+
+greeting = input(")
