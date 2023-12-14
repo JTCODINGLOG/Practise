@@ -1,7 +1,3 @@
-
-
-
-
 greeting = input("Greeting: ")
 greeting.lower()
 if "hello" == greeting.split()[0]:
