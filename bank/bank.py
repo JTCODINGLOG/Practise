@@ -2,4 +2,6 @@
 
 
 
-greeting = input(")
+greeting = input("Greeting: ")
+
+if (greeting =)
