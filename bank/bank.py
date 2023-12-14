@@ -3,5 +3,7 @@
 
 
 greeting = input("Greeting: ")
-greeting.upper()
-if (greeting == Hello)
+greeting.lower()
+if (greeting == hello)
+
+elif(greeting[0] = h)
