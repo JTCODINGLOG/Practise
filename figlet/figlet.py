@@ -16,7 +16,7 @@ if le == 1:
 
 elif le == 3:
     if sys.argv[1] != ("-f" or "--font"):
-        print("Write the write to print in a specific font")
+        print("Write the code to print in a specific font")
         sys.exit(1)
     figlet.setFont(font = sys.argv[2])
 
