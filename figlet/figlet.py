@@ -1,5 +1,5 @@
-from random import
-from pyfiglet import Figlet
+import random
+import pyfiglet
 
 le = len(arg)
 
