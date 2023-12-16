@@ -9,16 +9,16 @@ fonts = figlet.getFonts()
 inp = input("Input: ")
 
 
-if le = 0:
+if le == 0:
     rand = random.randint(le,len(fonts))
     figlet.setFont(font = fonts[rand])
 
 
-elif le = 2
+elif le == 2:
     figlet.setFont(font = sys.argv[1])
 
 
-else
+else:
     print("Please input 0 or 2 command-line arguments")
     sys.exit(1)
 
