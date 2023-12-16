@@ -1,15 +1,17 @@
 import sys
-from pyfiglet import Figlet,
+import random
+from pyfiglet import Figlet
+
 
 
 le = len(sys.argv)
 figlet = Figlet()
-file = len(figlet)
+lefig = len(figlet)
 
 
 
 if le = 0:
-
+    random.randint(le,lefig)
 
 elif le = 2
 
