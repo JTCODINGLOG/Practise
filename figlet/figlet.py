@@ -27,14 +27,5 @@ else:
     sys.exit(1)
 
 
-print("Output")
-print(figlet.renderText(inp))
+print("Output" + figlet.renderText(inp))
 sys.exit(0)
-
-
-
-
-
-inp = input("Input: ")
-
-print(figlet.renderText(inp))
