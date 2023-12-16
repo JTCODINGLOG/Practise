@@ -1,11 +1,20 @@
 pip install pyfiglet
 
 from sys import argv
-from figlet import Figlet
+from pyfiglet import Figlet
+from random import
 
-if len(argv) != 0:
+le = len(arg)
+
+if le = 0:
+
+
+elif le = 2
+
+else
     print("Please input 0 or 2 command-line arguments")
     sys.exit(1)
+
 
 
 
