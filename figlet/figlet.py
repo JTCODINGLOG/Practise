@@ -1,7 +1,8 @@
-import random
-import pyfiglet
+from pyfiglet import Figlet, 
 
 le = len(arg)
+figlet = Figlet()
+
 
 if le = 0:
 
