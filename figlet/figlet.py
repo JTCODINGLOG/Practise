@@ -6,12 +6,11 @@ from pyfiglet import Figlet
 le = len(sys.argv)
 figlet = Figlet()
 fonts = figlet.getFonts()
-print(fonts)
 inp = input("Input: ")
 
 
 if le == 1:
-    rand = random.randint(le,len(fonts))
+    rand = random.randint(0,len(fonts)-1)
     figlet.setFont(font = fonts[rand])
 
 
