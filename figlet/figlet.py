@@ -9,13 +9,13 @@ fonts = figlet.getFonts()
 inp = input("Input: ")
 
 
-if le == 0:
+if le == 1:
     rand = random.randint(le,len(fonts))
     figlet.setFont(font = fonts[rand])
 
 
-elif le == 2:
-    figlet.setFont(font = sys.argv[1])
+elif le == 3:
+    figlet.setFont(font = sys.argv[2])
 
 
 else:
@@ -23,7 +23,7 @@ else:
     sys.exit(1)
 
 
-print("Output" + figlet.renderText(sys.argv[2]))
+print("Output" + figlet.renderText(sys.argv[3]))
 sys.exit(0)
 
 
