@@ -15,7 +15,7 @@ if le == 1:
 
 
 elif le == 3:
-    figlet.setFont(font = sys.argv[2])
+    figlet.setFont(font = sys.argv[1])
 
 
 else:
@@ -23,7 +23,7 @@ else:
     sys.exit(1)
 
 
-print("Output" + figlet.renderText(sys.argv[3]))
+print("Output" + figlet.renderText(sys.argv[2]))
 sys.exit(0)
 
 
