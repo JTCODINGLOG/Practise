@@ -1,6 +1,6 @@
 from sys import argv
-from pyfiglet import Figlet
 from random import
+from pyfiglet import Figlet
 
 le = len(arg)
 
