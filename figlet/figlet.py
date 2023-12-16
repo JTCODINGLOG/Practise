@@ -1,4 +1,3 @@
-from sys import argv
 from random import
 from pyfiglet import Figlet
 
@@ -11,7 +10,7 @@ elif le = 2
 
 else
     print("Please input 0 or 2 command-line arguments")
-    sys.exit(1)
+
 
 
 
