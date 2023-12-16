@@ -1,5 +1,3 @@
-pip install pyfiglet
-
 from sys import argv
 from pyfiglet import Figlet
 from random import
