@@ -6,6 +6,7 @@ from pyfiglet import Figlet
 le = len(sys.argv)
 figlet = Figlet()
 fonts = figlet.getFonts()
+inp = input("Input: ")
 
 
 if le = 0:
@@ -22,7 +23,7 @@ else
     sys.exit(1)
 
 
-print(figlet.renderText(sys.argv[2]))
+print("Output" + figlet.renderText(sys.argv[2]))
 sys.exit(0)
 
 
