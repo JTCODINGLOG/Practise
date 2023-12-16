@@ -24,7 +24,7 @@ else:
 
 
 print("Output")
-print(figlet.renderText(sys.argv[2]))
+print(figlet.renderText(inp)
 sys.exit(0)
 
 
