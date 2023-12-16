@@ -6,6 +6,7 @@ from pyfiglet import Figlet
 le = len(sys.argv)
 figlet = Figlet()
 fonts = figlet.getFonts()
+print(fonts)
 inp = input("Input: ")
 
 
@@ -15,7 +16,10 @@ if le == 1:
 
 
 elif le == 3:
-    figlet.setFont(font = sys.argv[1])
+    if sys.argv[1] != ("-f" or "--font"):
+        print("Write the write to print in a specific font")
+        sys.exit(1)
+    figlet.setFont(font = sys.argv[2])
 
 
 else:
