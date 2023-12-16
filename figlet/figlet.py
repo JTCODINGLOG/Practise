@@ -23,7 +23,8 @@ else:
     sys.exit(1)
 
 
-print("Output" + figlet.renderText(sys.argv[2]))
+print("Output")
+print(figlet.renderText(sys.argv[2]))
 sys.exit(0)
 
 
