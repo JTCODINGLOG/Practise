@@ -1,7 +1,11 @@
-from pyfiglet import Figlet, 
+import sys
+from pyfiglet import Figlet,
 
-le = len(arg)
+
+le = len(sys.argv)
 figlet = Figlet()
+file = len(figlet)
+
 
 
 if le = 0:
