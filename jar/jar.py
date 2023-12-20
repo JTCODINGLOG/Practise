@@ -29,4 +29,4 @@ class Jar:
 
 
 jar = Jar()
-print
+print(str(jar.capacity))
