@@ -29,5 +29,6 @@ class Jar:
         return self.size
 
 
-jar = Jar()
-print(jar)
+jarra = Jar()
+jarra.print()
+
