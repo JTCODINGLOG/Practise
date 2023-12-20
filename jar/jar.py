@@ -35,5 +35,5 @@ class Jar:
 jar = Jar()
 jar.deposit(5)
 jar.withdraw(2)
-print(jar._str_
+print(jar._str_)
 
