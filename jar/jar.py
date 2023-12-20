@@ -23,6 +23,11 @@ class Jar:
     def capacity(self):
         return self.capacity
 
+    @capacity.setter
+    def capacity(self, value)
+        if value < 0:
+            raise ValueError
+
     @property
     def size(self):
         return self.size
