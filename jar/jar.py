@@ -26,3 +26,7 @@ class Jar:
     @property
     def size(self):
         return self.size
+
+
+jar = Jar()
+print
