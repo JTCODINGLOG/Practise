@@ -6,7 +6,7 @@ class Jar:
         str
 
     def deposit(self, n):
-        ...
+        str
 
     def withdraw(self, n):
         ...
