@@ -29,8 +29,8 @@ class Jar:
 
     @size.setter
     def size(self, value):
-        if value > self.capacity:
-        return ValueError ("The number of cookies is over the capacity of the jar")
+        if 0 < value > self.capacity:
+        return ValueError ("The number of cookies is over/under the capacity of the jar")
 
 
 
