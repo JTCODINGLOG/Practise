@@ -3,10 +3,10 @@ class Jar:
         init capacity
 
     def __str__(self):
-        str
+        n = input("number)
 
     def deposit(self, n):
-        str
+        str = input(n);
 
     def withdraw(self, n):
         ...
