@@ -8,12 +8,12 @@ class Jar:
         self.n = f"{'🍪'*self.size}"
 
     def deposit(self, n):
-        if n > capacity:
+        self.size =+ n
+        if self.size > self.capacity:
             raise ValueError
-        n = jar._str_(self) + n
 
     def withdraw(self, n):
-        ...
+        self.size =- n
 
     @property
     def capacity(self):
