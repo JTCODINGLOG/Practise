@@ -6,13 +6,12 @@ class Jar:
 
 
     def __str__(self):
-        n = input("number)
         return "n"
 
     def deposit(self, n):
         if n > capacity:
             raise ValueError
-            return n
+        n = jar._str_(self) + n
 
     def withdraw(self, n):
         ...
