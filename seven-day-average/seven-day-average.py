@@ -36,7 +36,7 @@ def main():
 def calculate(reader):
 
     previous_cases = {}
-    new_cases = {"states":[], }
+    new_cases = {"states":[], "cases":[]}
     for row in reader
         previous_cases
 
