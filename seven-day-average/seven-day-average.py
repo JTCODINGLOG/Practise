@@ -38,6 +38,7 @@ def calculate(reader):
     previous_cases = {}
     new_cases = {}
     for row in reader
+        previous_cases
 
 
 
