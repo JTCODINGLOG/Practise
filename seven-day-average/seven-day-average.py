@@ -36,13 +36,6 @@ def main():
 def calculate(reader):
 
 
-    for row in reader
-        dict previous_cases {"states":, "cases of most recent 14 days": }
-        new_cases = {"states":, "casesof most recent 14 days": }
-
-
-
-
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
