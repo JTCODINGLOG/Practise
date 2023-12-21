@@ -38,9 +38,9 @@ def calculate(reader):
     previous_cases{}
 
     for row in reader:
-        state[]
-        cases[]
-        date[]
+        state = row["state"]
+        cases = int(row["cases])
+        date = row["cases]
 
 
 
