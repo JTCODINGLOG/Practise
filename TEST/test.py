@@ -1,8 +1,6 @@
 def hast():
     for _ in range(quest()):
-        n = "#"
-        print(n)
-        n += "#"
+        print(f"# *{_}")
 
 
 def quest():
