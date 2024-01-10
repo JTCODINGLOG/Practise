@@ -1,9 +1,11 @@
 def hast():
-    n = " " * quest()
+    n = ""
+    p = ""
     for _ in range(quest()):
-        for i in
+        for i = quest()-1 in quest()
+            print (" ", end="")
+        for j = 0 in quest()
             print ("#")
-        for j in 
 
 
 
