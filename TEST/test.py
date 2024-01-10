@@ -1,4 +1,6 @@
-for _ in range(15):
-    print ("hello bitch")
+before = input("Before: ")
+print("After: ")
+for _ in before:
+    print(c.upper())
 
 
