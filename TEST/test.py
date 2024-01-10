@@ -1,1 +1,8 @@
-for i in range(4)
+n = int(input("height>: "))
+k = n
+
+
+for i in range(n):
+    k -= 1
+    print(" " * k)
+    print("#" * i)
