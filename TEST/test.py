@@ -1,5 +1,5 @@
 before = input("Before: ")
-print("After: ", end="")
-print(before.upper())
+after = before.upper()
+print(after)
 
 
