@@ -1,9 +1,9 @@
 def main():
-    for i in range(3):
-        meow()
+    meow(3)
 
-def  meow():
-    print("meow")
+def  meow(n):
+    for _ in range(n):
+        print("meow")
 
 main()
 
