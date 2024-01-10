@@ -1,8 +1,9 @@
 def get_int(x):
-    try:
-        return int(input(x))
-    except ValueError:
-        print("Not an integer")
+    while True:
+        try:
+            return int(input(x))
+        except ValueError:
+            print("Not an integer")
 
 
 def main():
