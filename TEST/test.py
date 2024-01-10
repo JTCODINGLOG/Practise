@@ -3,7 +3,7 @@ def get_int(x):
         try:
             return int(input(x))
         except ValueError:
-            print()
+            print("", end=="")
 
 
 def main():
