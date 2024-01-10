@@ -1,5 +1,10 @@
+def quest():
+    x = int(input("How high?: " ))
+    return x
+
 def hast():
-    for i in range(quest()):
+    quest()
+    for i in range(x):
         j = i
         for j in range(quest()):
             print(" ", end="")
@@ -8,13 +13,10 @@ def hast():
             print("#", end="")
     print()
 
+def main():
+    quest()
+    hast()
 
-
-
-def quest():
-    return int(input("How high?: " ))
-
-
-hast()
+main()
 
 
