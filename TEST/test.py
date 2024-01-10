@@ -1,8 +1,8 @@
 def hast():
-    for _ in range(5):
-        for _ in range(5):
-            print("#", end="")
-        print()
+    for _ in range(quest()):
+        n += "#"
+        print (n)
+
 
 
 def quest():
