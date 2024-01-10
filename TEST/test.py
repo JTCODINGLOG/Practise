@@ -1,6 +1,7 @@
 def hast():
     for _ in range(quest()):
-        print(f"# *{_}")
+        for _ in range(quest()):
+            print("#", end="")
 
 
 def quest():
