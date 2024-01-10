@@ -1,8 +1,9 @@
 def hast():
     n = " " * quest()
     for _ in range(quest()):
-        n = n - " " + "#"
-        print (n)
+        for i in
+            print ("#")
+        for j in 
 
 
 
