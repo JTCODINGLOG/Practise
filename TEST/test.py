@@ -1,4 +1,4 @@
-s = input{"Do you agree? "}
+s = input("Do you agree? ")
 
 if s == "Y" or s == "y":
     print("Agreed")
