@@ -1,17 +1,12 @@
-def get_int(x):
-    while True:
-        try:
-            return int(input(x))
-        except ValueError:
-            pass
+def hast():
+for _ in range(quest()):
+    print("#")
 
 
-def main():
-    x = get_int("x: ")
-    y = get_int("y: ")
-
-    print(x + y)
+def quest():
+    return input("How high?: " )
 
 
-main()
+hast()
+
 
