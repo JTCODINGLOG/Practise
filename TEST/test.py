@@ -1,5 +1,3 @@
-from cs50 import get_int
-
 x = input("What's x? ")
 y = input("What's y? ")
 
