@@ -1,5 +1,5 @@
-def get_int(prompt):
-    return int(input(prompt))
+def get_int(x):
+    return int(input(x))
 
 
 def main():
