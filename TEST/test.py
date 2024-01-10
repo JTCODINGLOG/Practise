@@ -4,5 +4,6 @@ k = n
 
 for i in range(n):
     k -= 1
-    print(" " * k)
-    print("#" * i)
+    print(" " * k, end="")
+    print("#" * (i+1), end="")
+    print()
