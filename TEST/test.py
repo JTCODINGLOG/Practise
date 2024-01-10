@@ -1,6 +1,7 @@
-x = int(input("x: "))
-y = int(input("y: "))
+def get_int(prompt):
+    return int(input(prompt))
 
-z = x / y
-print(f"{z:.50f}")
+def main()
+    x = get_int("x: ")
+    
 
