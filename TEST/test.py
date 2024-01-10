@@ -1,10 +1,12 @@
 def hast():
-for _ in range(quest()):
-    print("#")
+    for _ in range(quest()):
+        n = "#"
+        print(n)
+        n += "#"
 
 
 def quest():
-    return input("How high?: " )
+    return int(input("How high?: " ))
 
 
 hast()
