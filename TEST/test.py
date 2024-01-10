@@ -1,11 +1,10 @@
 def hast():
-    n = ""
     for i in range(quest()):
-        quest()
-        for j in quest()-_:
-            print (" ", end="")
-        n += "#"
-        print(n)
+        for j in range(quest()):
+            print(" ", end="")
+        for k in range(quest()):
+            print("#", end="")
+    print()
 
 
 
