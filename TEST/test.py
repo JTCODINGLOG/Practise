@@ -1,3 +1,4 @@
 import cowsay
 
-cowsay.cow("Hola guapisisisima")
+name = input("What's your name? ")
+cowsay.cow(f"Hola, {name}")
