@@ -1,15 +1,11 @@
-people = [
-    {"name": "Javier", "number": "0411251528"},
-    {"name": "David", "number": "0402040184"},
-    {"name": "John", "number": "0444444444"}
-]
+people = {
+    "Javier": "0411251528",
+    "David": "0402040184",
+    "John": "0444444444",
+}
 
 name = input("Name: ")
-
-for person in people:
-    if person["name"] == name
-        number = person["number"]
-        print(f"Found {number}")
-        break
+if name in people:
+    print(f"Found: {people[name]}")
 else:
     print("Not found")
