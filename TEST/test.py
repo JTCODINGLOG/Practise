@@ -1,11 +1,6 @@
-people = {
-    "Javier": "0411251528",
-    "David": "0402040184",
-    "John": "0444444444",
-}
+from sys import argv
 
-name = input("Name: ")
-if name in people:
-    print(f"Found: {people[name]}")
+if len(argv) == 2:
+    print(f"Hello, {argv[1]}")
 else:
-    print("Not found")
+    print("Hello, world")
