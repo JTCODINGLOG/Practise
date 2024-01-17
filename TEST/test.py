@@ -1,6 +1,10 @@
-n = int(input("height>: "))
-k = n
+while True:
+    try:
+        return n = int(input("height>: "))
+    except ValueError:
+        print("Not an integer")
 
+k = n
 
 for i in range(n):
     k -= 1
