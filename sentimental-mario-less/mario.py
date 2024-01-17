@@ -3,7 +3,7 @@ from sys import exit
 
 while True:
     n = get_int("Height: ")
-    if n > 1 and n < 9:
+    if n > 0 and n < 9:
         break
 
 
