@@ -1,9 +1,8 @@
-from cs50 import get_int
+names = ["Carter", "David", "John"]
 
-scores = []
-for i in range(3):
-    score = get_int("Score: ")
-    scores = scores + [score]
+name = input("Name: ")
 
-average = sum(scores) / len(scores)
-print(f"Average: {average}")
+for n in names:
+    if name == n:
+        print("Found")
+        break
