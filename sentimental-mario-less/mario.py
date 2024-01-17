@@ -1,12 +1,10 @@
 from cs50 import get_int
-import sys
+from sys import exit
 
 while True:
     n = get_int("Height: ")
-    if n > 1 or n < 9:
+    if n > 1 and n < 9:
         break
-        sys.exit(0)
-
 
 
 k = n
