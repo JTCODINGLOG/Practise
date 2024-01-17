@@ -1,4 +1,4 @@
-import cowsay
+import qrcode
 
-name = input("What's your name? ")
-cowsay.cow(f"Hola, {name}")
+img = qrcode.make("https://youtu.be/xvFZjo5PgG0")
+img.save
