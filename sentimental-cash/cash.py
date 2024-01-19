@@ -9,9 +9,9 @@ while True:
     change = get_float("Change: ")
     if change > 0:
         break
-coins = 0
+
 def changewith(coin):
-    coins = int(change/coin)
+    coins = coins + int(change/coin)
     change = change % coin
     return coins, change
 
