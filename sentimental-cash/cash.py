@@ -1,6 +1,6 @@
 from cs50 import get_float
 
-def changewith
+def changewith(coin, coins, change)
 
 while True:
     change = get_float("Change: ")
