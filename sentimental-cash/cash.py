@@ -1,5 +1,5 @@
 from cs50 import get_float
-change = 0
+
 while True:
     change = get_float("Change: ")
     if change > 0:
