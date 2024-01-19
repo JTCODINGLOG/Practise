@@ -14,10 +14,10 @@ def changewith(coin, coins, change):
         return print(coins)
     return coins, change
 
-changewith(0.25, coins, change)
-changewith(0.10, coins, change)
-changewith(0.05, coins, change)
-changewith(0.01, coins, change)
+coins, change = changewith(0.25, coins, change)
+coins, change = changewith(0.10, coins, change)
+coins, change = changewith(0.05, coins, change)
+coins, change = changewith(0.01, coins, change)
 
 
 #if change % quarters == 0:
