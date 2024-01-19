@@ -5,12 +5,6 @@ while True:
     if change > 0:
         break
 coins = 0
-def changewith(coin, coins, change):
-    if change < coin:
-        return coins, change
-    coins = coins + int(change/coin)
-    change = round(change % coin, 2)
-    return coins, change
 
 coins, change = changewith(0.25, coins, change)
 coins, change = changewith(0.10, coins, change)
@@ -19,10 +13,13 @@ coins, change = changewith(0.01, coins, change)
 print(coins)
 
 
-#if change % quarters == 0:
-#    print(f"Change: {change / quarters}")
-#elif change % quarters / dimes
+def changewith(coin, coins, change):
+    if change < coin:
+        return coins, change
+    coins = coins + int(change/coin)
+    change = round(change % coin, 2)
+    return coins, change
 
 
 
-#0.25 0.10 0.05 0.01
+
