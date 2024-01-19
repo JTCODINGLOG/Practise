@@ -10,7 +10,7 @@ while True:
     if change > 0:
         break
 
-def changewith(coin):
+def changewith(change, coin):
     if change < coin:
         return
     coins = coins + int(change/coin)
