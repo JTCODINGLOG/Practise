@@ -1,5 +1,6 @@
 from cs50 import get_float
 
+
 def main():
     while True:
         change = get_float("Change: ")
@@ -23,6 +24,3 @@ def changewith(coin, coins, change):
 
 if __name__ == "__main__":
     main()
-
-
-
