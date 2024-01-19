@@ -15,6 +15,8 @@ def changewith(coin):
         return
     coins = coins + int(change/coin)
     change = change % coin
+    if change == 0:
+        print(coins)
     return coins, change
 
 changewith(quarters)
