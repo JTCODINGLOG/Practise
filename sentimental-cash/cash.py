@@ -4,20 +4,20 @@ while True:
     change = get_float("Change: ")
     if change > 0:
         break
-
+coins = 0
 def changewith(coin, coins, change):
     if change < coin:
         return
     coins = coins + int(change/coin)
     change = change % coin
     if change == 0:
-        print(coins)
+        return print(coins)
     return coins, change
 
-changewith(0.25)
-changewith(0.0)
-changewith(0.05)
-changewith(0.01)
+changewith(0.25, coins, change)
+changewith(0.10, coins, change)
+changewith(0.05, coins, change)
+changewith(0.01, coins, change)
 
 
 #if change % quarters == 0:
