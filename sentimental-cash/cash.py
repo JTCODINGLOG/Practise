@@ -5,14 +5,17 @@ dimes = 0.10
 nickels = 0.05
 pennies = 0.01
 
-while True
+while True:
     change = get_float("Change: ")
     if change > 0:
         break
+coins = int(change/quarters)
+print(coins)
 
-if change % quarters == 0:
-    print(f"Change: {change / quarters}")
-elif chan
+
+#if change % quarters == 0:
+#    print(f"Change: {change / quarters}")
+#elif change % quarters / dimes
 
 
 
