@@ -7,17 +7,16 @@ while True:
 coins = 0
 def changewith(coin, coins, change):
     if change < coin:
-        return
+        return coins, change
     coins = coins + int(change/coin)
     change = change % coin
-    if change == 0:
-        return print(coins)
     return coins, change
 
 coins, change = changewith(0.25, coins, change)
 coins, change = changewith(0.10, coins, change)
 coins, change = changewith(0.05, coins, change)
 coins, change = changewith(0.01, coins, change)
+print(coins)
 
 
 #if change % quarters == 0:
