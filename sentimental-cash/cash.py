@@ -9,7 +9,7 @@ def changewith(coin, coins, change):
     if change < coin:
         return coins, change
     coins = coins + int(change/coin)
-    change = change % coin
+    change = round(change % coin, 2)
     return coins, change
 
 coins, change = changewith(0.25, coins, change)
