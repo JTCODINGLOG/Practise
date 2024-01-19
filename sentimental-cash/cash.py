@@ -6,11 +6,14 @@ nickels = 0.05
 pennies = 0.01
 
 while True
-    pay = get_float("Change: ")
-    if pay > 0:
+    change = get_float("Change: ")
+    if change > 0:
         break
 
-if pay % quarters == 0
-    
+if change % quarters == 0:
+    print(f"Change: {change / quarters}")
+elif chan
+
+
 
 #0.25 0.10 0.05 0.01
