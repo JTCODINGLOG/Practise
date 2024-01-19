@@ -12,7 +12,7 @@ while True:
 
 def changewith(coin):
     if change < coin:
-        break
+        return
     coins = coins + int(change/coin)
     change = change % coin
     return coins, change
