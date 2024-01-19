@@ -11,6 +11,8 @@ while True:
         break
 
 def changewith(coin):
+    if change < coin:
+        break
     coins = coins + int(change/coin)
     change = change % coin
     return coins, change
