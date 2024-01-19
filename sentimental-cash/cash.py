@@ -13,9 +13,12 @@ coins = 0
 def changewith(coin):
     coins = int(change/coin)
     change = change % coin
-    return 
+    return coins, change
 
 changewith(quarters)
+changewith(dimes)
+changewith(nickels)
+changewith(pennies)
 
 
 #if change % quarters == 0:
