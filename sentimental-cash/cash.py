@@ -13,7 +13,6 @@ def changewith(coin, coins, change):
     return coins, change
 
 coins, change = changewith(0.25, coins, change)
-print(coins, change)
 coins, change = changewith(0.10, coins, change)
 print(coins, change)
 coins, change = changewith(0.05, coins, change)
