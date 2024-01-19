@@ -1,11 +1,11 @@
 from cs50 import get_float
-
+change = 0
 while True:
     change = get_float("Change: ")
     if change > 0:
         break
 
-def changewith(change, coin):
+def changewith(coin):
     if change < coin:
         return
     coins = coins + int(change/coin)
