@@ -10,7 +10,9 @@ while True:
     if change > 0:
         break
 coins = int(change/quarters)
-print(coins)
+
+change = change % quarters
+
 
 
 #if change % quarters == 0:
