@@ -18,8 +18,8 @@ def main()
 def c_letters(txt):
     letters = 0
     for i in txt:
-        if text.isalnum()
-        letters += 1
+        if text[i].isalnum():
+            letters += 1
     return letters
 
 
