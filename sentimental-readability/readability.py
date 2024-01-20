@@ -1,5 +1,7 @@
 from cs50 import get_string
-import unicodedata
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import sent_tokenize, word_tokenize
 
 def main():
     text = get_string("Text: ")
@@ -16,17 +18,16 @@ def main():
         return print(f"Grade {index}")
 
 def c_letters(txt):
-    letters = 0
-    for i in txt:
-        if text[i].isalnum():
-            letters += 1
-    return letters
+    
 
 
 def c_words(txt):
-    words = 0
-    for i in txt:
-        if text[i].isalnum() nd 
+
+
+
+def c_sentences(txt):
+
+
 
 if __name__ == "__main__":
     main()
