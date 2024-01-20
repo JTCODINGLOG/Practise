@@ -11,5 +11,5 @@ if index < 1:
 elif index > 16:
     return print("Grade 16+\n")
 else:
-    return print(f"Grade {index}")  
+    return print(f"Grade {index}")
 
