@@ -1,7 +1,7 @@
 from cs50 import get_string
 import unicodedata
 
-def main()
+def main():
     text = get_string("Text: ")
 
     L = c_letters(text) / c_words(text) * 100
@@ -27,4 +27,7 @@ def c_words(txt):
     words = 0
     for i in txt:
         if
+
+if __name__ == "__main__":
+    main()
 
