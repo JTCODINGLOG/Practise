@@ -1,5 +1,5 @@
 from cs50 import get_string
-import unicode
+import unicodedata
 
 def main()
     text = get_string("Text: ")
