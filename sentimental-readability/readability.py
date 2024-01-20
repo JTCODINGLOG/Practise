@@ -1,7 +1,7 @@
+from nltk.tokenize import sent_tokenize, word_tokenize
 from cs50 import get_string
 import nltk
 nltk.download('punkt')
-from nltk.tokenize import sent_tokenize, word_tokenize
 
 
 text = get_string("Text: ")
@@ -22,5 +22,3 @@ elif index > 16:
     print("Grade 16+\n")
 else:
     print(f"Grade {index}")
-
-
