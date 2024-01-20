@@ -5,6 +5,8 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 
 def main():
     text = get_string("Text: ")
+    sentences = sent_tokenize(text)
+    words = word_tokenize(text)
 
     L = c_letters(text) / c_words(text) * 100
     S = c_sentences(text) / c_words(text) * 100
@@ -18,7 +20,7 @@ def main():
         return print(f"Grade {index}")
 
 def c_letters(txt):
-    
+
 
 
 def c_words(txt):
