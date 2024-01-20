@@ -26,7 +26,7 @@ def c_letters(txt):
 def c_words(txt):
     words = 0
     for i in txt:
-        if
+        if text[i].isalnum() nd 
 
 if __name__ == "__main__":
     main()
