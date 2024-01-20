@@ -1,4 +1,5 @@
 from cs50 import get_string
+import unicode
 
 def main()
     text = get_string("Text: ")
@@ -17,6 +18,7 @@ def main()
 def c_letters(txt):
     letters = 0
     for i in txt:
+        if text.isalnum()
         letters += 1
     return letters
 
