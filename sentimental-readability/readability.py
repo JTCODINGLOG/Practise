@@ -10,8 +10,7 @@ words = word_tokenize(text)
 
 num_sentences = len(sentences)
 num_words = len(words)
-num_letters = sum(len(word) for word in words)
-word if char.isalpha()
+num_letters = sum(len(word if char.isalpha()) for word in words)
 
 
 L = num_letters / num_words * 100
