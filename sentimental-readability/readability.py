@@ -6,12 +6,11 @@ nltk.download('punkt')
 
 text = get_string("Text: ")
 sentences = sent_tokenize(text)
-words = word_tokenize(text)
+words = [word for word in word_tokenize(text) if word.isalpha()]
 
 num_sentences = len(sentences)
-num_words = len(words.isalpha())
-num_letters = sum(1 for word in words for char in word if char.isalpha())
-
+num_words = len(words)
+num_letters = sum(len(word) for word in words)
 
 L = num_letters / num_words * 100
 S = num_sentences / num_words * 100
