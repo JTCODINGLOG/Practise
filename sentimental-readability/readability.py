@@ -1,7 +1,6 @@
 from nltk.tokenize import sent_tokenize, word_tokenize
 from cs50 import get_string
 import nltk
-nltk.download('punkt')
 
 
 text = get_string("Text: ")
