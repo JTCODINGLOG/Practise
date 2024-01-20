@@ -15,5 +15,14 @@ def main()
         return print(f"Grade {index}")
 
 def c_letters(txt):
-    
+    letters = 0
+    for i in txt:
+        letters += 1
+    return letters
+
+
+def c_words(txt):
+    words = 0
+    for i in txt:
+        if
 
