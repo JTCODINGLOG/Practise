@@ -17,10 +17,10 @@ S = num_sentences / num_words * 100
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
 if index < 1:
-    return print("Before grade 1\n")
+    print("Before grade 1\n")
 elif index > 16:
-    return print("Grade 16+\n")
+    print("Grade 16+\n")
 else:
-    return print(f"Grade {index}")
+    print(f"Grade {index}")
 
 
