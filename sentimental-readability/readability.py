@@ -20,7 +20,7 @@ def main():
 def c_letters(txt):
     letters = 0
     for i in txt:
-        if txt[i].isalpha():
+        if txt[int(i)].isalpha():
             letters += 1
     return letters
 
@@ -28,8 +28,8 @@ def c_letters(txt):
 def c_words(txt):
     words = 0
     for i in txt:
-        if (txt[i].isalpha() and txt[i + 1].isspace()) or txt[i + 1].punctuation:
-            if txt[i+1] == '-':
+        if (txt[int(i)].isalpha() and txt[int(i) + 1].isspace()) or txt[int(i) + 1].punctuation:
+            if txt[int(i) + 1] == '-':
                 continue
             words += 1
     return words
@@ -38,7 +38,7 @@ def c_words(txt):
 def c_sentences(txt):
     sentences = 0
     for i in txt:
-        if txt[i] == '.' or '!' or '?':
+        if txt[int(i)] == '.' or '!' or '?':
             sentences += 1
     return sentences
 
