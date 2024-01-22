@@ -31,7 +31,7 @@ def c_words(txt):
     for i in range(len(txt)-1):
         if (txt[i].isspace()):
             spaces += 1
-    words = spaces +1
+    words = spaces + 1
     return words
 
 
