@@ -38,8 +38,8 @@ def c_words(txt):
 def c_sentences(txt):
     sentences = 0
     for i in range(len(txt) - 1):
-    if (txt[i] in ".!?" and txt[i + 1].isspace()) or (txt[i] in ".!?" and i == len(txt) - 1):
-        sentences += 1
+        if (txt[i] in ".!?" and txt[i + 1].isspace()) or (txt[i] in ".!?" and i == len(txt) - 1):
+            sentences += 1
     return sentences
 
 
