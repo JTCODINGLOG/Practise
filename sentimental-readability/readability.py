@@ -38,7 +38,7 @@ def c_words(txt):
 def c_sentences(txt):
     sentences = 0
     for char in txt:
-        if char == '.' or '!' or '?':
+        if char == '.' or char == '!' or char == '?':
             sentences += 1
     return sentences
 
