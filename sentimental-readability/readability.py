@@ -19,7 +19,7 @@ def main():
 
 def c_letters(txt):
     letters = 0
-    for i in txt:
+    for i in range(txt):
         if txt[int(i)].isalpha():
             letters += 1
     return letters
