@@ -5,7 +5,7 @@ import string
 def main():
     text = get_string("Text: ")
 
-    print(c_words(text))
+    print(c_sentences(text))
     #L = c_letters(text) / c_words(text) * 100
     #S = c_sentences(text) / c_words(text) * 100
     #index = round(0.0588 * L - 0.296 * S - 15.8)
@@ -38,7 +38,7 @@ def c_words(txt):
 def c_sentences(txt):
     sentences = 0
     for i in range(len(txt) - 1):
-        if (txt[i].isspace() and txt[i-1] in ".!?")
+        if (txt[i].isspace() and txt[i-1] in ".!?"):
             sentences += 1
     sentences += 1
     return sentences
