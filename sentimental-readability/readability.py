@@ -40,6 +40,7 @@ def c_sentences(txt):
     for i in range(len(txt) - 1):
         if (txt[i].isspace() and txt[i-1] in ".!?")
             sentences += 1
+    sentences += 1
     return sentences
 
 
