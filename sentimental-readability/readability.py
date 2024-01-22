@@ -19,16 +19,16 @@ def main():
 
 def c_letters(txt):
     letters = 0
-    for i in range(txt):
-        if txt[int(i)].isalpha():
+    for char in txt:
+        if char.isalpha():
             letters += 1
     return letters
 
 
 def c_words(txt):
     words = 0
-    for i in txt:
-        if (txt[int(i)].isalpha() and txt[int(i) + 1].isspace()) or txt[int(i) + 1].punctuation:
+    for char in txt:
+        if (char.isalpha() and txt[int(i) + 1].isspace()) or txt[int(i) + 1].punctuation:
             if txt[int(i) + 1] == '-':
                 continue
             words += 1
