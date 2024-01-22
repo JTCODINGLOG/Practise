@@ -10,7 +10,7 @@ def main():
     index = round(0.0588 * L - 0.296 * S - 15.8)
 
     if index < 1:
-        return print("Before grade 1\n")
+        return print("Before Grade 1\n")
     elif index > 16:
         return print("Grade 16+\n")
     else:
