@@ -26,7 +26,8 @@ def c_letters(txt):
 def c_words(txt):
     words = 0
     for i in txt:
-        
+        if (txt[i].isalpha() and txt[i + 1].isspace()) or (txt[i + 1].)
+
 
 
 
