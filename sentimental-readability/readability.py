@@ -27,12 +27,11 @@ def c_letters(txt):
 
 
 def c_words(txt):
-    words = 0
+    spaces = 0
     for i in range(len(txt)-1):
-        if (txt[i].isalpha() and txt[i + 1].isspace()) or (i < len(txt) -2 and txt[i + 1] in string.punctuation and txt[i+2].isspace()):
-            if txt[i + 1] == '-':
-                continue
-            words += 1
+        if (txt[i].isspace()):
+            spaces += 1
+    words = spaces +1
     return words
 
 
