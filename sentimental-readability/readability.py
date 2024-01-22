@@ -5,7 +5,6 @@ import string
 def main():
     text = get_string("Text: ")
 
-
     L = c_letters(text) / c_words(text) * 100
     S = c_sentences(text) / c_words(text) * 100
     index = round(0.0588 * L - 0.296 * S - 15.8)
@@ -43,8 +42,6 @@ def c_sentences(txt):
     sentences += 1
     return sentences
 
-
-# str.isdigit(), str.isalpha(), str.islower(), str.isupper(), and str.isspace()
 
 if __name__ == "__main__":
     main()
