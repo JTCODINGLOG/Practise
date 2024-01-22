@@ -4,6 +4,7 @@ import string
 
 def main():
     text = get_string("Text: ")
+    print (c_letters(text), c_words(text), c_sentences(text))
 
     L = c_letters(text) / c_words(text) * 100
     S = c_sentences(text) / c_words(text) * 100
@@ -27,12 +28,20 @@ def c_letters(txt):
 def c_words(txt):
     words = 0
     for i in txt:
-        if (txt[i].isalpha() and txt[i + 1].isspace()) or (txt[i + 1].punctuation)
-
-
+        if (txt[i].isalpha() and txt[i + 1].isspace()) or txt[i + 1].punctuation:
+            if txt[i+1] == '-':
+                continue
+            words += 1
+    return words
 
 
 def c_sentences(txt):
+    sentences = 0
+    for i in txt:
+        if txt[i] == '.'  '!', '?':
+            sentences += 1
+    return sentences
+
 
 #str.isdigit(), str.isalpha(), str.islower(), str.isupper(), and str.isspace()
 
