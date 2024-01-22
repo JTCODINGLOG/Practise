@@ -16,6 +16,11 @@ def main():
         return print(f"Grade {index}")
 
 def c_letters(txt):
+    letters = 0
+    for i in txt:
+        if text[i].isalpha():
+            letters += 1
+    return letters
 
 
 
@@ -24,6 +29,8 @@ def c_words(txt):
 
 
 def c_sentences(txt):
+
+#str.isdigit(), str.isalpha(), str.islower(), str.isupper(), and str.isspace()
 
 if __name__ == "__main__":
     main()
