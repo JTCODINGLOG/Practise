@@ -28,7 +28,7 @@ def c_letters(txt):
 def c_words(txt):
     words = 0
     for i in (len(txt)-1):
-        if (txt[i].isalpha() and txt[i + 1].isspace()) or txt[i + 1].punctuation:
+        if (txt[i].isalpha() and txt[i + 1].isspace()) or txt[i + 1] in txt.punctuation:
             if txt[i + 1] == '-':
                 continue
             words += 1
