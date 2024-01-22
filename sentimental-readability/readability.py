@@ -28,8 +28,8 @@ def c_letters(txt):
 
 def c_words(txt):
     spaces = 0
-    for i in range(len(txt)-1):
-        if (txt[i].isspace()):
+    for char in txt:
+        if (char.isspace()):
             spaces += 1
     words = spaces + 1
     return words
