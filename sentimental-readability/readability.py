@@ -18,13 +18,15 @@ def main():
 def c_letters(txt):
     letters = 0
     for i in txt:
-        if text[i].isalpha():
+        if txt[i].isalpha():
             letters += 1
     return letters
 
 
-
 def c_words(txt):
+    words = 0
+    for i in txt:
+        
 
 
 
