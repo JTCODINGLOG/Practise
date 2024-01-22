@@ -4,7 +4,6 @@ import string
 
 def main():
     text = get_string("Text: ")
-    print (c_letters(text), c_words(text), c_sentences(text))
 
     L = c_letters(text) / c_words(text) * 100
     S = c_sentences(text) / c_words(text) * 100
