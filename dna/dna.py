@@ -5,11 +5,12 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) != 3
-        print("Please just 2 ccommand-line arguments: first is a CSV file, second is a text file")
+    if len(sys.argv) != 3:
+        print("Please input 2 ccommand-line arguments: first is a CSV file, second is a text file")
         sys.exit(1)
 
     # TODO: Read database file into a variable
+    
 
     # TODO: Read DNA sequence file into a variable
 
