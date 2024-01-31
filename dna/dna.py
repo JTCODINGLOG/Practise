@@ -6,6 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     while len(argv) != 3
+        print("Please just 2 ccommand-line arguments: first is a CSV file, second is a text file")
 
     # TODO: Read database file into a variable
 
