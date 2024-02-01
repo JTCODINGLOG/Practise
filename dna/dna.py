@@ -19,7 +19,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     for i in range(1, len(csvhead)-1):
-        print(longest_match(sys.argv[2], csvhead[i]))
+        print(longest_match(dnasequence, csvhead[i]))
 
     # TODO: Check database for matching profiles
 
