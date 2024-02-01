@@ -20,8 +20,8 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     dictruns = {}
     for i in range(1, len(csvhead)-1):
-        longest_match(dnasequence, csvhead[i])
-        
+        dictruns[csvhead[i]] = longest_match(dnasequence, csvhead[i])
+    print(dictruns)
 
     # TODO: Check database for matching profiles
 
