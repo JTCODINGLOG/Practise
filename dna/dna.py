@@ -21,10 +21,12 @@ def main():
     dictruns = {}
     for i in range(1, len(csvhead)-1):
         dictruns[csvhead[i]] = longest_match(dnasequence, csvhead[i])
-    print(dictruns)
+    #print(dictruns)
 
     # TODO: Check database for matching profiles
-
+    # for every row check i we have the same results than in dictruns
+    # compare from the second element
+    # return the first element which is the name
     return
 
 
