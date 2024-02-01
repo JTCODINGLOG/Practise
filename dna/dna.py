@@ -18,9 +18,9 @@ def main():
         dnasequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    for i in range(1,)
-    csvhead[1,len(csvhead)]
-    longest_match(sys.argv[2],csvhead[])
+    for i in range(1, len(csvhead)-1):
+        longest_match(sys.argv[2],csvhead[i])
+        print(i)
     # TODO: Check database for matching profiles
 
     return
