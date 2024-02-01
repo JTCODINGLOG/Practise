@@ -18,7 +18,7 @@ def main():
         dnasequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    print(databasedna.fieldnames)
+    print(databasedna)
     # TODO: Check database for matching profiles
 
     return
