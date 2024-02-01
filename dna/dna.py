@@ -18,9 +18,10 @@ def main():
         dnasequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    dictruns = {}
     for i in range(1, len(csvhead)-1):
         longest_match(dnasequence, csvhead[i])
-        dict[csvhead[i]]
+        
 
     # TODO: Check database for matching profiles
 
