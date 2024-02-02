@@ -30,7 +30,7 @@ def main():
     #print(rows)
 
     # TODO: Check database for matching profiles
-    for row in databasedna:
+    for i in range(len(rows)):
          if dictruns == rows[i][1:len(csvhead)-1]:
             print(rows[i][0])
     # for every row check i we have the same results than in dictruns
