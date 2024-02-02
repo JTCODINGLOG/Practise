@@ -32,7 +32,7 @@ def main():
     # TODO: Check database for matching profiles
 
     #for row in databasedna:
-    #     if dictruns == rows[i]
+    #     if dictruns == rows[i][]
     # for every row check i we have the same results than in dictruns
     # compare from the second element
     # return the first element which is the name
