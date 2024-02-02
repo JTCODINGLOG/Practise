@@ -24,6 +24,12 @@ def main():
     #print(dictruns)
 
     # TODO: Check database for matching profiles
+    rows = []
+    for row in databasedna:
+        rows.append(row)
+    print(rows)
+
+
     for row in databasedna:
         for i in range(1, len(csvhead)-1):
             if dictruns[i] = row
