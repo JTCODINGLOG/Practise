@@ -16,7 +16,7 @@ def main():
         rows = []
         for row in databasedna:
             rows.append(row)
-            
+
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file:
         dnasequence = file.read()
@@ -25,16 +25,14 @@ def main():
     dictruns = {}
     for i in range(1, len(csvhead)-1):
         dictruns[csvhead[i]] = longest_match(dnasequence, csvhead[i])
-    #print(dictruns)
+    print(dictruns)
+    print()
+    print(rows)
 
     # TODO: Check database for matching profiles
 
-    print(rows)
-
-
     #for row in databasedna:
-    #    for i in range(1, len(csvhead)-1):
-    #       if dictruns[i] == row
+    #     if dictruns == rows[i]
     # for every row check i we have the same results than in dictruns
     # compare from the second element
     # return the first element which is the name
