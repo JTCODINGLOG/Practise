@@ -30,18 +30,18 @@ def main():
     #print(rows)
 
     # TODO: Check database for matching profiles
-    for i in range(len(rows)):
-         subdict = {key:rows[i][key] for key in csvhead[1:len(csvhead)-1]}
-         #if dictruns == subdict[i]:
-            #print(rows[i][0])
+    for row in rows:
+        for i in range(0, len(csvhead)-1):
+            if dictruns[i] == rows[i][i+1]:
+                print(rows[i][0])
 
     #print (subdict)
-    print("-------")
-    print(rows)
+    #print("-------")
+    #print(rows)
     # for every row check i we have the same results than in dictruns
     # compare from the second element
     # return the first element which is the name
-    #create a dictionary without the first column and then compare it
+
     return
 
 
