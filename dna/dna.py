@@ -41,6 +41,7 @@ def main():
     # for every row check i we have the same results than in dictruns
     # compare from the second element
     # return the first element which is the name
+    #create a dictionary without the first column and then compare it
     return
 
 
