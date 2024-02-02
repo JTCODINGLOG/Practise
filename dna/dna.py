@@ -35,9 +35,9 @@ def main():
          #if dictruns == subdict[i]:
             #print(rows[i][0])
 
-    print (subdict)
+    #print (subdict)
     print("-------")
-    #print(rows)
+    print(rows)
     # for every row check i we have the same results than in dictruns
     # compare from the second element
     # return the first element which is the name
