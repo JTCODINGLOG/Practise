@@ -13,6 +13,10 @@ def main():
     with open(sys.argv[1]) as file:
         databasedna = csv.DictReader(file)
         csvhead = databasedna.fieldnames
+        rows = []
+        for row in databasedna:
+            rows.append(row)
+            
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file:
         dnasequence = file.read()
@@ -24,9 +28,7 @@ def main():
     #print(dictruns)
 
     # TODO: Check database for matching profiles
-    rows = []
-    for row in databasedna:
-        rows.append(row)
+
     print(rows)
 
 
