@@ -24,15 +24,16 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     dictruns = {}
     for i in range(1, len(csvhead)-1):
-        dictruns[csvhead[i]] = longest_match(dnasequence, csvhead[i])
+        dictruns[csvhead[i]] = str(longest_match(dnasequence, csvhead[i]))
     print(dictruns)
-    print()
+    print("-----------------------------------")
     print(rows)
 
     # TODO: Check database for matching profiles
 
-    #for row in databasedna:
-    #     if dictruns == rows[i][]
+    for row in databasedna:
+         if dictruns == rows[i][1:len(csvhead)-1]:
+            print(rows[i][0])
     # for every row check i we have the same results than in dictruns
     # compare from the second element
     # return the first element which is the name
