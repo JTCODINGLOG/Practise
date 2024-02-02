@@ -31,7 +31,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for i in range(len(rows)):
-         if dictruns == rows[i][1:len(csvhead)-1]:
+         subdict = {key:rows[i][key] for key in csvhead[1:len(csvhead)-1]}
+         if dictruns == subdict:
             print(rows[i][0])
     # for every row check i we have the same results than in dictruns
     # compare from the second element
