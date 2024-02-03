@@ -30,7 +30,7 @@ def main():
     #print(rows)
 
     # TODO: Check database for matching profiles
-    
+    rows
 
 
     #print (subdict)
