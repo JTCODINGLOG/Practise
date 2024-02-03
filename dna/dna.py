@@ -35,13 +35,9 @@ def main():
         for  key in csvhead:
             if dnasequence[counter] == row[key]:
                 counter += 1
-        if counter == (len(csvhead)-1):
-            print(rows[i][0])
+        if counter == (len(csvhead)):
+            print(row[0])
 
-        if dnasequence[counter] == row[key]:
-            counter += 1
-    if counter == len(csvhead):
-        print(row['some_key'])
     #print (subdict)
     #print("-------")
     #print(rows)
