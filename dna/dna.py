@@ -31,10 +31,10 @@ def main():
     # TODO: Check database for matching profiles
     for row in rows:
         counter = 0
-        for  key in csvhead:
+        for  key in csvhead[1:]:
             if dnasequence[counter] == row[key]:
                 counter += 1
-        if counter == (len(csvhead)):
+        if counter == (len(csvhead)-1):
             print(row['name'])
 
     #print (subdict)
