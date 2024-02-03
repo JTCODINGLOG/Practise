@@ -27,7 +27,7 @@ def main():
         dictruns[csvhead[i]] = str(longest_match(dnasequence, csvhead[i]))
     #print(len(csvhead))
     #print("-----------------------------------")
-    #print(rows)
+    print(rows)
 
     # TODO: Check database for matching profiles
     for row in rows:
@@ -36,7 +36,7 @@ def main():
             if dnasequence[counter] == row[key]:
                 counter += 1
         if counter == (len(csvhead)):
-            print(row[0])
+            print(row['name])
 
     #print (subdict)
     #print("-------")
