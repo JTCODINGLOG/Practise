@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
-        print("Please input 2 ccommand-line arguments: first is a CSV file, second is a text file")
+        print("Please input 2 command-line arguments: first is a CSV file, second is a text file")
         sys.exit(1)
 
     # TODO: Read database file into a variable
@@ -25,7 +25,7 @@ def main():
     dictruns = {}
     for i in range(1, len(csvhead)-1):
         dictruns[csvhead[i]] = str(longest_match(dnasequence, csvhead[i]))
-        
+
     print(csvhead[1:0])
     #print("-----------------------------------")
     print(dictruns)
