@@ -32,12 +32,16 @@ def main():
     # TODO: Check database for matching profiles
     for row in rows:
         counter = 0
-        for i in range(0, len(csvhead)-1):
-            if dnasequence[i] == rows[i][str(i+1)]:
+        for  key in csvhead:
+            if dnasequence[counter] == row[key]:
                 counter += 1
         if counter == (len(csvhead)-1):
             print(rows[i][0])
 
+        if dnasequence[counter] == row[key]:
+            counter += 1
+    if counter == len(csvhead):
+        print(row['some_key'])
     #print (subdict)
     #print("-------")
     #print(rows)
