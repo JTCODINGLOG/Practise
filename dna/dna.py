@@ -30,11 +30,7 @@ def main():
     #print(rows)
 
     # TODO: Check database for matching profiles
-    for row in rows:
-        row_iter = iter(row)
-        next(row_iter)
-        for key in row_iter:
-            if 
+    
 
 
     #print (subdict)
