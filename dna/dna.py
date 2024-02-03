@@ -25,13 +25,16 @@ def main():
     dictruns = {}
     for i in range(1, len(csvhead)-1):
         dictruns[csvhead[i]] = str(longest_match(dnasequence, csvhead[i]))
-    #print(dictruns)
+    print(dictruns)
     #print("-----------------------------------")
     #print(rows)
 
     # TODO: Check database for matching profiles
-    if dnasequence in rows:
-        print(rows[i][0])
+    for row in rows:
+        row_iter = iter(row)
+        next(row_iter)
+        for key in row_iter:
+            if 
 
 
     #print (subdict)
