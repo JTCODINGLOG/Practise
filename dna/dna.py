@@ -29,7 +29,7 @@ def main():
     # TODO: Check database for matching profiles
     for row in rows:
         counter = 0
-        for  key in dictruns:
+        for key in dictruns:
             if dictruns[key] == row[key]:
                 counter += 1
         if counter == len(csvhead)-1:
