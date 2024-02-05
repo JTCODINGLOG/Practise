@@ -34,6 +34,7 @@ def main():
                 counter += 1
         if counter == len(csvhead)-1:
             print(row['name'])
+        
 
     return
 
