@@ -36,6 +36,10 @@ def main():
         if counter == len(csvhead):
             print(row['name'])
     print(len(csvhead))
+    print()
+    print(dictruns)
+    print()
+    print(rows)
     #print (subdict)
     #print("-------")
     #print(rows)
