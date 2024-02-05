@@ -33,10 +33,8 @@ def main():
             if dictruns[key] == row[key]:
                 counter += 1
         if counter == len(csvhead)-1:
-            print(row['name'])
-        
-
-    return
+            return print(row['name'])
+    return print("No match")
 
 
 def longest_match(sequence, subsequence):
