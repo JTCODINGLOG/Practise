@@ -32,9 +32,10 @@ def main():
         for  key in dictruns:
             if dictruns[key] == row[key]:
                 counter += 1
+        print(counter)
         if counter == len(csvhead):
             print(row['name'])
-
+    print(len(csvhead))
     #print (subdict)
     #print("-------")
     #print(rows)
