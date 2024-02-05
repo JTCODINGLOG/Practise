@@ -32,7 +32,6 @@ def main():
         for  key in dictruns:
             if dictruns[key] == row[key]:
                 counter += 1
-        print(counter)
         if counter == len(csvhead)-1:
             print(row['name'])
     #print(len(csvhead))
