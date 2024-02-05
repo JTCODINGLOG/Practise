@@ -34,15 +34,6 @@ def main():
                 counter += 1
         if counter == len(csvhead)-1:
             print(row['name'])
-    #print(len(csvhead))
-    #print()
-    #print(dictruns)
-    #print()
-    #print(rows)
-
-    # for every row check i we have the same results than in dictruns
-    # compare from the second element
-    # return the first element which is the name
 
     return
 
