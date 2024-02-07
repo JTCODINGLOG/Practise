@@ -8,7 +8,7 @@ with open("favorites.csv", "r") as file:
         favorite = row["language"]
         if favorite == "Scratch":
             scratch += 1
-        elif favorite == "c":
+        elif favorite == "C":
             c += 1
         elif favorite == "Python":
             python += 1
