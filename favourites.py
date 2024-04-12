@@ -1,3 +1,5 @@
 from cs50 import SQL
 
-db = SQL(")
+db = SQL("sqlite:///favorites.db")
+
+favorite
