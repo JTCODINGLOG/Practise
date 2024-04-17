@@ -1,1 +1,2 @@
-To determine the Audio Aura I would search for the average of energy, valence and dancebility using an algorithm that gives more
+I would select the average of energy, valence and danceability and clasify it comparing it to the different audio auras that spotify provides
+I think I would need to pay attention at the position of each song in the list and create an algorithm that multiplies the energy, valence and danceability of every song according their position in the list before doing the average.
