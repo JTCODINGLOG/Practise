@@ -1,1 +1,1 @@
-To determine the Audio Aura I would search for the average of each column
+To determine the Audio Aura I would search for the average of energy, valence and dancebility using an algorithm that gives more
