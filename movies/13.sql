@@ -4,5 +4,5 @@ SELECT id FROM people
         WHERE people.name = 'Kevin Bacon' AND people.birth = 1958
 
 SELECT name FROM people WHERE id IN (
-    SELECT )
+    SELECT id FROM movies )
 
