@@ -3,6 +3,7 @@ SELECT id FROM people
     JOIN movies ON stars.movie_id = movies.id
         WHERE people.name = 'Kevin Bacon' AND people.birth = 1958
 
-SELECT name FROM people WHERE id IN (
-    SELECT id FROM movies )
+
+SELECT id FROM movies 
+SELECT id FROM people WHERE WHERE people.name = 'Kevin Bacon' AND people.birth = 1958
 
