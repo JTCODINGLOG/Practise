@@ -14,5 +14,5 @@ WHERE year = 2023 AND month = 7 AND day = 28;
 Let's check bakery security logs*/
 SELECT activity, license_plate FROM bakery_security_logs
 WHERE year = 2023 AND month = 7 AND day = 28
-AND hour = 10 AND minute
+AND hour = 10 AND minute BETWEEN 15 AND 25;
 
