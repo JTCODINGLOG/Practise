@@ -85,7 +85,12 @@ SELECT name, passport_number FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60)
     AND license_plate IN
     (SELECT license_plate FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 25)
-    AND passport_number IN;
+    AND passport_number IN
+    (SELECT passport_number FROM passengers WHERE id =
+        (SELECT id FROM flights WHERE origin_airport_id =
+            (SELECT id FROM airports WHERE city = 'Fiftyville')
+        AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1)
+    );
 
 
 
