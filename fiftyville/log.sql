@@ -79,7 +79,7 @@ SELECT city FROM airports WHERE id = (
             SELECT id FROM airports WHERE city = 'Fiftyville')
         AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1);
 
-Lets try to guess the name (we have to link it with atm transactions):*/
+Who the thief is?
 
 SELECT name FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60)
@@ -94,6 +94,11 @@ SELECT name FROM people WHERE phone_number IN
     (SELECT person_id FROM bank_accounts WHERE account_number IN
         (SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28
         AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
+
+Who the thief’s accomplice is who helped them escape?*/
+SELECT name FROM people WHERE phone_number IN (
+    SELECT receiver FROM phone_calls WHERE caller = (
+        SELECT phone_number FROM people WHERE name = 'Bruce'));
 
 
 
