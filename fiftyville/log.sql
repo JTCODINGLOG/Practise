@@ -50,7 +50,11 @@ caller,receiver,duration
 (826) 555-1652 | (066) 555-9701, 55
 (338) 555-6650 | (704) 555-2131, 54
 
-let's try to connect 
+let's try to connect caller(phone_calls) and license_plate(bakery_security_logs)
+SELECT name, passport FROM people WHERE phone_number IN
+(SELECT caller FROM phone_calls
+WHERE year = 2023 AND month = 7 AND day = 28 AND
+duration < 60;) AND license_plate IN
 
 
 
