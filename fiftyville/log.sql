@@ -81,7 +81,7 @@ SELECT city FROM airports WHERE id = (
 
 Lets try to guess the name (we have to link it with atm transactions):*/
 
-SELECT name, passport_number FROM people WHERE phone_number IN
+SELECT name FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60)
     AND license_plate IN
     (SELECT license_plate FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute BETWEEN 15 AND 25)
