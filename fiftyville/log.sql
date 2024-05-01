@@ -79,6 +79,9 @@ SELECT city FROM airports WHERE id = (
             SELECT id FROM airports WHERE city = 'Fiftyville')
         AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1);
 
+Lets try to guess the name:*/
+SELECT passport_number FROM passenger WHERE flight_id = 36;
+
 
 
 
