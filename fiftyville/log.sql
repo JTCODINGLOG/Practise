@@ -20,7 +20,7 @@ activity:exit
 license_plate: 5P2BI95, 94KL13X, 6P58WS2, 4328GD8
             G412CB7, L93JTIZ, 322W7JE, 0NTHK55
 
-Let's check atm transactions*/
+Let's check atm transactions
 SELECT account_number, amount FROM atm_transactions
 WHERE year = 2023 AND month = 7 AND day = 28 AND
 atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
@@ -33,6 +33,8 @@ Results are: account_number,amount
             25506511,20
             81061156,30
             26013199,35
+
+
 
 
 
