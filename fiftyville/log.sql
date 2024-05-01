@@ -38,7 +38,7 @@ Let's check phone calls:*/
 SELECT caller, receiver, duration FROM phone_calls
 WHERE year = 2023 AND month = 7 AND day = 28 AND
 duration < 60;
-Results are:
+--Results are:
 
 
 
