@@ -21,7 +21,7 @@ license_plate: 5P2BI95, 94KL13X, 6P58WS2, 4328GD8
             G412CB7, L93JTIZ, 322W7JE, 0NTHK55
 
 Let's check atm transactions*/
-SELECT account_number, 
+SELECT atm_location, transaction_type FROM atm_transactions LIMIT 5;
 
 
 
