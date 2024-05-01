@@ -89,8 +89,10 @@ SELECT name, passport_number FROM people WHERE phone_number IN
     (SELECT passport_number FROM passengers WHERE flight_id =
         (SELECT id FROM flights WHERE origin_airport_id =
             (SELECT id FROM airports WHERE city = 'Fiftyville')
-        AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1)
-    );
+        AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1))
+    AND id IN
+    (SELECT person_id FROM bank_accounts WHERE account_number IN
+        ());
 
 
 
