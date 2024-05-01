@@ -65,10 +65,15 @@ Diana, 3592750733
 Kelsey, 8294398571
 Bruce, 5773159633
 
-Let's try now to connect the last results to the flights*/
-SELECT id FROM flights WHERE origin_airport_id =(
-    SELECT id FROM airports WHERE city = 'Fiftyville')
-AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1;
+Let's try now to connect the last results to the flights
+SELECT id, destination_airport_id FROM flights WHERE origin_airport_id =(
+        SELECT id FROM airports WHERE city = 'Fiftyville')
+    AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1;
+Results:
+flight.id = 36
+destination_airport_id = 4
+
+
 
 
 
