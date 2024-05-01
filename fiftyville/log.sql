@@ -24,7 +24,15 @@ Let's check atm transactions*/
 SELECT account_number, amount FROM atm_transactions
 WHERE year = 2023 AND month = 7 AND day = 28 AND
 atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
-
+Results are: account_number,amount
+            28500762,48
+            28296815,20
+            76054385,60
+            49610011,50
+            16153065,80
+            25506511,20
+            81061156,30
+            26013199,35
 
 
 
