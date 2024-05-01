@@ -65,7 +65,7 @@ Diana, 3592750733
 Kelsey, 8294398571
 Bruce, 5773159633
 
-Let's try now to 
+Let's try now to connect the last results to the
 
 
 
