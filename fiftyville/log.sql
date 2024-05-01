@@ -38,7 +38,7 @@ Let's check phone calls:
 SELECT caller, receiver, duration FROM phone_calls
 WHERE year = 2023 AND month = 7 AND day = 28 AND
 duration < 60;
-Results are:
+Results are(caller is thief, receiver is accomplice):
 caller,receiver,duration
 (130) 555-0289 | (996) 555-8899, 51
 (499) 555-9472 | (892) 555-8872, 36
@@ -51,7 +51,7 @@ caller,receiver,duration
 (338) 555-6650 | (704) 555-2131, 54
 
 let's try flights:*/
-SELECT 
+SELECT
 
 
 
