@@ -50,7 +50,7 @@ caller,receiver,duration
 (826) 555-1652 | (066) 555-9701, 55
 (338) 555-6650 | (704) 555-2131, 54
 
-let's try flights:*/
+let's try to connect 
 
 
 
