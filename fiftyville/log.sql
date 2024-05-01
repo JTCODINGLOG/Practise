@@ -79,7 +79,7 @@ SELECT city FROM airports WHERE id = (
             SELECT id FROM airports WHERE city = 'Fiftyville')
         AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1);
 
-Lets try to guess the name:*/
+Lets try to guess the name (we have to link it with atm transactions):*/
 
 SELECT name, passport_number FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60)
