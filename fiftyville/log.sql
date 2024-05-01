@@ -34,6 +34,9 @@ Results are: account_number,amount
             81061156,30
             26013199,35
 
+Let's check phone calls:*/
+SELECT 
+
 
 
 
