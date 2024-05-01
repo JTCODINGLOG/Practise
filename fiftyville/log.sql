@@ -66,7 +66,7 @@ Kelsey, 8294398571
 Bruce, 5773159633
 
 Let's try now to connect the last results to the flights*/
-SELECT * FROM airports where city LIKE '%Fiftyville%;
+SELECT * FROM airports LIMIT 10;
 
 
 
