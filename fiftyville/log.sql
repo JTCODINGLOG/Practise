@@ -35,7 +35,12 @@ Results are: account_number,amount
             26013199,35
 
 Let's check phone calls:*/
-SELECT 
+SELECT caller, receiver, duration FROM phone_calls
+WHERE year = 2023 AND month = 7 AND day = 28 AND
+duration < 60;
+Results are:
+
+
 
 
 
