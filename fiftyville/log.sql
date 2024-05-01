@@ -7,10 +7,10 @@ AND street = 'Humphrey Street';
 
 now that we know the specific time (10:15am) and that the 3 witnesses where
 interviewed the same day, we can have a look into the interviews and maybe later the bakery security logs
-(we also know that all of them mentioned the bakery)
-SELECT transcript FROM interviews
+(we also know that all of them mentioned the bakery)*/
+SELECT name, transcript FROM interviews
 WHERE year = 2023 AND month = 7 AND day = 28;
-
+/*
 Let's check bakery security logs
 SELECT activity, license_plate FROM bakery_security_logs
 WHERE year = 2023 AND month = 7 AND day = 28
@@ -51,7 +51,7 @@ caller,receiver,duration
 (338) 555-6650 | (704) 555-2131, 54
 
 let's try flights:*/
-SELECT
+
 
 
 
