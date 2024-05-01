@@ -95,10 +95,11 @@ SELECT name FROM people WHERE phone_number IN
         (SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28
         AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
 
-Who the thief’s accomplice is who helped them escape?*/
+Who the thief’s accomplice is who helped them escape?
 SELECT name FROM people WHERE phone_number IN (
     SELECT receiver FROM phone_calls WHERE caller = (
-        SELECT phone_number FROM people WHERE name = 'Bruce'));
+        SELECT phone_number FROM people WHERE name = 'Bruce')
+    AND year = 2023 AND month = 7 AND day = 28 AND duration < 60);*/
 
 
 
