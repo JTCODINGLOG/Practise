@@ -34,11 +34,24 @@ Results are: account_number,amount
             81061156,30
             26013199,35
 
-Let's check phone calls:*/
+Let's check phone calls:
 SELECT caller, receiver, duration FROM phone_calls
 WHERE year = 2023 AND month = 7 AND day = 28 AND
 duration < 60;
---Results are:
+Results are:
+caller,receiver,duration
+(130) 555-0289 | (996) 555-8899, 51
+(499) 555-9472 | (892) 555-8872, 36
+(367) 555-5533 | (375) 555-8161, 45
+(499) 555-9472 | (717) 555-1342, 50
+(286) 555-6063 | (676) 555-6554, 43
+(770) 555-1861 | (725) 555-3243, 49
+(031) 555-6622 | (910) 555-3251, 38
+(826) 555-1652 | (066) 555-9701, 55
+(338) 555-6650 | (704) 555-2131, 54*/
+
+SELECT
+
 
 
 
