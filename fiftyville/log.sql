@@ -73,14 +73,13 @@ Results:
 flight.id = 36
 destination_airport_id = 4
 
-***What city the thief escaped to?
+***What city the thief escaped to?*/
 SELECT city FROM airports WHERE id = (
         SELECT destination_airport_id FROM flights WHERE origin_airport_id =(
             SELECT id FROM airports WHERE city = 'Fiftyville')
         AND year = 2023 AND month = 7 AND day = 29 ORDER BY hour ASC LIMIT 1);
 
-Who the thief is?
-
+/*Who the thief is?*/
 SELECT name FROM people WHERE phone_number IN
     (SELECT caller FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60)
     AND license_plate IN
@@ -95,11 +94,11 @@ SELECT name FROM people WHERE phone_number IN
         (SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28
         AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw'));
 
-Who the thief’s accomplice is who helped them escape?
+/*Who the thief’s accomplice is who helped them escape?*/
 SELECT name FROM people WHERE phone_number IN (
     SELECT receiver FROM phone_calls WHERE caller = (
         SELECT phone_number FROM people WHERE name = 'Bruce')
-    AND year = 2023 AND month = 7 AND day = 28 AND duration < 60);*/
+    AND year = 2023 AND month = 7 AND day = 28 AND duration < 60);
 
 
 
