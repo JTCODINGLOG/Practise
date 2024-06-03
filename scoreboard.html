@@ -91,6 +91,14 @@
             document.querySelector('#add2').onclick = function() {
                 team2 = team2 + 1;
                 document.querySelector('#score2').innerHTML = team2;
+                if (team2 == 5)
+                {
+                    alert("Team 2 won");
+                        team1 = 0;
+                        team2 = 0;
+                        document.querySelector('#score1').innerHTML = team1;
+                        document.querySelector('#score2').innerHTML = team2;
+                }
             }
 
     </script>
