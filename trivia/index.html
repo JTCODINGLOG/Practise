@@ -19,15 +19,15 @@
                 <!-- TODO: Add multiple choice question here -->
                 <h3>How many countries speak spanish in the world?</h3>
                 <button id="b1"> 2 </button>
-                <small id="s1"></small>
+                <small></small>
                 <button id="b2"> 11 </button>
-                <small id="s2"></small>
+                <small></small>
                 <button id="b3"> 12 </button>
-                <small id="s3"></small>
+                <small></small>
                 <button id="b4"> 20 </button>
-                <small id="s4"></small>
+                <small></small>
                 <button id="b5"> 21 </button>
-                <small id="s5"></small>
+                <small></small>
 
             </div>
 
@@ -44,7 +44,7 @@
             // TODO: Add code to check answers to questions
             document.querySelector('#b1').onclick = function() {
                 this.style.backgroundColor = '#f44336';
-                document.querySelector('#s1').innerHTML = "You're wrong mate";
+                this.nextElementSibling.innerHTML = "You're wrong mate";
                 };
         </script>
     </body>
