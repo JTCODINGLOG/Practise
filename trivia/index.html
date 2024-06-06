@@ -50,9 +50,9 @@
                 document.querySelector('#in').innerHTML = "Correct!";
             };
             document.querySelector('#s').onclick = function() {
-                if (document.querySelector('#inp').value.toLowerCase === "madrid"){
-                    document.querySelector('#inp').style.backgroundColor = 'green';}
-                else {document.querySelector('#inp').style.backgroundColor = 'red';}
+                if (document.querySelector('#inp').value.toLowerCase() === "madrid"){
+                    this.style.backgroundColor = 'green';}
+                else {this.style.backgroundColor = 'red';}
             };
         </script>
     </body>
