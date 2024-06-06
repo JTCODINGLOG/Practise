@@ -3,6 +3,10 @@ body {
     color: #696969;
 }
 
+h1 {
+    margin-top: 50px;
+}
+
 
 .header {
     background-image: linear-gradient(#B991FC, #FFFFFF);
