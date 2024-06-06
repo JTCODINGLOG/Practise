@@ -40,7 +40,7 @@
             // TODO: Add code to check answers to questions
             for (let i = 1; i < 5; i++)
             {
-                document.querySelector('#b${i}').onclick = function() {
+                document.querySelector(`#b${i}`).onclick = function() {
                 this.style.backgroundColor = '#f44336';
                 document.querySelector('#in').innerHTML = "Incorrect";
                 };
