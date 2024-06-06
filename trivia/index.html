@@ -18,7 +18,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>How many countries speak spanish in the world?</h3>
-                <p id="in"></p>
+                <p id="in1"></p>
                 <button id="b1"> 2 </button>
                 <button id="b2"> 11 </button>
                 <button id="b3"> 12 </button>
@@ -32,6 +32,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the capital of Spain?</h3>
+                <p id="in2"></p>
                 <input id="inp" type="text" placeholder="Enter capital name"/>
                 <button id = "s"> Send </button>
             </div>
@@ -42,7 +43,7 @@
             {
                 document.querySelector(`#b${i}`).onclick = function() {
                 this.style.backgroundColor = '#f44336';
-                document.querySelector('#in').innerHTML = "Incorrect";
+                document.querySelector('#in1').innerHTML = "Incorrect";
                 };
             };
             document.querySelector('#b5').onclick = function() {
@@ -52,10 +53,10 @@
             document.querySelector('#s').onclick = function() {
                 if (document.querySelector('#inp').value.toLowerCase() === "madrid"){
                     document.querySelector('#inp').style.backgroundColor = 'green';
-                    document.querySelector('#inp').innerHTML = "Correct!"}
+                    document.querySelector('#in2').innerHTML = "Correct!"}
                 else {
                     document.querySelector('#inp').style.backgroundColor = 'red';
-                    document.querySelector('#inp').innerHTML = "Correct"}
+                    document.querySelector('#in2').innerHTML = "Incorrect"}
             };
         </script>
     </body>
