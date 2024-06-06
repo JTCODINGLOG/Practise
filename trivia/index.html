@@ -50,10 +50,10 @@
                 document.querySelector('#in').innerHTML = "Correct!";
             };
             document.querySelector('#s').onclick = function() {
-                if [document.querySelector('#inp').value === "Madrid" || document.querySelector('#inp').value === "madrid" || document.querySelector('#inp').value === "Madrid." || document.querySelector('#inp').value === "madrid"]
-                document.querySelector('#inp').style.backgroundColor = 'green';
+                if (document.querySelector('#inp').value === "Madrid" || document.querySelector('#inp').value === "madrid" || document.querySelector('#inp').value === "Madrid." || document.querySelector('#inp').value === "madrid")
+                {document.querySelector('#inp').style.backgroundColor = 'green'};
                 else
-                document.querySelector('#inp').style.backgroundColor = 'red';
+                {document.querySelector('#inp').style.backgroundColor = '#f44336'};
             };
         </script>
     </body>
