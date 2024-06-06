@@ -38,23 +38,25 @@
         </div>
         <script>
             // TODO: Add code to check answers to questions
-            for (let i = 1; i < 5; i++)
-            {
-                document.querySelector(`#b${i}`).onclick = function() {
-                this.style.backgroundColor = '#f44336';
-                document.querySelector('#in').innerHTML = "Incorrect";
+            window.onload = function() {
+                for (let i = 1; i < 5; i++)
+                {
+                    document.querySelector(`#b${i}`).onclick = function() {
+                    this.style.backgroundColor = '#f44336';
+                    document.querySelector('#in').innerHTML = "Incorrect";
+                    };
                 };
-            };
-            document.querySelector('#b5').onclick = function() {
-                this.style.backgroundColor = 'green';
-                document.querySelector('#in').innerHTML = "Correct!";
-            };
-            document.querySelector('#s').onclick = function() {
-                if (document.querySelector('#inp').value.toLowerCase() === "madrid"){
-                    document.querySelector('#inp').style.backgroundColor = 'green'};
-                else{
-                    document.querySelector('#inp').style.backgroundColor = '#f44336'};
-            };
+                document.querySelector('#b5').onclick = function() {
+                    this.style.backgroundColor = 'green';
+                    document.querySelector('#in').innerHTML = "Correct!";
+                };
+                document.querySelector('#s').onclick = function() {
+                    if (document.querySelector('#inp').value.toLowerCase() === "madrid"){
+                        document.querySelector('#inp').style.backgroundColor = 'green'};
+                    else{
+                        document.querySelector('#inp').style.backgroundColor = '#f44336'};
+                };
+            }
         </script>
     </body>
 </html>
