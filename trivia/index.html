@@ -18,16 +18,12 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>How many countries speak spanish in the world?</h3>
+                <p id="in"></p>
                 <button id="b1"> 2 </button>
-                <small></small>
                 <button id="b2"> 11 </button>
-                <small></small>
                 <button id="b3"> 12 </button>
-                <small></small>
                 <button id="b4"> 20 </button>
-                <small></small>
                 <button id="b5"> 21 </button>
-                <small></small>
 
             </div>
 
@@ -44,7 +40,7 @@
             // TODO: Add code to check answers to questions
             document.querySelector('#b1').onclick = function() {
                 this.style.backgroundColor = '#f44336';
-                this.nextElementSibling.innerHTML = "You're wrong mate";
+                document.querySelector('#in').innerHTML = "Incorrect";
                 };
         </script>
     </body>
