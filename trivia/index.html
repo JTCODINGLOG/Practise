@@ -50,7 +50,10 @@
                 document.querySelector('#in').innerHTML = "Correct!";
             };
             document.querySelector('#s').onclick = function() {
-                document.querySelector('#inp').value = "Yes"
+                if (document.querySelector('#inp').value === Madrid){
+                    document.querySelector('#inp').style.backgroundColor = 'green';}
+                else 
+
             };
         </script>
     </body>
