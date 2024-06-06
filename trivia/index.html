@@ -50,13 +50,13 @@
                 document.querySelector('#in').innerHTML = "Correct!";
             };
             document.querySelector('#s').onclick = function() {
-                document.querySelector('#inp').style.backgroundColor = 'green'
+                if (document.querySelector('#inp').value === "madrid"){
+                    document.querySelector('#inp').style.backgroundColor = 'green'};
+                else{
+                    document.querySelector('#inp').style.backgroundColor = '#f44336'};
             };
         </script>
     </body>
 </html>
 
-if (document.querySelector('#inp').value.toLowerCase() === "madrid"){
-                    document.querySelector('#inp').style.backgroundColor = 'green'};
-                else{
-                    document.querySelector('#inp').style.backgroundColor = '#f44336'};
+
