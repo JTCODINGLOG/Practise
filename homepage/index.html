@@ -367,9 +367,8 @@
             for (let i = 1; i < 4; i++) {
               for (let j = 1; i < 4; j++) {
                 for (let k = 1; i < 4; k++) {
-                  document.querySelector('#').onclick = function() {
-                  this.style.backgroundColor = 'green';
-                  document.querySelector('#').innerHTML = ""
+                  document.querySelector(`#${i}{j}{k}`).onclick = function() {
+                  document.querySelector('#').innerHTML =
                   }
                 }
             }
