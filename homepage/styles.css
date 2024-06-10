@@ -13,6 +13,7 @@ h1 {
 }
 
 .header {
+    width: 100vw;
     background-image: linear-gradient(#99CCFF, #FFFFFF);
     font-size: 60px;
     font-family: impact, sans-serif;
