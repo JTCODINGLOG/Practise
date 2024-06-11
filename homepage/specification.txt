@@ -1,1 +1,1 @@
-<
+HTML tags: link, script, meta, header, main, table, thead, tr, td, tbody, button, ul, li, div, p, h1, a, footer.
