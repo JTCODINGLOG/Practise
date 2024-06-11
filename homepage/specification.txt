@@ -4,6 +4,6 @@ CSS properties: text-align, color, margin-left, margin-top, margin-bottom, backg
 
 Used javascript to give functionality to the dropdown buttons of the table created in HTML.
 
-Used bootstrap to give format to the table, buttons and dropdown.
+Used bootstrap to give format to the table, buttons and dropdown-buttons.
 
 
