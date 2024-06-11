@@ -1,3 +1,5 @@
 HTML tags: link, script, meta, header, main, table, thead, tr, td, tbody, button, ul, li, div, p, h1, a, footer.
 
-CSS properties: class, id, 
+CSS properties: class, id, lang, href, rel.
+
+
