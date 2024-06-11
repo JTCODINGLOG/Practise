@@ -1,5 +1,9 @@
 HTML tags: link, script, meta, header, main, table, thead, tr, td, tbody, button, ul, li, div, p, h1, a, footer.
 
-CSS properties: class, id, lang, href, rel.
+CSS properties: text-align, color, margin-left, margin-top, margin-bottom, background-image, font-size, font-family.
+
+Used javascript to give functionality to the dropdown buttons of the table created in HTML.
+
+Used bootstrap to give format to the table, buttons and dropdown.
 
 
