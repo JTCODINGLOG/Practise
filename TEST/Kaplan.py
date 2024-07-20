@@ -6,4 +6,5 @@ print("Welcome to this subject :)")
 comments
 '''
 
+print(result = 77/0)
 
