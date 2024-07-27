@@ -1,10 +1,4 @@
-variable_name = "World"
-print("Hello " + variable_name + "!")
+age = int(input())
 
-print("Welcome to this subject :)")
-'''
-comments
-'''
-
-print(result = 77/0)
-
+if age < 18:
+    print("Sorry under 18s are not allowed")
