@@ -8,6 +8,6 @@ def index():
 
 @app.route("/greet")
 def greet():
-    name = request.args.get("name", "world")
+    name = request.args.get("surname", "world")
     return render_template("greet.html", name=name)
 
