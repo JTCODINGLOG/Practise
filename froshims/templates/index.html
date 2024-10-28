@@ -6,21 +6,22 @@
     <form action="/register" method="post">
         <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
         <!-- instead of dropdown(select functionality) we can do:
-         radio buttons...
+        Radio buttons...
         {% for sport in sports %}
             <input name="sport" type"radio" value="{{ sport }}"> {{ sport }}
         {% endfor %}
-         checkboxes...
-        {% for sport in sports %}
-            <input name="sport" type"checkbox" value="{{ sport }}"> {{ sport }}
-        {% endfor %}
-        -->
+        Dropdown list...
         <select name="sport">
             <option disabled selected value="">Sport</option>
             {% for sport in sports %}
                 <option value="{{ sport }}">{{sport}}</option>
             {% endfor %}
         </select>
+        -->
+        {% for sport in sports %}
+            <input name="sport" type="checkbox" value="{{ sport }}"> {{ sport }}
+        {% endfor %}
+
         <button type="submit">Register</button>
     </form>
 
