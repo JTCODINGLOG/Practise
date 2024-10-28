@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-SPORTS = ["Basketball", "Football", "Soccer", "Ultimate Frisbee"]
+SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
 
 @app.route("/")
 def index():
