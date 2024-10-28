@@ -4,8 +4,8 @@
 
     <h1>Register</h1>
     <form action="/register" method="post">
-        <!--type=radio for "radio button type"-->
         <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        <!--type=radio for "radio button type"-->
         <select name="sport">
             <option disabled selected value="">Sport</option>
             {% for sport in sports %}
