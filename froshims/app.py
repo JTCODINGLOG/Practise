@@ -18,17 +18,19 @@ def register():
         return render_template("error.html", message="Missing name")
 
     # Validate sport
-    if not sport:
+    if not request.form.get("sport"):
         return render_template("error.html", message="Missing sport")
-    if sport not in SPORTS:
-        return render_template("error.html", message=""Invalid sport")
-                               
-    for sport in request.form.getlist("sport"):
-        if sport not in SPORTS:
-            return render_template("failure.html")
+    if request.form.get("sport") not in SPORTS:
+        return render_template("error.html", message="Invalid sport")
 
-    # This when using dropdown:
-    """if not request.form.get("name") or request.form.get("sport") not in SPORTS:
-        return render_template("failure.html")
-    """
-    return render_template("success.html")
+    # Saving registrant
+    REGISTRANTS[request.form.get("name")] = request.form.get("sport")
+
+    # Confirming registration
+    return redirect("/registrants")
+
+@app.route("/registrants")
+def registrants():
+    return render_template("registrants.html", registrants=REGISTRANTS)
+
+
