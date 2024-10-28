@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+REGISTRANTS = {}
+
 SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
 
 @app.route("/")
