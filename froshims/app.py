@@ -3,6 +3,8 @@ from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
+db = SQL("sqlite:///froshims.db")
+
 REGISTRANTS = {}
 
 SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
