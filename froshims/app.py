@@ -12,7 +12,6 @@ def index():
 
 @app.route("/register", methods=["POST"])
 def register():
-    # This is when using checkbox or radio buttons:
     # Validate name
     name = request.form.get("name")
     if not name:
