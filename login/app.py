@@ -8,7 +8,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 @app.route("/")
-def index()
+def index():
     return render_template("index.html", name=session.get("name"))
 
 @app.route("/login", methods=["GET", "POST"])
@@ -17,3 +17,8 @@ def login():
         session["name"] = request.form.get("name")
         return redirect("/")
     return render_template("login.html")
+
+@APP.ROUTE("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
