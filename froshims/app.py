@@ -14,17 +14,19 @@ def index():
 def register():
     # This is when using checkbox or radio buttons:
     # Validate name
-    if not request.form.get("name"):
+    name = request.form.get("name")
+    if not name:
         return render_template("error.html", message="Missing name")
 
     # Validate sport
-    if not request.form.get("sport"):
+    sport = request.form.get("sport")
+    if not sport:
         return render_template("error.html", message="Missing sport")
-    if request.form.get("sport") not in SPORTS:
+    if sport not in SPORTS:
         return render_template("error.html", message="Invalid sport")
 
     # Saving registrant
-    REGISTRANTS[request.form.get("name")] = request.form.get("sport")
+    REGISTRANTS[name] = sport
 
     # Confirming registration
     return redirect("/registrants")
