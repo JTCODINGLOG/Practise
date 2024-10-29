@@ -13,6 +13,15 @@ SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
 def index():
     return render_template("index.html", sports=SPORTS)
 
+@app.route("/deregister", methods=["POST"])
+def deregister():
+
+    # Forget registant
+    id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM registrants where id = ?", id)
+    return redirect("/registrants")
+
 @app.route("/register", methods=["POST"])
 def register():
     # Validate name
