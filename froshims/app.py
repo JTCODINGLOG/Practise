@@ -38,7 +38,7 @@ def register():
     # Saving registrant
     db.execute("INSER INTO registrants (name, sport) VALUES(?, ?)", name, sport )
 
-    # Confirming registration
+    # Confirm registration
     return redirect("/registrants")
 
 @app.route("/registrants")
