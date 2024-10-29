@@ -36,13 +36,14 @@ def register():
         return render_template("error.html", message="Invalid sport")
 
     # Saving registrant
-    db.execute("INSER INTO registrants (name, sport) VALUES(?, ?)", name, sport )
+    db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport )
 
     # Confirm registration
     return redirect("/registrants")
 
 @app.route("/registrants")
 def registrants():
-    return render_template("registrants.html", registrants=REGISTRANTS)
+    registrants = db.execute("SELECT * FROM registrant)
+    return render_template("registrants.html", registrants=registrants)
 
 
