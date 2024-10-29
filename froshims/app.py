@@ -24,13 +24,14 @@ def deregister():
 
 @app.route("/register", methods=["POST"])
 def register():
-    # Validate name
     name = request.form.get("name")
+    sport = request.form.get("sport")
+    # Validate name
     if not name:
         return render_template("error.html", message="Missing name")
 
     # Validate sport
-    sport = request.form.get("sport")
+
     if not sport:
         return render_template("error.html", message="Missing sport")
     if sport not in SPORTS:
