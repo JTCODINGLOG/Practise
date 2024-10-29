@@ -5,8 +5,6 @@ app = Flask(__name__)
 
 db = SQL("sqlite:///froshims.db")
 
-REGISTRANTS = {}
-
 SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
 
 @app.route("/")
@@ -38,7 +36,7 @@ def register():
         return render_template("error.html", message="Invalid sport")
 
     # Saving registrant
-    REGISTRANTS[name] = sport
+    
 
     # Confirming registration
     return redirect("/registrants")
