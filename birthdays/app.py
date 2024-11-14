@@ -36,7 +36,10 @@ def index():
             month = int(month)
             day = int(day)
 
-        if day not in range(31):
+        if month not in range(1, 13):
+            return redirect("/")
+
+        if day not in range(1, 32):
             return redirect("/")
 
         except ValueError:
