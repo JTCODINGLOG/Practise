@@ -35,6 +35,8 @@ def index():
         try:
             month = int(month)
             day = int(day)
+        except ValueError:
+            return redirect("/")
 
         if month not in range(1, 13):
             return redirect("/")
@@ -42,8 +44,6 @@ def index():
         if day not in range(1, 32):
             return redirect("/")
 
-        except ValueError:
-            return redirect("/")
 
         db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
 
