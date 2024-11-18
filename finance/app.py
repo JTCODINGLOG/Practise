@@ -111,28 +111,34 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 403)
 
-                # Ensure password was submitted
-        elif not request.form.get("confirmation"):
+        # Ensure confirmation was submitted
+        elif not confirmation:
             return apology("must provide password confirmation", 403)
 
-        elif request.get("confirmation") != request.get("password"):
+        # Ensure password and confirmation match
+        elif confirmation != password:
             return apology("passwords do not match", 400)
 
-        elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) == 1:
+        # Ensure username was not taken
+        elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) == 1:
             return apology("user taken", 400)
 
-        # Query database for username
-        rows = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
-        )
+        # Generate password hash
+
+        # Save user data
+        db.execute("INSERT INTO users ()
+
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(
