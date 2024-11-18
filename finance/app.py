@@ -45,7 +45,8 @@ def buy():
         shares = request.form.get("shares")
 
         if shares < 1:
-            return apology()
+            return apology("invalid shares", 400)
+        if lookout
         return apology()
     else:
         return render_template("buy.html")
