@@ -114,6 +114,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+
         # Ensure username was submitted
         if not username:
             return apology("must provide username", 403)
@@ -131,7 +132,9 @@ def register():
             return apology("passwords do not match", 400)
 
         # Ensure username was not taken
-        elif len(db.execute("SELECT * FROM users WHERE username = ?", username)) == 1:
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        elif len(rows) == 1:
             return apology("user taken", 400)
 
         # Generate password hash
@@ -140,7 +143,7 @@ def register():
         # Save user data
         db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
-        
+
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
