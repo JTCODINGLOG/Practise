@@ -55,7 +55,7 @@ def buy():
         if not lookup(symbol)
             return apology("invalid symbol", 400)
 
-        
+        return redirect("/")
     else:
         return render_template("buy.html")
 
