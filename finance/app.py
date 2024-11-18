@@ -57,6 +57,9 @@ def buy():
 
         #check price
         price = lookup(symbol)["price"]
+
+        #check cash of the user
+        user_id = session["user_id"]
         cash = db.execute("SELECT cash FROM users WHERE username = ?", )
         return redirect("/")
     else:
