@@ -135,6 +135,7 @@ def register():
             return apology("user taken", 400)
 
         # Generate password hash
+        hash = generate_password_hash(password)
 
         # Save user data
         db.execute("INSERT INTO users ()
