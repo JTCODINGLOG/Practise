@@ -56,7 +56,8 @@ def buy():
             return apology("invalid symbol", 400)
 
         #check price
-        price = lookup(symbol)[price]
+        price = lookup(symbol)["price"]
+        cash = db.execute(SELECT cash FROM users)
         return redirect("/")
     else:
         return render_template("buy.html")
