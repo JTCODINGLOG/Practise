@@ -151,7 +151,6 @@ def register():
 
     else:
         render_template("register.html")
-    return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
