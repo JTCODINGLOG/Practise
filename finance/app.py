@@ -126,8 +126,8 @@ def register():
         elif request.get("confirmation") != request.get("password"):
             return apology("passwords do not match", 400)
 
-        elif len(db.execute("SELECT * FROM users WHERE username = ?" request.form.get("username"))) == 1:
-            return apology
+        elif len(db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))) == 1:
+            return apology("user taken", 400)
 
         # Query database for username
         rows = db.execute(
