@@ -107,9 +107,10 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if lookup(symbol):
-            name = lookup(symbol)[0]
-            price = lookup(symbol)[1]
-            symbol = lookup(symbol)[2]
+            lookedup = lookup(symbol)
+            name = lookedup["name"]
+            price = lookedup["price"]
+            symbol = lookedup["symbol"]
             return render_template("quoted.html", name=name, price=price, symbol=symbol)
         return apology("invalid symbol", 400)
     else:
