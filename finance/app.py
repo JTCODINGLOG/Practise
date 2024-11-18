@@ -46,7 +46,7 @@ def buy():
 
         if shares < 1:
             return apology("invalid shares", 400)
-        if lookout
+        if not lookup(symbol)
         return apology()
     else:
         return render_template("buy.html")
