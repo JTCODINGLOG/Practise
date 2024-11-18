@@ -67,7 +67,7 @@ def buy():
 
         #check if user can buy
         if cash < shares_price:
-            apology("can't afford", 400)
+            return apology("can't afford", 400)
 
         return redirect("/")
     else:
