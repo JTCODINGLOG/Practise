@@ -108,7 +108,8 @@ def quote():
         symbol = request.form.get("symbol")
         if lookup(symbol):
             name = lookup(symbol)[0]
-            symbol = lookup(symbol)
+            price = lookup(symbol)
+            symbol = lookup(symbol)[2]
             return render_template("quoted.html", symbol=symbol)
         return (apology)
     else:
