@@ -60,7 +60,12 @@ def buy():
 
         #check cash of the user
         user_id = session["user_id"]
-        cash = db.execute("SELECT cash FROM users WHERE username = ?", )
+        rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = rows[0][cash]
+
+        #check if user can buy
+        if cash < price * shares:
+
         return redirect("/")
     else:
         return render_template("buy.html")
