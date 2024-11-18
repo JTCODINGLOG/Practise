@@ -57,7 +57,7 @@ def buy():
 
         #check price
         price = lookup(symbol)["price"]
-        cash = db.execute(SELECT cash FROM users)
+        cash = db.execute("SELECT cash FROM users WHERE username = ?", )
         return redirect("/")
     else:
         return render_template("buy.html")
