@@ -138,7 +138,7 @@ def register():
         hash = generate_password_hash(password)
 
         # Save user data
-        db.execute("INSERT INTO users ()
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
 
         # Ensure username exists and password is correct
