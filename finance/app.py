@@ -114,6 +114,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
 
         # Ensure username was submitted
         if not username:
@@ -132,8 +133,6 @@ def register():
             return apology("passwords do not match", 400)
 
         # Ensure username was not taken
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-
         elif len(rows) == 1:
             return apology("user taken", 400)
 
