@@ -52,7 +52,7 @@ def buy():
             return apology("Missing shares", 400)
         if shares < 1:
             return apology("invalid shares", 400)
-        if not lookup(symbol)
+        if not lookup(symbol):
             return apology("invalid symbol", 400)
 
         #check price
@@ -61,10 +61,11 @@ def buy():
         #check cash of the user
         user_id = session["user_id"]
         rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = rows[0][cash]
+        cash = rows[0]["cash"]
 
         #check if user can buy
         if cash < price * shares:
+            apology("can't afford", 400)
 
         return redirect("/")
     else:
