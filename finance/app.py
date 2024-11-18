@@ -44,7 +44,7 @@ def buy():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
 
-        if shares < 1:
+        if not shares or shares < 1:
             return apology("invalid shares", 400)
         if not lookup(symbol)
             return apology("invalid symbol", 400)
