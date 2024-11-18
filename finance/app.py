@@ -62,8 +62,8 @@ def buy():
         user_id = session["user_id"]
         rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         cash = float(rows[0]["cash"])
-
-        shares_price = usd(price*shares)
+        shares = int(shares)
+        shares_price = price*shares
 
         #check if user can buy
         if cash < shares_price:
