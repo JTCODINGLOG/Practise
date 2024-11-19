@@ -19,15 +19,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-db.execute("""CREATE TABLE buy_new (
-    purchase_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    user_id INTEGER NOT NULL,
-    symbol TEXT,
-    shares INTEGER,
-    price REAL,
-    purchase_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id))""")
-
 
 @app.after_request
 def after_request(response):
