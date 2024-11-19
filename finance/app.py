@@ -26,7 +26,7 @@ db.execute("""CREATE TABLE buy_new (
     shares INTEGER,
     price REAL,
     purchase_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id)""")
+    FOREIGN KEY (user_id) REFERENCES users(id))""")
 
 
 @app.after_request
