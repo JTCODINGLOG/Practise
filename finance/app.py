@@ -69,6 +69,8 @@ def buy():
         if cash < shares_price:
             return apology("can't afford", 400)
 
+        db.execute(INSERT INTO purchases )
+
         return redirect("/")
     else:
         return render_template("buy.html")
