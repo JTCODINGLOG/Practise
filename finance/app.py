@@ -71,7 +71,7 @@ def buy():
 
         db.execute("""
                    INSERT INTO purchases (user_id, symbol, shares, price, purchase_time)
-                   """)
+                   VALUES (?, ?, ?, ?, ?)""", user_id, symbol, shares, shares_price, )
 
         return redirect("/")
     else:
