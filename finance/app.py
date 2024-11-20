@@ -40,12 +40,12 @@ def index():
     for row in index:
         price = float(lookup(row["symbol"])["price"])
         total = price * row["SUM(shares)"]
-        row.update({"price": price, "TOTAL": total})
+        row.update({"price": usd(price), "TOTAL": usd(total)})
         stotal += total
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     stotal += cash
-    return render_template("index.html", index=index, cash=cash, stotal=usd(stotal))
+    return render_template("index.html", index=index, cash=usd(cash), stotal=usd(stotal))
 
 
 @app.route("/buy", methods=["GET", "POST"])
