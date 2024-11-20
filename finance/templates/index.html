@@ -15,17 +15,18 @@
             </tr>
         </thead>
         <tbody>
-            <p>cash: {{ cash }}</p>
-            <P>total: {{ stotal }}</P>
+            {% for row in {index} %}
+            
+            {% endfor %}
         </tbody>
         <tfoot>
             <tr>
                 <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
-                <td class="border-0 fw-bold text-end"></td>
+                <td class="border-0 fw-bold text-end">{{cash}}</td>
             </tr>
             <tr>
                 <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
-                <td class="border-0 fw-bold text-end"></td>
+                <td class="border-0 fw-bold text-end">{{stotal}}</td>
             </tr>
         </tfoot>
     </table>
