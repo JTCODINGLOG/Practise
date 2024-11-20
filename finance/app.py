@@ -47,7 +47,7 @@ def index():
 
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
-    return render_template("index.html", index, cash, stotal)
+    return render_template("index.html", index=index, cash=cash, stotal=stotal)
 
 
 @app.route("/buy", methods=["GET", "POST"])
