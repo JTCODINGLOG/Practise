@@ -35,10 +35,12 @@ def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
     index = db.execute("SELECT symbol, SUM(shares) FROM purchases WHERE user_id=?", user_id)
+    for row in index:
+        index
     price = float(lookup(index["symbol"])["price"])
     TOTAL = price * index["shares"]
 
-    
+
 
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
