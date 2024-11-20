@@ -44,6 +44,7 @@ def index():
         row.update({"price": price, "TOTAL": total})
         cash -= total
         stotal += total
+    stotal += cash
 
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
