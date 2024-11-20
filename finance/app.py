@@ -42,7 +42,8 @@ def index():
         total = price * row["SUM(shares)"]
         row.update({"price": price, "TOTAL": total})
         stotal += total
-    
+
+    cash = (db.execute("SELECT cash FROM users WHERE id = ?", user_id))[]
 
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
