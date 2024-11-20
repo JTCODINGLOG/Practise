@@ -39,8 +39,7 @@ def index():
     for row in index:
         price = float(lookup(index["symbol"])["price"]
         TOTAL = price * index["shares"]
-        row.update({"price":})
-        row.update({"TOTAL":})
+        row.update({"price":price, "TOTAL"=TOTAL})
 
 
 
