@@ -43,11 +43,9 @@ def index():
         row.update({"price": price, "TOTAL": total})
         stotal += total
 
-    cash = (db.execute("SELECT cash FROM users WHERE id = ?", user_id))[]
-
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
-
-    return render_template("index.html", index=index, stotal=stotal)
+    cash = (db.execute("SELECT cash FROM users WHERE id = ?", user_id))["0"]["cash"]
+    stotal += cash
+    return render_template("index.html", index=index, cash=cash, stotal=stotal)
 
 
 @app.route("/buy", methods=["GET", "POST"])
