@@ -36,8 +36,9 @@ def index():
     user_id = session["user_id"]
     index = db.execute("SELECT symbol, SUM(shares) FROM purchases WHERE user_id=?", user_id)
     for row in index:
-        index
-    price = float(lookup(index["symbol"])["price"])
+        row.update({"price":float(lookup(index["symbol"])["price"]})
+        row.update({"TOTAL":})
+
     TOTAL = price * index["shares"]
 
 
