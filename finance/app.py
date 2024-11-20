@@ -36,19 +36,17 @@ def index():
     user_id = session["user_id"]
     index = db.execute("SELECT symbol, SUM(shares) FROM purchases WHERE user_id=?", user_id)
 
-    cash = 10000
     stotal = 0
     for row in index:
         price = float(lookup(row["symbol"])["price"])
         total = price * row["SUM(shares)"]
         row.update({"price": price, "TOTAL": total})
-        cash -= total
         stotal += total
-    stotal += cash
+    
 
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
-    return render_template("index.html", index=index, cash=cash, stotal=stotal)
+    return render_template("index.html", index=index, stotal=stotal)
 
 
 @app.route("/buy", methods=["GET", "POST"])
