@@ -43,7 +43,7 @@ def index():
         row.update({"price": price, "TOTAL": total})
         stotal += total
 
-    cash = (db.execute("SELECT cash FROM users WHERE id = ?", user_id))["0"]["cash"]
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     stotal += cash
     return render_template("index.html", index=index, cash=cash, stotal=stotal)
 
