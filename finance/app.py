@@ -34,8 +34,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
-    index = db.execute("SELECT symbol, shares FROM purchases WHERE user_id=?", user_id)
+    index = db.execute("SELECT symbol, SUM(shares) FROM purchases WHERE user_id=?", user_id)
     
+
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
     return render_template("index.html", )
