@@ -37,9 +37,9 @@ def index():
     index = db.execute("SELECT symbol, SUM(shares) FROM purchases WHERE user_id=?", user_id)
 
     for row in index:
-        price = float(lookup(index["symbol"])["price"]
-        TOTAL = price * index["shares"]
-        row.update({"price":price, "TOTAL"=TOTAL})
+        price = float(lookup(row["symbol"])["price"])
+        TOTAL = price * row["SUM(shares)"]
+        row.update({"price": price, "TOTAL"= TOTAL})
 
 
 
