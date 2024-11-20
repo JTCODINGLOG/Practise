@@ -16,10 +16,12 @@
         </thead>
         <tbody>
             {% for row in index %}
-                <td class="text-start">{{ row["symbol"] }}</td>
-                <td class="text-end">{{ row["SUM(shares)"]}}</td>
-                <td class="text-end">${{ row["price"] }}</td>
-                <td class="text-end">${{ row["TOTAL"] }}</td>
+                {% for symbol in row}
+                    <td class="text-start">{{ row["symbol"] }}</td>
+                    <td class="text-end">{{ row["SUM(shares)"]}}</td>
+                    <td class="text-end">${{ row["price"] }}</td>
+                    <td class="text-end">${{ row["TOTAL"] }}</td>
+                {% endfor %}
             {% endfor %}
         </tbody>
         <tfoot>
