@@ -73,7 +73,7 @@ def buy():
         #check cash of the user
         user_id = session["user_id"]
         rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = float(rows[0]["cash"])
+        cash = int(rows[0]["cash"])
         shares = int(shares)
         shares_price = price*shares
 
