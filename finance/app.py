@@ -59,9 +59,9 @@ def buy():
 
         #data validation
         if not symbol:
-            return apology("Missing symbol", 400)
+            return apology("missing symbol", 400)
         if not shares:
-            return apology("Missing shares", 400)
+            return apology("missing shares", 400)
         if int(shares) < 1:
             return apology("invalid shares", 400)
         if not lookup(symbol):
