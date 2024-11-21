@@ -221,14 +221,14 @@ def sell():
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
 
         #data validation
         if not symbol:
             return apology("missing symbol", 400)
         if not shares:
             return apology("missing shares", 400)
-        if int(shares) <= 0:
+        if shares <= 0:
             return apology("shares must be positive", 400)
         if not lookup(symbol):
             return apology("invalid symbol", 400)
@@ -249,6 +249,7 @@ def sell():
 
         shares_price = price*shares
         cash = cash + shares_price
+        shares = -1 * shares
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
         db.execute("""INSERT INTO purchases (user_id, symbol, shares, price)
                    VALUES (?, ?, ?, ?)""", user_id, symbol, shares, shares_price)
