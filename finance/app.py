@@ -216,4 +216,42 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
+        #data validation
+        if not symbol:
+            return apology("Missing symbol", 400)
+        if not shares:
+            return apology("Missing shares", 400)
+        if int(shares) < 1:
+            return apology("invalid shares", 400)
+        if not lookup(symbol):
+            return apology("invalid symbol", 400)
+
+        #check price
+        price = float(lookup(symbol)["price"])
+
+        #check cash of the user
+        user_id = session["user_id"]
+        rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = float(rows[0]["cash"])
+        shares = int(shares)
+        shares_price = price*shares
+
+        #check if user can buy
+        if cash < shares_price:
+            return apology("can't afford", 400)
+        else:
+            cash = cash - shares_price
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
+
+        db.execute("""INSERT INTO purchases (user_id, symbol, shares, price)
+                   VALUES (?, ?, ?, ?)""", user_id, symbol, shares, shares_price)
+
+        return redirect("/")
+    else:
+        return render_template("sell.html")
+
