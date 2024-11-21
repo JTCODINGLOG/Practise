@@ -73,7 +73,7 @@ def buy():
         #check cash of the user
         user_id = session["user_id"]
         rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = int(rows[0]["cash"])
+        cash = float(rows[0]["cash"])
         shares = int(shares)
         shares_price = price*shares
 
@@ -238,10 +238,12 @@ def sell():
         price = float(lookup(symbol)["price"])
 
         #check shares of the user for that symbol
-        rows = db.execute("SELECT shares, SUM(shares) FROM purchases WHERE user_id=? and symbol=? GROUP BY symbol", user_id, symbol)
-        shares = float(rows[0]["cash"])
-        shares = int(shares)
+        rows_0 = db.execute("SELECT shares, SUM(shares) FROM purchases WHERE user_id=? and symbol=? GROUP BY symbol", user_id, symbol)
+        shares = int(rows_0[0]["shares"])
         shares_price = price*shares
+
+        rows_1 = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = float(rows_1[0]["cash"])
 
         #check if user can buy
         if cash < shares_price:
