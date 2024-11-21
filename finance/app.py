@@ -80,10 +80,9 @@ def buy():
         #check if user can buy
         if cash < shares_price:
             return apology("can't afford", 400)
-        else:
-            cash = cash - shares_price
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
+        cash = cash - shares_price
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
         db.execute("""INSERT INTO purchases (user_id, symbol, shares, price)
                    VALUES (?, ?, ?, ?)""", user_id, symbol, shares, shares_price)
 
