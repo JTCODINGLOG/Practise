@@ -246,11 +246,10 @@ def sell():
         #check if user can buy
         if shares_user < shares:
             return apology("too many shares", 400)
-        else:
-            shares_price = price*shares_user
-            cash = cash - shares_price
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
+        shares_price = price*shares_user
+        cash = cash + shares_price
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
         db.execute("""INSERT INTO purchases (user_id, symbol, shares, price)
                    VALUES (?, ?, ?, ?)""", user_id, symbol, shares, shares_price)
 
