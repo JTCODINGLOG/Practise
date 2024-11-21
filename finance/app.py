@@ -216,7 +216,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+
     user_id = session["user_id"]
 
     if request.method == "POST":
@@ -256,6 +256,6 @@ def sell():
 
         return redirect("/")
     else:
-        shares = db.execute("SELECT symbol FROM purchases WHERE user_id=? GROUP BY symbol", user_id)
-        return render_template("sell.html", shares)
+        shares = db.execute("SELECT symbol FROM purchases WHERE user_id=? GROUP BY symbol", user_id)[0]["shares"]
+        return render_template("sell.html", shares=shares)
 
