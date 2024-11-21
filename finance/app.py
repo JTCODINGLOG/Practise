@@ -237,8 +237,7 @@ def sell():
         #check price
         price = float(lookup(symbol)["price"])
 
-        #check cash of the user
-        user_id = session["user_id"]
+        #check shares of the user
         rows = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         cash = float(rows[0]["cash"])
         shares = int(shares)
