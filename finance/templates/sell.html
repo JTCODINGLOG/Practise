@@ -9,7 +9,8 @@
         <div class="mb-3">
             <select class="form-select mx-auto w-auto" name="symbol">
                 <option disabled selected>Symbol</option>
-                {% for in %}
+                {% for share in shares%}
+                    <option value="{{share}}">{{share}}</option>
                 {% endfor %}
             </select>
         </div>

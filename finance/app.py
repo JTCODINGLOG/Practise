@@ -253,5 +253,8 @@ def sell():
 
         return redirect("/")
     else:
-        return render_template("sell.html")
+        user_id = session["user_id"]
+        shares = db.execute("SELECT symbol FROM purchases WHERE user_id=? GROUP BY symbol", user_id)
+
+        return render_template("sell.html", shares)
 
