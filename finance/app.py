@@ -239,15 +239,15 @@ def sell():
 
         #check shares of the user for that symbol
         rows_0 = db.execute("SELECT shares, SUM(shares) FROM purchases WHERE user_id=? and symbol=? GROUP BY symbol", user_id, symbol)
-        shares = int(rows_0[0]["shares"])
-        shares_price = price*shares
+        shares_user = int(rows_0[0]["shares"])
+        shares_price = price*shares_user
 
         rows_1 = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         cash = float(rows_1[0]["cash"])
 
         #check if user can buy
-        if cash < shares_price:
-            return apology("can't afford", 400)
+        if shares_user < shares:
+            return apology("can't sell", 400)
         else:
             cash = cash - shares_price
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
