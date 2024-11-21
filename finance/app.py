@@ -220,7 +220,7 @@ def sell():
 
     if request.method == "POST":
 
-        symbol = request.form.get("symbol")
+        symbol = (request.form.get("symbol")).upper()
         shares = int(request.form.get("shares"))
 
         #data validation
