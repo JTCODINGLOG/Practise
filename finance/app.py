@@ -226,11 +226,11 @@ def sell():
 
         #data validation
         if not symbol:
-            return apology("Missing symbol", 400)
+            return apology("missing symbol", 400)
         if not shares:
-            return apology("Missing shares", 400)
-        if int(shares) < 1:
-            return apology("invalid shares", 400)
+            return apology("missing shares", 400)
+        if int(shares) <= 0:
+            return apology("shares must be positive", 400)
         if not lookup(symbol):
             return apology("invalid symbol", 400)
 
@@ -247,7 +247,7 @@ def sell():
 
         #check if user can buy
         if shares_user < shares:
-            return apology("can't sell", 400)
+            return apology("too many shares", 400)
         else:
             cash = cash - shares_price
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
