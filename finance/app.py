@@ -238,7 +238,7 @@ def sell():
         price = float(lookup(symbol)["price"])
 
         #check shares of the user for that symbol
-        rows = db.execute("SELECT shares, SUM(shares) FROM purchases WHERE user_id=? GROUP BY symbol", user_id)
+        rows = db.execute("SELECT shares, SUM(shares) FROM purchases WHERE user_id=? and symbol =  GROUP BY symbol", user_id)
         cash = float(rows[0]["cash"])
         shares = int(shares)
         shares_price = price*shares
