@@ -34,7 +34,11 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     user_id = session["user_id"]
-    index = db.execute("SELECT symbol, SUM(shares) FROM purchases WHERE user_id=? GROUP BY symbol", user_id)
+    index = db.execute("""SELECT symbol, SUM(shares) FROM purchases
+                       WHERE user_id=?
+                       GROUP BY symbol
+                       HAVING SUM(shares) > 0"""
+                       , user_id)
 
     stotal = 0
     for row in index:
