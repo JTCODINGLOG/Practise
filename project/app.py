@@ -28,6 +28,6 @@ def after_request(response):
     return response
 
 @app.route("/")
-#function for login
+@login_required
 def index():
-    
+    return render_template("main.html")
