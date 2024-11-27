@@ -41,15 +41,15 @@ def index():
     return render_template("main.html")
 
 @app.route("/login", methods=["GET", "POST"])
+# Limit of 3 login attemps per minute
+@limiter.limits("3 per minute")
 def login():
     """Log user in"""
 
     # Forget any user_id
     session.clear()
 
-    # Limit of 3 login attemps per minute
-    @limiter.limits("3 per minute")
-    def login()
+
 
 
 
