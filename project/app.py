@@ -23,8 +23,6 @@ limiter = Limiter(
     # Use client's IP address
     get_remote_address,
     app=app,
-    # Set default limits
-    default_limits=["90 per day", "9 per hour"],
 )
 
 @app.after_request
