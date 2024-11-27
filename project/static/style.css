@@ -33,3 +33,10 @@ nav .navbar-brand .green
     background-color: #007777; /* Darker green */
     border-color: #007777;
 }
+
+input.form-control:hover,
+input.form-control:focus {
+    border-color: #009999; /* Green border */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px #009999; /* Add a glow effect */
+}
