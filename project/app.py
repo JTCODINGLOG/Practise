@@ -44,14 +44,8 @@ def index():
 # Limit of 3 login attemps per minute
 @limiter.limits("3 per minute")
 def login():
-    """Log user in"""
-
     # Forget any user_id
     session.clear()
-
-
-
-
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
