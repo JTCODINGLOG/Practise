@@ -19,9 +19,10 @@ Session(app)
 db = SQL("sqlite:///project.db")
 
 limiter = Limiter(
-    #ussing client's IP address
+    # ussing client's IP address
     get_remote_address
     app=app,
+    # setting default limits
     default_limits=["20 per day", "10 per hour"],
 )
 
