@@ -68,7 +68,7 @@ def login():
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
         # Mark login ass successful
-        session["login_sucess" = True]
+        session["login_sucess"] = True
 
         # Redirect user to home page
         return redirect("/")
