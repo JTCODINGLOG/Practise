@@ -24,7 +24,7 @@ limiter = Limiter(
     get_remote_address,
     app=app,
     # Set default limits
-    default_limits=["20 per day", "10 per hour"],
+    default_limits=["90 per day", "9 per hour"],
 )
 
 @app.after_request
@@ -42,7 +42,8 @@ def index():
 
 @app.route("/login", methods=["GET", "POST"])
 # Limit of 3 login attemps per minute
-@limiter.limit("10 per minute")
+@limiter.limit("3 per minute")
+@limiter.limit("30 per day")
 def login():
     # Forget any user_id
     session.clear()
