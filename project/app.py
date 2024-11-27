@@ -42,7 +42,7 @@ def index():
 
 @app.route("/login", methods=["GET", "POST"])
 # Limit of 3 login attemps per minute
-@limiter.limits("3 per minute")
+@limiter.limit("3 per minute")
 def login():
     # Forget any user_id
     session.clear()
