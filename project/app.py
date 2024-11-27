@@ -18,6 +18,13 @@ Session(app)
 # Configure databse library for SQL
 db = SQL("sqlite:///project.db")
 
+    limiter = Limiter(
+        #ussing client's IP address
+        get_remote_address
+        app=app,
+        default_limits=["20 per day", "10 per hour"],
+    )
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -45,7 +52,7 @@ def login():
         default_limits=["20 per day", "10 per hour"],
     )
 
-    
+
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
