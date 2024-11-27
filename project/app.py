@@ -39,7 +39,7 @@ def index():
     return render_template("main.html")
 
 @app.route("/login", methods=["GET", "POST"])
-# Limit of 3 login attemps per minute, 
+# Limit fail attemps: 3/min and 30/day, exempting successful logins
 @limiter.limit("3 per minute", key_func=lambda: request.remote_addr, exempt_when=lambda: session.get("login_success", False))
 @limiter.limit("30 per day",  key_func=lambda: request.remote_addr, exempt_when=lambda: session.get("login_success", False))
 def login():
