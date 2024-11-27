@@ -47,12 +47,9 @@ def login():
     # Forget any user_id
     session.clear()
 
-    limiter = Limiter(
-        #ussing client's IP address
-        get_remote_address
-        app=app,
-        default_limits=["20 per day", "10 per hour"],
-    )
+    # Limit of 3 login attemps per minute
+    @limiter.limits("3 per minute")
+    def login()
 
 
 
