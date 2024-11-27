@@ -18,11 +18,12 @@ Session(app)
 # Configure databse library for SQL
 db = SQL("sqlite:///project.db")
 
+# Initialise limiter
 limiter = Limiter(
-    # ussing client's IP address
-    get_remote_address
+    # Use client's IP address
+    get_remote_address,
     app=app,
-    # setting default limits
+    # Set default limits
     default_limits=["20 per day", "10 per hour"],
 )
 
