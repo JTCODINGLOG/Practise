@@ -48,18 +48,18 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return "must provide username"
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not password:
             return "must provide password"
 
         # Query database for username
-        rows = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get("username")
-        )
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(
