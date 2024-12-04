@@ -13,5 +13,15 @@
             <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
         </div>
         <button class="btn btn-green" type="submit">Log In</button>
+        <div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
     </form>
 {% endblock %}
