@@ -18,5 +18,11 @@
                 <p class="red">{{ error }}</p>
             {% endif %}
         </div>
+        <div>
+            {% if error %}
+                <p class="red">{{ error }}</p>
+                <p><a href="/register">Click here if you think you are not registered.</a></p>
+            {% endif %}
+        </div>
     </form>
 {% endblock %}
