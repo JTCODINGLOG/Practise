@@ -53,7 +53,7 @@ def login():
         # Ensure username was submitted
         if not username:
             error = "Must provide username"
-            return redirect("/login", error=error)
+            return render_template("login.html", error=error)
 
         # Ensure password was submitted
         elif not password:
