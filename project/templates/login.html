@@ -16,12 +16,7 @@
         <div>
             {% if error %}
                 <p class="red">{{ error }}</p>
-            {% endif %}
-        </div>
-        <div>
-            {% if error %}
-                <p class="green">{{ error }}</p>
-                <p><a href="/register">Click here if you think you are not registered.</a></p>
+                <a href="/register">Click here if you are not registered.</a>
             {% endif %}
         </div>
     </form>
