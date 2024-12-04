@@ -40,3 +40,8 @@ input.form-control:focus {
     outline: none; /* Remove default focus outline */
     box-shadow: 0 0 5px #009999; /* Add a glow effect */
 }
+
+.red
+{
+    color: #ea433b;
+}
