@@ -52,8 +52,8 @@ def login():
         password = request.form.get("password")
         # Ensure username was submitted
         if not username:
-            flash("Must provide username")
-            return redirect("/login")
+            error = "Must provide username"
+            return redirect("/login", error=error)
 
         # Ensure password was submitted
         elif not password:

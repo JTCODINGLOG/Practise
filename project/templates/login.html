@@ -14,15 +14,9 @@
         </div>
         <button class="btn btn-green" type="submit">Log In</button>
         <div>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                <ul>
-                    {% for message in messages %}
-                    <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            {% endwith %}
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
         </div>
     </form>
 {% endblock %}
