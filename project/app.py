@@ -94,7 +94,9 @@ def register():
             error = "Must provide email"
             return render_template("register.html", error=error)
 
-        if not any(for char in email):
+        elif not "@" in email:
+            error = "Must provide email"
+            return render_template("register.html", error=error)
 
         # Ensure password was submitted
         elif not password:
