@@ -63,7 +63,7 @@ def login():
         # Query database for email
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
 
-        # Ensure username exists and password is correct
+        # Ensure email exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], password):
             error = "Invalid email or password"
             return render_template("login.html", error=error)
@@ -84,17 +84,17 @@ def login():
 def register():
     """Register user"""
     if request.method == "POST":
-        username = request.form.get("email")
+        email = request.form.get("email")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
 
-        # Ensure username was submitted
-        if not username:
+        # Ensure email was submitted
+        if not email:
             error = "Must provide email"
             return render_template("register.html", error=error)
 
-        if not any(for char in username):
+        if not any(for char in email):
 
         # Ensure password was submitted
         elif not password:
@@ -132,19 +132,19 @@ def register():
             error = "Confirmation and password do not match"
             return render_template("register.html", error=error)
 
-        # Ensure username was not taken
+        # Ensure email was not taken
         elif len(rows) == 1:
-            error = "Username is taken. Please, choose a different username"
+            error = "Email is taken. Please, choose a different email"
             return render_template("register.html", error=error)
 
         # Generate password hash
         hash = generate_password_hash(password)
 
         # Save user data
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
+        db.execute("INSERT INTO users (email, hash) VALUES(?, ?)", email, hash)
 
         # Remember which user has logged in
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
