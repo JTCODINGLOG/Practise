@@ -100,12 +100,26 @@ def register():
             return render_template("register.html", error=error)
 
         # Password validation
+        specialchar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
+
         elif 20 < len(password) < 8:
             error = "Password must have a minimum of 8 characters and a maximum of 20"
             return render_template("register.html", error=error)
 
         elif not any(char.isupper() for char in password):
-            error = "Password must have at least one upper character"
+            error = "Password must have at least one upper case character"
+            return render_template("register.html", error=error)
+
+        elif not any(char.islower() for char in password):
+            error = "Password must have at least one lower case character"
+            return render_template("register.html", error=error)
+
+        elif not any(char.isdigit() for char in password):
+            error = "Password must have at least one digit"
+            return render_template("register.html", error=error)
+
+        elif not any(char.isdigit() for char in password):
+            error = "Password must have at least one digit"
             return render_template("register.html", error=error)
 
 
