@@ -1,7 +1,7 @@
 from flask import redirect, render_template, session
 from functools import wraps
 from re import match
-import dns
+from dns.resolver import resolve, NoAnswer, NXDOMAIN
 
 
 def login_required(f):
