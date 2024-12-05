@@ -84,15 +84,17 @@ def login():
 def register():
     """Register user"""
     if request.method == "POST":
-        username = request.form.get("username")
+        username = request.form.get("email")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
 
         # Ensure username was submitted
         if not username:
-            error = "Must provide username"
+            error = "Must provide email"
             return render_template("register.html", error=error)
+
+        if not any(for)
 
         # Ensure password was submitted
         elif not password:
