@@ -48,11 +48,11 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-        username = request.form.get("username")
+        username = request.form.get("email")
         password = request.form.get("password")
         # Ensure username was submitted
         if not username:
-            error = "Must provide username"
+            error = "Must provide email"
             return render_template("login.html", error=error)
 
         # Ensure password was submitted
@@ -65,7 +65,7 @@ def login():
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], password):
-            error = "Invalid username or password"
+            error = "Invalid email or password"
             return render_template("login.html", error=error)
 
         # Remember which user has logged in
