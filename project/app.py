@@ -100,8 +100,6 @@ def register():
             return render_template("register.html", error=error)
 
         # Password validation
-        specialchar = ["!", "@", "#", "$", "%", "^", "&"]
-
         elif 20 < len(password) < 8:
             error = "Password must have a minimum of 8 characters and a maximum of 20"
             return render_template("register.html", error=error)
@@ -119,11 +117,7 @@ def register():
             return render_template("register.html", error=error)
 
         elif not specialchar in password:
-            error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
-            return render_template("register.html", error=error)
-
-
-
+            error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &""
             return render_template("register.html", error=error)
 
         # Ensure confirmation was submitted
