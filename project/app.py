@@ -116,7 +116,7 @@ def register():
             error = "Password must have at least one digit"
             return render_template("register.html", error=error)
 
-        elif not specialchar in password:
+        elif not any(char in password for char in specialchar):
             error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &""
             return render_template("register.html", error=error)
 
