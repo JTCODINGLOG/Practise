@@ -96,14 +96,17 @@ def register():
 
         # Ensure password was submitted
         elif not password:
-            error = "Must provide password
-            return render_template("register.html", error=error)
-        
-        elif not password:
-            error = "Must provide password
+            error = "Must provide password"
             return render_template("register.html", error=error)
 
+        # Password validation
+        elif len(password) < 8:
+            error = "Password must have a minimum of 8 characters"
+            return render_template("register.html", error=error)
 
+        elif [] < 8:
+            error = "Password must have a minimum of 8 characters"
+            return render_template("register.html", error=error)
 
         # Ensure confirmation was submitted
         elif not confirmation:
