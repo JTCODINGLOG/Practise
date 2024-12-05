@@ -104,8 +104,8 @@ def register():
             error = "Password must have a minimum of 8 characters and a maximum of 20"
             return render_template("register.html", error=error)
 
-        elif [] < 8:
-            error = "Password must have a minimum of 8 characters"
+        elif for char in password
+            char
             return render_template("register.html", error=error)
 
         # Ensure confirmation was submitted
