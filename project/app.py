@@ -117,7 +117,7 @@ def register():
             return render_template("register.html", error=error)
 
         elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in password):
-            error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &""
+            error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
             return render_template("register.html", error=error)
 
         # Ensure confirmation was submitted
