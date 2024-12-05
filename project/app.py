@@ -91,23 +91,34 @@ def register():
 
         # Ensure username was submitted
         if not username:
-            return "must provide username"
+            error = "Must provide username"
+            return render_template("register.html", error=error)
 
         # Ensure password was submitted
         elif not password:
-            return "must provide password"
+            error = "Must provide password
+            return render_template("register.html", error=error)
+        
+        elif not password:
+            error = "Must provide password
+            return render_template("register.html", error=error)
+
+
 
         # Ensure confirmation was submitted
         elif not confirmation:
-            return "must provide password confirmation"
+            error = "Must provide password confirmation"
+            return render_template("register.html", error=error)
 
         # Ensure password and confirmation match
         elif confirmation != password:
-            return "passwords do not match"
+            error = "Confirmation and password do not match"
+            return render_template("register.html", error=error)
 
         # Ensure username was not taken
         elif len(rows) == 1:
-            return "user taken"
+            error = "Username is taken. Please, choose a different username"
+            return render_template("register.html", error=error)
 
         # Generate password hash
         hash = generate_password_hash(password)
