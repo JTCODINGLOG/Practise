@@ -38,6 +38,4 @@ def validate_email(email):
         error = "Email not valid"
         return render_template("login.html", error=error)
 
-    return False, "Unknown error"
-
 
