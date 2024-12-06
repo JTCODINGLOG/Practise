@@ -93,23 +93,6 @@ def login():
     else:
         return render_template("login.html")
 
-@app.route("/verify", methods=["GET", "POST"])
-def verify():
-    submitted_code = request.form.get("verification_code")
-    email = request.form.get("email")
-    if submitted_code == session.get("verification_code"):
-        # Remove the verification code from session
-        session.pop("verificaion_code", None)
-        # Create dictionary with user information
-        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
-        # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
-        # Mark login ass successful
-        session["login_sucess"] = True
-        return redirect("/")
-    else:
-        error = "Please input the right code."
-        return render_template("verify.html", email=email, error=error)
 
 @app.route("/send", method=["POST"])
 def send():
@@ -130,6 +113,24 @@ def send():
     session["verification_code"] = code
 
     return render_template ("verify.html", email=email)
+
+@app.route("/verify", methods=["GET", "POST"])
+def verify():
+    submitted_code = request.form.get("verification_code")
+    email = request.form.get("email")
+    if submitted_code == session.get("verification_code"):
+        # Remove the verification code from session
+        session.pop("verificaion_code", None)
+        # Create dictionary with user information
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+        # Mark login ass successful
+        session["login_sucess"] = True
+        return redirect("/")
+    else:
+        error = "Please input the right code."
+        return render_template("verify.html", email=email, error=error)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
