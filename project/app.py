@@ -110,10 +110,12 @@ def login():
 
 @app.route("/verify", methods=["GET", "POST"])
 def verify():
-        # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
-        # Mark login ass successful
-        session["login_sucess"] = True
+
+    rows = db.execute("SELECT * FROM users WHERE email = ?", email)
+    # Remember which user has logged in
+    session["user_id"] = rows[0]["id"]
+    # Mark login ass successful
+    session["login_sucess"] = True
 
 
 @app.route("/register", methods=["GET", "POST"])
