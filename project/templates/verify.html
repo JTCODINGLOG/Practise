@@ -23,7 +23,7 @@
             <a href=>Code expires in 30 seconds, click here to resend code to {{ email }}.</a>
             <form action="/resend" method="post">
                 <input type="hidden" name="email" value="{{ email }}">
-                <button type="submit" class="btn btn-link">Resend Code</button>
+                <button class="btn btn-green" type="submit">Resend Code</button>
             </form>
         {% endif %}
     </div>
