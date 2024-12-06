@@ -5,7 +5,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from assistants import login_required
+from assistants import login_required, validate_email
 
 # Configure application
 app = Flask(__name__)
@@ -51,7 +51,7 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
         # Ensure email was submitted
-        if @validate_email(email):
+        if validate_email(email):
             error = "Must provide email"
             return render_template("login.html", error=error)
 
