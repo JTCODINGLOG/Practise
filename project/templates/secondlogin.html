@@ -1,18 +1,18 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Log In
+    Verification
 {% endblock %}
 
 {% block main %}
-    <form action="/login" method="post">
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="text">
+    <form action="/verify" method="post">
+        <div>
+            Please, enter the verification code sent to {{  }}
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="verification_code" placeholder="Verification_code" type="text">
         </div>
-        <button class="btn btn-green" type="submit">Log In</button>
+        <button class="btn btn-green" type="submit">Verify</button>
         <div>
             {% if error %}
                 <p class="red">{{ error }}</p>
