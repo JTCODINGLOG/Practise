@@ -23,7 +23,7 @@ def validate_email(email):
     # Validate format with regex pattern
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     if not match(pattern, email):
-        return False, "Invalid email format"
+        return False
 
     # Extract domain
     domain = email.split('@')[-1]
@@ -35,7 +35,5 @@ def validate_email(email):
         if mx_records:
             return True
     except (NoAnswer, NXDOMAIN, Exception):
-        error = "Email not valid"
-        return render_template("login.html", error=error)
-
+        return False
 
