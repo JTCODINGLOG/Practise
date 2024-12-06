@@ -129,6 +129,15 @@ def verify():
         error = "Please input the right code."
         return render_template("verify.html", email=email, error=error)
 
+@app.route("/send", method=["POST"])
+def resend():
+    email = request.form.get("email")
+    # Generate and send a new verification code
+    new_code = generate_verification_code()
+    send_verification_code(email, new_code)
+    # Store the new code in the session
+    session["verification_code"] = new_code
+    return render_template("verify.html", email=email, message="A new code has been sent.")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
