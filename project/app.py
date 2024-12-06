@@ -88,15 +88,21 @@ def login():
         #code = verifycodefunction
 
         #Send email
-        msg = Message("Your Verification Code", sender=")
+        msg = Message("Your Verification Code", sender="your email", recipients=[email])
+        msg.body = f"Your verification code is: {code}"
+        mail.send(msg)
+
+
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
         # Mark login ass successful
         session["login_sucess"] = True
 
-        # Redirect user to home page
-        return redirect("/")
+        return render_template ("verify.html", email=email, )
+
+        # BEFORE - Redirect user to home page
+        # return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
