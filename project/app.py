@@ -51,7 +51,7 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
         # Ensure email was submitted
-        if validate_email(email):
+        if not email(email):
             error = "Must provide email"
             return render_template("login.html", error=error)
 
