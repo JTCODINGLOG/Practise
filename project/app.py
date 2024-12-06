@@ -3,6 +3,7 @@ from flask import Flask, flash, redirect, render_template, request, session, jso
 from flask_session import Session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from flask_mail import Mail, message
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from assistants import login_required, validate_email
@@ -14,6 +15,9 @@ app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+
+# Configuring email
+app.config['MAIL_SERVER'] = '
 
 # Configure databse library for SQL
 db = SQL("sqlite:///project.db")
