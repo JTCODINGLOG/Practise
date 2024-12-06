@@ -99,7 +99,7 @@ def login():
         # Mark login ass successful
         session["login_sucess"] = True
 
-        return render_template ("verify.html", email=email, )
+        return render_template ("verify.html", email=email)
 
         # BEFORE - Redirect user to home page
         # return redirect("/")
