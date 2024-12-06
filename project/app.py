@@ -94,10 +94,10 @@ def login():
 
 
 
-        # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
-        # Mark login ass successful
-        session["login_sucess"] = True
+        # BEFORE Remember which user has logged in
+        # session["user_id"] = rows[0]["id"]
+        # BEFORE Mark login ass successful
+        # session["login_sucess"] = True
 
         return render_template ("verify.html", email=email)
 
@@ -107,6 +107,14 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
+
+@app.route("/verify", methods=["GET", "POST"])
+def verify():
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+        # Mark login ass successful
+        session["login_sucess"] = True
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
