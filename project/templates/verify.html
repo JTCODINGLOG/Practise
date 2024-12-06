@@ -5,20 +5,26 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/verify" method="post">
-        <div>
-            Please, enter the verification code sent to {{ email }}
-        </div>
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="verification_code" placeholder="Enter verification code" type="text">
-            <input type="hidden" name="email" value="{{ email }}">
-        </div>
-        <button class="btn btn-green" type="submit">Verify</button>
-    </form>
+    <div>
+        <form action="/verify" method="post">
+            <div>
+                Please, enter the verification code sent to {{ email }}
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="verification_code" placeholder="Enter verification code" type="text">
+                <input type="hidden" name="email" value="{{ email }}">
+            </div>
+            <button class="btn btn-green" type="submit">Verify</button>
+        </form>
+    </div>
     <div>
         {% if error %}
             <p class="red">{{ error }}</p>
             <a href=>Code expires in 30 seconds, click here to resend code to {{ email }}.</a>
+            <form action="/resend" method="post">
+                <input type="hidden" name="email" value="{{ email }}">
+                <button type="submit" class="btn btn-link">Resend Code</button>
+            </form>
         {% endif %}
     </div>
 {% endblock %}
