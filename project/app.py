@@ -92,6 +92,9 @@ def login():
         msg.body = f"Your verification code is: {code}"
         mail.send(msg)
 
+        #Remember verification code sent
+        session["verification_code"] = code
+
 
 
         # BEFORE Remember which user has logged in
@@ -111,11 +114,13 @@ def login():
 @app.route("/verify", methods=["GET", "POST"])
 def verify():
 
-    rows = db.execute("SELECT * FROM users WHERE email = ?", email)
-    # Remember which user has logged in
-    session["user_id"] = rows[0]["id"]
-    # Mark login ass successful
-    session["login_sucess"] = True
+    submitted_code = request.form.get("verification_code")
+    if submitted_code ==session.get("verification_code"):
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+        # Mark login ass successful
+        session["login_sucess"] = True
 
 
 @app.route("/register", methods=["GET", "POST"])
