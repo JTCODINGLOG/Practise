@@ -84,6 +84,8 @@ def login():
             error = "Invalid email or password"
             return render_template("login.html", error=error)
 
+        # Code verification
+
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
         # Mark login ass successful
