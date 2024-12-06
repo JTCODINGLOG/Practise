@@ -37,12 +37,6 @@ def validate_email(email):
     except (NoAnswer, NXDOMAIN, Exception):
         error = "Email not valid"
         return render_template("login.html", error=error)
-    except NXDOMAIN:
-        error = "Email not valid"
-        return render_template("login.html", error=error)
-    except Exception as e:
-        error = "Email not valid"
-        return render_template("login.html", error=error)
 
     return False, "Unknown error"
 
