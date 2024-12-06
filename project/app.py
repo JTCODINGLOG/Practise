@@ -113,6 +113,7 @@ def verify():
 
 @app.route("/send", method=["POST"])
 def send():
+    email = request.args.get("email")
     # Code verification
     #code = verifycodefunction
 
