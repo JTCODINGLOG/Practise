@@ -20,7 +20,7 @@ def login_required(f):
     return decorated_function
 
 def validate_email(email):
-    # Validate format with regex
+    # Validate format with regex pattern
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     if not match(pattern, email):
         return False, "Invalid email format"
