@@ -3,7 +3,8 @@ from functools import wraps
 from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
 
-import random
+import pyotp
+import time
 
 
 def login_required(f):
