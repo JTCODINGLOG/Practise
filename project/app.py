@@ -113,7 +113,6 @@ def login():
 
 @app.route("/verify", methods=["GET", "POST"])
 def verify():
-
     submitted_code = request.form.get("verification_code")
     email = request.form.get("email")
     if submitted_code == session.get("verification_code"):
@@ -129,6 +128,7 @@ def verify():
     else:
         error = "Please input the right code."
         return render_template("verify.html", email=email, error=error)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
