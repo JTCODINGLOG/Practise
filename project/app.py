@@ -85,6 +85,10 @@ def login():
             return render_template("login.html", error=error)
 
         # Code verification
+        #code = verifycodefunction
+
+        #Send email
+        msg = Message("Your Verification Code", sender=")
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
