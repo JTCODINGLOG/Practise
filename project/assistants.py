@@ -34,7 +34,7 @@ def validate_email(email):
         mx_records = resolve(domain, 'MX')
         if mx_records:
             return True
-    except NoAnswer:
+    except (NoAnswer, NXDOMAIN, Exception):
         error = "Email not valid"
         return render_template("login.html", error=error)
     except NXDOMAIN:
