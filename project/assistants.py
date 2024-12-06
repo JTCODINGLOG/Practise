@@ -3,6 +3,8 @@ from functools import wraps
 from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
 
+import random
+
 
 def login_required(f):
     """
