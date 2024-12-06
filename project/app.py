@@ -95,17 +95,7 @@ def login():
         #Remember verification code sent
         session["verification_code"] = code
 
-
-
-        # BEFORE Remember which user has logged in
-        # session["user_id"] = rows[0]["id"]
-        # BEFORE Mark login ass successful
-        # session["login_sucess"] = True
-
         return render_template ("verify.html", email=email)
-
-        # BEFORE - Redirect user to home page
-        # return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
