@@ -98,7 +98,7 @@ def register():
             error = "Must provide email"
             return render_template("register.html", error=error)
 
-        elif not :
+        elif not validate_email(email):
             error = "Must provide a valid email"
             return render_template("register.html", error=error)
 
