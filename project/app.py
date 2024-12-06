@@ -54,6 +54,8 @@ def login():
         if not email(email):
             error = "Must provide email"
             return render_template("login.html", error=error)
+        # Ensure that the email format and domain are valid
+        elif validate_email(email)
 
         # Ensure password was submitted
         elif not password:
