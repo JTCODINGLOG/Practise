@@ -114,10 +114,8 @@ def verify():
 @app.route("/send", method=["POST"])
 def send():
     email = request.args.get("email")
-    # Create code in assistant.py?
-    # Code verification
-    #code = verifycodefunction
-        # Generate and send a new verification code
+    # Create code in assistant.py with pyotp and time?
+    # Generate and send a new verification code
     code = generate_verification_code()
     send_verification_code(email, new_code)
     # Store the new code in the session
