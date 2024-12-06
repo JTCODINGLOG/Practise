@@ -17,7 +17,7 @@
         <div>
             {% if error %}
                 <p class="red">{{ error }}</p>
-                <a href="/resend">Code expires in 30 seconds, click here to resend code to {{ email }}.</a>
+                <a href="/resend?email={{ email }}">Code expires in 30 seconds, click here to resend code to {{ email }}.</a>
             {% endif %}
         </div>
     </form>
