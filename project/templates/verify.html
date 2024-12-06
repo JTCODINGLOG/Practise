@@ -14,11 +14,11 @@
             <input type="hidden" name="email" value="{{ email }}">
         </div>
         <button class="btn btn-green" type="submit">Verify</button>
-        <div>
-            {% if error %}
-                <p class="red">{{ error }}</p>
-                <a href="/resend?email={{ email }}">Code expires in 30 seconds, click here to resend code to {{ email }}.</a>
-            {% endif %}
-        </div>
     </form>
+    <div>
+        {% if error %}
+            <p class="red">{{ error }}</p>
+            <a href=>Code expires in 30 seconds, click here to resend code to {{ email }}.</a>
+        {% endif %}
+    </div>
 {% endblock %}
