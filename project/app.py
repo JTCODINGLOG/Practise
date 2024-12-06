@@ -84,18 +84,10 @@ def login():
             error = "Invalid email or password"
             return render_template("login.html", error=error)
 
-        # Code verification
-        #code = verifycodefunction
+        #Redirect to email sender
+        return redirect(url_for("send", email=email))
 
-        #Send email
-        msg = Message("Your Verification Code", sender="your email", recipients=[email])
-        msg.body = f"Your verification code is: {code}"
-        mail.send(msg)
 
-        #Remember verification code sent
-        session["verification_code"] = code
-
-        return render_template ("verify.html", email=email)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
@@ -120,7 +112,19 @@ def verify():
         return render_template("verify.html", email=email, error=error)
 
 @app.route("/send", method=["POST"])
-def resend():
+def send():
+    # Code verification
+    #code = verifycodefunction
+
+    #Send email
+    msg = Message("Your Verification Code", sender="your email", recipients=[email])
+    msg.body = f"Your verification code is: {code}"
+    mail.send(msg)
+
+    #Remember verification code sent
+    session["verification_code"] = code
+
+    return render_template ("verify.html", email=email)
     email = request.form.get("email")
     # Generate and send a new verification code
     new_code = generate_verification_code()
