@@ -33,13 +33,16 @@ def validate_email(email):
         # Look for MX records of the domain
         mx_records = resolve(domain, 'MX')
         if mx_records:
-            return True, "Valid email"
+            return True
     except NoAnswer:
-        return False, "No MX records found for the domain"
+        error = "Email not valid"
+        return render_template("login.html", error=error)
     except NXDOMAIN:
-        return False, "Domain does not exist"
+        error = "Email not valid"
+        return render_template("login.html", error=error)
     except Exception as e:
-        return False, f"DNS lookup failed: {e}"
+        error = "Email not valid"
+        return render_template("login.html", error=error)
 
     return False, "Unknown error"
 
