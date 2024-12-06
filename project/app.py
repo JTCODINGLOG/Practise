@@ -111,8 +111,9 @@ def send():
 
     #Remember verification code sent
     session["verification_code"] = code
-
+    
     return render_template ("verify.html", email=email)
+
 
 @app.route("/verify", methods=["GET", "POST"])
 def verify():
