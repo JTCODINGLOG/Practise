@@ -124,6 +124,7 @@ def verify():
     if submitted_code == session.get("verification_code") and time.time() > session.get("code_expiration"):
         # Remove the verification code from session
         session.pop("verificaion_code", None)
+        session.pop("code_expiration", None)
         # Create dictionary with user information
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # Remember which user has logged in
@@ -132,7 +133,7 @@ def verify():
         session["login_sucess"] = True
         return redirect("/")
     else:
-        error = "Please input the right code."
+        error = "Wrong or expired code."
         return render_template("verify.html", email=email, error=error)
 
 @app.route("/register", methods=["GET", "POST"])
