@@ -36,4 +36,4 @@ def validate_email(email):
         if mx_records:
             return True
     except (NoAnswer, NXDOMAIN, Exception):
-        return False                     }
+        return False
