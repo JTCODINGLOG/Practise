@@ -24,7 +24,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'therightworkplace4you@gmail.com'
-app.config['MAIL_PASSWORD'] = '$uperWork712'
+app.config['MAIL_PASSWORD'] = 'pesg seuj yncj zmqg'
 
 mail = Mail(app)
 
@@ -93,7 +93,7 @@ def login():
     else:
         return render_template("login.html")
 
-    
+
 @app.route("/logout")
 def logout():
     """Log user out"""
