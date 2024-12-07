@@ -21,8 +21,8 @@ Session(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'your email'
-app.config['MAIL_PASSWORD'] = 'your email password'
+app.config['MAIL_USERNAME'] = 'therightworkplace4you@gmail.com'
+app.config['MAIL_PASSWORD'] = '$uperWork712'
 
 mail = Mail(app)
 
@@ -106,7 +106,7 @@ def send():
     session["verification_code"] = code
 
     #Send email
-    msg = Message("Your Verification Code", sender="your email", recipients=[email])
+    msg = message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
     msg.body = f"Your verification code is: {code}"
     mail.send(msg)
 
