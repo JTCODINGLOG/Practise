@@ -104,10 +104,6 @@ def send():
     code = f"{random.randint(100000, 999999)}"
     expiration_time = time.time() + 120
 
-    # Store the new code in the session
-    session["verification_code"] = code
-    session["code_expiration"] = expiration_time
-
     #Send email
     msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
     msg.body = f"Your verification code is: {code}"
@@ -115,6 +111,7 @@ def send():
 
     #Remember verification code sent
     session["verification_code"] = code
+    session["code_expiration"] = expiration_time
 
     return render_template ("verify.html", email=email)
 
