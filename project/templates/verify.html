@@ -20,8 +20,8 @@
     <div>
         {% if error %}
             <p class="red">{{ error }}</p>
-            <a href=>Code expires in 2 minutes, click here if you need to resend the code to {{ email }}.</a>
-            <form action="/resend" method="post">
+            <p>Code expires in 2 minutes, click in the button if you need to resend the code to {{ email }}.</p>
+            <form action="/send" method="post">
                 <input type="hidden" name="email" value="{{ email }}">
                 <button class="btn btn-green" type="submit">Resend Code</button>
             </form>
