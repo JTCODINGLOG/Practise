@@ -120,7 +120,8 @@ def send():
 def verify():
     submitted_code = request.form.get("verification_code")
     email = request.form.get("email")
-    if submitted_code == session.get("verification_code"):
+
+    if submitted_code == session.get("verification_code") and time.time() > session.get("code_expiration"):
         # Remove the verification code from session
         session.pop("verificaion_code", None)
         # Create dictionary with user information
