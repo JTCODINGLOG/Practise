@@ -99,7 +99,8 @@ def send():
     email = request.args.get("email")
     # Create code in assistant.py with pyotp and time?
     # Generate and send a new verification code
-    code = generate_verification_code()
+    code = generate_code(email)
+    
     send_verification_code(email, new_code)
     # Store the new code in the session
     session["verification_code"] = new_code
