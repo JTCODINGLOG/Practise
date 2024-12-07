@@ -130,7 +130,7 @@ def verify():
     submitted_code = request.form.get("verification_code")
     email = request.form.get("email")
 
-    if (submitted_code == session.get("verification_code")) and (time.time() > session.get("code_expiration")):
+    if (submitted_code == session.get("verification_code")) and (time.time() < session.get("code_expiration")):
         # Remove the verification code from session
         session.pop("verificaion_code", None)
         session.pop("code_expiration", None)
