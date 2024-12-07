@@ -143,6 +143,8 @@ def verify():
         return redirect("/")
     else:
         error = "Wrong or expired code."
+        session.pop("verificaion_code", None)
+        session.pop("code_expiration", None)
         return render_template("verify.html", email=email, error=error)
 
 @app.route("/register", methods=["GET", "POST"])
