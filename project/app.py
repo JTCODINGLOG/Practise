@@ -3,7 +3,7 @@ from flask import Flask, flash, redirect, render_template, request, session, jso
 from flask_session import Session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from flask_mail import Mail, message
+from flask_mail import Mail, Message
 from werkzeug.security import check_password_hash, generate_password_hash
 from assistants import login_required, validate_email, generate_code
 
@@ -106,7 +106,7 @@ def send():
     session["verification_code"] = code
 
     #Send email
-    msg = message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
+    msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
     msg.body = f"Your verification code is: {code}"
     mail.send(msg)
 
