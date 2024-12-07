@@ -100,10 +100,10 @@ def send():
     # Create code in assistant.py with pyotp and time?
     # Generate and send a new verification code
     code = generate_code(email)
-    
-    send_verification_code(email, new_code)
+
+    send_verification_code(email, code)
     # Store the new code in the session
-    session["verification_code"] = new_code
+    session["verification_code"] = code
 
     #Send email
     msg = Message("Your Verification Code", sender="your email", recipients=[email])
