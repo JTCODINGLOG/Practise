@@ -108,7 +108,6 @@ def logout():
 @app.route("/send", methods=["GET","POST"])
 def send():
     email = request.args.get("email")
-    # Create code in assistant.py with pyotp and time?
     # Generate and send a new verification code
     code = f"{random.randint(100000, 999999)}"
     expiration_time = time.time() + 120
