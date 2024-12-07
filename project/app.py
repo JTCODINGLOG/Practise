@@ -5,7 +5,9 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_mail import Mail, Message
 from werkzeug.security import check_password_hash, generate_password_hash
-from assistants import login_required, validate_email, generate_code
+from assistants import login_required, validate_email
+import random
+import time
 
 
 
@@ -99,7 +101,7 @@ def send():
     email = request.args.get("email")
     # Create code in assistant.py with pyotp and time?
     # Generate and send a new verification code
-    code = generate_code(email)
+    code = f"{random.randint(100000, 999999)}
 
     send_verification_code(email, code)
     # Store the new code in the session

@@ -2,8 +2,7 @@ from flask import redirect, render_template, session
 from functools import wraps
 from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
-import random
-import time
+
 
 
 def login_required(f):
@@ -38,16 +37,4 @@ def validate_email(email):
             return True
     except (NoAnswer, NXDOMAIN, Exception):
         return False
-
-def generate_code(username):
-    # Generate 6 digit random code
-    code = f"{random.randint(100000, 999999)}"
-    # Set 2 minutes for expiration
-    expiration_time = time.time() + 120
-    verification_codes[username] = {
-        "code": code,
-        "expiration": expiration_time,
-        "used": False
-    }
-    return code
                                     }
