@@ -96,7 +96,7 @@ def login():
         return render_template("login.html")
 
 
-@app.route("/send", method=["POST"])
+@app.route("/send", methods=["GET","POST"])
 def send():
     email = request.args.get("email")
     # Create code in assistant.py with pyotp and time?
