@@ -102,6 +102,7 @@ def send():
     # Create code in assistant.py with pyotp and time?
     # Generate and send a new verification code
     code = f"{random.randint(100000, 999999)}
+    expiration_time = time.time() + 120
 
     send_verification_code(email, code)
     # Store the new code in the session
