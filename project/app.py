@@ -164,6 +164,7 @@ def remember_password():
 
 @app.route("/reset_password")
 def reset_password():
+    # instead of token, use the process I used for the second step validation
     token = request.args.get("token")
     return render_template("reset_password.html")
 
