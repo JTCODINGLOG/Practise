@@ -149,7 +149,13 @@ def verify():
 
 @app.route("/remember_password", methods=["GET", "POST"])
 def remember_password():
-    if request.method == "POST"
+    if request.method == "POST":
+        # if Password valid:
+        #   if email is in database:
+        #       send email to reset_password
+        #       return redirect to login
+        #   else:
+
     else:
         return render_template("remember_password.html")
 
