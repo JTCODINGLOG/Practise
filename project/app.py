@@ -152,6 +152,8 @@ def verify():
 def remember_password():
     if request.method == "POST":
         # if Password valid and email is in database:
+        #       token = secrets.token_urlsafe()
+        #       store token to database
         #       send email to reset_password
         #       return redirect to login
         #   else:
