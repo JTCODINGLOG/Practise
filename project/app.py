@@ -155,7 +155,7 @@ def remember_password():
         #       token = secrets.token_urlsafe()
         #       store token to database
         #       send email to reset_password
-        #       return redirect to login
+        #       return redirect to reset_password
         #   else:
         #       redirect to remember_password with error.
 
