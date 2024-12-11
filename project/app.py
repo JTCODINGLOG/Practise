@@ -155,9 +155,14 @@ def remember_password():
         #       return redirect to login
         #   else:
         #       redirect to remember_password with error.
-        
+
     else:
         return render_template("remember_password.html")
+
+@app.route("/reset_password")
+def reset_password():
+    token = request.args.get("token")
+    return render_template("reset_password.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
