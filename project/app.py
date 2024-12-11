@@ -147,6 +147,13 @@ def verify():
         error = "Wrong or expired code."
         return render_template("verify.html", email=email, error=error)
 
+@app.route("/remember_password", methods=["GET", "POST"])
+def remember_password():
+    if request.method == "POST"
+    else:
+        return render_template("remember_password.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
