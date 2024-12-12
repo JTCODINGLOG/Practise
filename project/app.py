@@ -162,9 +162,12 @@ def remember_password():
         if not email:
             error = "Must provide email"
             return render_template("/remember_password.html", error=error)
+        if not validate_email(email):
+            error = "Must provide right email"
+            return render_template("/remember_password.html", error=error)
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if Password valid and email is in database:
-        if validate_email(email) and len(rows) == 1:
+        if len(rows) == 1:
             session['action'] = 'reset_password'
             return redirect(url_for("send", email=email))
         else:
