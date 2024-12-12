@@ -223,6 +223,7 @@ def reset_password():
                 hash = generate_password_hash(password)
                 id = session["user_id"]
                 db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, id )
+                return redirect("/")
 
         else:
             return render_template("reset_password.html")
