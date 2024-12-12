@@ -2,10 +2,6 @@ from flask import redirect, render_template, session
 from functools import wraps
 from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
-import random
-import time
-from flask_mail import Message
-
 
 
 def login_required(f):
@@ -40,17 +36,3 @@ def validate_email(email):
             return True
     except (NoAnswer, NXDOMAIN, Exception):
         return False
-
-def send_token(mail, ):
-    # Generate and send a new verification code
-    code = f"{random.randint(100000, 999999)}"
-    expiration_time = time.time() + 120
-
-    #Send email
-    msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
-    msg.body = f"Your verification code is: {code}"
-    mail.send(msg)
-
-    #Remember verification code sent
-    session["verification_code"] = code
-    session["code_expiration"] = expiration_time
