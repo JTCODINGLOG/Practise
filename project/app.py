@@ -149,7 +149,7 @@ def verify():
             return redirect("/")
         if session['action'] == 'reset_password':
             session.pop("action", None)
-            return render_template("reset_password", email=email)
+            return render_template("reset_password.html", email=email)
     else:
         error = "Wrong or expired code."
         return render_template("verify.html", email=email, error=error)
