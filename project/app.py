@@ -161,7 +161,7 @@ def remember_password():
 
             #Send email
             msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
-            msg.body = f"Your verification code to reset yout password is: {code}"
+            msg.body = f"Your verification code is: {code}"
             mail.send(msg)
 
             #Remember verification code sent
