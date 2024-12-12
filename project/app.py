@@ -151,19 +151,21 @@ def verify():
 @app.route("/remember_password", methods=["GET", "POST"])
 def remember_password():
     if request.method == "POST":
+        email = request.form.get("email")
         # if Password valid and email is in database:
-        # Generate and send a new verification code
-        code = f"{random.randint(100000, 999999)}"
-        expiration_time = time.time() + 120
+        if validate_email(email) and 
+            # Generate and send a new verification code
+            code = f"{random.randint(100000, 999999)}"
+            expiration_time = time.time() + 120
 
-        #Send email
-        msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
-        msg.body = f"Your verification code is: {code}"
-        mail.send(msg)
+            #Send email
+            msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
+            msg.body = f"Your verification code is: {code}"
+            mail.send(msg)
 
-        #Remember verification code sent
-        session["verification_code"] = code
-        session["code_expiration"] = expiration_time
+            #Remember verification code sent
+            session["verification_code"] = code
+            session["code_expiration"] = expiration_time
         #       return redirect to reset_password
         #   else:
         #       redirect to remember_password with error.
