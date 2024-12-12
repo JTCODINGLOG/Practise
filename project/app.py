@@ -169,7 +169,7 @@ def remember_password():
             return redirect("/send")
         else:
             error = "Invalid email"
-            redirect ("remember_password", error=error)
+            render_template("remember_password", error=error)
 
     else:
         return render_template("remember_password.html")
