@@ -218,8 +218,11 @@ def reset_password():
                 elif confirmation != password:
                     error = "New password and password confirmation do not match"
                     return render_template("register.html", error=error)
-                else:
-                
+
+                #changing password
+                id = session["user_id"]
+                db.execute(")
+
         else:
             return render_template("reset_password.html")
 
