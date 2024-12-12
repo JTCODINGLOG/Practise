@@ -147,10 +147,11 @@ def verify():
             # Mark login ass successful
             session["login_success"] = True
             return redirect("/")
-        elif session.get('action') == 'reset_password':
+        # elif session.get('action') == 'reset_password':
+        else:
             session.pop("action", None)
             return render_template("reset_password.html", email=email)
-        else: 
+
     else:
         error = "Wrong or expired code."
         return render_template("verify.html", email=email, error=error)
