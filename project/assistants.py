@@ -4,6 +4,7 @@ from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
 import random
 import time
+from flask_mail import Mail, Message
 
 
 
