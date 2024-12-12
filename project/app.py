@@ -158,6 +158,10 @@ def verify():
 def remember_password():
     if request.method == "POST":
         email = request.form.get("email")
+        # Ensure email was submitted
+        if not email:
+            error = "Must provide email"
+            return render_template("/remember_password.html", error=error)
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if Password valid and email is in database:
         if validate_email(email) and len(rows) == 1:
