@@ -14,11 +14,13 @@
         </div>
         <button class="btn btn-green" type="submit">Log In</button>
         <div>
-            {% if error == " %}
+            {% if error %}
                 <p class="red">{{ error }}</p>
                 <a href="/register">Click here if you are not registered.</a>
                 <p></p>
+                {% if error == "Must provide password" or error == "Invalid email or password" %}
                 <a href="/remember_password">Click here if you want to remember your password</a>
+                {% endif %}
             {% endif %}
         </div>
     </form>
