@@ -155,7 +155,7 @@ def remember_password():
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if Password valid and email is in database:
         if validate_email(email) and len(rows) == 1:
-            
+            session['action'] = 'reset_password'
             return redirect("/send")
         #   else:
         #       redirect to remember_password with error.
