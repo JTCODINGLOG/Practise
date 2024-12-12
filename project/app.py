@@ -218,7 +218,10 @@ def reset_password():
                 elif confirmation != password:
                     error = "New password and password confirmation do not match"
                     return render_template("register.html", error=error)
-    return render_template("reset_password.html")
+                else:
+                
+        else:
+            return render_template("reset_password.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
