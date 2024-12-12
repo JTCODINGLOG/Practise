@@ -154,14 +154,14 @@ def remember_password():
         email = request.form.get("email")
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if Password valid and email is in database:
-        if validate_email(email) and
+        if validate_email(email) and len(rows) == 1
             # Generate and send a new verification code
             code = f"{random.randint(100000, 999999)}"
             expiration_time = time.time() + 120
 
             #Send email
             msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
-            msg.body = f"Your verification code is: {code}"
+            msg.body = f"Your verification code to reset yout password is: {code}"
             mail.send(msg)
 
             #Remember verification code sent
