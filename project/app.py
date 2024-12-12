@@ -147,7 +147,7 @@ def verify():
             # Mark login ass successful
             session["login_success"] = True
             return redirect("/")
-        if session.get('action') == 'reset_password':
+        elif session.get('action') == 'reset_password':
             session.pop("action", None)
             return render_template("reset_password.html", email=email)
         return render_template("verify.html", email=email)
