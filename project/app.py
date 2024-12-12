@@ -186,7 +186,7 @@ def reset_password():
             # Ensure password was submitted
                 if not password:
                     error = "Must provide password"
-                    return render_template("register.html", error=error)
+                    return render_template("reset_password.html", error=error)
 
                 # Password validation
                 elif len(password) < 8:
