@@ -220,8 +220,9 @@ def reset_password():
                     return render_template("register.html", error=error)
 
                 #changing password
+                hash = generate_password_hash(password)
                 id = session["user_id"]
-                db.execute(")
+                db.execute("UPDATE users SET hash = ? WHERE id = ?, )
 
         else:
             return render_template("reset_password.html")
