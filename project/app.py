@@ -152,8 +152,9 @@ def verify():
 def remember_password():
     if request.method == "POST":
         email = request.form.get("email")
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if Password valid and email is in database:
-        if validate_email(email) and 
+        if validate_email(email) and
             # Generate and send a new verification code
             code = f"{random.randint(100000, 999999)}"
             expiration_time = time.time() + 120
