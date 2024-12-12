@@ -150,6 +150,7 @@ def verify():
         if session.get('action') == 'reset_password':
             session.pop("action", None)
             return render_template("reset_password.html", email=email)
+        return render_template("verify.html", email=email)
     else:
         error = "Wrong or expired code."
         return render_template("verify.html", email=email, error=error)
