@@ -172,8 +172,7 @@ def remember_password():
             return render_template("remember_password", error=error)
 
     else:
-        error = "Invalid email"
-        return render_template("remember_password.html", error=error)
+        return render_template("remember_password.html")
 
 @app.route("/reset_password")
 def reset_password():
