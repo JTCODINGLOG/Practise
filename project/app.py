@@ -166,13 +166,14 @@ def remember_password():
         # if Password valid and email is in database:
         if validate_email(email) and len(rows) == 1:
             session['action'] = 'reset_password'
-            return redirect("/send")
+            return redirect(url_for("send", email=email))
         else:
             error = "Invalid email"
-            render_template("remember_password", error=error)
+            return render_template("remember_password", error=error)
 
     else:
-        return render_template("remember_password.html")
+        error = "Invalid email"
+        return render_template("remember_password.html", error=error)
 
 @app.route("/reset_password")
 def reset_password():
