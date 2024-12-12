@@ -222,7 +222,7 @@ def reset_password():
                 #changing password
                 hash = generate_password_hash(password)
                 id = session["user_id"]
-                db.execute("UPDATE users SET hash = ? WHERE id = ?, )
+                db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, id )
 
         else:
             return render_template("reset_password.html")
