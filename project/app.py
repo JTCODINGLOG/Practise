@@ -167,8 +167,9 @@ def remember_password():
         if validate_email(email) and len(rows) == 1:
             session['action'] = 'reset_password'
             return redirect("/send")
-        #   else:
-        #       redirect to remember_password with error.
+        else:
+            error = "Invalid email"
+            redirect ("remember_password", error=error)
 
     else:
         return render_template("remember_password.html")
