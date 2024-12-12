@@ -155,6 +155,18 @@ def remember_password():
         #       token = secrets.token_urlsafe()
         #       store token to database
         #       send email to reset_password
+        # Generate and send a new verification code
+        code = f"{random.randint(100000, 999999)}"
+        expiration_time = time.time() + 120
+
+        #Send email
+        msg = Message("Your Verification Code", sender="therightworkplace4you@gmail.com", recipients=[email])
+        msg.body = f"Your verification code is: {code}"
+        mail.send(msg)
+
+        #Remember verification code sent
+        session["verification_code"] = code
+        session["code_expiration"] = expiration_time
         #       return redirect to reset_password
         #   else:
         #       redirect to remember_password with error.
