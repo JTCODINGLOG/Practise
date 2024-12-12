@@ -163,7 +163,7 @@ def remember_password():
             error = "Must provide email"
             return render_template("/remember_password.html", error=error)
         if not validate_email(email):
-            error = "Must provide right email"
+            error = "Must provide a valid email"
             return render_template("/remember_password.html", error=error)
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if Password valid and email is in database:
