@@ -4,7 +4,7 @@ from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
 import random
 import time
-from flask_mail import Mail, Message
+from flask_mail import Message
 
 
 
@@ -41,7 +41,7 @@ def validate_email(email):
     except (NoAnswer, NXDOMAIN, Exception):
         return False
 
-def send_token():
+def send_token(mail, ):
     # Generate and send a new verification code
     code = f"{random.randint(100000, 999999)}"
     expiration_time = time.time() + 120
