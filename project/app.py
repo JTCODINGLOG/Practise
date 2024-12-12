@@ -183,47 +183,47 @@ def reset_password():
             password = request.form.get("password")
             confirmation = request.form.get("confirmation")
 
-            # Ensure password was submitted
-                if not password:
-                    error = "Must provide password"
-                    return render_template("reset_password.html", error=error)
+        # Ensure password was submitted
+            if not password:
+                error = "Must provide password"
+                return render_template("reset_password.html", error=error)
 
-                # Password validation
-                elif len(password) < 8:
-                    error = "Password must have at least 8 characters"
-                    return render_template("reset_password.html", error=error)
+            # Password validation
+            elif len(password) < 8:
+                error = "Password must have at least 8 characters"
+                return render_template("reset_password.html", error=error)
 
-                elif not any(char.isupper() for char in password):
-                    error = "Password must have at least one upper case character"
-                    return render_template("reset_password.html", error=error)
+            elif not any(char.isupper() for char in password):
+                error = "Password must have at least one upper case character"
+                return render_template("reset_password.html", error=error)
 
-                elif not any(char.islower() for char in password):
-                    error = "Password must have at least one lower case character"
-                    return render_template("reset_password.html", error=error)
+            elif not any(char.islower() for char in password):
+                error = "Password must have at least one lower case character"
+                return render_template("reset_password.html", error=error)
 
-                elif not any(char.isdigit() for char in password):
-                    error = "Password must have at least one digit"
-                    return render_template("reset_password.html", error=error)
+            elif not any(char.isdigit() for char in password):
+                error = "Password must have at least one digit"
+                return render_template("reset_password.html", error=error)
 
-                elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in password):
-                    error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
-                    return render_template("reset_password.html", error=error)
+            elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in password):
+                error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
+                return render_template("reset_password.html", error=error)
 
-                # Ensure confirmation was submitted
-                elif not confirmation:
-                    error = "Must provide new password confirmation"
-                    return render_template("reset_password.html", error=error)
+            # Ensure confirmation was submitted
+            elif not confirmation:
+                error = "Must provide new password confirmation"
+                return render_template("reset_password.html", error=error)
 
-                # Ensure password and confirmation match
-                elif confirmation != password:
-                    error = "New password and password confirmation do not match"
-                    return render_template("reset_password.html", error=error)
+            # Ensure password and confirmation match
+            elif confirmation != password:
+                error = "New password and password confirmation do not match"
+                return render_template("reset_password.html", error=error)
 
-                #changing password
-                hash = generate_password_hash(password)
-                id = session["user_id"]
-                db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, id )
-                return redirect("/")
+            #changing password
+            hash = generate_password_hash(password)
+            id = session["user_id"]
+            db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, id )
+            return redirect("/")
 
         else:
             return render_template("reset_password.html")
