@@ -152,9 +152,6 @@ def verify():
 def remember_password():
     if request.method == "POST":
         # if Password valid and email is in database:
-        #       token = secrets.token_urlsafe()
-        #       store token to database
-        #       send email to reset_password
         # Generate and send a new verification code
         code = f"{random.randint(100000, 999999)}"
         expiration_time = time.time() + 120
