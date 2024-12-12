@@ -88,6 +88,7 @@ def login():
             return render_template("login.html", error=error)
 
         #Redirect to email sender
+        session['action'] = '2fa'
         return redirect(url_for("send", email=email))
 
     # User reached route via GET (as by clicking a link or via redirect)
