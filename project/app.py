@@ -125,6 +125,7 @@ def send():
     #Remember verification code sent
     session["verification_code"] = code
     session["code_expiration"] = expiration_time
+    session["email"] = email
 
     return render_template ("verify.html", email=email)
 
