@@ -237,6 +237,8 @@ def register():
         email = request.form.get("email")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+        question = request.form.get("question")
+        answer = request.form.get("answer")
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
 
         # Ensure email was submitted
@@ -298,18 +300,17 @@ def register():
             error = "Email is taken. Please, choose a different email"
             return render_template("register.html", error=error)
 
+        # Modify table including question
+        headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
+        headers = [row['COLUMN_NAME'] for row in headers]
+        if question not in headers:
+            db.execute("ALTER TABLE users ADD ? TEXT", question)
+            
         # Generate password hash
         hash = generate_password_hash(password)
 
         # Generate answer hash
         answer_hash = generate_password_hash(answer)
-
-        # Modify table including question
-        question = request.form.get("question")
-        headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
-        headers = [row['COLUMN_NAME'] for row in headers]
-        if question not in headers:
-            db.execute("ALTER TABLE users ADD ? TEXT", question)
 
         # Save user data
         db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", question, email, hash, answer_hash)
