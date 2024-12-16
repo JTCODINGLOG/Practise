@@ -15,12 +15,15 @@
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
         </div>
-        <select class="mb-3">
-            <option value="pet">What is the name of your first pet?</option>
-            <option value="friend">What is the name of your best friend?</option>
-            <option value="brand">What is your favourite brand?</option>
-            <option value="color">What is your favourite color?</option>
-        </select>
+        <div>
+            <select class="mb-3" name ="question">
+                <option value="first_pet">What is the name of your first pet?</option>
+                <option value="best_friend">What is the name of your best friend?</option>
+                <option value="favourite_brand">What is your favourite brand?</option>
+                <option value="favourite_color">What is your favourite color?</option>
+            </select>
+        </div>
+        <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
         <button class="btn btn-green" type="submit">Register</button>
         <div>
             {% if error %}
