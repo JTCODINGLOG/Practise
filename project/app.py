@@ -253,6 +253,15 @@ def register():
             error = "Must provide password"
             return render_template("register.html", error=error)
 
+        # Ensure question and answer are submitted
+        elif not question or question not in ("first_pet", "best_friend", "favourite_brand", "favourite_color"):
+            error = "Must select one of the provided questions"
+            return render_template("register.html", error=error)
+
+        elif not answer:
+            error = "Must provide an answer to the question"
+            return render_template("register.html", error=error)
+
         # Password validation
         elif len(password) < 8:
             error = "Password must have at least 8 characters"
@@ -293,7 +302,6 @@ def register():
         hash = generate_password_hash(password)
 
         # Generate answer hash
-        answer = request.form.get("answer")
         answer_hash = generate_password_hash(answer)
 
         # Modify table including question
@@ -304,7 +312,7 @@ def register():
             db.execute("ALTER TABLE users ADD ? TEXT", question)
 
         # Save user data
-        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", question, email, hash, answer)
+        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", question, email, hash, answer_hash)
 
         # Remember which user has logged in
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
