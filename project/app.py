@@ -321,6 +321,8 @@ def register():
         # Generate answer hash
         hash_answer = generate_password_hash(answer)
 
+        question = 
+
         # Save user data
         db.execute("INSERT INTO users (email, hash, question, hash_answer) VALUES(?, ?, ?, ?)", (email, hash, question, hash_answer))
 
