@@ -161,7 +161,6 @@ def remember_password():
     if request.method == "POST":
         step = request.form.get("step")
         email = request.form.get("email")
-        print(f"Step: {step}, Email: {email}")
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         if step == "1":
             # Ensure email was submitted
