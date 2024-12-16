@@ -300,7 +300,7 @@ def register():
         question = request.form.get("question")
         headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
         headers = [row['COLUMN_NAME'] for row in headers]
-        if question in headers:
+        if not any question in headers:
             db.execute("ALTER TABLE users ADD ? TEXT", question)
 
         # Save user data
