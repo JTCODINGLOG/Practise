@@ -168,7 +168,7 @@ def remember_password():
             error = "Must provide a valid email"
             return render_template("/remember_password.html", error=error)
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
-        # if Password valid and email is in database:
+        # if all is valid and email is in database:
         if len(rows) == 1:
             session['action'] = 'reset_password'
             return redirect(url_for("send", email=email))
