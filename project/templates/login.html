@@ -19,7 +19,10 @@
                 <a href="/register">Click here if you are not registered.</a>
                 <p></p>
                 {% if error == "Must provide password" or error == "Invalid email or password" %}
-                <a href="/remember_password">Click here if you want to remember your password</a>
+                <form action="/remember_password" method="POST">
+                    <input type="hidden" name="email" value="{{ email }}">
+                    <button type="submit">Click here if you want to remember your password</button>
+                </form>
                 {% endif %}
             {% endif %}
         </div>
