@@ -172,6 +172,8 @@ def remember_password():
         # if all is valid and email is in database:
         if len(rows) == 1:
             # define question
+            headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
+            headers = [row['COLUMN_NAME'] for row in headers]
             question = xxxxx
             # validate answer
             if not answer:
