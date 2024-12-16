@@ -300,9 +300,10 @@ def register():
         question = request.form.get("question")
         headers = db.execute("SELECT headers FROM users")
         if question in headers:
-            db.execute("ALTER TABLE users ADD ?", question)
+            db.execute("ALTER TABLE users ADD ? TEXT", question)
+
         # Save user data
-        db.execute("INSERT INTO users (email, hash) VALUES(?, ?)", email, hash)
+        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", question, email, hash, answer)
 
         # Remember which user has logged in
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
