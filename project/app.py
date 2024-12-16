@@ -179,6 +179,8 @@ def remember_password():
             else:
                 error = "Invalid email"
                 return render_template("/remember_password.html", step=1, error=error)
+        if step == "2":
+            
 
         # When the second form of the HTML is submitted this part of code below should execute
 
