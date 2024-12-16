@@ -172,7 +172,8 @@ def remember_password():
         if len(rows) == 1:
             # define question
             rows = db.execute("SELECT * FROM users WHERE email = ?", email)
-            rows[0]
+            question = rows[0][2]
+            answer = 
             # validate answer
             if not answer:
                 return render_template("/remember_password.html", step=2, question=question)
