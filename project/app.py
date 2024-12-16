@@ -223,7 +223,7 @@ def reset_password():
             #changing password
             hash = generate_password_hash(password)
             email = request.form.get("email")
-            db.execute("UPDATE users SET hash = ? WHERE email = ?", hash, email )
+            db.execute("UPDATE users SET hash = ? WHERE email = ?", (hash, email))
             return redirect("/")
 
         else:
