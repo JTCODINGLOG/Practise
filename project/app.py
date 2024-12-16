@@ -177,7 +177,7 @@ def remember_password():
             return render_template("remember_password", error=error)
 
     else:
-        return render_template("remember_password.html", question=question)
+        return render_template("remember_password.html")
 
 @app.route("/reset_password", methods=["GET", "POST"])
 def reset_password():
