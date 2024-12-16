@@ -171,11 +171,21 @@ def remember_password():
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if all is valid and email is in database:
         if len(rows) == 1:
+            # define question
+            question = xxxxx
+            # validate answer
             if not answer:
                 return render_template("/remember_password.html", step=2, question=question)
-            elif answer:
+            elif answer == "":
+                error = "Must provide an answer"
+                return render_template("/remember_password.html", step=2, error=error, question=question)
+            elif not check answer hash:
+                error = "Wrong answer"
+                return render_template("/remember_password.html", step=2, error=error, question=question)
+            else:
                 session['action'] = 'reset_password'
                 return redirect(url_for("send", email=email))
+
         else:
             error = "Invalid email"
             return render_template("remember_password", error=error)
