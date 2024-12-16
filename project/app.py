@@ -52,6 +52,7 @@ def after_request(response):
 def index():
     return render_template("main.html")
 
+
 @app.route("/login", methods=["GET", "POST"])
 # Limit fail attemps: 3/min and 30/day, exempting successful logins
 @limiter.limit("3 per minute", key_func=lambda: request.remote_addr, exempt_when=lambda: session.get("login_success", False), methods=["POST"])
