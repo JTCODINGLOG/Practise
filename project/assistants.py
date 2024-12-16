@@ -36,6 +36,3 @@ def validate_email(email):
             return True
     except (NoAnswer, NXDOMAIN, Exception):
         return False
-
-def validate_new_pass(old, new):
-    
