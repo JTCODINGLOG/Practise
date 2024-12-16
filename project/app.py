@@ -191,13 +191,8 @@ def remember_password():
             else:
                 session['action'] = 'reset_password'
                 return redirect(url_for("send", email=email))
-
-        else:
-            error = "Invalid email"
-            return render_template("remember_password", error=error)
-
-    else:
-        return render_template("remember_password.html", step=1)
+            
+    return render_template("remember_password.html", step=1)
 
 @app.route("/reset_password", methods=["GET", "POST"])
 def reset_password():
@@ -247,8 +242,7 @@ def reset_password():
             db.execute("UPDATE users SET hash = ? WHERE email = ?", (hash, email))
             return redirect("/")
 
-        else:
-            return render_template("reset_password.html")
+        return render_template("reset_password.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
