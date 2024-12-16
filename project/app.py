@@ -191,7 +191,7 @@ def remember_password():
             else:
                 session['action'] = 'reset_password'
                 return redirect(url_for("send", email=email))
-            
+
     return render_template("remember_password.html", step=1)
 
 @app.route("/reset_password", methods=["GET", "POST"])
@@ -314,10 +314,6 @@ def register():
         elif len(rows) == 1:
             error = "Email is taken. Please, choose a different email"
             return render_template("register.html", error=error)
-
-        # Modify table including question
-        headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
-        headers = [row['COLUMN_NAME'] for row in headers]
 
         # Use string formatting directly, parameterized queries might not work with column names
         if question not in headers:
