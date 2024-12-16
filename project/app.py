@@ -184,7 +184,7 @@ def remember_password():
             # validate answer
             if not answer:
                 error = "Must provide an answer"
-                return render_template("/remember_password.html", step=2, question=question)
+                return render_template("/remember_password.html", step=2, error=error, question=question)
             elif not check_password_hash(rows[0]["hash_answer"], answer):
                 error = "Wrong answer"
                 return render_template("/remember_password.html", step=2, error=error, question=question)
