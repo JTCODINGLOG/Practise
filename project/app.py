@@ -160,7 +160,6 @@ def verify():
 def remember_password():
     if request.method == "POST":
         email = request.form.get("email")
-        answer = request.form.get("answer")
         # Ensure email was submitted
         if not email:
             error = "Must provide email"
