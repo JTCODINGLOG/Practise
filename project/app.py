@@ -171,7 +171,7 @@ def remember_password():
         # if all is valid and email is in database:
         if len(rows) == 1:
             # define question
-            question = rows[0]["question]
+            question = rows[0]["question"]
             answer = rows[0]["answer"]
             # validate answer
             if not answer:
