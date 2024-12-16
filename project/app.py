@@ -174,6 +174,7 @@ def remember_password():
             # define question
             headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
             headers = [row['COLUMN_NAME'] for row in headers]
+            for i in headers
             question = xxxxx
             # validate answer
             if not answer:
