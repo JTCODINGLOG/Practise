@@ -316,7 +316,7 @@ def register():
         answer_hash = generate_password_hash(answer)
 
         # Save user data
-        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", ("answer_hash", email, hash, answer_hash))
+        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", (question, email, hash, answer_hash))
 
         # Remember which user has logged in
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
