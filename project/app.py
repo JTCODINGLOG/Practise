@@ -315,10 +315,6 @@ def register():
             error = "Email is taken. Please, choose a different email"
             return render_template("register.html", error=error)
 
-        # Use string formatting directly, parameterized queries might not work with column names
-        if question not in headers:
-            db.execute(f"ALTER TABLE users ADD {question} TEXT")
-
         # Generate password hash
         hash = generate_password_hash(password)
 
