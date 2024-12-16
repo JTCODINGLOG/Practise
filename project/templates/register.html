@@ -15,8 +15,8 @@
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
         </div>
-        <div>
-            <select class="mb-3" name ="question">
+        <div class="mb-3">
+            <select select class="form-control mx-auto w-auto" name ="question">
                 <option value="first_pet">What is the name of your first pet?</option>
                 <option value="best_friend">What is the name of your best friend?</option>
                 <option value="favourite_brand">What is your favourite brand?</option>
@@ -24,12 +24,10 @@
             </select>
             <input class="form-control mx-auto w-auto" name="answer" placeholder="Answer" type="password">
         </div>
-        <p></p>
-        <div>
+        <div class="mb-3">
             <button class="btn btn-green" type="submit">Register</button>
         </div>
-        <div></div>
-        <div>
+        <div class="mb-3">
             {% if error %}
                 <p class="red">{{ error }}</p>
             {% endif %}
