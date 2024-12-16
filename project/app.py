@@ -254,7 +254,7 @@ def register():
         confirmation = request.form.get("confirmation")
         question = request.form.get("question")
         answer = request.form.get("answer")
-        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
+        rows = db.execute("SELECT * FROM users WHERE email = ?", (email,))
 
         # Ensure email was submitted
         if not email:
