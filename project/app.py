@@ -77,7 +77,7 @@ def login():
         # Ensure password was submitted
         elif not password:
             error = "Must provide password"
-            return render_template("login.html", email=email, error=error)
+            return render_template("login.html", error=error)
 
         # Query database for email
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
@@ -85,7 +85,7 @@ def login():
         # Ensure email exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], password):
             error = "Invalid email or password"
-            return render_template("login.html", email=email, error=error)
+            return render_template("login.html", error=error)
 
         #Redirect to email sender
         session['action'] = '2fa'
