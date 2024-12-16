@@ -303,8 +303,10 @@ def register():
         # Modify table including question
         headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
         headers = [row['COLUMN_NAME'] for row in headers]
+
+        # Use string formatting directly, parameterized queries might not work with column names
         if question not in headers:
-            db.execute("ALTER TABLE users ADD ? TEXT", question)
+            db.execute(f"ALTER TABLE users ADD {question} TEXT")
 
         # Generate password hash
         hash = generate_password_hash(password)
