@@ -160,17 +160,18 @@ def verify():
 def remember_password():
     if request.method == "POST":
         email = request.form.get("email")
-        if action
         # Ensure email was submitted
         if not email:
             error = "Must provide email"
-            return render_template("/remember_password.html", error=error)
+            return render_template("/remember_password.html", step=1, error=error)
         if not validate_email(email):
             error = "Must provide a valid email"
-            return render_template("/remember_password.html", error=error)
+            return render_template("/remember_password.html", step=1, error=error)
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         # if all is valid and email is in database:
         if len(rows) == 1:
+            return render_template("/remember_password.html", step=2, question=question)
+        elif 
             session['action'] = 'reset_password'
             return redirect(url_for("send", email=email))
         else:
