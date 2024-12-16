@@ -331,10 +331,10 @@ def register():
         hash = generate_password_hash(password)
 
         # Generate answer hash
-        answer_hash = generate_password_hash(answer)
+        hash_answer = generate_password_hash(answer)
 
         # Save user data
-        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", (question, email, hash, answer_hash))
+        db.execute("INSERT INTO users (email, hash, question, hash_answer) VALUES(?, ?, ?, ?)", (email, hash, question, hash_answer))
 
         # Remember which user has logged in
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
