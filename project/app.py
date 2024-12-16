@@ -160,9 +160,9 @@ def verify():
 def remember_password():
     if request.method == "POST":
         step = request.form.get("step")
-
+        email = request.form.get("email")
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
         if step == "1":
-            email = request.form.get("email")
             # Ensure email was submitted
             if not email:
                 error = "Must provide email"
@@ -170,7 +170,6 @@ def remember_password():
             if not validate_email(email):
                 error = "Must provide a valid email"
                 return render_template("/remember_password.html", step=1, error=error)
-            rows = db.execute("SELECT * FROM users WHERE email = ?", email)
             # if all is valid and email is in database:
             if len(rows) == 1:
                 # define question
@@ -180,16 +179,12 @@ def remember_password():
                 error = "Invalid email"
                 return render_template("/remember_password.html", step=1, error=error)
         if step == "2":
-            rows = db.execute("SELECT * FROM users WHERE email = ?", email)
             # check answer
             answer = request.form.get("answer")
-
             # validate answer
             if not answer:
-                return render_template("/remember_password.html", step=2, question=question)
-            elif answer == "":
                 error = "Must provide an answer"
-                return render_template("/remember_password.html", step=2, error=error, question=question)
+                return render_template("/remember_password.html", step=2, question=question)
             elif not check_password_hash(rows[0]["hash_answer"], answer):
                 error = "Wrong answer"
                 return render_template("/remember_password.html", step=2, error=error, question=question)
