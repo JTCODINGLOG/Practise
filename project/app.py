@@ -159,7 +159,8 @@ def verify():
 @app.route("/remember_password", methods=["GET", "POST"])
 def remember_password():
     if request.method == "POST":
-        email = request.form.get("email")
+        action = request.form.get("email")
+        if action
         # Ensure email was submitted
         if not email:
             error = "Must provide email"
