@@ -158,12 +158,6 @@ def verify():
 
 @app.route("/remember_password", methods=["GET", "POST"])
 def remember_password():
-    headers = db.execute("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users'")
-    headers = [row['COLUMN_NAME'] for row in headers]
-    if "question"in headers:
-        question = db.execute("SELECT question FROM users WHERE)
-    else:
-        return
     if request.method == "POST":
         email = request.form.get("email")
         # Ensure email was submitted
