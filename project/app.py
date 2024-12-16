@@ -299,7 +299,8 @@ def register():
         # Modify table including question
         question = request.form.get("question")
         headers = db.execute("SELECT headers FROM users")
-        
+        if question in headers:
+            db.execute("ALTER TABLE users ADD ?", question)
         # Save user data
         db.execute("INSERT INTO users (email, hash) VALUES(?, ?)", email, hash)
 
