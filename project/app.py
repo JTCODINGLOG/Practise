@@ -162,7 +162,6 @@ def remember_password():
         step = request.form.get("step")
         email = request.form.get("email")
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
-        question = rows[0]["question"]
         if step == "1":
             # Ensure email was submitted
             if not email:
@@ -174,6 +173,7 @@ def remember_password():
             # if all is valid and email is in database:
             if len(rows) == 1:
                 # define question
+                question = rows[0]["question"]
                 return render_template("/remember_password.html", step=2, question=question)
             else:
                 error = "Invalid email"
@@ -181,6 +181,7 @@ def remember_password():
         if step == "2":
             # check answer
             answer = request.form.get("answer")
+            question = rows[0]["question"]
             # validate answer
             if not answer:
                 error = "Must provide an answer"
