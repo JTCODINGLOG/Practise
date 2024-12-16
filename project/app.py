@@ -292,6 +292,14 @@ def register():
         # Generate password hash
         hash = generate_password_hash(password)
 
+        # Generate answer hash
+        answer = request.form.get("answer")
+        answer_hash = generate_password_hash(answer)
+
+        # Modify table including question
+        question = request.form.get("question")
+        headers = db.execute("SELECT headers FROM users")
+        
         # Save user data
         db.execute("INSERT INTO users (email, hash) VALUES(?, ?)", email, hash)
 
