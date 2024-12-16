@@ -174,7 +174,7 @@ def remember_password():
             if len(rows) == 1:
                 # define question
                 question = rows[0]["question"]
-                return render_template("/remember_password.html", step=2, question=question)
+                return render_template("/remember_password.html", step=2, email=email, question=question)
             else:
                 error = "Invalid email"
                 return render_template("/remember_password.html", step=1, error=error)
