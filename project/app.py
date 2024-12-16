@@ -162,20 +162,23 @@ def remember_password():
         step = request.form.get("step")
 
         if step == "1":
-        email = request.form.get("email")
-        # Ensure email was submitted
-        if not email:
-            error = "Must provide email"
-            return render_template("/remember_password.html", step=1, error=error)
-        if not validate_email(email):
-            error = "Must provide a valid email"
-            return render_template("/remember_password.html", step=1, error=error)
-        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
-        # if all is valid and email is in database:
-        if len(rows) == 1:
-            # define question
-            question = rows[0]["question"]
-            return render_template("/remember_password.html", step=2, question=question)
+            email = request.form.get("email")
+            # Ensure email was submitted
+            if not email:
+                error = "Must provide email"
+                return render_template("/remember_password.html", step=1, error=error)
+            if not validate_email(email):
+                error = "Must provide a valid email"
+                return render_template("/remember_password.html", step=1, error=error)
+            rows = db.execute("SELECT * FROM users WHERE email = ?", email)
+            # if all is valid and email is in database:
+            if len(rows) == 1:
+                # define question
+                question = rows[0]["question"]
+                return render_template("/remember_password.html", step=2, question=question)
+            else:
+                error = "Invalid email"
+                return render_template("/remember_password.html", step=1, error=error)
 
         # When the second form of the HTML is submitted this part of code below should execute
 
