@@ -254,7 +254,7 @@ def register():
         confirmation = request.form.get("confirmation")
         question = request.form.get("question")
         answer = request.form.get("answer")
-        rows = db.execute("SELECT * FROM users WHERE email = ?", (email,))
+        rows = db.execute("SELECT * FROM users WHERE email = ?", email)
 
         # Ensure email was submitted
         if not email:
@@ -322,7 +322,7 @@ def register():
         hash_answer = generate_password_hash(answer)
 
         # Save user data
-        db.execute("INSERT INTO users (email, hash, question, hash_answer) VALUES(?, ?, ?, ?)", (email, hash, question, hash_answer))
+        db.execute("INSERT INTO users (email, hash, question, hash_answer) VALUES(?, ?, ?, ?)", email, hash, question, hash_answer)
 
         # Remember which user has logged in
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
