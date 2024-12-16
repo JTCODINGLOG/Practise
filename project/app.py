@@ -305,7 +305,7 @@ def register():
         headers = [row['COLUMN_NAME'] for row in headers]
         if question not in headers:
             db.execute("ALTER TABLE users ADD ? TEXT", question)
-            
+
         # Generate password hash
         hash = generate_password_hash(password)
 
@@ -313,7 +313,7 @@ def register():
         answer_hash = generate_password_hash(answer)
 
         # Save user data
-        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", question, email, hash, answer_hash)
+        db.execute("INSERT INTO users (email, hash, ?) VALUES(?, ?, ?)", (question, email, hash, answer_hash))
 
         # Remember which user has logged in
         rows = db.execute("SELECT * FROM users WHERE email = ?", email)
