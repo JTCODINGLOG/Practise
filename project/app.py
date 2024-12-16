@@ -183,6 +183,8 @@ def remember_password():
             answer = request.form.get("answer")
             email = request.form.get("email")
             rows = db.execute("SELECT * FROM users WHERE email = ?", email)
+            print(email)
+            print(rows)
             question = rows[0]["question"]
             # validate answer
             if not answer:
