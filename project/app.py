@@ -171,17 +171,21 @@ def remember_password():
         # if all is valid and email is in database:
         if len(rows) == 1:
             # define question
-            rows[0]["question"]
-            rows[0]["answer"]
+            question = rows[0]["question"]
+            return render_template("/remember_password.html", step=2, question=question)
+
+        # When the second form of the HTML is submitted this part of code below should execute
+
+            # check answer
             answer = request.form.get("answer")
-            check_password_hash(rows[0]["hash_answer"], answer)
+
             # validate answer
             if not answer:
                 return render_template("/remember_password.html", step=2, question=question)
             elif answer == "":
                 error = "Must provide an answer"
                 return render_template("/remember_password.html", step=2, error=error, question=question)
-            elif not check answer hash:
+            elif not check_password_hash(rows[0]["hash_answer"], answer):
                 error = "Wrong answer"
                 return render_template("/remember_password.html", step=2, error=error, question=question)
             else:
