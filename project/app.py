@@ -286,6 +286,8 @@ def reset_password():
         elif confirmation != new_password:
             error = "New password and password confirmation do not match"
             return render_template("change_password.html", error=error)
+        else:
+            return
 
 
     return render_template("change_password.html")
