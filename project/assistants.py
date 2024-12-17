@@ -1,4 +1,4 @@
-from flask import redirect, render_template, session
+from flask import redirect, session
 from functools import wraps
 from re import match
 from dns.resolver import resolve, NoAnswer, NXDOMAIN
@@ -26,12 +26,12 @@ def validate_email(email):
         return False
 
     # Extract domain
-    domain = email.split('@')[-1]
+    domain = email.split("@")[-1]
 
     # Check domain with DNS lookup
     try:
         # Look for MX records of the domain
-        mx_records = resolve(domain, 'MX')
+        mx_records = resolve(domain, "MX")
         if mx_records:
             return True
     except (NoAnswer, NXDOMAIN, Exception):
