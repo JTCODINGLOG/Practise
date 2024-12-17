@@ -247,10 +247,12 @@ def reset_password():
 
 
 @app.route("/change_password", methods=["GET", "POST"])
+def change_password():
     if request.method == "POST":
         password = request.form.get("password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
+        # Check password
         # Ensure password was submitted
         if not new_password:
             error = "Must provide password"
