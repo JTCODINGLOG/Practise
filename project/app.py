@@ -332,12 +332,13 @@ def delete():
             return render_template("delete.html", error=error)
 
         if not check_password_hash(rows[0]["hash"], password):
-            error = "Wrong old password"
+            error = "Wrong password"
             return render_template("delete.html", error=error)
 
         session["action"] = "delete"
         return redirect(url_for("send", email=email))
     else:
+        session["delete_in_progress"] = False
         if session["delete_in_progress"] == True:
             session.pop("delete_in_progress", None)
             db.execute("DELETE FROM users WHERE id = ?", id)
