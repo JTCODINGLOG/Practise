@@ -317,10 +317,10 @@ def change_password():
 
 @app.route("/delete", methods=["GET", "POST"])
 def delete():
+    id = session["user_id"]
+    rows = db.execute("SELECT * FROM users WHERE id = ?", id)
     if request.method == "POST":
         password = request.form.get("password")
-        id = session["user_id"]
-        rows = db.execute("SELECT * FROM users WHERE id = ?", id)
         email = rows[0]["email"]
 
         if not password:
@@ -333,8 +333,10 @@ def delete():
 
         session['action'] = 'delete'
         return redirect(url_for("send", email=email))
-
-    return render_template("delete.html")
+    else:
+        if session["delete_in_progress"] = True:
+            session.pop("delete_in_progress", None)
+        return render_template("delete.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
