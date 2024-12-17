@@ -304,9 +304,9 @@ def change_password():
             error = "New password and old password are too similar"
             return render_template("change_password.html", error=error)
         else:
-            db.execute("")
-
-
+            hash = generate_password_hash(new_password)
+            db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, id)
+            return()
 
     return render_template("change_password.html")
 
