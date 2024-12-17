@@ -313,7 +313,14 @@ def change_password():
 @app.route("/delete", methods=["GET", "POST"])
 def delete():
     if request.method == "POST":
-        
+        password = request.form.get("password")
+        if not password:
+            error = "Must provide password"
+            return render_template("delete.html", error=error)
+
+        if not check_password_hash(rows[0]["hash"], password):
+            error = "Wrong old password"
+            return render_template("delete.html", error=error)
 
     return render_template("delete.html")
 
