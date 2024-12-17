@@ -254,37 +254,37 @@ def reset_password():
                 # Ensure password was submitted
         if not new_password:
             error = "Must provide password"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
         # Password validation
         elif len(new_password) < 8:
             error = "Password must have at least 8 characters"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
 
         elif not any(char.isupper() for char in new_password):
             error = "Password must have at least one upper case character"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
 
         elif not any(char.islower() for char in new_password):
             error = "Password must have at least one lower case character"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
 
         elif not any(char.isdigit() for char in new_password):
             error = "Password must have at least one digit"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
 
         elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in new_password):
             error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
 
         # Ensure confirmation was submitted
         elif not confirmation:
             error = "Must provide new password confirmation"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
         # New password validation
         # Ensure password and confirmation match
         elif confirmation != new_password:
             error = "New password and password confirmation do not match"
-            return render_template("reset_password.html", error=error)
+            return render_template("change_password.html", error=error)
 
 
     return render_template("change_password.html")
