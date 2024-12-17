@@ -251,10 +251,11 @@ def reset_password():
         password = request.form.get("password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
-                # Ensure password was submitted
+        # Ensure password was submitted
         if not new_password:
             error = "Must provide password"
             return render_template("change_password.html", error=error)
+
         # Password validation
         elif len(new_password) < 8:
             error = "Password must have at least 8 characters"
