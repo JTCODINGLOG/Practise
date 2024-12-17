@@ -5,7 +5,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_mail import Mail, Message
 from werkzeug.security import check_password_hash, generate_password_hash
-from assistants import login_required, validate_email, 
+from assistants import login_required, validate_email, check_similar
 import random
 import time
 
