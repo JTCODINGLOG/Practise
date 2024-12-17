@@ -166,18 +166,18 @@ def remember_password():
             # Ensure email was submitted
             if not email:
                 error = "Must provide email"
-                return render_template("/remember_password.html", step=1, error=error)
+                return render_template("remember_password.html", step=1, error=error)
             if not validate_email(email):
                 error = "Must provide a valid email"
-                return render_template("/remember_password.html", step=1, error=error)
+                return render_template("remember_password.html", step=1, error=error)
             # if all is valid and email is in database:
             if len(rows) == 1:
                 # define question
                 question = rows[0]["question"]
-                return render_template("/remember_password.html", step=2, email=email, question=question)
+                return render_template("remember_password.html", step=2, email=email, question=question)
             else:
                 error = "Invalid email"
-                return render_template("/remember_password.html", step=1, error=error)
+                return render_template("remember_password.html", step=1, error=error)
         if step == "2":
             # check answer
             answer = request.form.get("answer")
@@ -189,10 +189,10 @@ def remember_password():
             # validate answer
             if not answer:
                 error = "Must provide an answer"
-                return render_template("/remember_password.html", step=2, question=question, error=error)
+                return render_template("remember_password.html", step=2, question=question, error=error)
             elif not check_password_hash(rows[0]["hash_answer"], answer):
                 error = "Wrong answer"
-                return render_template("/remember_password.html", step=2, question=question, error=error)
+                return render_template("remember_password.html", step=2, question=question, error=error)
             else:
                 session['action'] = 'reset_password'
                 return redirect(url_for("send", email=email))
