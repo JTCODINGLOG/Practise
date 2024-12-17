@@ -253,7 +253,6 @@ def change_password():
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
         # Check password
-        rows
         check_password_hash()
         # Ensure password was submitted
         if not new_password:
