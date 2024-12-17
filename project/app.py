@@ -138,7 +138,7 @@ def verify():
         # Remove the verification code from session
         session.pop("verification_code", None)
         session.pop("code_expiration", None)
-        if session.get('action') == '2fa':
+        if session.get("action") == "2fa":
             session.pop("action", None)
             # Create dictionary with user information
             rows = db.execute("SELECT * FROM users WHERE email = ?", email)
@@ -147,10 +147,14 @@ def verify():
             # Mark login ass successful
             session["login_success"] = True
             return redirect("/")
-        # elif session.get('action') == 'reset_password':
-        else:
+        elif session.get("action") == "reset_password":
             session.pop("action", None)
             return render_template("reset_password.html", email=email)
+        # elif session.get("action") == "delete"
+        else:
+            session.pop("action", None)
+            return redirect("/delete")
+
 
     else:
         error = "Wrong or expired code."
