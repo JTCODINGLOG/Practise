@@ -310,6 +310,12 @@ def change_password():
 
     return render_template("change_password.html")
 
+@app.route("/deletion", methods=["GET", "POST"])
+def deletion():
+    if request.method == "POST":
+
+    return render_template("delete.html")
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
