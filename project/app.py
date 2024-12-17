@@ -293,13 +293,15 @@ def change_password():
         elif not confirmation:
             error = "Must provide new password confirmation"
             return render_template("change_password.html", error=error)
-        # New password validation
+
         # Ensure password and confirmation match
         elif confirmation != new_password:
             error = "New password and password confirmation do not match"
             return render_template("change_password.html", error=error)
-        # check password similarity with
-        elif
+
+        # check new password similarity with old password with Levenshtein
+        elif check_similar(password, new_password) == False:
+            error = "New password and old password are too similar"
         else:
             return
 
