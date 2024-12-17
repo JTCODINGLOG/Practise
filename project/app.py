@@ -253,6 +253,7 @@ def reset_password():
 
 
 @app.route("/change_password", methods=["GET", "POST"])
+@login_required
 def change_password():
     if request.method == "POST":
         password = request.form.get("password")
@@ -317,6 +318,7 @@ def change_password():
     return render_template("change_password.html")
 
 @app.route("/delete", methods=["GET", "POST"])
+@login_required
 def delete():
     id = session["user_id"]
 
