@@ -254,8 +254,8 @@ def change_password():
         confirmation = request.form.get("confirmation")
         # Check password
         id = session["user_id"]
-        old_password = db.execute("SELECT * FROM users WHERE id = ?", id)
-        check_password_hash(old_password, password)
+        rows = db.execute("SELECT * FROM users WHERE id = ?", id)
+        check_password_hash(rows[0]["hash"], password)
         # Ensure password was submitted
         if not new_password:
             error = "Must provide password"
