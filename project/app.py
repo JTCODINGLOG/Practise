@@ -314,6 +314,9 @@ def change_password():
 def delete():
     if request.method == "POST":
         password = request.form.get("password")
+        id = session["user_id"]
+        rows = db.execute("SELECT * FROM users WHERE id = ?", id)
+        
         if not password:
             error = "Must provide password"
             return render_template("delete.html", error=error)
