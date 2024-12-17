@@ -331,6 +331,7 @@ def delete():
             return render_template("delete.html", error=error)
 
         session['action'] = 'delete'
+        session['delete_in_progress'] = False
         return redirect(url_for("send", email=email))
 
     return render_template("delete.html")
