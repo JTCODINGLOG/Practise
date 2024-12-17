@@ -20,11 +20,11 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configuring email
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'therightworkplace4you@gmail.com'
-app.config['MAIL_PASSWORD'] = 'pesg seuj yncj zmqg'
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 587
+app.config["MAIL_USE_TLS"] = True
+app.config["MAIL_USERNAME"] ="therightworkplace4you@gmail.com"
+app.config["MAIL_PASSWORD"] = "pesg seuj yncj zmqg"
 
 mail = Mail(app)
 
@@ -88,7 +88,7 @@ def login():
             return render_template("login.html", error=error)
 
         #Redirect to email sender
-        session['action'] = '2fa'
+        session["action"] = "2fa"
         return redirect(url_for("send", email=email))
 
     # User reached route via GET (as by clicking a link or via redirect)
@@ -154,7 +154,7 @@ def verify():
         # elif session.get("action") == "delete"
         else:
             session.pop("action", None)
-            session['delete_in_progress'] = True
+            session["delete_in_progress"] = True
             return redirect("/delete")
 
 
@@ -196,7 +196,7 @@ def remember_password():
                 error = "Wrong answer"
                 return render_template("remember_password.html", step=2, question=question, error=error, email=email)
             else:
-                session['action'] = 'reset_password'
+                session["action"] = "reset_password"
                 return redirect(url_for("send", email=email))
 
     return render_template("remember_password.html", step=1)
@@ -229,7 +229,7 @@ def reset_password():
                 error = "Password must have at least one digit"
                 return render_template("reset_password.html", error=error)
 
-            elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in password):
+            elif not any(char in ["!", "@", "#", "$", "%", "^", "&"] for char in password):
                 error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
                 return render_template("reset_password.html", error=error)
 
