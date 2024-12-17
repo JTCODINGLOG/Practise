@@ -341,6 +341,7 @@ def delete():
         if session["delete_in_progress"] == True:
             session.pop("delete_in_progress", None)
             db.execute("DELETE FROM users WHERE id = ?", id)
+            session.clear()
             return redirect("/register")
         return render_template("delete.html")
 
