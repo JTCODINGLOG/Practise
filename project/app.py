@@ -292,7 +292,7 @@ def change_password():
             error = "Password must have at least one digit"
             return render_template("change_password.html", error=error)
 
-        elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in new_password):
+        elif not any(char in ["!", "@", "#", "$", "%", "^", "&"] for char in new_password):
             error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
             return render_template("change_password.html", error=error)
 
@@ -335,7 +335,7 @@ def delete():
             error = "Wrong old password"
             return render_template("delete.html", error=error)
 
-        session['action'] = 'delete'
+        session["action"] = "delete"
         return redirect(url_for("send", email=email))
     else:
         if session["delete_in_progress"] == True:
@@ -395,7 +395,7 @@ def register():
             error = "Password must have at least one digit"
             return render_template("register.html", error=error)
 
-        elif not any(char in ['!', '@', '#', '$', '%', '^', '&'] for char in password):
+        elif not any(char in ["!", "@", "#", "$", "%", "^", "&"] for char in password):
             error = "Password must have at least one of the following special characters !, @, #, $, %, ^, &"
             return render_template("register.html", error=error)
 
