@@ -246,6 +246,15 @@ def reset_password():
         return render_template("reset_password.html")
 
 
+@app.route("/change_password", methods=["GET", "POST"])
+    if request.method == "POST":
+        password = request.form.get("password")
+        new_password = request.form.get("new_password")
+        confirmation = request.form.get("confirmation")
+
+        
+    return render_template("change_password.html")
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
