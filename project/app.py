@@ -255,7 +255,10 @@ def change_password():
         # Check password
         id = session["user_id"]
         rows = db.execute("SELECT * FROM users WHERE id = ?", id)
-        check_password_hash(rows[0]["hash"], password)
+        if not check_password_hash(rows[0]["hash"], password):
+            error = "Wrong password"
+            return render_template("change_password.html", error=error)
+
         # Ensure password was submitted
         if not new_password:
             error = "Must provide password"
