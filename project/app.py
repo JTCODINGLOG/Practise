@@ -252,12 +252,12 @@ def change_password():
         password = request.form.get("password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
+        id = session["user_id"]
+        rows = db.execute("SELECT * FROM users WHERE id = ?", id)
         # Check old password
         if not password:
             error = "Must provide password"
             return render_template("change_password.html", error=error)
-        id = session["user_id"]
-        rows = db.execute("SELECT * FROM users WHERE id = ?", id)
 
         if not check_password_hash(rows[0]["hash"], password):
             error = "Wrong old password"
@@ -299,11 +299,13 @@ def change_password():
             error = "New password and password confirmation do not match"
             return render_template("change_password.html", error=error)
 
-        # check new password similarity with old password with Levenshtein
+        # check new password similarity with old password with Levenshtein. Threshold 3 by default.
         elif check_similar(password, new_password) == False:
             error = "New password and old password are too similar"
+            return render_template("change_password.html", error=error)
         else:
-            return
+            db.execute("")
+
 
 
     return render_template("change_password.html")
