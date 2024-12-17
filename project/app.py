@@ -153,6 +153,7 @@ def verify():
         # elif session.get("action") == "delete"
         else:
             session.pop("action", None)
+            session['delete_in_progress'] = True
             return redirect("/delete")
 
 
