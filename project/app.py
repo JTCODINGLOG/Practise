@@ -294,6 +294,8 @@ def change_password():
         elif confirmation != new_password:
             error = "New password and password confirmation do not match"
             return render_template("change_password.html", error=error)
+        # check password similarity with
+        elif
         else:
             return
 
