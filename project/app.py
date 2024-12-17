@@ -316,7 +316,8 @@ def delete():
         password = request.form.get("password")
         id = session["user_id"]
         rows = db.execute("SELECT * FROM users WHERE id = ?", id)
-        
+        email = rows[0]["email"]
+
         if not password:
             error = "Must provide password"
             return render_template("delete.html", error=error)
@@ -324,6 +325,9 @@ def delete():
         if not check_password_hash(rows[0]["hash"], password):
             error = "Wrong old password"
             return render_template("delete.html", error=error)
+
+        session['action'] = 'delete'
+        return redirect(url_for("send", email=email))
 
     return render_template("delete.html")
 
