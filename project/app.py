@@ -252,16 +252,20 @@ def change_password():
         password = request.form.get("password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
-        # Check password
+        # Check old password
+        if not password:
+            error = "Must provide password"
+            return render_template("change_password.html", error=error)
         id = session["user_id"]
         rows = db.execute("SELECT * FROM users WHERE id = ?", id)
+
         if not check_password_hash(rows[0]["hash"], password):
-            error = "Wrong password"
+            error = "Wrong old password"
             return render_template("change_password.html", error=error)
 
-        # Ensure password was submitted
+        # Ensure new password was submitted
         if not new_password:
-            error = "Must provide password"
+            error = "Must provide new password"
             return render_template("change_password.html", error=error)
 
         # Password validation
