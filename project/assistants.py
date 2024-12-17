@@ -38,9 +38,9 @@ def validate_email(email):
         return False
 
 # Levenshtein distance function without len=0 condition
-def check_similar(s1, s2, tresh):
+def check_similar(s1, s2, treshhold=4):
     if len(s1) < len(s2):
-        return levenshtein_distance(s2, s1)
+        s1, s2 = s2, s1
 
     previous_row = range(len(s2) + 1)
     for i, c1 in enumerate(s1):
@@ -52,4 +52,4 @@ def check_similar(s1, s2, tresh):
             current_row.append(min(insertions, deletions, substitutions))
         previous_row = current_row
 
-    return previous_row[-1]
+    distance = previous_row[-1]
