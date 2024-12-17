@@ -306,7 +306,7 @@ def change_password():
         else:
             hash = generate_password_hash(new_password)
             db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, id)
-            return()
+            return redirect("/")
 
     return render_template("change_password.html")
 
