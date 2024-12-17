@@ -97,6 +97,7 @@ def login():
 
 
 @app.route("/logout")
+@login_required
 def logout():
     """Log user out"""
 
@@ -318,9 +319,10 @@ def change_password():
 @app.route("/delete", methods=["GET", "POST"])
 def delete():
     id = session["user_id"]
-    rows = db.execute("SELECT * FROM users WHERE id = ?", id)
+
     if request.method == "POST":
         password = request.form.get("password")
+        rows = db.execute("SELECT * FROM users WHERE id = ?", id)
         email = rows[0]["email"]
 
         if not password:
@@ -336,6 +338,8 @@ def delete():
     else:
         if session["delete_in_progress"] = True:
             session.pop("delete_in_progress", None)
+            db.execute("DELETE FROM users WHERE id = ?", id)
+            return redirect("/register")
         return render_template("delete.html")
 
 @app.route("/register", methods=["GET", "POST"])
