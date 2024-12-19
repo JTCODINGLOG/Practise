@@ -338,12 +338,13 @@ def delete():
         session["action"] = "delete"
         return redirect(url_for("send", email=email))
     else:
-        if session["delete_in_progress"] == True:
-            session.pop("delete_in_progress", None)
-            db.execute("DELETE FROM users WHERE id = ?", id)
-            session.clear()
-            return redirect("/register")
-        return render_template("delete.html")
+        if session["delete_in_progress]:
+            if session["delete_in_progress"] == True:
+                session.pop("delete_in_progress", None)
+                db.execute("DELETE FROM users WHERE id = ?", id)
+                session.clear()
+                return redirect("/register")
+            return render_template("delete.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
