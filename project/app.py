@@ -344,7 +344,7 @@ def delete():
                 db.execute("DELETE FROM users WHERE id = ?", id)
                 session.clear()
                 return redirect("/register")
-            return render_template("delete.html")
+        return render_template("delete.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
