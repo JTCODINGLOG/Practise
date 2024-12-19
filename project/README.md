@@ -1,3 +1,9 @@
+# The Right Workplace: Authentication and Passwords
+#### Video Demo:  <https://youtu.be/Uo6oVyz1zMs>
+#### Description:
+
+
+
 from cs50 import SQL
 from flask import Flask, flash, redirect, session, render_template, request, session, url_for
 from flask_session import Session
