@@ -18,7 +18,7 @@ For the registration, the user has to input an email as username, and it has dat
 
 For the option of "remember password" the user is requested to write the right email and answer to the question, then the user has to pass the 2nd step authentication inputing the right code sent to his email. A thing I would and probably will change is that once the user pass all the steps and writes a new email and new email confirmation, probably it is better to redirect the user to the home page and not the login, even being less secure, it probably provides a better experience as it is very annoying to input again username, password and a code after all that process.
 
-The option of "changing password" was easier as, knowing that the user already could log in I just used
+The option of "changing password" was easier as, knowing that the user already logged in I just asked to write again the password and to write the new password. To make it more secure I could have added the 2nd step authentication but at that point, for some reason, I decided that it was not neccessary. When inputting the new password, I used the distance principle created by a man
 
 
 from cs50 import SQL
