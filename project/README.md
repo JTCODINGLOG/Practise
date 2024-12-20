@@ -1,7 +1,6 @@
 # The Right Workplace: Authentication and Passwords
 #### Video Demo:  <https://youtu.be/Uo6oVyz1zMs>
 #### Description:
-
 This project idea comes from joining what we learnt in cs50 week 9 content and some aspects discussed in the week 10 lecture. Therefore, I have tried to implement some aspects related to security in a Flask application. The application has been focused on login, registration and passwords and I tried to deploy some solutions that enhance security when accessing this personal information.
 
 
@@ -32,6 +31,8 @@ Things I could implement in the future:
 -I would like to try captcha, I do not think it is better than code validation, but it is interesting.
 -The user experience through some processes as it has been explained before (remember password) can be improved.
 -I would like at least to have a look and see if there is a chance of implementing single sign one, but I do not think that would be easy.
+
+Please, check requirements.txt to see what packages are previously needed to run the program without errors.
 
 
 Thank you CS50!
