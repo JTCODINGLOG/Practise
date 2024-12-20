@@ -25,7 +25,12 @@ Other functions that can be executed once the user is logged in are:
 -Log out redirects user to the login page previously clearing session.
 
 
-
+Things I could implement in the future:
+-The password validation looks quite redundant and probably I need to find a way of adding it to assistants.py as a function and then just call the function.
+-I want to implement the 2nd step authentication sending the code to the phone and not just email, but I need to find a free service and a way of handling and storing the phone number with higher encription level as nowadays a lot of scam is done through text messages.
+-I would like to try captcha, I do not think is better than the code validation, but it is interesting.
+-The user experience through some processess as it has been explained before (remember password) can be improved.
+-I would like at least to have a look and see if there is a chance of implementing single sign one, but I do not think that would be easy.
 
 
 from cs50 import SQL
