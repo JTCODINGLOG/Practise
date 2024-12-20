@@ -2,9 +2,10 @@
 #### Video Demo:  <https://youtu.be/Uo6oVyz1zMs>
 #### Description:
 
-This project comes from joining what we learnt in cs50 week 9 content and some aspects discussed in the week 10 lecture. Therefore, my idea was to implement some aspects related to security in a Flask application. The application has been focused on login, registration and passwords and I tried to deploy some solutions that enhance security when accessing this personal information.
+This project idea comes from joining what we learnt in cs50 week 9 content and some aspects discussed in the week 10 lecture. Therefore, I have tried to implement some aspects related to security in a Flask application. The application has been focused on login, registration and passwords and I tried to deploy some solutions that enhance security when accessing this personal information.
 
-When loading the application running "flask run" the first screen is a login page:
+
+When loading the application the first screen is a login page:
 -When we try to login, if we are not successful, there is a new limit of attempts. The limit established is 3 attempts per minute and 30 per day. To implement the limiter, I used the library flask_limiter, and I have used the user's IP to identify him/her. Also, it is stablished an exemption when the login is successful and when POST requests are received, that way I ensure that the user can access the content when logging in on the third attempt and prevents login tries by error, without writing anything in user and password input boxes.
 -In case of not passing the data validation, it is not rendered a different screen, like it was happening in week 9, but the error is printed in the same screen so the user has a chance of knowing what is wrong and try again. Depending on the error, the message that is printed is different and the user is provided with two links depending on the situation:
     a - for any error a link that sends the user to the "register" screen.
@@ -16,9 +17,9 @@ When loading the application running "flask run" the first screen is a login pag
 
 For the registration, the user has to input an email as username, and it has data validation, apart from checking if the user already exists, a new validation to check email structure and domain is implemented. Regarding the password, the user has to input at least 8 characters, with upper and lower case, a number and include special characters. The user finally has to choose a security question between 4 options and an answer for that security question. If all is correct, a hash is generated for the password and the answer(using werzeug.security) and the 4 inputs are stores in the database "users" that now has 4 attributes.
 
-For the option of "remember password" the user is requested to write the right email and answer the question, then the user has to pass the 2nd step authentication inputting the right code sent to his email. A thing I would and probably will change is that once the user pass all the steps and writes a new email and new email confirmation, probably it is better to redirect the user to the home page and not the login, even being less secure, it probably provides a better experience as it is very annoying to input again username, password and a code after all that process.
+For the option "remember password" the user is requested to write the right email and answer the question, then the user has to pass the 2nd step authentication inputting the right code sent to his email. A thing I would and probably will change is that once the user pass all the steps and writes a new email and new email confirmation, probably it is better to redirect the user to the home page and not the login, even being less secure, it probably provides a better experience as it is very annoying to input again username, password and a code after all that process.
 
-The option of "changing password" was easier as, knowing that the user had already logged in I just asked to write again the password and to write the new password. To make it more secure I could have added the 2nd step authentication but at that point, for some reason, I decided that it was not necessary. When inputting the new password, I added a function in my helpers file, assistant.py, that applied the Levenshtein distance principle. In this function I applied this to get the string metric that measures the difference between the two passwords, and then I compare it to the default threshold of 3. That means that I need to edit one of the passwords 3 times to be the same as the other password. This is quite moderated, and if we want to ensure that the user inputs a really different password we can always increase the threshold.
+The option "change password" was easier as, knowing that the user had already logged in I just asked to write again the password and to write the new password. To make it more secure I could have added the 2nd step authentication but at that point, for some reason, I decided that it was not necessary. When inputting the new password, I added a function in my helpers file, assistant.py, that applied the Levenshtein distance principle. In this function I applied this to get the string metric that measures the difference between the two passwords, and then I compare it to the default threshold of 3. That means that I need to edit one of the passwords 3 times to be the same as the other password. This is quite moderated, and if we want to ensure that the user inputs a really different password we can always increase the threshold.
 
 Other functions that can be executed once the user is logged in are:
 -Delete/remove account, that clears the data from "users" table after requesting user's password and 2nd step authentication. Then, session is cleared, and the user is redirected to the registration page.
@@ -27,19 +28,10 @@ Other functions that can be executed once the user is logged in are:
 
 Things I could implement in the future:
 -The password validation looks quite redundant and probably I need to find a way of adding it to assistants.py as a function and then just call the function.
--I want to implement the 2nd step authentication sending the code to the phone and not just email, but I need to find a free service and a way of handling and storing the phone number with higher encription level as nowadays a lot of scam is done through text messages.
--I would like to try captcha, I do not think is better than the code validation, but it is interesting.
--The user experience through some processess as it has been explained before (remember password) can be improved.
+-I want to implement the 2nd step authentication sending the code to the phone and not just email, but I need to find a free service and a way of handling and storing the phone number with higher encryption level as nowadays a lot of scams are done through text messages.
+-I would like to try captcha, I do not think it is better than code validation, but it is interesting.
+-The user experience through some processes as it has been explained before (remember password) can be improved.
 -I would like at least to have a look and see if there is a chance of implementing single sign one, but I do not think that would be easy.
 
 
-from cs50 import SQL
-from flask import Flask, flash, redirect, session, render_template, request, session, url_for
-from flask_session import Session
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-from flask_mail import Mail, Message
-from werkzeug.security import check_password_hash, generate_password_hash
-from functools import wraps
-from re import match
-from dns.resolver import resolve, NoAnswer, NXDOMAIN
+Thank you CS50!
