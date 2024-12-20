@@ -16,7 +16,9 @@ When loading the application running "flask run" the first screen is a login pag
 
 For the registration, the user has to input an email as username, and it has data validation, apart from checking if the user already exists, a new validation to check email structure and domain is implemented. Regarding the password, the user has to input at least 8 characters, with upper and lower case, a number and include special characters. The user finally has to choose a security question between 4 options and an answer for that security question. If all is correct, a hash is generated for the password and the answer(using werzeug.security) and the 4 inputs are stores in the database "users" that now has 4 attributes.
 
-For the option of "remember password" the user is requested to write the right email and answer to the question, then the user has to pass the 2nd step authentication inputing the right code sent to his email. A thing I regret is that 
+For the option of "remember password" the user is requested to write the right email and answer to the question, then the user has to pass the 2nd step authentication inputing the right code sent to his email. A thing I would and probably will change is that once the user pass all the steps and writes a new email and new email confirmation, probably it is better to redirect the user to the home page and not the login, even being less secure, it probably provides a better experience as it is very annoying to input again username, password and a code after all that process.
+
+The option of "changing password" was easier as, knowing that the user already could log in I just used
 
 
 from cs50 import SQL
