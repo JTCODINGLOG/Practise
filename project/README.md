@@ -20,6 +20,10 @@ For the option of "remember password" the user is requested to write the right e
 
 The option of "changing password" was easier as, knowing that the user had already logged in I just asked to write again the password and to write the new password. To make it more secure I could have added the 2nd step authentication but at that point, for some reason, I decided that it was not necessary. When inputting the new password, I added a function in my helpers file, assistant.py, that applied the Levenshtein distance principle. In this function I applied this to get the string metric that measures the difference between the two passwords, and then I compare it to the default threshold of 3. That means that I need to edit one of the passwords 3 times to be the same as the other password. This is quite moderated, and if we want to ensure that the user inputs a really different password we can always increase the threshold.
 
+Other functions that can be executed once the user is logged in are:
+-Delete/remove account, that clears the data from "users" table after requesting user's password and 2nd step authentication. Then, session is cleared and the user is redirected to the registration page.
+-Log out redirects user to the login page previously clearing session.
+
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, session, render_template, request, session, url_for
