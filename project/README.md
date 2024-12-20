@@ -6,7 +6,10 @@ This project comes from joining what we learnt in cs50 week 9 content and some a
 
 When loading the application running "flask run" the first screen is a login page:
 -When we try to login, if we are not successful, there is a new limit of attempts. The limit stablished is 3 attempts per minute and 30 per day. To implement the limiter I used the decorator @limiter.limit, which uses the user's IP to identify him/her. Also, it stablishes an exemption when the login is successful and with POST requests. That way we ensure that the user can access the content when logging in on the third attemp and prevents login tries by error, without writing anything in user and password.
--In case of not passing the data validation, it is not rendered a different screen like it was happening in week 9, but print the error in the same screen so the user has a chance of knowing what is wrong and try again. Depending on the error, the message that is printed is different and also the user is provided with two links
+-In case of not passing the data validation, it is not rendered a different screen like it was happening in week 9, but print the error in the same screen so the user has a chance of knowing what is wrong and try again. Depending on the error, the message that is printed is different and also the user is provided with two links depending on the situation:
+    a- for any error a link that send the user to the "register" screen.
+    b- if the error is regarding an empty or invalid password the user will see also a link to "remember password"
+-If the user sends the correct information, will be redirected to a second screen where he has to authenticate his identity writing a code sent to his email. 
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, session, render_template, request, session, url_for
