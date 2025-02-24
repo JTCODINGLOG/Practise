@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Verification
+{% endblock %}
+
+{% block main %}
+    <div>
+        <form action="/verify" method="post">
+            <div>
+                Please, enter the verification code sent to {{ email }}
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="verification_code" placeholder="Enter verification code" type="text">
+                <input type="hidden" name="email" value="{{ email }}">
+            </div>
+            <button class="btn btn-green" type="submit">Verify</button>
+        </form>
+    </div>
+    <div>
+        {% if error %}
+            <p class="red">{{ error }}</p>
+            <p>Code expires in 2 minutes, click in the button if you need to resend the code to {{ email }}.</p>
+            <form action="/send" method="post">
+                <input type="hidden" name="email" value="{{ email }}">
+                <button class="btn btn-green" type="submit">Resend Code</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

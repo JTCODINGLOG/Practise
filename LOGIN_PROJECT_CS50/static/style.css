@@ -1,0 +1,52 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #009999;
+}
+
+
+.btn-green {
+    background-color: #009999; /* Green color */
+    border-color: #009999;    /* Green border */
+    color: white;             /* White text */
+}
+
+.btn-green:hover {
+    background-color: #007777; /* Darker green */
+    border-color: #007777;
+}
+
+input.form-control:hover,
+input.form-control:focus {
+    border-color: #009999; /* Green border */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px #009999; /* Add a glow effect */
+}
+
+.red
+{
+    color: #ea433b;
+}
+
+.green
+{
+    color: #007777
+}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-green" type="submit">Log In</button>
+        <div>
+            {% if error %}
+                <p class="red">{{ error }}</p>
+                <a href="/register">Click here if you are not registered.</a>
+                <p></p>
+                {% if error == "Must provide password" or error == "Invalid email or password" %}
+                <a href="/remember_password">Click here if you want to remember your password</a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}

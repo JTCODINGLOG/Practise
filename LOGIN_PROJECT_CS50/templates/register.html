@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Password (again)" type="password">
+        </div>
+        <div class="mb-3">
+            <select select class="form-control mx-auto w-auto" name ="question">
+                <option value="" disabled selected>Select a question</option>
+                <option value="first_pet">What is the name of your first pet?</option>
+                <option value="best_friend">What is the name of your best friend?</option>
+                <option value="favourite_brand">What is your favourite brand?</option>
+                <option value="favourite_color">What is your favourite color?</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="answer" placeholder="Answer" type="password">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-green" type="submit">Register</button>
+        </div>
+        <div class="mb-3">
+            {% if error %}
+                <p class="red">{{ error }}</p>
+            {% endif %}
+            <a href="/login">Click here if you already have an account.</a>
+        </div>
+    </form>
+{% endblock %}
